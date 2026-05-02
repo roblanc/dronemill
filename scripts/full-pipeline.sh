@@ -26,11 +26,24 @@ if [ -z "$AUDIO" ] || [ -z "$TITLE" ] || [ -z "$DESC" ]; then
   exit 1
 fi
 
-SLUG=$(slugify "$TITLE")
 IMAGE=$(next_image "$ROOT")
+
+# Auto-title from metadata if not provided or set to "auto"
+if [ "$TITLE" = "auto" ] || [ -z "$TITLE" ]; then
+  TITLE=$(get_title "$IMAGE" "$ROOT")
+  if [ -z "$TITLE" ]; then
+    echo "ERROR: Could not get title for $IMAGE and no title provided."
+    exit 1
+  fi
+fi
+
+SLUG=$(slugify "$TITLE")
+TAGS=$(get_tags "$IMAGE" "$ROOT")
+
 echo ">> Title: $TITLE"
 echo ">> Slug:  $SLUG"
 echo ">> Image: $IMAGE"
+echo ">> Tags:  $TAGS"
 echo ">> Mode:  $MODE"
 
 echo ""
@@ -41,14 +54,13 @@ VIDEO="$ROOT/output/${SLUG}.mp4"
 
 echo ""
 echo "=== STAGE 2: youtube upload ==="
-DEFAULT_TAGS="ambient,cosmic horror,dark ambient,sleep ambient,study music,1 hour ambient,sci-fi ambient,deep space,timeless ambience"
 
 if [ "$MODE" = "schedule" ]; then
   PUB=$("$DIR/scheduler.sh")
   echo ">> Publish at: $PUB UTC"
-  "$DIR/upload-yt.sh" "$VIDEO" "$TITLE" "$DESC" "$IMAGE" "private" "$DEFAULT_TAGS" "$PUB"
+  "$DIR/upload-yt.sh" "$VIDEO" "$TITLE" "$DESC" "$IMAGE" "private" "$TAGS" "$PUB"
 else
-  "$DIR/upload-yt.sh" "$VIDEO" "$TITLE" "$DESC" "$IMAGE" "$EXTRA" "$DEFAULT_TAGS" ""
+  "$DIR/upload-yt.sh" "$VIDEO" "$TITLE" "$DESC" "$IMAGE" "$EXTRA" "$TAGS" ""
 fi
 
 echo ""
