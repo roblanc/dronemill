@@ -53,11 +53,29 @@ Drop multiple images in `images/queue/`. Pipeline picks the oldest (alphabetical
 ```
 → output: `output/my-title-here.mp4`
 
-### Full chain (render + upload + archive)
+### Full chain — scheduled (default)
+Auto-schedules at next slot (default: 18:00 local / 15:00 UTC, 1 video/day cadence).
 ```bash
 ./scripts/full-pipeline.sh ../audio/raw.mp3 \
   "frozen 169 years | hms erebus deep ambient | dark arctic drone" \
   ../descriptions/frozen.txt 0.93
+```
+Each invocation advances scheduler by 1 day. State in `.schedule_state` (gitignored).
+
+### Full chain — immediate publish
+```bash
+./scripts/full-pipeline.sh ../audio/raw.mp3 "title" descriptions/d.txt 0.93 now public
+# or 'now unlisted' to keep private until manual review
+```
+
+### Reset scheduler
+```bash
+rm .schedule_state   # next call schedules for today/tomorrow at 18:00 local
+```
+
+### Custom schedule slot
+```bash
+./scripts/scheduler.sh 21 3   # 21:00 EEST = 18:00 UTC
 ```
 
 ### Generate original ambient (zero copyright)
