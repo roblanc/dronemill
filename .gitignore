@@ -39,3 +39,7 @@ Thumbs.db
 
 # Scheduler state (per-machine)
 .schedule_state
+.batch_state
+
+# Personal queue (keep example only)
+queue.csv

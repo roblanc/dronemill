@@ -9,33 +9,45 @@ Channel: `@timelessambience55`
 brew install youtubeuploader
 ```
 
-### 2. Google Cloud Console
+### 2. Google Cloud Console — create project + enable API
 1. Go to https://console.cloud.google.com/
 2. Create new project: `timeless-ambience-uploader`
 3. Sidebar → "APIs & Services" → "Library" → search "YouTube Data API v3" → Enable
-4. Sidebar → "APIs & Services" → "OAuth consent screen":
-   - User Type: External
-   - App name: `timeless-ambience-uploader`
-   - User support email: dumitriurobert0@gmail.com
-   - Developer email: dumitriurobert0@gmail.com
-   - Skip scopes
-   - Add yourself as test user (dumitriurobert0@gmail.com)
-5. Sidebar → "Credentials" → "+ Create Credentials" → "OAuth client ID":
-   - Type: **Desktop app**
-   - Name: `youtubeuploader-cli`
-   - Download JSON
 
-### 3. Place credentials
+### 3. Google Auth Platform — configure OAuth
+**Note:** Google renamed "OAuth consent screen" to "Google Auth Platform" (2025+ UI).
+
+1. Sidebar → "APIs & Services" → "OAuth consent screen" (redirects to Google Auth Platform Overview)
+2. Click **Get started**
+3. **App information:**
+   - App name: `timeless-ambience-uploader`
+   - User support email: `avisualtheory@gmail.com`
+4. **Audience:** select **External**
+5. **Contact info:** `avisualtheory@gmail.com`
+6. Agree to API Services User Data Policy → **Create**
+
+### 4. Add test user
+After creation:
+1. Sidebar → **Audience** → "Test users" → **+ Add users**
+2. Add: `avisualtheory@gmail.com` (sau email-ul care deține `@timelessambience55`)
+
+### 5. Create OAuth client
+1. Sidebar → **Clients** → **+ Create client**
+2. Application type: **Desktop app**
+3. Name: `youtubeuploader-cli`
+4. **Create** → click **Download JSON**
+
+### 6. Place credentials
 ```bash
 mkdir -p ~/.youtubeuploader
 mv ~/Downloads/client_secret_*.json ~/.youtubeuploader/client_secrets.json
 ```
 
-### 4. First auth (browser flow)
+### 7. First auth (browser flow)
 Run any upload command — youtubeuploader opens browser:
 ```bash
-cd ~/Desktop/cosmic-video/scripts
-./upload-yt.sh ../output/erebus_v1.mp4 "test upload" ../descriptions/test.txt ../images/erebus_cover.png private
+cd ~/Developer/GitHub/dronemill/scripts
+./upload-yt.sh ../output/test.mp4 "test upload" ../descriptions/template.txt ../images/used/erebus_cover.png private
 ```
 Browser opens → choose Google account that owns `@timelessambience55`. If brand account: select it from "Choose an account" screen. Token saved to `~/.youtubeuploader/request.token`. Future runs are headless.
 
