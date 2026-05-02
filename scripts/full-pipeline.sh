@@ -26,6 +26,15 @@ if [ -z "$AUDIO" ] || [ -z "$TITLE" ] || [ -z "$DESC" ]; then
   exit 1
 fi
 
+# Auto-audio if set to "auto"
+if [ "$AUDIO" = "auto" ]; then
+  AUDIO=$(next_audio "$ROOT")
+  if [ -z "$AUDIO" ]; then
+    echo "ERROR: No audio in queue."
+    exit 1
+  fi
+fi
+
 IMAGE=$(next_image "$ROOT")
 
 # Auto-title from metadata if not provided or set to "auto"

@@ -62,35 +62,51 @@ if [ "$THUMB_SIZE" -gt 2000000 ]; then
 fi
 
 # Build metaJSON dynamically — handles multi-line descriptions + scheduling cleanly
-META=$(mktemp -t dronemill_meta).json
+# Cross-platform mktemp: macOS needs no XXXXXX; Linux requires it.
+META="/tmp/dronemill_meta_$$_$(date +%s).json"
 DESCRIPTION=$(cat "$DESC")
 
+# Porjo's youtubeuploader uses a flat JSON structure or specific snippet/status.
+# We'll provide both or a flat one that works with most versions.
 python3 -c "
 import json, sys
 title, description, privacy, tags_csv, publish_at = sys.argv[1:6]
 meta = {
+    'title': title,
+    'description': description,
+    'tags': [t.strip() for t in tags_csv.split(',') if t.strip()],
+    'privacyStatus': privacy,
+    'categoryId': '10',
+    'selfDeclaredMadeForKids': False
+}
+if publish_at:
+    meta['publishAt'] = publish_at
+
+# For newer versions that expect snippet/status:
+meta_full = {
     'snippet': {
         'title': title,
         'description': description,
-        'tags': [t.strip() for t in tags_csv.split(',') if t.strip()],
-        'categoryId': '10',
+        'tags': meta['tags'],
+        'categoryId': '10'
     },
     'status': {
         'privacyStatus': privacy,
-        'selfDeclaredMadeForKids': False,
+        'publishAt': publish_at if publish_at else None,
+        'selfDeclaredMadeForKids': False
     }
 }
-if publish_at:
-    meta['status']['publishAt'] = publish_at
+# We'll use the flat one as it's more common for this CLI
 print(json.dumps(meta, indent=2))
 " "$TITLE" "$DESCRIPTION" "$PRIVACY" "$TAGS_CSV" "$PUBLISH_AT" > "$META"
 
-echo ">> metaJSON:"
-cat "$META"
-echo ""
+echo ">> Uploading: $TITLE"
+echo ">> Tags: $TAGS_CSV"
 
 youtubeuploader \
   -filename "$VIDEO" \
+  -title "$TITLE" \
+  -description "$DESCRIPTION" \
   -metaJSON "$META" \
   -thumbnail "$THUMB" \
   -secrets "$CREDS" \
