@@ -18,6 +18,18 @@ fi
 CREDS="$HOME/.youtubeuploader/client_secrets.json"
 TOKEN="$HOME/.youtubeuploader/request.token"
 
+# Single-instance guard — prevent duplicate uploads
+LOCKFILE="$HOME/.youtubeuploader/upload.lock"
+if [ -f "$LOCKFILE" ]; then
+  PID=$(cat "$LOCKFILE")
+  if kill -0 "$PID" 2>/dev/null; then
+    echo "ERROR: another upload running (PID $PID). Wait for it or kill: kill $PID"
+    exit 1
+  fi
+fi
+echo $$ > "$LOCKFILE"
+trap "rm -f $LOCKFILE" EXIT
+
 if [ ! -f "$CREDS" ]; then
   echo "ERROR: client_secrets.json missing. See SETUP-YOUTUBE.md"
   exit 1
