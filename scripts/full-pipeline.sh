@@ -1,12 +1,12 @@
 #!/bin/bash
-# Full pipeline: pick image from queue → render → upload → mark image used.
-# Usage: ./full-pipeline.sh <audio> <title> <desc_file> [pitch=0.93] [privacy=unlisted]
-# Example:
-#   ./full-pipeline.sh \
-#     ../audio/erebus_raw.mp3 \
-#     "signals from below | hms erebus abyssal ambient | 1 hour" \
-#     ../descriptions/signals.txt \
-#     0.91
+# Full pipeline: pick image from queue → render → upload (optionally scheduled) → mark image used.
+# Usage:
+#   ./full-pipeline.sh <audio> <title> <desc_file> [pitch=0.93] [mode=schedule|now] [extra]
+#   mode=schedule (default): auto-schedules at next slot via scheduler.sh
+#   mode=now:                uploads immediately as 'unlisted' (or pass [extra]=public/private)
+# Examples:
+#   ./full-pipeline.sh ../audio/raw.mp3 "title" ../descriptions/d.txt 0.93 schedule
+#   ./full-pipeline.sh ../audio/raw.mp3 "title" ../descriptions/d.txt 0.93 now public
 
 set -e
 
@@ -18,10 +18,11 @@ AUDIO="$1"
 TITLE="$2"
 DESC="$3"
 PITCH="${4:-0.93}"
-PRIVACY="${5:-unlisted}"
+MODE="${5:-schedule}"
+EXTRA="${6:-unlisted}"
 
 if [ -z "$AUDIO" ] || [ -z "$TITLE" ] || [ -z "$DESC" ]; then
-  echo "Usage: $0 <audio> <title> <desc_file> [pitch=0.93] [privacy=unlisted]"
+  echo "Usage: $0 <audio> <title> <desc_file> [pitch=0.93] [mode=schedule|now] [extra]"
   exit 1
 fi
 
@@ -30,6 +31,7 @@ IMAGE=$(next_image "$ROOT")
 echo ">> Title: $TITLE"
 echo ">> Slug:  $SLUG"
 echo ">> Image: $IMAGE"
+echo ">> Mode:  $MODE"
 
 echo ""
 echo "=== STAGE 1: render ==="
@@ -39,7 +41,15 @@ VIDEO="$ROOT/output/${SLUG}.mp4"
 
 echo ""
 echo "=== STAGE 2: youtube upload ==="
-"$DIR/upload-yt.sh" "$VIDEO" "$TITLE" "$DESC" "$IMAGE" "$PRIVACY"
+DEFAULT_TAGS="ambient,cosmic horror,dark ambient,sleep ambient,study music,1 hour ambient,sci-fi ambient,deep space,timeless ambience"
+
+if [ "$MODE" = "schedule" ]; then
+  PUB=$("$DIR/scheduler.sh")
+  echo ">> Publish at: $PUB UTC"
+  "$DIR/upload-yt.sh" "$VIDEO" "$TITLE" "$DESC" "$IMAGE" "private" "$DEFAULT_TAGS" "$PUB"
+else
+  "$DIR/upload-yt.sh" "$VIDEO" "$TITLE" "$DESC" "$IMAGE" "$EXTRA" "$DEFAULT_TAGS" ""
+fi
 
 echo ""
 echo "=== STAGE 3: mark image used ==="
@@ -48,4 +58,8 @@ mark_used "$IMAGE" "$ROOT"
 echo ""
 echo "=== DONE ==="
 echo "Local: $VIDEO"
-echo "YT:    uploaded as '$PRIVACY'. Check https://studio.youtube.com"
+if [ "$MODE" = "schedule" ]; then
+  echo "YT:    scheduled for $PUB UTC. Check https://studio.youtube.com"
+else
+  echo "YT:    uploaded ($EXTRA). Check https://studio.youtube.com"
+fi

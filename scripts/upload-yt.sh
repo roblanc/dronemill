@@ -1,6 +1,7 @@
 #!/bin/bash
-# Usage: ./upload-yt.sh <video_path> <title> <desc_file> <thumbnail> [privacy=unlisted]
-# Example: ./upload-yt.sh ../output/erebus_v1.mp4 "frozen 169 years..." ../descriptions/erebus_v1.txt ../images/erebus_cover.png
+# Usage: ./upload-yt.sh <video> <title> <desc_file> <thumbnail> [privacy=unlisted] [tags_csv] [publishAt]
+# publishAt: ISO 8601 UTC, e.g. 2026-05-04T18:00:00Z (must be future, forces privacy=private)
+# tags_csv:  comma-separated, e.g. "ambient,cosmic horror,sleep music"
 
 set -e
 
@@ -9,10 +10,20 @@ TITLE="$2"
 DESC="$3"
 THUMB="$4"
 PRIVACY="${5:-unlisted}"
+TAGS_CSV="${6:-ambient,cosmic horror,dark ambient,sleep ambient,study music,1 hour ambient,sci-fi ambient,deep space,timeless ambience}"
+PUBLISH_AT="$7"
 
 if [ -z "$VIDEO" ] || [ -z "$TITLE" ] || [ -z "$DESC" ] || [ -z "$THUMB" ]; then
-  echo "Usage: $0 <video> <title> <desc_file> <thumbnail> [privacy=unlisted]"
+  echo "Usage: $0 <video> <title> <desc_file> <thumbnail> [privacy=unlisted] [tags_csv] [publishAt]"
   exit 1
+fi
+
+# If publishAt is set, force privacy=private (YT requirement for scheduled videos)
+if [ -n "$PUBLISH_AT" ]; then
+  if [ "$PRIVACY" != "private" ]; then
+    echo "INFO: publishAt set, forcing privacy=private (required for scheduling)"
+    PRIVACY="private"
+  fi
 fi
 
 CREDS="$HOME/.youtubeuploader/client_secrets.json"
@@ -50,26 +61,33 @@ if [ "$THUMB_SIZE" -gt 2000000 ]; then
   echo "Using compressed thumbnail: $THUMB ($(stat -f%z "$THUMB" 2>/dev/null || stat -c%s "$THUMB") bytes)"
 fi
 
-# Build metaJSON dynamically — handles multi-line descriptions cleanly
+# Build metaJSON dynamically — handles multi-line descriptions + scheduling cleanly
 META=$(mktemp -t dronemill_meta).json
 DESCRIPTION=$(cat "$DESC")
 
-# Use python for safe JSON encoding (handles quotes, newlines, unicode)
 python3 -c "
 import json, sys
+title, description, privacy, tags_csv, publish_at = sys.argv[1:6]
 meta = {
     'snippet': {
-        'title': sys.argv[1],
-        'description': sys.argv[2],
-        'tags': ['ambient','cosmic horror','dark ambient','sleep ambient','study music','1 hour ambient','sci-fi ambient','deep space','timeless ambience'],
+        'title': title,
+        'description': description,
+        'tags': [t.strip() for t in tags_csv.split(',') if t.strip()],
         'categoryId': '10',
     },
     'status': {
-        'privacyStatus': sys.argv[3],
+        'privacyStatus': privacy,
+        'selfDeclaredMadeForKids': False,
     }
 }
+if publish_at:
+    meta['status']['publishAt'] = publish_at
 print(json.dumps(meta, indent=2))
-" "$TITLE" "$DESCRIPTION" "$PRIVACY" > "$META"
+" "$TITLE" "$DESCRIPTION" "$PRIVACY" "$TAGS_CSV" "$PUBLISH_AT" > "$META"
+
+echo ">> metaJSON:"
+cat "$META"
+echo ""
 
 youtubeuploader \
   -filename "$VIDEO" \
@@ -79,4 +97,8 @@ youtubeuploader \
   -cache "$TOKEN"
 
 rm "$META"
-echo "Uploaded: $TITLE"
+if [ -n "$PUBLISH_AT" ]; then
+  echo "Scheduled: $TITLE → publishes at $PUBLISH_AT UTC"
+else
+  echo "Uploaded: $TITLE (privacy=$PRIVACY)"
+fi
