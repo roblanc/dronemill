@@ -1,0 +1,38 @@
+# Outputs (too large for git)
+output/*.mp4
+output/*.mp3
+output/*.aac
+
+# Source assets (copyright risk + size)
+audio/*.mp3
+audio/*.wav
+audio/*.flac
+images/queue/*
+images/used/*
+
+# Keep folder structure markers
+!audio/.gitkeep
+!images/.gitkeep
+!images/queue/.gitkeep
+!images/used/.gitkeep
+!output/.gitkeep
+!descriptions/.gitkeep
+
+# Descriptions are personal — keep template only
+descriptions/*.txt
+!descriptions/template.txt
+
+# OAuth credentials (NEVER commit)
+client_secrets.json
+*.token
+.env
+.env.local
+
+# OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Logs
+*.log
