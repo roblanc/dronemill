@@ -39,7 +39,7 @@ if [ ! -f "$FOG" ]; then
   # Low-res gray noise -> scaled up + heavy blur = animated fog.
   # geq uses periodic sin/cos so the 60s clip loops cleanly.
   ffmpeg -y -f lavfi -i "color=c=gray:s=240x135:r=24:d=60" \
-    -vf "geq=lum='128+55*sin(2*PI*(X+T*30)/400+T*0.5)*cos(2*PI*(Y-T*22)/300+T*0.3)':cb=128:cr=128,scale=1920:1080:flags=fast_bilinear,boxblur=18:2,format=yuv420p" \
+    -vf "geq=lum='128+15*sin(2*PI*(X/600+T/60))*cos(2*PI*(Y/300-T/60))':cb=128:cr=128,scale=1920:1080:flags=fast_bilinear,boxblur=24:3,format=yuv420p" \
     -c:v libx264 -preset ultrafast -pix_fmt yuv420p "$FOG"
 fi
 
@@ -62,8 +62,8 @@ ffmpeg -y -stream_loop -1 -i "$AUDIO" \
 #  drift: x ±50px / 120s, y ±30px / 90s — desynced from zoom = floating camera
 #  eq   : contrast 15s, brightness 20s — both divide 60s -> loop seam clean
 # ──────────────────────────────────────────────────────────────────
-VF_BASE="scale=2112:1188,crop=1920:1080:x='(in_w-out_w)/2+80*sin(2*PI*n/1440)':y='(in_h-out_h)/2+40*cos(2*PI*n/1080)'"
-VF_POST="vignette='angle=0.35'"
+VF_BASE="scale=5760:3240:force_original_aspect_ratio=increase,crop=5760:3240,zoompan=z='1.12+0.06*sin(2*PI*on/1440)':x='iw/2-(iw/zoom/2)+150*cos(2*PI*on/1440)':y='ih/2-(ih/zoom/2)+90*sin(2*PI*on/1440)':d=1:s=1920x1080:fps=24"
+VF_POST="eq=contrast='1.0+0.003*sin(2*PI*n/480)':brightness='0.001*cos(2*PI*n/240)',vignette='angle=0.35'"
 
 # ──────────────────────────────────────────────────────────────────
 # Multi-image path: <IMAGE> is a directory
@@ -108,9 +108,9 @@ if [ -d "$IMAGE" ]; then
       PREV="$LABEL"
     done
 
-    # Fog overlay on top
+    # Fog overlay on top + subtle film grain
     FC+="[${FOG_IDX}:v]scale=1920:1080,format=yuv420p[fog];"
-    FC+="[$PREV][fog]blend=all_mode=screen:all_opacity=0.12,format=yuv420p[vout]"
+    FC+="[$PREV][fog]blend=all_mode=screen:all_opacity=0.04,noise=alls=3:allf=t+u,format=yuv420p[vout]"
 
     VIDEO_TMP="$ROOT/output/${SLUG}_video.mp4"
     ffmpeg -y "${INPUT_ARGS[@]}" \
@@ -139,7 +139,7 @@ LOOPS=61
 
 echo "[2/3] Build 60s clip (drift + breathing + fog overlay)..."
 ffmpeg -y -loop 1 -framerate 24 -t 60 -i "$IMAGE" -stream_loop -1 -i "$FOG" \
-  -filter_complex "[0:v]${VF_BASE},${VF_POST}[base];[1:v]scale=1920:1080,format=yuv420p[fog];[base][fog]blend=all_mode=screen:all_opacity=0.12,format=yuv420p[vout]" \
+  -filter_complex "[0:v]${VF_BASE},${VF_POST}[base];[1:v]scale=1920:1080,format=yuv420p[fog];[base][fog]blend=all_mode=screen:all_opacity=0.04,noise=alls=3:allf=t+u,format=yuv420p[vout]" \
   -map "[vout]" \
   -c:v libx264 -tune stillimage -preset ultrafast -pix_fmt yuv420p \
   -r 24 -t 60 "$LOOP60"

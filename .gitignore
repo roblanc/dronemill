@@ -2,6 +2,9 @@
 output/*.mp4
 output/*.mp3
 output/*.aac
+assets/fog_loop.mp4
+__pycache__/
+*.pyc
 
 # Source assets (copyright risk + size)
 audio/queue/*
