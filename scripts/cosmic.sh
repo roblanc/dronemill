@@ -26,18 +26,20 @@ SHIFTED="$ROOT/output/${SLUG}_shifted.aac"
 LOOP60="$ROOT/output/${SLUG}_loop60.mp4"
 OUT="$ROOT/output/${SLUG}.mp4"
 
-DUR=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$AUDIO")
-LOOPS=$(awk "BEGIN {print int($DUR / 60) + 1}")
+# Force the video to be exactly 1 hour (3600 seconds).
+# LOOPS=61 ensures the still image video is 61 * 60 = 3660 seconds.
+# The final copy step uses -shortest to trim it to the 3600-second audio track.
+LOOPS=61
 
 SR=$(ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of default=noprint_wrappers=1:nokey=1 "$AUDIO")
 if [ -z "$SR" ] || ! [[ "$SR" =~ ^[0-9]+$ ]]; then
   SR=44100
 fi
 
-echo "[1/3] Pitch shift + AAC encode (pitch=$PITCH, sample_rate=$SR)..."
-ffmpeg -y -i "$AUDIO" \
-  -af "asetrate=${SR}*${PITCH},aresample=${SR},atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000" \
-  -c:a aac -b:a 192k "$SHIFTED"
+echo "[1/3] Pitch shift + AAC encode (pitch=$PITCH, sample_rate=$SR, forced 1h duration)..."
+ffmpeg -y -stream_loop -1 -i "$AUDIO" \
+  -af "asetrate=${SR}*${PITCH},aresample=${SR},atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000,afade=t=out:st=3590:d=10" \
+  -c:a aac -b:a 192k -t 3600 "$SHIFTED"
 
 echo "[2/3] Build 60s still-image clip..."
 ffmpeg -y -loop 1 -framerate 1 -t 60 -i "$IMAGE" \
