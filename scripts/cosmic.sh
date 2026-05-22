@@ -41,10 +41,10 @@ ffmpeg -y -stream_loop -1 -i "$AUDIO" \
   -af "asetrate=${SR}*${PITCH},aresample=${SR},atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000,afade=t=out:st=3590:d=10" \
   -c:a aac -b:a 192k -t 3600 "$SHIFTED"
 
-echo "[2/3] Build 60s still-image clip (24fps cover crop + analog effects)..."
+echo "[2/3] Build 60s still-image clip (24fps cover crop + procedural zoom/light breathing + analog effects)..."
 ffmpeg -y -loop 1 -framerate 24 -t 60 -i "$IMAGE" \
   -c:v libx264 -tune stillimage -preset ultrafast -pix_fmt yuv420p \
-  -vf "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,noise=alls=8:allf=t+u,vignette='angle=0.4+0.03*sin(2*PI*t/6)'" \
+  -vf "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,zoompan=z='1.03+0.03*sin(2*PI*on/1440)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1920x1080,eq=contrast='1.0+0.015*sin(2*PI*n/360)':brightness='0.005*cos(2*PI*n/480)',noise=alls=8:allf=t+u,vignette='angle=0.4+0.03*sin(2*PI*t/6)'" \
   -r 24 "$LOOP60"
 
 echo "[3/3] Loop x${LOOPS} + mux audio..."
