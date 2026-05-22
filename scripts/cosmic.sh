@@ -62,8 +62,8 @@ ffmpeg -y -stream_loop -1 -i "$AUDIO" \
 #  drift: x ±50px / 120s, y ±30px / 90s — desynced from zoom = floating camera
 #  eq   : contrast 15s, brightness 20s — both divide 60s -> loop seam clean
 # ──────────────────────────────────────────────────────────────────
-VF_BASE="scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,zoompan=z='1.03+0.03*sin(2*PI*on/1440)':x='iw/2-(iw/zoom/2)+50*sin(2*PI*on/2880)':y='ih/2-(ih/zoom/2)+30*cos(2*PI*on/2160)':d=1:s=1920x1080"
-VF_POST="eq=contrast='1.0+0.015*sin(2*PI*n/360)':brightness='0.005*cos(2*PI*n/480)',noise=alls=8:allf=t+u,vignette='angle=0.4+0.03*sin(2*PI*t/6)'"
+VF_BASE="scale=2112:1188,crop=1920:1080:x='(in_w-out_w)/2+80*sin(2*PI*n/1440)':y='(in_h-out_h)/2+40*cos(2*PI*n/1080)'"
+VF_POST="vignette='angle=0.35'"
 
 # ──────────────────────────────────────────────────────────────────
 # Multi-image path: <IMAGE> is a directory

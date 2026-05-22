@@ -14,34 +14,34 @@ SEED="${3:-$RANDOM}"
 DIR="$(cd "$(dirname "$0")/.." && pwd)"
 OUT="$DIR/audio/${NAME}.mp3"
 
-# Pseudo-random base frequencies derived from seed
-BASE_FREQ=$((40 + (SEED % 50)))           # 40-90 Hz drone
-PAD_FREQ=$((110 + (SEED % 60)))           # 110-170 Hz pad
-SUB_FREQ=$((20 + (SEED % 15)))            # 20-35 Hz sub
+# Calculate note frequencies based on seed (dynamic but harmonious)
+TONIC=$((110 + (SEED % 20)))            # ~110-130 Hz tonic (warm room resonance)
+DOMINANT=$(awk "BEGIN {print $TONIC * 1.5}") # Perfect 5th chord note
+OCTAVE=$(awk "BEGIN {print $TONIC * 2.0}")   # Octave chord note
+BELL_1=$(awk "BEGIN {print $TONIC * 6.0}")   # High resonant ping 1 (~660-780 Hz)
+BELL_2=$(awk "BEGIN {print $TONIC * 8.0}")   # High resonant ping 2 (~880-1040 Hz)
 
-echo ">> Synthesizing ${DUR}s ambient (seed=$SEED, base=${BASE_FREQ}Hz, pad=${PAD_FREQ}Hz)..."
-
-# Layer 1: brown noise (base atmosphere)
-# Layer 2: sine drone @ BASE_FREQ with slow LFO
-# Layer 3: pad sine @ PAD_FREQ tremolo
-# Layer 4: sub bass @ SUB_FREQ
-# Mix + reverb-like aecho + lowpass for warmth + compression
+echo ">> Synthesizing ${DUR}s liminal ambience (seed=$SEED, tonic=${TONIC}Hz)..."
 
 ffmpeg -y -nostdin \
-  -f lavfi -t "$DUR" -i "anoisesrc=c=brown:r=44100:a=0.25" \
-  -f lavfi -t "$DUR" -i "sine=frequency=${BASE_FREQ}:sample_rate=44100" \
-  -f lavfi -t "$DUR" -i "sine=frequency=${PAD_FREQ}:sample_rate=44100" \
-  -f lavfi -t "$DUR" -i "sine=frequency=${SUB_FREQ}:sample_rate=44100" \
+  -f lavfi -t "$DUR" -i "anoisesrc=c=pink:r=44100:a=0.2" \
+  -f lavfi -t "$DUR" -i "sine=frequency=${TONIC}:sample_rate=44100" \
+  -f lavfi -t "$DUR" -i "sine=frequency=${DOMINANT}:sample_rate=44100" \
+  -f lavfi -t "$DUR" -i "sine=frequency=${OCTAVE}:sample_rate=44100" \
+  -f lavfi -t "$DUR" -i "sine=frequency=${BELL_1}:sample_rate=44100" \
+  -f lavfi -t "$DUR" -i "sine=frequency=${BELL_2}:sample_rate=44100" \
   -filter_complex "
-    [0:a]volume=0.6,lowpass=f=900[base];
-    [1:a]volume=0.3,tremolo=f=0.1:d=0.4[drone];
-    [2:a]volume=0.15,tremolo=f=0.1:d=0.6,lowpass=f=2000[pad];
-    [3:a]volume=0.4[sub];
-    [base][drone][pad][sub]amix=inputs=4:duration=longest:dropout_transition=0,
-    aecho=0.7:0.5:1500:0.4,
-    lowpass=f=4500,
-    acompressor=threshold=0.3:ratio=3:attack=200:release=1000,
-    volume=1.5
+    [0:a]volume=0.6,lowpass=f=250[ac_hum];
+    [1:a]volume=0.2,tremolo=f=0.1:d=0.7[pad1];
+    [2:a]volume=0.15,tremolo=f=0.12:d=0.6[pad2];
+    [3:a]volume=0.15,tremolo=f=0.14:d=0.8[pad3];
+    [4:a]volume=0.06,tremolo=f=0.35:d=0.95[drip1];
+    [5:a]volume=0.04,tremolo=f=0.22:d=0.95[drip2];
+    [ac_hum][pad1][pad2][pad3][drip1][drip2]amix=inputs=6:duration=longest:dropout_transition=0,
+    aecho=0.8:0.7:1500|3000:0.5|0.3,
+    lowpass=f=3000,
+    acompressor=threshold=0.2:ratio=4:attack=150:release=1200,
+    volume=2.2
   " \
   -c:a libmp3lame -b:a 192k "$OUT"
 
