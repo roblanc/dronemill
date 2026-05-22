@@ -7,7 +7,7 @@
 ## Master prompt prefix (paste before each batch)
 
 ```
-Generate a 16:9 widescreen image, cinematic still frame, painterly — not photorealistic, not anime, not 3D render. Single cool light source from upper-left with deep falloff into ambient shadow; volumetric haze catching the beam; no fill light; deep blacks crushed at 5%. Wide shot, slight low angle, 35mm lens equivalent, shallow depth of field. Composition rule: vast empty negative space dominates the frame; subject (if any) occupies less than 20% of canvas; clear scale reference for unease. Mood: ominous stillness, presence implied not shown — no creatures visible, no text, no watermarks, no logos, no UI, no borders. Style triangulation: Caspar David Friedrich (Romantic solitude), Edward Hopper (architectural emptiness), Mark Rothko (color field saturation), James Turrell (atmospheric light as subject), Zdzisław Beksiński (decay texture only — avoid figural mimicry). Color palette restricted: teal, black, violet, ochre — desaturated, muted, low contrast. Suitable for a 1-hour ambient video thumbnail meant to be stared at.
+Generate a 16:9 widescreen image, photorealistic cinematic still frame, realistic photo — not painterly, not illustration, not anime, not CGI render. Harsh, cold fluorescent or incandescent lighting with realistic falloff and shadows; volumetric haze or dust motes catching the light; deep blacks and high contrast. Wide shot, slight low angle, taken on 35mm film or realistic digital sensor, shallow depth of field. Composition rule: vast empty negative space dominates the frame; disused or abandoned spaces; subject (if any) occupies less than 20% of canvas; clear scale reference for unease. Mood: ominous stillness, liminal space aesthetic, presence implied not shown — no creatures visible, no text, no watermarks, no logos, no UI, no borders. Color palette restricted: muted, low contrast, desaturated tones, natural decay, fluorescent yellows and cold greens/blues. Suitable for a 1-hour ambient video thumbnail meant to be stared at.
 ```
 
 Then paste one prompt below per image. Or paste 5 prompts at once and ask Gemini to generate each.
@@ -17,7 +17,7 @@ Then paste one prompt below per image. Or paste 5 prompts at once and ask Gemini
 ## Suffix to append to every prompt (consistency)
 
 ```
-, painterly cinematic still, volumetric haze, single light source, deep crushed shadows, muted teal black violet ochre palette, scale reference if relevant, negative space dominant, no text no logos no watermark, 16:9
+, photorealistic cinematic photo, liminal space, harsh fluorescent lighting, volumetric haze, deep shadows, muted realistic palette, negative space dominant, no text no logos no watermark, 16:9
 ```
 
 ---
@@ -25,7 +25,7 @@ Then paste one prompt below per image. Or paste 5 prompts at once and ask Gemini
 ## Negative prompt (paste once per session if interface accepts it)
 
 ```
-photorealistic, hyperrealistic, anime, manga, cartoon, 3D render, CGI look, neon, oversaturated, bright daylight, cheerful, smiling figures, text, watermark, logo, signature, UI element, frame, border, busy composition, cluttered, dramatic colorful sky, hero pose, monster face, gore, anatomical horror, jump-scare imagery
+painterly, painting, illustration, drawing, sketch, anime, manga, cartoon, 3D CGI render, game graphics, oversaturated, bright cheerful daylight, smiling figures, people, creatures, monsters, text, watermark, logo, signature, UI element, frame, border, busy composition, cluttered, dramatic colorful sky
 ```
 
 ---
