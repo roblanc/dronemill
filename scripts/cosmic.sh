@@ -41,11 +41,11 @@ ffmpeg -y -stream_loop -1 -i "$AUDIO" \
   -af "asetrate=${SR}*${PITCH},aresample=${SR},atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000,afade=t=out:st=3590:d=10" \
   -c:a aac -b:a 192k -t 3600 "$SHIFTED"
 
-echo "[2/3] Build 60s still-image clip..."
-ffmpeg -y -loop 1 -framerate 1 -t 60 -i "$IMAGE" \
+echo "[2/3] Build 60s still-image clip (24fps cover crop + analog effects)..."
+ffmpeg -y -loop 1 -framerate 24 -t 60 -i "$IMAGE" \
   -c:v libx264 -tune stillimage -preset ultrafast -pix_fmt yuv420p \
-  -vf "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=black" \
-  -r 1 "$LOOP60"
+  -vf "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,noise=alls=8:allf=t+u,vignette='angle=0.4+0.03*sin(2*PI*t/6)'" \
+  -r 24 "$LOOP60"
 
 echo "[3/3] Loop x${LOOPS} + mux audio..."
 ffmpeg -y -stream_loop "$LOOPS" -i "$LOOP60" -i "$SHIFTED" \
