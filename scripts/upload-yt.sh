@@ -26,6 +26,8 @@ if [ -n "$PUBLISH_AT" ]; then
   fi
 fi
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT="$(cd "$DIR/.." && pwd)"
 CREDS="$HOME/.youtubeuploader/client_secrets.json"
 TOKEN="$HOME/.youtubeuploader/request.token"
 
@@ -113,6 +115,47 @@ youtubeuploader \
   -thumbnail "$THUMB" \
   -secrets "$CREDS" \
   -cache "$TOKEN"
+
+# Write to upload history log
+HISTORY_FILE="$ROOT/output/upload_history.json"
+python3 -c "
+import os, json, datetime, sys
+history_file, title, description, tags, privacy, publish_at, thumbnail, local_path = sys.argv[1:9]
+entry = {
+    'timestamp': datetime.datetime.utcnow().isoformat() + 'Z',
+    'title': title,
+    'description': description,
+    'tags': [t.strip() for t in tags.split(',') if t.strip()],
+    'privacy': privacy,
+    'publish_at': publish_at if publish_at else None,
+    'thumbnail': os.path.basename(thumbnail),
+    'local_path': os.path.basename(local_path)
+}
+history = []
+if os.path.exists(history_file):
+    try:
+        with open(history_file, 'r', encoding='utf-8') as f:
+            history = json.load(f)
+            if not isinstance(history, list):
+                history = []
+    except Exception as e:
+        sys.stderr.write(f'Warn: Could not parse history file: {e}\n')
+history.append(entry)
+with open(history_file, 'w', encoding='utf-8') as f:
+    json.dump(history, f, indent=2)
+" "$HISTORY_FILE" "$TITLE" "$DESCRIPTION" "$TAGS_CSV" "$PRIVACY" "$PUBLISH_AT" "$THUMB" "$VIDEO"
+
+# Clean up local video file to save space
+if [ -f "$VIDEO" ]; then
+  rm -f "$VIDEO"
+  echo "INFO: Deleted local video file: $VIDEO to save space."
+fi
+
+# Clean up compressed thumbnail if created
+if [ -n "$COMPRESSED" ] && [ -f "$COMPRESSED" ]; then
+  rm -f "$COMPRESSED"
+  echo "INFO: Deleted temporary compressed thumbnail: $COMPRESSED"
+fi
 
 rm "$META"
 if [ -n "$PUBLISH_AT" ]; then
