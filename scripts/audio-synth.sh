@@ -27,15 +27,15 @@ echo ">> Synthesizing ${DUR}s ambient (seed=$SEED, base=${BASE_FREQ}Hz, pad=${PA
 # Layer 4: sub bass @ SUB_FREQ
 # Mix + reverb-like aecho + lowpass for warmth + compression
 
-ffmpeg -y \
+ffmpeg -y -nostdin \
   -f lavfi -t "$DUR" -i "anoisesrc=c=brown:r=44100:a=0.25" \
   -f lavfi -t "$DUR" -i "sine=frequency=${BASE_FREQ}:sample_rate=44100" \
   -f lavfi -t "$DUR" -i "sine=frequency=${PAD_FREQ}:sample_rate=44100" \
   -f lavfi -t "$DUR" -i "sine=frequency=${SUB_FREQ}:sample_rate=44100" \
   -filter_complex "
     [0:a]volume=0.6,lowpass=f=900[base];
-    [1:a]volume=0.3,tremolo=f=0.08:d=0.4[drone];
-    [2:a]volume=0.15,tremolo=f=0.05:d=0.6,lowpass=f=2000[pad];
+    [1:a]volume=0.3,tremolo=f=0.1:d=0.4[drone];
+    [2:a]volume=0.15,tremolo=f=0.1:d=0.6,lowpass=f=2000[pad];
     [3:a]volume=0.4[sub];
     [base][drone][pad][sub]amix=inputs=4:duration=longest:dropout_transition=0,
     aecho=0.7:0.5:1500:0.4,

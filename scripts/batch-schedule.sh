@@ -90,7 +90,9 @@ for i in range(processed, total):
         break
         
     if audio_col:
-        if audio_col in available_audio_queue:
+        if audio_col == "procedural":
+            pass
+        elif audio_col in available_audio_queue:
             available_audio_queue.remove(audio_col)
         elif os.path.exists(os.path.join(root_dir, "audio", audio_col)):
             pass
@@ -173,7 +175,14 @@ while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH; do
   fi
 
   # Resolve audio file
-  if [ -n "$AUDIO_COL" ]; then
+  IS_PROCEDURAL=0
+  if [ "$AUDIO_COL" = "procedural" ]; then
+    IS_PROCEDURAL=1
+    TEMP_NAME="procedural_$(date +%s)_$RANDOM"
+    echo ">> Generating procedural audio: $TEMP_NAME"
+    "$DIR/audio-synth.sh" 3600 "$TEMP_NAME" < /dev/null
+    AUDIO="$ROOT/audio/${TEMP_NAME}.mp3"
+  elif [ -n "$AUDIO_COL" ]; then
     if [ -f "$ROOT/audio/queue/$AUDIO_COL" ]; then
       AUDIO="$ROOT/audio/queue/$AUDIO_COL"
     elif [ -f "$ROOT/audio/$AUDIO_COL" ]; then
@@ -189,8 +198,11 @@ while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH; do
 
   echo ">> Audio:  $AUDIO"
 
-  if "$DIR/full-pipeline.sh" "$AUDIO" "$TITLE" "$DESC_PATH" "$PITCH" schedule; then
-    if [[ "$AUDIO" == "$ROOT/audio/queue/"* ]]; then
+  if "$DIR/full-pipeline.sh" "$AUDIO" "$TITLE" "$DESC_PATH" "$PITCH" schedule < /dev/null; then
+    if [ "$IS_PROCEDURAL" -eq 1 ]; then
+      echo ">> Cleaning up procedural audio: $AUDIO"
+      rm -f "$AUDIO"
+    elif [[ "$AUDIO" == "$ROOT/audio/queue/"* ]]; then
       mark_audio_used "$AUDIO" "$ROOT"
     else
       echo ">> Using shared audio, not moving to used/"
@@ -205,6 +217,9 @@ while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH; do
     fi
   else
     echo "ERROR: pipeline failed at row $((COUNT + 1)). State preserved at $COUNT."
+    if [ "$IS_PROCEDURAL" -eq 1 ]; then
+      rm -f "$AUDIO"
+    fi
     exit 1
   fi
 done <<< "$PARSED_ROWS"
