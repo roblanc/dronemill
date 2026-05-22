@@ -1,0 +1,13 @@
+{
+  "search_queries": [
+    "liminal space ambient",
+    "backrooms ambient sleep",
+    "dreamcore ambient focus",
+    "poolrooms ambient water sounds",
+    "dreampools ambient 1 hour"
+  ],
+  "duration_min_seconds": 1800,
+  "duration_max_seconds": 10800,
+  "max_search_results_per_query": 5,
+  "stock_threshold": 3
+}
