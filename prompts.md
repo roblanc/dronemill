@@ -7,7 +7,7 @@
 ## Master prompt prefix (paste before each batch)
 
 ```
-Generate a 16:9 widescreen image (1920x1080), cosmic horror / lovecraftian atmosphere, cinematic painterly style, dark moody lighting, atmospheric haze, no text, no watermarks, no logos, no signatures, suitable for a 1-hour ambient video thumbnail. Painted look — not photorealistic, not anime. Style references: late John Harris space art, Zdzisław Beksiński, Ralph McQuarrie, Caspar David Friedrich.
+Generate a 16:9 widescreen image, cinematic still frame, painterly — not photorealistic, not anime, not 3D render. Single cool light source from upper-left with deep falloff into ambient shadow; volumetric haze catching the beam; no fill light; deep blacks crushed at 5%. Wide shot, slight low angle, 35mm lens equivalent, shallow depth of field. Composition rule: vast empty negative space dominates the frame; subject (if any) occupies less than 20% of canvas; clear scale reference for unease. Mood: ominous stillness, presence implied not shown — no creatures visible, no text, no watermarks, no logos, no UI, no borders. Style triangulation: Caspar David Friedrich (Romantic solitude), Edward Hopper (architectural emptiness), Mark Rothko (color field saturation), James Turrell (atmospheric light as subject), Zdzisław Beksiński (decay texture only — avoid figural mimicry). Color palette restricted: teal, black, violet, ochre — desaturated, muted, low contrast. Suitable for a 1-hour ambient video thumbnail meant to be stared at.
 ```
 
 Then paste one prompt below per image. Or paste 5 prompts at once and ask Gemini to generate each.
@@ -17,7 +17,15 @@ Then paste one prompt below per image. Or paste 5 prompts at once and ask Gemini
 ## Suffix to append to every prompt (consistency)
 
 ```
-, painterly cosmic horror, atmospheric haze, low contrast, deep shadows, muted palette of teal black violet ochre, lone figure scale reference if relevant, cinematic 16:9, no text
+, painterly cinematic still, volumetric haze, single light source, deep crushed shadows, muted teal black violet ochre palette, scale reference if relevant, negative space dominant, no text no logos no watermark, 16:9
+```
+
+---
+
+## Negative prompt (paste once per session if interface accepts it)
+
+```
+photorealistic, hyperrealistic, anime, manga, cartoon, 3D render, CGI look, neon, oversaturated, bright daylight, cheerful, smiling figures, text, watermark, logo, signature, UI element, frame, border, busy composition, cluttered, dramatic colorful sky, hero pose, monster face, gore, anatomical horror, jump-scare imagery
 ```
 
 ---
