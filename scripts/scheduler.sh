@@ -10,8 +10,21 @@
 
 set -e
 
+# Auto-detect local timezone offset in hours
+OFFSET_STR=$(date +%z)
+SIGN="${OFFSET_STR:0:1}"
+HOURS="${OFFSET_STR:1:2}"
+HOURS=$(echo "$HOURS" | sed 's/^0//')
+[ -z "$HOURS" ] && HOURS=0
+
+if [ "$SIGN" = "-" ]; then
+  DETECTED_TZ_OFFSET=$(( -HOURS ))
+else
+  DETECTED_TZ_OFFSET=$(( HOURS ))
+fi
+
 HOUR_LOCAL="${1:-18}"
-TZ_OFFSET="${2:-3}"
+TZ_OFFSET="${2:-$DETECTED_TZ_OFFSET}"
 
 DIR="$(cd "$(dirname "$0")/.." && pwd)"
 STATE="$DIR/.schedule_state"

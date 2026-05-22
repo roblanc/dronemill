@@ -80,6 +80,8 @@ meta = {
     'selfDeclaredMadeForKids': False
 }
 if publish_at:
+    if publish_at.endswith('Z'):
+        publish_at = publish_at[:-1] + '-00:00'
     meta['publishAt'] = publish_at
 
 # For newer versions that expect snippet/status:

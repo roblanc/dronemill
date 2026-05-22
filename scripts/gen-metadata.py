@@ -3,8 +3,9 @@ import re
 import json
 import requests
 
-PROMPTS_FILE = "../prompts.md"
-OUTPUT_FILE = "../images/metadata.json"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROMPTS_FILE = os.path.join(SCRIPT_DIR, "../prompts.md")
+OUTPUT_FILE = os.path.join(SCRIPT_DIR, "../images/metadata.json")
 API_KEY = os.environ.get("OPENROUTER_API_KEY")
 
 def get_prompts():
@@ -14,38 +15,74 @@ def get_prompts():
     return prompts
 
 def generate_seo_metadata(prompt_text):
-    # Use OpenRouter for just a tiny bit of text (should be cheap/free or very low tokens)
-    # If the user is COMPLETELY out of credits, this might fail too.
-    # But for 100 titles, it's like 5k tokens total.
+    system_prompt = (
+        "You are a YouTube SEO expert for a cosmic horror ambience channel. "
+        "Create a compelling, mysterious, and clickable title (max 60 chars) and 3-5 tags for the given scene. "
+        "The title should reflect the scene but sound like a dark mystery or narrative hook. "
+        "Do not use generic 'Ambient Music' titles, make them sound like stories. "
+        "Respond with a JSON object containing keys: 'title' (string) and 'tags' (list of strings)."
+    )
     
-    url = "https://openrouter.ai/api/v1/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
+    # 1. Try OpenRouter if API key is present
+    if API_KEY:
+        url = "https://openrouter.ai/api/v1/chat/completions"
+        headers = {
+            "Authorization": f"Bearer {API_KEY}",
+            "Content-Type": "application/json"
+        }
+        data = {
+            "model": "google/gemini-2.0-flash-001",
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Scene description: {prompt_text}"}
+            ],
+            "response_format": { "type": "json_object" }
+        }
+        try:
+            print("  Trying OpenRouter...")
+            response = requests.post(url, headers=headers, json=data, timeout=10)
+            if response.status_code == 200:
+                result = response.json()
+                content = result["choices"][0]["message"]["content"].strip()
+                if content.startswith("```"):
+                    content = re.sub(r"^```(?:json)?\n", "", content)
+                    content = re.sub(r"\n```$", "", content).strip()
+                return json.loads(content)
+            else:
+                print(f"  OpenRouter error: {response.status_code} - {response.text}")
+        except Exception as e:
+            print(f"  OpenRouter failed: {e}")
+            
+    # 2. Try local Ollama fallback
+    print("  Trying local Ollama (phi3:latest)...")
+    url_ollama = "http://localhost:11434/v1/chat/completions"
+    headers_ollama = {
         "Content-Type": "application/json"
     }
-    
-    system_prompt = "You are a YouTube SEO expert for a cosmic horror ambience channel. Create a compelling, mysterious, and clickable title (max 60 chars) and 3-5 tags for the given scene. The title should reflect the scene but sound like a dark mystery or narrative hook. Do not use generic 'Ambient Music' titles, make them sound like stories."
-    
-    data = {
-        "model": "google/gemini-2.0-flash-001", # Very cheap model
+    data_ollama = {
+        "model": "phi3:latest",
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": f"Scene description: {prompt_text}"}
         ],
         "response_format": { "type": "json_object" }
     }
-    
     try:
-        # If no credits, fallback to template
-        response = requests.post(url, headers=headers, json=data, timeout=10)
+        response = requests.post(url_ollama, headers=headers_ollama, json=data_ollama, timeout=90)
         if response.status_code == 200:
             result = response.json()
-            content = result["choices"][0]["message"]["content"]
+            content = result["choices"][0]["message"]["content"].strip()
+            if content.startswith("```"):
+                content = re.sub(r"^```(?:json)?\n", "", content)
+                content = re.sub(r"\n```$", "", content).strip()
             return json.loads(content)
-    except:
-        pass
-    
-    # Simple fallback
+        else:
+            print(f"  Ollama error: {response.status_code} - {response.text}")
+    except Exception as e:
+        print(f"  Ollama failed: {e}")
+        
+    # 3. Simple fallback
+    print("  Using static template fallback...")
     return {
         "title": f"The Mystery of {prompt_text[:30]}...",
         "tags": ["cosmic horror", "ambient", "mystery"]

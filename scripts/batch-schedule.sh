@@ -6,8 +6,8 @@
 #
 # queue.csv format (no header):
 #   title,description_filename,pitch
-# Example:
-#   "He Was Already Waiting Behind the Door…",door.txt,0.93
+#   OR:
+#   audio_filename,title,description_filename,pitch
 #
 # Resumable via .batch_state.
 # Usage: ./batch-schedule.sh [max_per_run=5]
@@ -25,16 +25,101 @@ STATE="$ROOT/.batch_state"
 if [ ! -f "$QUEUE" ]; then
   echo "ERROR: queue.csv not found at $QUEUE"
   echo "Format per line: title,description_filename,pitch"
+  echo "Or: audio_filename,title,description_filename,pitch"
   exit 1
 fi
 
 PROCESSED=0
 [ -f "$STATE" ] && PROCESSED=$(cat "$STATE")
-TOTAL=$(grep -cve '^\s*$' "$QUEUE")
-REMAINING=$((TOTAL - PROCESSED))
 
-# Pre-flight: count queue inventory
-read AUDIO_AVAIL IMG_AVAIL <<< "$(count_queue "$ROOT")"
+# Run Python parser to perform pre-flight checks and output standardized TSV
+PARSED_DATA=$(python3 - "$QUEUE" "$ROOT" "$PROCESSED" "$MAX" <<'EOF'
+import os, csv, sys
+
+queue_path = sys.argv[1]
+root_dir = sys.argv[2]
+processed = int(sys.argv[3])
+max_limit = int(sys.argv[4])
+
+# Get available images
+images_dir = os.path.join(root_dir, "images", "queue")
+if os.path.exists(images_dir):
+    images = sorted([f for f in os.listdir(images_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))])
+else:
+    images = []
+
+# Get available audio files in audio/queue/
+audio_queue_dir = os.path.join(root_dir, "audio", "queue")
+if os.path.exists(audio_queue_dir):
+    audio_queue_files = sorted([f for f in os.listdir(audio_queue_dir) if f.lower().endswith(('.mp3', '.wav', '.flac', '.m4a'))])
+else:
+    audio_queue_files = []
+
+available_audio_queue = list(audio_queue_files)
+available_images = list(images)
+
+rows = []
+try:
+    with open(queue_path, "r", encoding="utf-8") as f:
+        for r in csv.reader(f):
+            if not r or not any(x.strip() for x in r):
+                continue
+            r = [x.strip() for x in r]
+            if len(r) == 3:
+                rows.append(("", r[0], r[1], r[2]))
+            elif len(r) >= 4:
+                rows.append((r[0], r[1], r[2], r[3]))
+except Exception as e:
+    sys.stderr.write(f"Error parsing CSV: {e}\n")
+    sys.exit(1)
+
+total = len(rows)
+possible = 0
+run_count = 0
+
+for i in range(processed, total):
+    if run_count >= max_limit:
+        break
+    
+    audio_col, title, desc, pitch = rows[i]
+    desc_path = os.path.join(root_dir, "descriptions", desc)
+    if not os.path.exists(desc_path):
+        continue
+        
+    if not available_images:
+        break
+        
+    if audio_col:
+        if audio_col in available_audio_queue:
+            available_audio_queue.remove(audio_col)
+        elif os.path.exists(os.path.join(root_dir, "audio", audio_col)):
+            pass
+        else:
+            break
+    else:
+        if not available_audio_queue:
+            break
+        available_audio_queue.pop(0)
+        
+    available_images.pop(0)
+    possible += 1
+    run_count += 1
+
+print(total)
+print(possible)
+print(len(audio_queue_files))
+print(len(images))
+for r in rows:
+    print("\t".join(r))
+EOF
+)
+
+TOTAL=$(echo "$PARSED_DATA" | sed -n '1p')
+POSSIBLE=$(echo "$PARSED_DATA" | sed -n '2p')
+AUDIO_AVAIL=$(echo "$PARSED_DATA" | sed -n '3p')
+IMG_AVAIL=$(echo "$PARSED_DATA" | sed -n '4p')
+PARSED_ROWS=$(echo "$PARSED_DATA" | tail -n +5)
+REMAINING=$((TOTAL - PROCESSED))
 
 echo ">> Queue:    $TOTAL total rows, $PROCESSED done, $REMAINING remaining"
 echo ">> Audio:    $AUDIO_AVAIL files in audio/queue/"
@@ -47,29 +132,24 @@ if [ "$REMAINING" -le 0 ]; then
   exit 0
 fi
 
-if [ "$AUDIO_AVAIL" -eq 0 ]; then
-  echo "ERROR: audio/queue/ empty. Drop .mp3 files there first."
-  exit 1
-fi
-
 if [ "$IMG_AVAIL" -eq 0 ]; then
   echo "ERROR: images/queue/ empty. Drop .png/.jpg files there first."
   exit 1
 fi
 
-POSSIBLE=$REMAINING
-[ "$AUDIO_AVAIL" -lt "$POSSIBLE" ] && POSSIBLE=$AUDIO_AVAIL
-[ "$IMG_AVAIL" -lt "$POSSIBLE" ] && POSSIBLE=$IMG_AVAIL
-[ "$MAX" -lt "$POSSIBLE" ] && POSSIBLE=$MAX
+if [ "$POSSIBLE" -eq 0 ] && [ "$REMAINING" -gt 0 ]; then
+  echo "ERROR: Cannot schedule any videos. Check that description files exist and you have enough audio/images in queue."
+  exit 1
+fi
 
-if [ "$POSSIBLE" -lt "$MAX" ]; then
-  echo "WARN: limited to $POSSIBLE videos this run (queue/audio/images bottleneck)"
+if [ "$POSSIBLE" -lt "$MAX" ] && [ "$POSSIBLE" -lt "$REMAINING" ]; then
+  echo "WARN: limited to $POSSIBLE videos this run (queue/audio/images bottleneck or missing description files)"
 fi
 echo ""
 
 COUNT=0
 RUN_COUNT=0
-while IFS=, read -r TITLE DESC PITCH; do
+while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH; do
   if [ "$COUNT" -lt "$PROCESSED" ]; then
     COUNT=$((COUNT + 1))
     continue
@@ -79,9 +159,6 @@ while IFS=, read -r TITLE DESC PITCH; do
     break
   fi
 
-  TITLE=$(echo "$TITLE" | sed 's/^"//;s/"$//' | xargs)
-  DESC=$(echo "$DESC" | xargs)
-  PITCH=$(echo "$PITCH" | xargs)
   [ -z "$PITCH" ] && PITCH="0.93"
 
   echo "=========================================="
@@ -95,11 +172,29 @@ while IFS=, read -r TITLE DESC PITCH; do
     continue
   fi
 
-  AUDIO=$(next_audio "$ROOT")
+  # Resolve audio file
+  if [ -n "$AUDIO_COL" ]; then
+    if [ -f "$ROOT/audio/queue/$AUDIO_COL" ]; then
+      AUDIO="$ROOT/audio/queue/$AUDIO_COL"
+    elif [ -f "$ROOT/audio/$AUDIO_COL" ]; then
+      AUDIO="$ROOT/audio/$AUDIO_COL"
+    else
+      echo "ERROR: audio file not found: $AUDIO_COL (checked in audio/queue/ and audio/) — skipping row"
+      COUNT=$((COUNT + 1))
+      continue
+    fi
+  else
+    AUDIO=$(next_audio "$ROOT")
+  fi
+
   echo ">> Audio:  $AUDIO"
 
   if "$DIR/full-pipeline.sh" "$AUDIO" "$TITLE" "$DESC_PATH" "$PITCH" schedule; then
-    mark_audio_used "$AUDIO" "$ROOT"
+    if [[ "$AUDIO" == "$ROOT/audio/queue/"* ]]; then
+      mark_audio_used "$AUDIO" "$ROOT"
+    else
+      echo ">> Using shared audio, not moving to used/"
+    fi
     COUNT=$((COUNT + 1))
     RUN_COUNT=$((RUN_COUNT + 1))
     echo "$COUNT" > "$STATE"
@@ -112,7 +207,7 @@ while IFS=, read -r TITLE DESC PITCH; do
     echo "ERROR: pipeline failed at row $((COUNT + 1)). State preserved at $COUNT."
     exit 1
   fi
-done < "$QUEUE"
+done <<< "$PARSED_ROWS"
 
 DONE=$(cat "$STATE")
 LEFT=$((TOTAL - DONE))

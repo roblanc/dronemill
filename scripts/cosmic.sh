@@ -29,10 +29,15 @@ OUT="$ROOT/output/${SLUG}.mp4"
 DUR=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$AUDIO")
 LOOPS=$(awk "BEGIN {print int($DUR / 60) + 1}")
 
-echo "[1/3] Pitch shift + AAC encode (pitch=$PITCH)..."
+SR=$(ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of default=noprint_wrappers=1:nokey=1 "$AUDIO")
+if [ -z "$SR" ] || ! [[ "$SR" =~ ^[0-9]+$ ]]; then
+  SR=44100
+fi
+
+echo "[1/3] Pitch shift + AAC encode (pitch=$PITCH, sample_rate=$SR)..."
 ffmpeg -y -i "$AUDIO" \
-  -af "asetrate=44100*${PITCH},aresample=44100,atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000" \
-  -c:a aac -b:a 128k -ac 1 "$SHIFTED"
+  -af "asetrate=${SR}*${PITCH},aresample=${SR},atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000" \
+  -c:a aac -b:a 192k "$SHIFTED"
 
 echo "[2/3] Build 60s still-image clip..."
 ffmpeg -y -loop 1 -framerate 1 -t 60 -i "$IMAGE" \
