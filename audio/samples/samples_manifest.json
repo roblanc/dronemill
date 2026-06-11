@@ -1,0 +1,261 @@
+[
+  {
+    "file": "01_empty_mall.mp3",
+    "slug": "01_empty_mall",
+    "theme": "Empty mall / scări",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "02_airport_terminal.mp3",
+    "slug": "02_airport_terminal",
+    "theme": "Airport terminal gol",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "03_laundromat.mp3",
+    "slug": "03_laundromat",
+    "theme": "Laundromat / uscător",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "04_poolrooms.mp3",
+    "slug": "04_poolrooms",
+    "theme": "Pool rooms / piscină interioară",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "05_infinite_hotel.mp3",
+    "slug": "05_infinite_hotel",
+    "theme": "Infinite hotel / cabină",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "06_library.mp3",
+    "slug": "06_library",
+    "theme": "Library / sală liniștită",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "07_train_station.mp3",
+    "slug": "07_train_station",
+    "theme": "Train station / gară",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "08_suburban_night.mp3",
+    "slug": "08_suburban_night",
+    "theme": "Suburban night / noapte suburbie",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "09_classroom.mp3",
+    "slug": "09_classroom",
+    "theme": "Classroom / birou gol",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "10_playplace.mp3",
+    "slug": "10_playplace",
+    "theme": "Playplace / sală goală reverb",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "11_parking_garage.mp3",
+    "slug": "11_parking_garage",
+    "theme": "Parking garage / subsol",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "12_cosmic_horror.mp3",
+    "slug": "12_cosmic_horror",
+    "theme": "Cosmic horror / submarin",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "13_synth_warm.mp3",
+    "slug": "13_synth_warm",
+    "theme": "Synth warm drone",
+    "source": "Procedural",
+    "lufs_target": -18
+  },
+  {
+    "file": "14_synth_cold.mp3",
+    "slug": "14_synth_cold",
+    "theme": "Synth cold drone",
+    "source": "Procedural",
+    "lufs_target": -18
+  },
+  {
+    "file": "15_synth_dread.mp3",
+    "slug": "15_synth_dread",
+    "theme": "Synth dread drone",
+    "source": "Procedural",
+    "lufs_target": -18
+  },
+  {
+    "file": "16_escalator.mp3",
+    "slug": "16_escalator",
+    "theme": "Escalator / hum mecanic",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "17_office_night.mp3",
+    "slug": "17_office_night",
+    "theme": "Office night / birou noapte",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "18_hospital_corridor.mp3",
+    "slug": "18_hospital_corridor",
+    "theme": "Hospital corridor / spital",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "19_supermarket_closed.mp3",
+    "slug": "19_supermarket_closed",
+    "theme": "Supermarket închis",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "20_metro_tunnel.mp3",
+    "slug": "20_metro_tunnel",
+    "theme": "Metro tunnel / metrou",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "21_elevator_shaft.mp3",
+    "slug": "21_elevator_shaft",
+    "theme": "Elevator shaft / lift",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "22_rain_window.mp3",
+    "slug": "22_rain_window",
+    "theme": "Rain on window / ploaie",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "23_server_room.mp3",
+    "slug": "23_server_room",
+    "theme": "Server room / datacenter",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "24_museum_hall.mp3",
+    "slug": "24_museum_hall",
+    "theme": "Museum hall / muzeu gol",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "25_church_empty.mp3",
+    "slug": "25_church_empty",
+    "theme": "Church empty / biserică",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "26_backrooms.mp3",
+    "slug": "26_backrooms",
+    "theme": "Backrooms / liminal fluorescent",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "27_wind_desolate.mp3",
+    "slug": "27_wind_desolate",
+    "theme": "Wind desolate / vânt pustiu",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "28_aquarium.mp3",
+    "slug": "28_aquarium",
+    "theme": "Aquarium / acvariu pump",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "29_humid_bathroom.mp3",
+    "slug": "29_humid_bathroom",
+    "theme": "Bathroom vent / baie ventilator",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "30_void_deep.mp3",
+    "slug": "30_void_deep",
+    "theme": "Void deep / spațiu profund",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "31_synth_void.mp3",
+    "slug": "31_synth_void",
+    "theme": "Synth void drone",
+    "source": "Procedural",
+    "lufs_target": -18
+  },
+  {
+    "file": "32_synth_pulse.mp3",
+    "slug": "32_synth_pulse",
+    "theme": "Synth pulse drone",
+    "source": "Procedural",
+    "lufs_target": -18
+  },
+  {
+    "file": "33_hotel_lobby.mp3",
+    "slug": "33_hotel_lobby",
+    "theme": "Hotel lobby / hol hotel gol",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "34_cave_drip.mp3",
+    "slug": "34_cave_drip",
+    "theme": "Cave drip / peșteră picături",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "35_night_drive.mp3",
+    "slug": "35_night_drive",
+    "theme": "Night drive / drum noapte",
+    "source": "Freesound",
+    "lufs_target": -18
+  },
+  {
+    "file": "36_synth_haze.mp3",
+    "slug": "36_synth_haze",
+    "theme": "Synth haze drone",
+    "source": "Procedural",
+    "lufs_target": -18
+  },
+  {
+    "file": "37_synth_ethereal.mp3",
+    "slug": "37_synth_ethereal",
+    "theme": "Synth ethereal drone",
+    "source": "Procedural",
+    "lufs_target": -18
+  }
+]

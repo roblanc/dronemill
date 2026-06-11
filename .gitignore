@@ -10,6 +10,8 @@ __pycache__/
 audio/queue/*
 audio/used/*
 audio/*.mp3
+!audio/samples/*.mp3
+audio/samples/raw/
 audio/*.wav
 audio/*.flac
 images/queue/*

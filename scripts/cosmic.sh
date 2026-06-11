@@ -7,7 +7,7 @@
 #
 # Visual effects: pseudo-Ken-Burns drift + zoom breathing + light eq breathing
 #                 + procedural fog overlay + grain + vignette.
-# Audio effects:  pitch shift + lowpass + loudnorm (YouTube target) + 10s fade-out.
+# Audio effects:  pitch shift + lowpass + loudnorm (ambient target, see _lib.sh) + 10s fade-out.
 
 set -e
 
@@ -24,6 +24,9 @@ if [ -z "$AUDIO" ] || [ -z "$IMAGE" ] || [ -z "$TITLE" ]; then
   echo "Usage: $0 <audio> <image_or_folder> <title> [pitch=0.93]"
   exit 1
 fi
+
+mkdir -p "$ROOT/output"
+require_disk_space 10 "$ROOT/output"
 
 SLUG=$(slugify "$TITLE")
 SHIFTED="$ROOT/output/${SLUG}_shifted.aac"
@@ -51,9 +54,9 @@ if [ -z "$SR" ] || ! [[ "$SR" =~ ^[0-9]+$ ]]; then
   SR=44100
 fi
 
-echo "[1/3] Pitch shift + AAC encode + loudnorm (pitch=$PITCH, sr=$SR, 1h target)..."
+echo "[1/3] Pitch shift + AAC encode + loudnorm I=${LOUDNORM_I} (pitch=$PITCH, sr=$SR, 1h target)..."
 ffmpeg -y -stream_loop -1 -i "$AUDIO" \
-  -af "asetrate=${SR}*${PITCH},aresample=${SR},atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000,loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=out:st=3590:d=10" \
+  -af "asetrate=${SR}*${PITCH},aresample=${SR},atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000,${LOUDNORM_AF},afade=t=out:st=3590:d=10" \
   -c:a aac -b:a 192k -t 3600 "$SHIFTED"
 
 # ──────────────────────────────────────────────────────────────────

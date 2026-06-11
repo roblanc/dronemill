@@ -87,3 +87,26 @@ count_queue() {
   I=$(find "$DIR/images/queue" -maxdepth 1 \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) -type f 2>/dev/null | wc -l | xargs)
   echo "$A $I"
 }
+
+# Loudness for 1h liminal/ambient YouTube (sleep, study, background).
+# -18 LUFS: quieter than YouTube music norm (-14); room tones stay soft, not fatiguing.
+# Override via .env: LOUDNORM_I=-16 LOUDNORM_TP=-2.0
+LOUDNORM_I="${LOUDNORM_I:--18}"
+LOUDNORM_TP="${LOUDNORM_TP:--2.0}"
+LOUDNORM_LRA="${LOUDNORM_LRA:-11}"
+LOUDNORM_AF="loudnorm=I=${LOUDNORM_I}:TP=${LOUDNORM_TP}:LRA=${LOUDNORM_LRA}"
+
+require_disk_space() {
+  # Bail before a ~2.6GB render if the volume is too tight for mux scratch files.
+  local min_gb="${1:-10}"
+  local path="${2:-.}"
+  local avail_kb min_kb avail_gb
+
+  avail_kb=$(df -k "$path" | awk 'NR==2 {print $4}')
+  min_kb=$((min_gb * 1024 * 1024))
+  if [ "$avail_kb" -lt "$min_kb" ]; then
+    avail_gb=$((avail_kb / 1024 / 1024))
+    echo "ERROR: need at least ${min_gb}GB free on $(df -k "$path" | awk 'NR==2 {print $1}'); have ~${avail_gb}GB" >&2
+    return 1
+  fi
+}
