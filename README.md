@@ -140,6 +140,54 @@ looping it without re-encoding against long-form audio:
   output/lighthouse-2h.wav output/lighthouse-2h.mp4 7200 120
 ```
 
+### Midjourney liminal animation workflow
+
+This workflow starts with a Midjourney still image, uses Midjourney's manual
+animation feature, and exports the result as MP4. Keep the downloaded MP4 under
+`assets/source-videos/`; source media there is intentionally excluded from Git.
+
+The prompt used for the first glass-landscape sample was:
+
+```text
+liminal atmosphere outside a grass field with hills and trees made of sparkling glass, raw, interesting perspective, minimalistic, abstract
+```
+
+Suggested process:
+
+1. Generate and select the still image in Midjourney.
+2. Use manual animation, keeping motion restrained and the camera stable enough
+   to reverse naturally.
+3. Export the animation as MP4 and place it in `assets/source-videos/`.
+4. Turn it into a forward/reverse loop. The script removes duplicated endpoint
+   frames so the animation does not pause at either reversal:
+
+```bash
+./scripts/pingpong-loop.sh \
+  assets/source-videos/liminal-glass-landscape.mp4 \
+  output/liminal-glass-pingpong.mp4 31
+```
+
+5. Generate matching procedural ambience, then mux it with the animation:
+
+```bash
+./scripts/liminal-glass-audio.sh output/liminal-glass-audio.wav 32
+
+ffmpeg -y -i output/liminal-glass-pingpong.mp4 \
+  -i output/liminal-glass-audio.wav -map 0:v:0 -map 1:a:0 \
+  -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart \
+  output/liminal-glass-soundtracked.mp4
+```
+
+The sound design uses outdoor air, a quiet suspended harmonic bed, and sparse
+glass-like tones at 48 kHz and `-18 LUFS`. It is generated locally and does not
+use copyrighted recordings.
+
+Future browser-assisted Midjourney generation may automate the image and manual
+animation steps if an authenticated browser session and browser-control tooling
+are available at that time. Browser access is not assumed or stored by this
+repository; confirm the prompt, account access, and generation costs before an
+automated run.
+
 ### Publish a review sample to Jellyfin
 
 Combine an image and audio preview into a lightweight 720p review video. Jellyfin
