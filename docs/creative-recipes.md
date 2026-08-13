@@ -47,9 +47,10 @@ licensing so future batches can reuse or combine proven choices.
 - Motion treatment: an extremely restrained camera breath for evaluation;
   prefer scene-level condensation and leaf motion if an animated source arrives.
 - Sound engine: `scripts/greenhouse-audio.sh`, using a warm C major/add-nine
-  palette with slow independent partials and sparse high glass resonances.
-- Rejected elements: continuous rain, generic noise, birds, obvious water-drop
-  samples, dark sub-drone, and the Glass Hills musicbox palette.
+  palette with slow independent continuous partials.
+- Rejected elements: continuous rain, generic noise, birds, water-drop samples,
+  beeps, blips, isolated transients, dark sub-drone, and the Glass Hills
+  musicbox palette.
 - Master: 48 kHz stereo, target `-24 LUFS`, with generous true-peak headroom.
 - Review sample: 90 seconds; render unique continuous audio for production.
 - Packaging: clean or very light film-soft treatment, no VHS decay.

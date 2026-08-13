@@ -21,6 +21,13 @@ Choose the following from the image rather than from a fixed template:
 - Harmonic language, environmental layers, duration, and mastering target.
 - Thumbnail frame and public-facing description.
 
+## Default Audio Rule
+
+Do not add beeps, blips, pings, chimes, isolated droplets, notification-like
+tones, or random one-shot sounds. Prefer continuous evolving harmony and
+environmental texture whose source is clearly implied by the scene. Exceptions
+require explicit user approval.
+
 Use `docs/title-and-visual-packaging.md` for title and overlay selection.
 
 ## Review Gate
