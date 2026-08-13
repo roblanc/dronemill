@@ -41,3 +41,26 @@ low drone, and targets `-24 LUFS` so quiet material remains quiet.
 - [Kankyo Ongaku: Japanese Ambient, Environmental and New Age Music 1980-1990](https://kankyongaku.bandcamp.com/album/kanky-ongaku-japanese-ambient-environmental-new-age-music-1980-1990)
 - [Hiroshi Yoshimura: GREEN](https://hiroshiyoshimura.bandcamp.com/album/green)
 - [Belbury Poly: The Willows](https://ghostbox.greedbag.com/buy/the-willows-0/)
+
+## Generator Evaluation
+
+The following projects were checked for actual export support and licensing. A
+public GitHub repository is not automatically open-source or safe for monetized
+video.
+
+| Project | Status for DroneMill | Notes |
+| --- | --- | --- |
+| [LatentScore](https://github.com/prabal-rje/latentscore) | Primary engine | Apache-2.0, CPU-only procedural WAV generation, already integrated. Text selects a procedural configuration; it is not neural text-to-waveform synthesis. |
+| [musicbox](https://github.com/benaskins/musicbox) | Candidate for A/B tests | Sample-free Rust synthesis and arbitrary-duration WAV rendering. Repository is CC BY-SA 4.0, so attribution and ShareAlike implications must be resolved before publication. |
+| [ambient-gen](https://github.com/beowulf-audio/ambient-gen) | Conditional | Exports MIDI and MP3, but generation is TUI-driven and bundled soundfonts have separate licensing. Use only an independently reviewed soundfont. |
+| [focusmusic](https://github.com/petrbrzek/focusmusic) | Not yet | Real-time procedural playback without an offline renderer. It claims MIT in metadata but has no license file. |
+| [AmbientGarden](https://github.com/pac-dev/AmbientGarden) | Reference only | Useful procedural patch design, but no repository license. |
+| [AmbientGardenAlbum](https://github.com/pac-dev/AmbientGardenAlbum) | Reference only | Rebuilds an authored album and has no repository license; it is not a general soundtrack generator. |
+| [Moodist](https://github.com/remvze/moodist) | Do not integrate | Soundboard rather than music generator. Bundled recordings use asset-specific licenses and it has no mix exporter. |
+| [Space](https://github.com/spitlo/space) | Do not integrate | No license, sample-based, and no implemented audio export. |
+| [ambient_music_generator](https://github.com/timothymeehan/ambient_music_generator) | Do not integrate | Unlicensed, obsolete SampleRNN stack that requires training audio and introduces source-copyright risk. |
+| [AudioCraft](https://github.com/facebookresearch/audiocraft) | Do not use released weights | Framework code is MIT, but Meta's released MusicGen weights are CC BY-NC 4.0 and unsuitable for monetized YouTube output. |
+
+Preferred next experiment: render several `musicbox` samples locally and compare
+their musical vocabulary with LatentScore and the current procedural generator.
+Do not publish those renders until the CC BY-SA obligations have been reviewed.
