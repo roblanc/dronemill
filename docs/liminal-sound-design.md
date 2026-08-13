@@ -9,7 +9,8 @@ scene into horror.
 
 Bright outdoor scenes need a different palette from Backrooms interiors:
 
-- Start with broad open air, grass movement, and substantial empty space.
+- Start with substantial empty space. Add environmental sound only when the
+  image specifically needs it; synthetic noise beds easily become distracting.
 - Use a restrained suspended major, add-nine, or Lydian harmony without a clear
   cadence.
 - Keep events sparse and irregular. A constant sparkle layer stops feeling
@@ -27,8 +28,9 @@ an indoor horror setting.
 
 For the Midjourney glass landscape, target roughly 70 percent serene wonder, 20
 percent solitude, and 10 percent beautiful impossibility. The current generator
-uses open D Lydian/add-nine color, sparse resonances, an unanswered distant call,
-and an intentional environmental discontinuity.
+uses clean open D Lydian/add-nine color and a sparse, incomplete melodic phrase.
+It deliberately contains no continuous noise, synthetic wind, bird effects, or
+low drone, and targets `-24 LUFS` so quiet material remains quiet.
 
 ## References
 

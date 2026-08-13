@@ -179,10 +179,10 @@ ffmpeg -y -i output/liminal-glass-pingpong.mp4 \
 ```
 
 The sound design treats this as bright pastoral liminality rather than indoor
-Backrooms horror. It uses open air, silence, a quiet suspended major/Lydian
-harmony, sparse irregular resonances, and one distant unanswered call. Subtle
-causal errors create unease without an ominous drone or constant glass effects.
-The 48 kHz, `-18 LUFS` audio is generated locally without copyrighted recordings.
+Backrooms horror. It uses silence, a quiet suspended major/Lydian harmony, and a
+sparse incomplete melody without a continuous noise bed, synthetic wind, birds,
+an ominous low drone, or constant glass effects. The 48 kHz, `-24 LUFS` audio is
+generated locally without copyrighted recordings.
 See `docs/liminal-sound-design.md` for the research-backed sound principles and
 references used by this workflow.
 
