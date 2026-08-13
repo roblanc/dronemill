@@ -54,3 +54,41 @@ licensing so future batches can reuse or combine proven choices.
 - Master: 48 kHz stereo, target `-24 LUFS`, with generous true-peak headroom.
 - Review sample: 90 seconds; render unique continuous audio for production.
 - Packaging: clean or very light film-soft treatment, no VHS decay.
+
+## Scene-Authored Continuous Sound
+
+The renderer `scripts/scene-sound-v2.sh` builds complex environments from
+continuous layers only. Each layer has its own deterministic seed, frequency
+range, spatial position, and slow non-matching envelope. This creates motion and
+depth without beeps, blips, chimes, isolated impacts, or random one-shot events.
+
+### Noonbloom
+
+- Ground layer: low wind pressure following the white terrain.
+- Body layer: plant-height pink-noise wind with restrained stereo width.
+- Air layer: high, diffuse movement above the flowers.
+- Material layer: a continuous narrow-band membrane resonance suggesting
+  translucent petals under tension, never a struck or chiming sound.
+- Harmony: an uneasy F-sharp Lydian/add-nine field whose partials breathe on
+  independent 61- to 97-second cycles.
+- Master: target `-22 LUFS`, LRA 10, true peak below `-3 dBFS`.
+
+### The Tide That Climbed Into the Sky
+
+- Ground layer: submerged low pressure beneath the shoreline.
+- Shore layer: ordinary horizontal surf with two overlapping swell periods.
+- Vertical layer: broad upper-frequency water movement assigned to the wall.
+- Mass layer: darker mid-band turbulence moving on much longer cycles.
+- Harmony: unresolved A-based low architecture with no horn, creature, impact,
+  crack, or discrete wave event.
+- Master: target `-20 LUFS`, LRA 11, true peak below `-2.5 dBFS`.
+
+### Orbital Ceramics Workshop
+
+- Hull layer: low structural transfer through the habitat.
+- Ventilation layer: stable room-scale airflow.
+- Convection layer: continuous upper movement from kiln heat.
+- Kiln layer: warm filtered combustion resonance without pops or tool sounds.
+- Harmony: C major/add-nine field with gentle chorus and slow orbital-scale
+  balance changes; no machinery alerts or pottery handling effects.
+- Master: target `-21 LUFS`, LRA 9, true peak below `-3 dBFS`.
