@@ -131,6 +131,15 @@ downsampling and uses the profile's `fps` value to avoid low-frame-rate judder.
 `camera_breathe_amount` and `camera_breathe_seconds` control a prolonged eased
 inhale/exhale zoom; separate drift controls add only slow horizontal motion.
 
+Render a long-form full-screen production by creating a reusable visual cycle and
+looping it without re-encoding against long-form audio:
+
+```bash
+./scripts/scene-production.sh \
+  profiles/lighthouse.json images/queue/111_lighthouse_fog.png \
+  output/lighthouse-2h.wav output/lighthouse-2h.mp4 7200 120
+```
+
 ### Publish a review sample to Jellyfin
 
 Combine an image and audio preview into a lightweight 720p review video. Jellyfin

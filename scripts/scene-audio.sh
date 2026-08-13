@@ -36,8 +36,8 @@ ffmpeg -y -nostdin \
     [1:a]lowpass=f=430,volume='if(isnan(t),${AUDIO_OCEAN_VOLUME},${AUDIO_OCEAN_VOLUME}*(0.64+0.36*sin(2*PI*t/13)))':eval=frame,aformat=channel_layouts=stereo[ocean];
     [2:a]highpass=f=380,lowpass=f=3600,tremolo=f=0.105:d=0.88,volume=${AUDIO_SURF_VOLUME},aecho=0.8:0.35:730:0.18,aformat=channel_layouts=stereo[surf];
     [3:a]highpass=f=120,lowpass=f=1800,volume='if(isnan(t),${AUDIO_WIND_VOLUME},${AUDIO_WIND_VOLUME}*(0.7+0.3*sin(2*PI*t/24)))':eval=frame,haas=left_delay=2.1:right_delay=14.7,lowpass=f=2400[wind];
-    [4:a]volume=${AUDIO_FOGHORN_VOLUME}:enable='between(t,22,30)+between(t,78,87)+between(t,142,152)'[h1];
-    [5:a]volume=0.022:enable='between(t,22,30)+between(t,78,87)+between(t,142,152)'[h2];
+    [4:a]volume=${AUDIO_FOGHORN_VOLUME}:enable='between(mod(t,241),22,30)+between(mod(t,313),78,87)+between(mod(t,419),142,152)'[h1];
+    [5:a]volume=0.022:enable='between(mod(t,241),22,30)+between(mod(t,313),78,87)+between(mod(t,419),142,152)'[h2];
     [h1][h2]amix=inputs=2:normalize=0,aecho=0.85:0.45:1100|2600:0.25|0.12,lowpass=f=900,aformat=channel_layouts=stereo[horn];
     [music][ocean][surf][wind][horn]amix=inputs=5:normalize=0:dropout_transition=3,
     highpass=f=25,lowpass=f=14000,acompressor=threshold=0.32:ratio=2.5:attack=120:release=900,
