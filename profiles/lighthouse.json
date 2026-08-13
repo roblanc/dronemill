@@ -5,9 +5,11 @@
   "mood": "isolated_dread",
   "visual": {
     "fog_opacity": 0.10,
+    "fog_playback_speed": 0.70,
     "fog_speed": 0.003,
     "fog_scale": 0.012,
     "rain_opacity": 0.10,
+    "rain_playback_speed": 0.72,
     "rain_density": 0.997,
     "rain_angle": 78,
     "rain_length": 14,

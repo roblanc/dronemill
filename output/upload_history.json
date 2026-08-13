@@ -256,5 +256,22 @@
     "publish_at": null,
     "thumbnail": "lighthouse-overlay-tuned-10s.jpg",
     "local_path": "lighthouse-overlay-motion-tuned-20s.mp4"
+  },
+  {
+    "timestamp": "2026-08-13T12:02:24.241415Z",
+    "title": "PRIVATE TEST | lighthouse real fog rain overlays | DroneMill",
+    "description": "Private DroneMill workflow test.\n\nThree-minute side-by-side comparison of the current lighthouse treatment and a scene-aware treatment with procedural ocean, surf, coastal wind, foghorns, fog, rain, slow camera drift, and light modulation.",
+    "tags": [
+      "DroneMill",
+      "lighthouse",
+      "real fog overlay",
+      "real rain overlay",
+      "ocean motion",
+      "test"
+    ],
+    "privacy": "private",
+    "publish_at": null,
+    "thumbnail": "lighthouse-real-overlay-10.jpg",
+    "local_path": "lighthouse-real-overlays-20s.mp4"
   }
 ]

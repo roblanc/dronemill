@@ -123,7 +123,10 @@ by side for review.
 These first scene renderers support the lighthouse profile. Environmental layers
 are generated locally and require no downloaded field recordings. Fog opacity,
 drift speed, rain density/direction, wave strength/speed, and the feathered water
-region are adjustable under `visual` in the profile JSON.
+region are adjustable under `visual` in the profile JSON. If
+`assets/youtube-overlays/fog-overlay.mp4` and `rain-overlay.mp4` exist, the
+renderer uses those clips with adjustable playback speed; otherwise it falls back
+to procedural fog and rain.
 
 ### Publish a review sample to Jellyfin
 

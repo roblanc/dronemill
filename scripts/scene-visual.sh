@@ -25,11 +25,27 @@ fi
 
 mkdir -p "$(dirname "$OUTPUT")"
 FRAMES=$((DURATION * 12))
+FOG_OVERLAY="$ROOT/assets/youtube-overlays/fog-overlay.mp4"
+RAIN_OVERLAY="$ROOT/assets/youtube-overlays/rain-overlay.mp4"
+
+if [ -f "$FOG_OVERLAY" ] && [ -f "$RAIN_OVERLAY" ]; then
+  FOG_INPUT=(-stream_loop -1 -i "$FOG_OVERLAY")
+  RAIN_INPUT=(-stream_loop -1 -i "$RAIN_OVERLAY")
+  FOG_FILTER="[1:v]setpts=PTS/${VISUAL_FOG_PLAYBACK_SPEED},fps=12,scale=640:720:force_original_aspect_ratio=increase,crop=640:720,eq=saturation=0.15:brightness=-0.025,format=yuv420p[fog]"
+  RAIN_FILTER="[2:v]setpts=PTS/${VISUAL_RAIN_PLAYBACK_SPEED},fps=12,scale=640:720:force_original_aspect_ratio=increase,crop=640:720,eq=saturation=0,curves=all='0/0 0.18/0 0.48/0.24 1/0.85',format=yuv420p[rain]"
+  echo "Using external fog and rain overlays"
+else
+  FOG_INPUT=(-f lavfi -t "$DURATION" -i "perlin=s=640x720:r=12:octaves=5:persistence=0.52:xscale=${VISUAL_FOG_SCALE}:yscale=0.007:tscale=0.025:random_mode=seed:seed=41")
+  RAIN_INPUT=(-f lavfi -t "$DURATION" -i "nullsrc=s=640x720:r=12")
+  FOG_FILTER="[1:v]scroll=horizontal=${VISUAL_FOG_SPEED},gblur=sigma=22,curves=all='0/0 0.38/0 0.56/0.35 0.75/0.72 1/0.88',format=yuv420p[fog]"
+  RAIN_FILTER="[2:v]geq=lum='if(gt(random(1),${VISUAL_RAIN_DENSITY}),255,0)':cb=128:cr=128,dblur=angle=${VISUAL_RAIN_ANGLE}:radius=${VISUAL_RAIN_LENGTH},tmix=frames=3:weights='1 0.55 0.25',format=yuv420p[rain]"
+  echo "Using procedural fog and rain overlays"
+fi
 
 ffmpeg -y -nostdin \
   -loop 1 -framerate 12 -t "$DURATION" -i "$IMAGE" \
-  -f lavfi -t "$DURATION" -i "perlin=s=640x720:r=12:octaves=5:persistence=0.52:xscale=${VISUAL_FOG_SCALE}:yscale=0.007:tscale=0.025:random_mode=seed:seed=41" \
-  -f lavfi -t "$DURATION" -i "nullsrc=s=640x720:r=12" \
+  "${FOG_INPUT[@]}" \
+  "${RAIN_INPUT[@]}" \
   -f lavfi -t "$DURATION" -i "perlin=s=640x720:r=12:octaves=3:persistence=0.58:xscale=${VISUAL_WAVE_SCALE}:yscale=0.22:tscale=0.11:random_mode=seed:seed=73" \
   -i "$AUDIO" \
   -filter_complex "
@@ -40,10 +56,8 @@ ffmpeg -y -nostdin \
     [rightsrc]scale=2560:1440:force_original_aspect_ratio=increase,crop=2560:1440,
       zoompan=z='1.04+${VISUAL_CAMERA_ZOOM}*on/${FRAMES}':x='iw/2-(iw/zoom/2)+34*sin(2*PI*on/${FRAMES})':y='ih/2-(ih/zoom/2)+18*cos(2*PI*on/${FRAMES})':d=1:s=640x720:fps=12,
       eq=contrast='1.035+0.008*sin(2*PI*n/420)':brightness='-0.018+${VISUAL_LIGHT_BREATHE}*sin(2*PI*n/216)',vignette=angle=0.42[rightbase];
-    [1:v]scroll=horizontal=${VISUAL_FOG_SPEED},gblur=sigma=22,
-      curves=all='0/0 0.38/0 0.56/0.35 0.75/0.72 1/0.88',format=yuv420p[fog];
-    [2:v]geq=lum='if(gt(random(1),${VISUAL_RAIN_DENSITY}),255,0)':cb=128:cr=128,
-      dblur=angle=${VISUAL_RAIN_ANGLE}:radius=${VISUAL_RAIN_LENGTH},tmix=frames=3:weights='1 0.55 0.25',format=yuv420p[rain];
+    ${FOG_FILTER};
+    ${RAIN_FILTER};
     [3:v]scroll=horizontal=${VISUAL_WAVE_SPEED},edgedetect=mode=colormix:high=0.18:low=0.04,
       dblur=angle=0:radius=5,curves=all='0/0 0.55/0 0.72/0.18 1/0.62',format=yuv420p[waves];
     color=s=640x720:r=12:c=black,geq=lum='255*gte(X,${VISUAL_WATER_LEFT})*gte(Y,${VISUAL_WATER_HORIZON})*lte(Y,${VISUAL_WATER_BOTTOM})':cb=128:cr=128,
