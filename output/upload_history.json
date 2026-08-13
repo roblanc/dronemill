@@ -239,5 +239,22 @@
     "publish_at": null,
     "thumbnail": "lighthouse-comparison-30s.jpg",
     "local_path": "lighthouse-scene-aware-comparison-3min.mp4"
+  },
+  {
+    "timestamp": "2026-08-13T11:32:38.256470Z",
+    "title": "PRIVATE TEST | lighthouse adjustable fog rain waves | DroneMill",
+    "description": "Private DroneMill workflow test.\n\nThree-minute side-by-side comparison of the current lighthouse treatment and a scene-aware treatment with procedural ocean, surf, coastal wind, foghorns, fog, rain, slow camera drift, and light modulation.",
+    "tags": [
+      "DroneMill",
+      "lighthouse",
+      "fog overlay",
+      "rain overlay",
+      "ocean waves",
+      "motion test"
+    ],
+    "privacy": "private",
+    "publish_at": null,
+    "thumbnail": "lighthouse-overlay-tuned-10s.jpg",
+    "local_path": "lighthouse-overlay-motion-tuned-20s.mp4"
   }
 ]

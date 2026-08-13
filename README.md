@@ -121,7 +121,9 @@ by side for review.
 ```
 
 These first scene renderers support the lighthouse profile. Environmental layers
-are generated locally and require no downloaded field recordings.
+are generated locally and require no downloaded field recordings. Fog opacity,
+drift speed, rain density/direction, wave strength/speed, and the feathered water
+region are adjustable under `visual` in the profile JSON.
 
 ### Publish a review sample to Jellyfin
 
