@@ -178,9 +178,13 @@ ffmpeg -y -i output/liminal-glass-pingpong.mp4 \
   output/liminal-glass-soundtracked.mp4
 ```
 
-The sound design uses outdoor air, a quiet suspended harmonic bed, and sparse
-glass-like tones at 48 kHz and `-18 LUFS`. It is generated locally and does not
-use copyrighted recordings.
+The sound design treats this as bright pastoral liminality rather than indoor
+Backrooms horror. It uses open air, silence, a quiet suspended major/Lydian
+harmony, sparse irregular resonances, and one distant unanswered call. Subtle
+causal errors create unease without an ominous drone or constant glass effects.
+The 48 kHz, `-18 LUFS` audio is generated locally without copyrighted recordings.
+See `docs/liminal-sound-design.md` for the research-backed sound principles and
+references used by this workflow.
 
 Future browser-assisted Midjourney generation may automate the image and manual
 animation steps if an authenticated browser session and browser-control tooling
