@@ -224,5 +224,20 @@
     "publish_at": "2026-08-13T18:00:00Z",
     "thumbnail": "001_erebus.png",
     "local_path": "frozen-169-years-hms-erebus-deep-ambient-dark-arctic-drone.mp4"
+  },
+  {
+    "timestamp": "2026-08-13T11:17:26.690292Z",
+    "title": "PRIVATE TEST | lighthouse scene-aware comparison | DroneMill",
+    "description": "Private DroneMill workflow test.\n\nThree-minute side-by-side comparison of the current lighthouse treatment and a scene-aware treatment with procedural ocean, surf, coastal wind, foghorns, fog, rain, slow camera drift, and light modulation.",
+    "tags": [
+      "DroneMill",
+      "ambient test",
+      "lighthouse",
+      "scene-aware comparison"
+    ],
+    "privacy": "private",
+    "publish_at": null,
+    "thumbnail": "lighthouse-comparison-30s.jpg",
+    "local_path": "lighthouse-scene-aware-comparison-3min.mp4"
   }
 ]

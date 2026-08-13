@@ -2,6 +2,8 @@
 output/*.mp4
 output/*.mp3
 output/*.aac
+output/*.wav
+output/*.jpg
 output/*-upload.json
 assets/fog_loop.mp4
 __pycache__/

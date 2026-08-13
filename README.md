@@ -100,6 +100,29 @@ LatentScore 0.1.8 does not expose deterministic seeding, so renders cannot be
 recreated exactly. This is currently an experimental musical bed; layer original
 environmental textures over it before using it for a full one-hour upload.
 
+### Render a scene-aware comparison
+
+Scene profiles in `profiles/` control both the environmental audio mix and visual
+motion. The lighthouse profile adds procedural ocean, surf, wind, and sparse
+foghorns to a musical bed, then renders the baseline and enhanced treatments side
+by side for review.
+
+```bash
+./scripts/scene-audio.sh \
+  profiles/lighthouse.json \
+  audio/previews/lighthouse-latentscore-3min.mp3 \
+  output/lighthouse-scene.wav 180
+
+./scripts/scene-visual.sh \
+  profiles/lighthouse.json \
+  images/queue/111_lighthouse_fog.png \
+  output/lighthouse-scene.wav \
+  output/lighthouse-comparison.mp4 180
+```
+
+These first scene renderers support the lighthouse profile. Environmental layers
+are generated locally and require no downloaded field recordings.
+
 ### Publish a review sample to Jellyfin
 
 Combine an image and audio preview into a lightweight 720p review video. Jellyfin
@@ -110,6 +133,14 @@ shows it under `Videos / DroneMill Previews` with local title and poster metadat
   images/queue/111_lighthouse_fog.png \
   audio/previews/lighthouse-latentscore-3min.mp3 \
   "lighthouse through the midnight fog"
+```
+
+Publish an animated review render without re-encoding it:
+
+```bash
+./scripts/publish-rendered-preview.sh \
+  output/lighthouse-comparison.mp4 \
+  "lighthouse scene-aware comparison"
 ```
 
 ### Download source from YT

@@ -1,0 +1,20 @@
+{
+  "id": "lighthouse",
+  "label": "Stormy lighthouse",
+  "environment": ["ocean", "coastal_wind", "fog", "light_rain"],
+  "mood": "isolated_dread",
+  "visual": {
+    "fog_opacity": 0.09,
+    "rain_opacity": 0.055,
+    "camera_zoom": 0.045,
+    "light_breathe": 0.012
+  },
+  "audio": {
+    "music_volume": 0.72,
+    "ocean_volume": 0.18,
+    "surf_volume": 0.075,
+    "wind_volume": 0.07,
+    "foghorn_volume": 0.055,
+    "foghorn_frequency": 82
+  }
+}
