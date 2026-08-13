@@ -330,7 +330,7 @@
   {
     "timestamp": "2026-08-13T13:22:22.694562Z",
     "title": "lighthouse through midnight fog | stormy ocean dark ambient | 2 hours",
-    "description": "Two hours at an isolated lighthouse beyond the last safe harbor.\n\nRolling fog, cold rain, restless ocean, distant foghorns, and a slow dark ambient score for sleep, study, reading, or quiet focus.\n\nVisual and environmental sound design assembled by DroneMill.\n\n#darkambient #lighthouse #oceanambience #rain #sleepmusic",
+    "description": "Two hours at an isolated lighthouse beyond the last safe harbor.\n\nCold rain crosses the lantern beam while restless waves break against black rock. Distant foghorns and a slow dark ambient score drift through the midnight fog.\n\nA stormy ocean soundscape for sleep, study, reading, meditation, or quiet focus.\n\nBest experienced with headphones at a comfortable volume.\n\n#darkambient #lighthouse #oceanambience #rain #sleepmusic",
     "tags": [
       "dark ambient",
       "lighthouse ambience",
@@ -344,14 +344,14 @@
       "DroneMill"
     ],
     "privacy": "private",
-    "publish_at": "2026-08-13T18:00:00Z",
+    "publish_at": "2026-08-14T18:00:00Z",
     "thumbnail": "lighthouse-through-midnight-fog-thumbnail.jpg",
     "local_path": "lighthouse-through-midnight-fog-2-hours.mp4"
   },
   {
     "timestamp": "2026-08-13T15:20:38.811497Z",
     "title": "glass hills between hours | 2h liminal ambient | dreamcore soundscape",
-    "description": "Two hours in a bright landscape that feels remembered rather than visited.\n\nEndless grass, translucent hills, quiet trees, and slow generative ambient music for sleep, study, reading, or drifting between familiar places.\n\nVisual concept and seamless ping-pong production assembled by DroneMill from a Midjourney image and manual animation.\n\nMusic generated with musicbox by Ben Askins:\nhttps://github.com/benaskins/musicbox\n\nAdapted by DroneMill with the Karplus-Strong pluck layer removed, high-pass filtering, long-form mastering, and video synchronization. This adaptation is licensed under Creative Commons Attribution-ShareAlike 4.0:\nhttps://creativecommons.org/licenses/by-sa/4.0/\n\n#liminalspaces #ambientmusic #dreamcore #sleepmusic #studyambient",
+    "description": "Two hours among glass hills suspended somewhere between memory and imagination.\n\nA quiet liminal soundscape for sleep, study, reading, meditation, or letting the hours pass unnoticed. The landscape moves slowly while soft ambient tones drift through an endless afternoon.\n\nBest experienced with headphones at a comfortable volume.\n\n#liminalspaces #ambientmusic #dreamcore #sleepmusic #studyambient\n\nMusic attribution: musicbox by Ben Askins, adapted from the original, CC BY-SA 4.0.\nhttps://github.com/benaskins/musicbox\nhttps://creativecommons.org/licenses/by-sa/4.0/",
     "tags": [
       "liminal spaces",
       "dreamcore",
@@ -363,8 +363,8 @@
       "surreal landscape",
       "timeless ambience"
     ],
-    "privacy": "private",
-    "publish_at": "2026-08-14T18:00:00Z",
+    "privacy": "public",
+    "publish_at": null,
     "thumbnail": "glass-hills-between-hours-2h-thumbnail.jpg",
     "local_path": "netrebnic-liminal-musicbox-no-pluck-2h.mp4"
   }

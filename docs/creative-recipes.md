@@ -36,3 +36,5 @@ licensing so future batches can reuse or combine proven choices.
   against no-pluck musicbox before choosing a production bed.
 - Keep environmental layers optional. Silence and clean harmonic space are
   preferable to generic noise when the image does not imply an audible source.
+- Select title grammar and clean/analog packaging by mood using
+  `docs/title-and-visual-packaging.md`; do not apply VHS treatment globally.
