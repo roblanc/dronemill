@@ -273,5 +273,22 @@
     "publish_at": null,
     "thumbnail": "lighthouse-real-overlay-10.jpg",
     "local_path": "lighthouse-real-overlays-20s.mp4"
+  },
+  {
+    "timestamp": "2026-08-13T12:10:02.626634Z",
+    "title": "PRIVATE TEST | VISIBLE fog rain waves | DroneMill",
+    "description": "Private DroneMill workflow test.\n\nThree-minute side-by-side comparison of the current lighthouse treatment and a scene-aware treatment with procedural ocean, surf, coastal wind, foghorns, fog, rain, slow camera drift, and light modulation.",
+    "tags": [
+      "DroneMill",
+      "lighthouse",
+      "visible fog",
+      "visible rain",
+      "ocean waves",
+      "overlay test"
+    ],
+    "privacy": "private",
+    "publish_at": null,
+    "thumbnail": "lighthouse-visible-rgb-06.jpg",
+    "local_path": "lighthouse-visible-overlays-rgb-12s.mp4"
   }
 ]
