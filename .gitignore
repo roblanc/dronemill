@@ -2,8 +2,11 @@
 output/*.mp4
 output/*.mp3
 output/*.aac
+output/*-upload.json
 assets/fog_loop.mp4
 __pycache__/
+.cache/
+datasets/
 *.pyc
 
 # Source assets (copyright risk + size)
@@ -14,6 +17,8 @@ audio/*.mp3
 audio/samples/raw/
 audio/*.wav
 audio/*.flac
+audio/previews/*
+!audio/previews/.gitkeep
 images/queue/*
 images/used/*
 

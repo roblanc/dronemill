@@ -83,6 +83,23 @@ rm .schedule_state   # next call schedules for today/tomorrow at 18:00 local
 ./scripts/noise-gen.sh 3600 deep_void brown
 ```
 
+### Generate title-conditioned ambient with LatentScore
+
+LatentScore runs CPU-only in an isolated Docker image. The first run builds the
+image and downloads the local retrieval model; later runs reuse both caches.
+
+```bash
+./scripts/latentscore-gen.sh \
+  "isolated lighthouse in midnight ocean fog, cosmic dread" \
+  audio/queue/lighthouse.wav 180
+```
+
+Arguments are prompt, output WAV, and duration in seconds. The script writes the
+raw WAV, a JSON sidecar with provenance, and a stereo master at `-18 LUFS`.
+LatentScore 0.1.8 does not expose deterministic seeding, so renders cannot be
+recreated exactly. This is currently an experimental musical bed; layer original
+environmental textures over it before using it for a full one-hour upload.
+
 ### Download source from YT
 ```bash
 ./scripts/yt-grab.sh "https://youtube.com/watch?v=..." erebus
