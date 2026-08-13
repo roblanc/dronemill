@@ -100,6 +100,18 @@ LatentScore 0.1.8 does not expose deterministic seeding, so renders cannot be
 recreated exactly. This is currently an experimental musical bed; layer original
 environmental textures over it before using it for a full one-hour upload.
 
+### Publish a review sample to Jellyfin
+
+Combine an image and audio preview into a lightweight 720p review video. Jellyfin
+shows it under `Videos / DroneMill Previews` with local title and poster metadata.
+
+```bash
+./scripts/publish-jellyfin-preview.sh \
+  images/queue/111_lighthouse_fog.png \
+  audio/previews/lighthouse-latentscore-3min.mp3 \
+  "lighthouse through the midnight fog"
+```
+
 ### Download source from YT
 ```bash
 ./scripts/yt-grab.sh "https://youtube.com/watch?v=..." erebus
