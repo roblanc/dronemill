@@ -101,6 +101,32 @@ Do not enable cron until the queue has enough reviewed images, audio recipes,
 titles, descriptions, disk space, and YouTube quota. A daily check is sufficient;
 the runway threshold, rather than the calendar month boundary, triggers refill.
 
+### Run jobs after disconnecting
+
+Use the systemd-backed job runner for renders or batches that must survive a
+closed terminal, ended SSH session, exited OpenCode process, or powered-off
+client laptop:
+
+```bash
+./scripts/job-runner.sh start greenhouse-render -- \
+  ./scripts/greenhouse-audio.sh output/greenhouse.wav 7200
+
+./scripts/job-runner.sh list
+./scripts/job-runner.sh status greenhouse-render
+./scripts/job-runner.sh logs greenhouse-render 100
+./scripts/job-runner.sh stop greenhouse-render
+```
+
+The system `systemd` manager owns the process. Durable state and logs are stored
+under `/var/lib/dronemill/jobs/`. Client disconnection does not stop the job.
+A server shutdown or reboot does stop an active transient job; completed files,
+status, and logs remain, but interrupted work must be restarted.
+
+The detached runner executes a concrete command or batch prepared before
+disconnecting. It does not keep the conversational LLM agent alive or make new
+creative decisions after OpenCode exits. Define the target and approval policy
+first, then start the resulting job and disconnect safely.
+
 Successful creative combinations are recorded in `docs/creative-recipes.md` so
 later batches can recombine proven visual, motion, audio, and mastering choices.
 
