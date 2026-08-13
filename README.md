@@ -78,6 +78,32 @@ rm .schedule_state   # next call schedules for today/tomorrow at 18:00 local
 ./scripts/scheduler.sh 21 3   # 21:00 EEST = 18:00 UTC
 ```
 
+### Maintain a rolling schedule
+
+Check how many days remain between now and the last locally scheduled slot. The
+default reports when runway falls below seven days and calculates how many items
+are needed to restore a 30-day queue:
+
+```bash
+./scripts/rolling-batch-check.sh
+```
+
+The checker is dry-run by default. To let cron invoke production, configure a
+bounded `DRONEMILL_BATCH_COMMAND` that reads `DRONEMILL_BATCH_COUNT`, then run
+with `--run`. It uses a non-blocking lock to prevent overlapping batches:
+
+```bash
+DRONEMILL_BATCH_COMMAND='./scripts/batch-schedule.sh "$DRONEMILL_BATCH_COUNT"' \
+  ./scripts/rolling-batch-check.sh 7 30 --run
+```
+
+Do not enable cron until the queue has enough reviewed images, audio recipes,
+titles, descriptions, disk space, and YouTube quota. A daily check is sufficient;
+the runway threshold, rather than the calendar month boundary, triggers refill.
+
+Successful creative combinations are recorded in `docs/creative-recipes.md` so
+later batches can recombine proven visual, motion, audio, and mastering choices.
+
 ### Generate original ambient (zero copyright)
 ```bash
 ./scripts/noise-gen.sh 3600 deep_void brown

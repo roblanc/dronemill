@@ -1,0 +1,19 @@
+diff --git a/musicbox-core/src/tracks/drone.rs b/musicbox-core/src/tracks/drone.rs
+index 649d75b..09b843e 100644
+--- a/musicbox-core/src/tracks/drone.rs
++++ b/musicbox-core/src/tracks/drone.rs
+@@ -145,10 +145,11 @@ impl Drone {
+         let (bass_l, bass_r) = self.bass.next_sample();
+         let (mid_l, mid_r) = self.mid.next_sample();
+         let (high_l, high_r) = self.high.next_sample();
+-        let (pluck_l, pluck_r) = self.plucks.next_sample();
++        // Advance the engine to preserve timing, but omit its percussive output.
++        let _ = self.plucks.next_sample();
+ 
+-        let mut left = (bass_l + mid_l + high_l + pluck_l).tanh();
+-        let mut right = (bass_r + mid_r + high_r + pluck_r).tanh();
++        let mut left = (bass_l + mid_l + high_l).tanh();
++        let mut right = (bass_r + mid_r + high_r).tanh();
+ 
+         // Peak limiter
+         let peak = left.abs().max(right.abs());

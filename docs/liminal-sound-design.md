@@ -64,3 +64,17 @@ video.
 Preferred next experiment: render several `musicbox` samples locally and compare
 their musical vocabulary with LatentScore and the current procedural generator.
 Do not publish those renders until the CC BY-SA obligations have been reviewed.
+
+The approved evaluation removes `musicbox`'s Karplus-Strong pluck layer while
+retaining its bass, filtered mids, high oscillator layer, and plate reverb. Render
+a continuous two-hour master and combine it with a prepared ping-pong cycle:
+
+```bash
+./scripts/musicbox-no-pluck.sh output/liminal-musicbox-2h.wav 7200
+./scripts/pingpong-production.sh output/liminal-pingpong.cycle.mp4 \
+  output/liminal-musicbox-2h.wav output/liminal-musicbox-2h.mp4 7200
+```
+
+`musicbox` is Copyright 2026 Ben Askins and licensed CC BY-SA 4.0. The no-pluck
+adaptation and resulting evaluation output must retain attribution, link the
+license and source, identify the modification, and be shared under CC BY-SA 4.0.

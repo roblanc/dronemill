@@ -347,5 +347,25 @@
     "publish_at": "2026-08-13T18:00:00Z",
     "thumbnail": "lighthouse-through-midnight-fog-thumbnail.jpg",
     "local_path": "lighthouse-through-midnight-fog-2-hours.mp4"
+  },
+  {
+    "timestamp": "2026-08-13T15:20:38.811497Z",
+    "title": "glass hills between hours | 2h liminal ambient | dreamcore soundscape",
+    "description": "Two hours in a bright landscape that feels remembered rather than visited.\n\nEndless grass, translucent hills, quiet trees, and slow generative ambient music for sleep, study, reading, or drifting between familiar places.\n\nVisual concept and seamless ping-pong production assembled by DroneMill from a Midjourney image and manual animation.\n\nMusic generated with musicbox by Ben Askins:\nhttps://github.com/benaskins/musicbox\n\nAdapted by DroneMill with the Karplus-Strong pluck layer removed, high-pass filtering, long-form mastering, and video synchronization. This adaptation is licensed under Creative Commons Attribution-ShareAlike 4.0:\nhttps://creativecommons.org/licenses/by-sa/4.0/\n\n#liminalspaces #ambientmusic #dreamcore #sleepmusic #studyambient",
+    "tags": [
+      "liminal spaces",
+      "dreamcore",
+      "ambient music",
+      "sleep music",
+      "study music",
+      "generative ambient",
+      "2 hour ambient",
+      "surreal landscape",
+      "timeless ambience"
+    ],
+    "privacy": "private",
+    "publish_at": "2026-08-14T18:00:00Z",
+    "thumbnail": "glass-hills-between-hours-2h-thumbnail.jpg",
+    "local_path": "netrebnic-liminal-musicbox-no-pluck-2h.mp4"
   }
 ]

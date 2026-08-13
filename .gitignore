@@ -59,6 +59,7 @@ Thumbs.db
 # Scheduler state (per-machine)
 .schedule_state
 .batch_state
+.rolling-batch.lock
 
 # Personal queue (keep example only)
 queue.csv
