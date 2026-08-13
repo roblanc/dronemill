@@ -38,3 +38,18 @@ licensing so future batches can reuse or combine proven choices.
   preferable to generic noise when the image does not imply an audible source.
 - Select title grammar and clean/analog packaging by mood using
   `docs/title-and-visual-packaging.md`; do not apply VHS treatment globally.
+
+## The Greenhouse After Rain
+
+- Visual concept: an empty municipal greenhouse after rain, with a centered wet
+  walkway, dense plants, one weathered bench, and violet-coral dawn light.
+- Visual source: user-supplied Midjourney still, 1456x816.
+- Motion treatment: an extremely restrained camera breath for evaluation;
+  prefer scene-level condensation and leaf motion if an animated source arrives.
+- Sound engine: `scripts/greenhouse-audio.sh`, using a warm C major/add-nine
+  palette with slow independent partials and sparse high glass resonances.
+- Rejected elements: continuous rain, generic noise, birds, obvious water-drop
+  samples, dark sub-drone, and the Glass Hills musicbox palette.
+- Master: 48 kHz stereo, target `-24 LUFS`, with generous true-peak headroom.
+- Review sample: 90 seconds; render unique continuous audio for production.
+- Packaging: clean or very light film-soft treatment, no VHS decay.

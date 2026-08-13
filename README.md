@@ -104,6 +104,15 @@ the runway threshold, rather than the calendar month boundary, triggers refill.
 Successful creative combinations are recorded in `docs/creative-recipes.md` so
 later batches can recombine proven visual, motion, audio, and mastering choices.
 
+### Image handoff workflow
+
+An image uploaded through CasaOS can start a complete production handoff. Ask
+DroneMill to check the new image; it will locate and inspect the asset, assess
+composition and motion options, propose a title and sound direction, render a
+short review sample, and wait for approval before the long-form render and
+YouTube upload. See `docs/image-handoff-workflow.md` for the review gates and
+defaults.
+
 ### Generate original ambient (zero copyright)
 ```bash
 ./scripts/noise-gen.sh 3600 deep_void brown
