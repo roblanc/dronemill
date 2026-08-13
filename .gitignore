@@ -8,6 +8,7 @@ output/*.png
 output/*-upload.json
 assets/fog_loop.mp4
 assets/youtube-overlays/
+assets/source-videos/
 __pycache__/
 .cache/
 datasets/
