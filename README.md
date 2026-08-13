@@ -128,6 +128,8 @@ region are adjustable under `visual` in the profile JSON. If
 renderer uses those clips with adjustable playback speed; otherwise it falls back
 to procedural fog and rain. Camera motion renders at double resolution before
 downsampling and uses the profile's `fps` value to avoid low-frame-rate judder.
+`camera_breathe_amount` and `camera_breathe_seconds` control a prolonged eased
+inhale/exhale zoom; separate drift controls add only slow horizontal motion.
 
 ### Publish a review sample to Jellyfin
 

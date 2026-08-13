@@ -54,7 +54,7 @@ ffmpeg -y -nostdin \
       zoompan=z='1.02+0.018*on/${FRAMES}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1280x1440:fps=${VISUAL_FPS},
       scale=640:720:flags=lanczos,eq=contrast=1.01:brightness=-0.01,vignette=angle=0.38[left];
     [rightsrc]scale=2560:1440:force_original_aspect_ratio=increase,crop=2560:1440,
-      zoompan=z='1.04+${VISUAL_CAMERA_ZOOM}*on/${FRAMES}':x='iw/2-(iw/zoom/2)+34*sin(2*PI*on/${FRAMES})':y='ih/2-(ih/zoom/2)+18*cos(2*PI*on/${FRAMES})':d=1:s=1280x1440:fps=${VISUAL_FPS},
+      zoompan=z='${VISUAL_CAMERA_BASE_ZOOM}+${VISUAL_CAMERA_BREATHE_AMOUNT}*(0.5-0.5*cos(2*PI*on/(${VISUAL_CAMERA_BREATHE_SECONDS}*${VISUAL_FPS})))':x='iw/2-(iw/zoom/2)+${VISUAL_CAMERA_DRIFT_PIXELS}*sin(2*PI*on/(${VISUAL_CAMERA_DRIFT_SECONDS}*${VISUAL_FPS}))':y='ih/2-(ih/zoom/2)':d=1:s=1280x1440:fps=${VISUAL_FPS},
       scale=640:720:flags=lanczos,eq=contrast='1.035+0.008*sin(2*PI*n/(35*${VISUAL_FPS}))':brightness='-0.018+${VISUAL_LIGHT_BREATHE}*sin(2*PI*n/(18*${VISUAL_FPS}))',vignette=angle=0.42,format=gbrp[rightbase];
     ${FOG_FILTER};
     ${RAIN_FILTER};

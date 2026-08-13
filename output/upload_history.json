@@ -308,5 +308,23 @@
     "publish_at": null,
     "thumbnail": "lighthouse-smooth-motion-06.jpg",
     "local_path": "lighthouse-smooth-motion-12s.mp4"
+  },
+  {
+    "timestamp": "2026-08-13T12:28:40.546999Z",
+    "title": "PRIVATE TEST | 30fps prolonged breathing motion | DroneMill",
+    "description": "Private DroneMill workflow test.\n\nThree-minute side-by-side comparison of the current lighthouse treatment and a scene-aware treatment with procedural ocean, surf, coastal wind, foghorns, fog, rain, slow camera drift, and light modulation.",
+    "tags": [
+      "DroneMill",
+      "lighthouse",
+      "30fps",
+      "breathing zoom",
+      "smooth motion",
+      "fog",
+      "rain"
+    ],
+    "privacy": "private",
+    "publish_at": null,
+    "thumbnail": "breathe-20.jpg",
+    "local_path": "lighthouse-breathing-motion-40s.mp4"
   }
 ]
