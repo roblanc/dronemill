@@ -290,5 +290,23 @@
     "publish_at": null,
     "thumbnail": "lighthouse-visible-rgb-06.jpg",
     "local_path": "lighthouse-visible-overlays-rgb-12s.mp4"
+  },
+  {
+    "timestamp": "2026-08-13T12:15:11.739575Z",
+    "title": "PRIVATE TEST | SMOOTH 24fps lighthouse motion | DroneMill",
+    "description": "Private DroneMill workflow test.\n\nThree-minute side-by-side comparison of the current lighthouse treatment and a scene-aware treatment with procedural ocean, surf, coastal wind, foghorns, fog, rain, slow camera drift, and light modulation.",
+    "tags": [
+      "DroneMill",
+      "lighthouse",
+      "smooth motion",
+      "24fps",
+      "fog",
+      "rain",
+      "ocean waves"
+    ],
+    "privacy": "private",
+    "publish_at": null,
+    "thumbnail": "lighthouse-smooth-motion-06.jpg",
+    "local_path": "lighthouse-smooth-motion-12s.mp4"
   }
 ]

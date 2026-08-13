@@ -126,7 +126,8 @@ drift speed, rain density/direction, wave strength/speed, and the feathered wate
 region are adjustable under `visual` in the profile JSON. If
 `assets/youtube-overlays/fog-overlay.mp4` and `rain-overlay.mp4` exist, the
 renderer uses those clips with adjustable playback speed; otherwise it falls back
-to procedural fog and rain.
+to procedural fog and rain. Camera motion renders at double resolution before
+downsampling and uses the profile's `fps` value to avoid low-frame-rate judder.
 
 ### Publish a review sample to Jellyfin
 

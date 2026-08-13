@@ -20,6 +20,7 @@
     "water_bottom": 655,
     "water_left": 185,
     "water_feather": 24,
+    "fps": 24,
     "camera_zoom": 0.045,
     "light_breathe": 0.012
   },
