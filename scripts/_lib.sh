@@ -1,6 +1,10 @@
 #!/bin/bash
 # shared helpers
 
+# Finished media belongs in one flat server-visible location. Keep working files
+# in the project or /tmp, but never create output subdirectories here.
+DRONEMILL_MEDIA_DIR="${DRONEMILL_MEDIA_DIR:-/DATA/Media}"
+
 slugify() {
   # Converts: "He Was Already Waiting Behind the Door…" -> "he-was-already-waiting-behind-the-door"
   echo "$1" | tr '[:upper:]' '[:lower:]' \

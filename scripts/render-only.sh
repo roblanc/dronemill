@@ -26,4 +26,4 @@ echo ">> Image: $IMAGE"
 "$DIR/cosmic.sh" "$AUDIO" "$IMAGE" "$TITLE" "$PITCH"
 mark_used "$IMAGE" "$ROOT"
 
-echo "Done -> $ROOT/output/${SLUG}.mp4"
+echo "Done -> $DRONEMILL_MEDIA_DIR/${SLUG}.mp4"

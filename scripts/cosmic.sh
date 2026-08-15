@@ -1,9 +1,9 @@
 #!/bin/bash
-# Render 1h cosmic-horror ambient video.
-# Usage: ./cosmic.sh <audio> <image_or_folder> <title> [pitch=0.93]
+# Render cosmic-horror ambient video.
+# Usage: ./cosmic.sh <audio> <image_or_folder> <title> [pitch=0.93] [duration=3600]
 #
 # If <image_or_folder> is a single file -> fast loop-based render (current behavior).
-# If <image_or_folder> is a directory   -> multi-scene render with crossfade across 1h.
+# If <image_or_folder> is a directory   -> multi-scene render with crossfade.
 #
 # Visual effects: pseudo-Ken-Burns drift + zoom breathing + light eq breathing
 #                 + procedural fog overlay + grain + vignette.
@@ -19,18 +19,22 @@ AUDIO="$1"
 IMAGE="$2"
 TITLE="$3"
 PITCH="${4:-0.93}"
+DURATION="${5:-3600}"
 
 if [ -z "$AUDIO" ] || [ -z "$IMAGE" ] || [ -z "$TITLE" ]; then
-  echo "Usage: $0 <audio> <image_or_folder> <title> [pitch=0.93]"
+  echo "Usage: $0 <audio> <image_or_folder> <title> [pitch=0.93] [duration=3600]"
   exit 1
 fi
 
-mkdir -p "$ROOT/output"
-require_disk_space 10 "$ROOT/output"
+mkdir -p "$DRONEMILL_MEDIA_DIR"
+require_disk_space 10 "$DRONEMILL_MEDIA_DIR"
 
 SLUG=$(slugify "$TITLE")
-SHIFTED="$ROOT/output/${SLUG}_shifted.aac"
-OUT="$ROOT/output/${SLUG}.mp4"
+WORK="${TMPDIR:-/tmp}/dronemill-${SLUG}-$$"
+mkdir -p "$WORK"
+trap 'rm -rf "$WORK"' EXIT
+SHIFTED="$WORK/${SLUG}_shifted.aac"
+OUT="$DRONEMILL_MEDIA_DIR/${SLUG}.mp4"
 
 # ──────────────────────────────────────────────────────────────────
 # One-time fog overlay generation (60s seamless loop, 1920x1080)
@@ -54,10 +58,10 @@ if [ -z "$SR" ] || ! [[ "$SR" =~ ^[0-9]+$ ]]; then
   SR=44100
 fi
 
-echo "[1/3] Pitch shift + AAC encode + loudnorm I=${LOUDNORM_I} (pitch=$PITCH, sr=$SR, 1h target)..."
+echo "[1/3] Pitch shift + AAC encode + loudnorm I=${LOUDNORM_I} (pitch=$PITCH, sr=$SR, ${DURATION}s target)..."
 ffmpeg -y -stream_loop -1 -i "$AUDIO" \
-  -af "asetrate=${SR}*${PITCH},aresample=${SR},atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000,${LOUDNORM_AF},afade=t=out:st=3590:d=10" \
-  -c:a aac -b:a 192k -t 3600 "$SHIFTED"
+  -af "asetrate=${SR}*${PITCH},aresample=${SR},atempo=$(awk "BEGIN {print 1/${PITCH}}"),lowpass=f=8000,${LOUDNORM_AF},afade=t=out:st=$((DURATION - 10)):d=10" \
+  -c:a aac -b:a 192k -t "$DURATION" "$SHIFTED"
 
 # ──────────────────────────────────────────────────────────────────
 # Shared video filter components
@@ -79,10 +83,10 @@ if [ -d "$IMAGE" ]; then
     exit 1
   fi
   if [ "$N" -gt 1 ]; then
-    echo "[2/3] Multi-scene render: $N images, ~$((3600 / N))s each + 8s crossfade + fog..."
+    echo "[2/3] Multi-scene render: $N images, ~$((DURATION / N))s each + 8s crossfade + fog..."
     XFADE=8
-    SCENE_DUR=$((3600 / N))
-    LAST_PAD=$(( 3600 - SCENE_DUR * (N - 1) ))   # absorb rounding into final scene
+    SCENE_DUR=$((DURATION / N))
+    LAST_PAD=$(( DURATION - SCENE_DUR * (N - 1) ))   # absorb rounding into final scene
 
     # Build inputs
     INPUT_ARGS=()
@@ -115,12 +119,12 @@ if [ -d "$IMAGE" ]; then
     FC+="[${FOG_IDX}:v]scale=1920:1080,format=yuv420p[fog];"
     FC+="[$PREV][fog]blend=all_mode=screen:all_opacity=0.04,noise=alls=3:allf=t+u,format=yuv420p[vout]"
 
-    VIDEO_TMP="$ROOT/output/${SLUG}_video.mp4"
+    VIDEO_TMP="$WORK/${SLUG}_video.mp4"
     ffmpeg -y "${INPUT_ARGS[@]}" \
       -filter_complex "$FC" \
       -map "[vout]" \
       -c:v libx264 -preset ultrafast -tune stillimage -pix_fmt yuv420p \
-      -t 3600 -r 24 "$VIDEO_TMP"
+      -t "$DURATION" -r 24 "$VIDEO_TMP"
 
     echo "[3/3] Mux video + audio..."
     ffmpeg -y -i "$VIDEO_TMP" -i "$SHIFTED" \
@@ -137,8 +141,8 @@ fi
 # ──────────────────────────────────────────────────────────────────
 # Single-image fast path (current behavior + drift + fog + loudnorm)
 # ──────────────────────────────────────────────────────────────────
-LOOP60="$ROOT/output/${SLUG}_loop60.mp4"
-LOOPS=61
+LOOP60="$WORK/${SLUG}_loop60.mp4"
+LOOPS=$((DURATION / 60 + 1))
 
 echo "[2/3] Build 60s clip (drift + breathing + fog overlay)..."
 ffmpeg -y -loop 1 -framerate 24 -t 60 -i "$IMAGE" -stream_loop -1 -i "$FOG" \

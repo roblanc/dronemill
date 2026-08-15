@@ -22,6 +22,14 @@ audio/*.mp3
 audio/samples/raw/
 audio/*.wav
 audio/*.flac
+audio/fresh/
+audio/slate/
+audio/lovecraft/
+audio/hybrid/
+audio/bases/
+tmp/
+dashboard/*.log
+
 audio/previews/*
 !audio/previews/.gitkeep
 images/queue/*

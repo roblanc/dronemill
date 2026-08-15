@@ -1,0 +1,35 @@
+[
+  {
+    "type": "Lore Teaser",
+    "title": "The Keeper of the Sea Wall",
+    "content": "Deep into the 1890s archives, old logbooks spoke of nights when the tide did not ebb, but pulsed with cold light. What do you listen for when the ocean goes quiet?\n\nNew atmospheric piece premiering Monday at 18:00 UTC. \ud83c\udf0a\ud83c\udfa7",
+    "poll_options": [
+      "The tide retreating",
+      "The hull groaning",
+      "The silence beneath",
+      "Distant bells"
+    ]
+  },
+  {
+    "type": "Upcoming Spotlight",
+    "title": "Subterranean Bathhouse at 4 AM",
+    "content": "Steam hanging between pale mint tiles, distant water ripples echoing through empty stone archways. Where does your mind drift when you are the only one awake?\n\nJoin us Saturday for the next Liminal Soundscape premiere. \ud83c\udf3f\ud83d\udec1",
+    "poll_options": [
+      "Total tranquility",
+      "Quiet nostalgia",
+      "Uncanny isolation",
+      "Deep focus / study"
+    ]
+  },
+  {
+    "type": "Sci-Fi Atmosphere",
+    "title": "The Botanist's Tea on Europa",
+    "content": "Watching the cracked azure ice plains of Europa while Jupiter slowly rotates in the cosmic dark. What is your go-to soundtrack for deep space reading? \u2615\ud83e\ude90",
+    "poll_options": [
+      "Analog warm synths",
+      "Sub-bass room drones",
+      "Soft acoustic rain",
+      "Pure cosmic silence"
+    ]
+  }
+]

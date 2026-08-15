@@ -5,7 +5,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SOURCE="/DATA/Media/DroneMill ChatGPT Concepts"
-DEST="/srv/media/videos/DroneMill Previews"
+DEST="${DRONEMILL_MEDIA_DIR:-/DATA/Media}"
 DURATION="${1:-60}"
 
 render_audio() {
@@ -56,13 +56,11 @@ render_video() {
 render_concept() {
   local slug="$1" image="$2" palette="$3" seed="$4"
   shift 4
-  local folder="$DEST/$slug-review"
-  local wav="$ROOT/output/$slug-review.wav"
-  mkdir -p "$folder"
+  local wav="${TMPDIR:-/tmp}/$slug-review-$$.wav"
+  local video="$DEST/$slug-review.mp4"
+  mkdir -p "$DEST"
   render_audio "$wav" "$@"
-  render_video "$image" "$wav" "$folder/$slug-review.mp4" "$palette" "$seed"
-  ffmpeg -y -ss "$((DURATION / 2))" -i "$folder/$slug-review.mp4" \
-    -frames:v 1 -q:v 2 -update 1 "$folder/poster.jpg"
+  render_video "$image" "$wav" "$video" "$palette" "$seed"
   rm -f "$wav"
 }
 

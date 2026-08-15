@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DroneMill — Autonomous YouTube Production Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-badge"></div>
+        <div>
+          <h1 class="brand-title">DRONEMILL</h1>
+          <p class="brand-subtitle">Autonomous Sound Studio</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="timeline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Release Schedule
+          <span class="badge" id="badge-scheduled">28</span>
+        </button>
+        <button class="nav-item" data-tab="studio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+          Hybrid Audio Studio
+        </button>
+        <button class="nav-item" data-tab="playlists">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          Themed Playlists
+        </button>
+        <button class="nav-item" data-tab="community">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          Community Teasers
+        </button>
+        <button class="nav-item" data-tab="system">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+          System & Storage
+        </button>
+      </nav>
+
+      <div class="sidebar-status-card">
+        <div class="status-indicator-row">
+          <span class="status-dot pulsing"></span>
+          <span class="status-label">Pipeline Active</span>
+        </div>
+        <p class="status-text" id="sidebar-next-release">Loading release...</p>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Metrics Bar -->
+      <header class="top-bar">
+        <div class="metric-pill">
+          <span class="metric-label">Release Buffer</span>
+          <span class="metric-value" id="metric-buffer">23 Days</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-label">Master Loudness</span>
+          <span class="metric-value font-mono">-22.0 LUFS</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-label">Sound Architecture</span>
+          <span class="metric-value">AI 5-Engine</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-label">Server Storage</span>
+          <span class="metric-value" id="metric-storage">11.8 GB Free</span>
+        </div>
+        <button class="refresh-btn" id="btn-refresh" title="Refresh Live Data">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+        </button>
+      </header>
+
+      <!-- View 1: Release Schedule Timeline -->
+      <section class="tab-pane active" id="pane-timeline">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">YouTube Release Calendar</h2>
+            <p class="section-desc">Live chronological queue of all upcoming automated releases.</p>
+          </div>
+          <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">All Releases</button>
+            <button class="filter-btn" data-filter="future">Scheduled Only</button>
+            <button class="filter-btn" data-filter="published">Published</button>
+          </div>
+        </div>
+
+        <div class="timeline-grid" id="timeline-container">
+          <div class="loader">Loading scheduled calendar...</div>
+        </div>
+      </section>
+
+      <!-- View 2: Audio Studio -->
+      <section class="tab-pane" id="pane-studio">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">AI Hybrid Sound Conductor Studio</h2>
+            <p class="section-desc">Real-time inspection of active stems, frequency allocation, and mastering parameters.</p>
+          </div>
+        </div>
+
+        <div class="studio-grid">
+          <!-- Frequency Allocation Matrix -->
+          <div class="studio-card">
+            <h3 class="card-title">Frequency Allocation & Active Engines</h3>
+            <div class="freq-stack">
+              <div class="freq-row sub">
+                <span class="freq-badge">&lt; 80 Hz</span>
+                <div class="freq-info">
+                  <strong>Rubberband Pitch-Shift Engine</strong>
+                  <p>Sub-octave (0.50x) phase-vocoded deep foundation resonance</p>
+                </div>
+                <span class="freq-tag">Physical Gravity</span>
+              </div>
+
+              <div class="freq-row mid">
+                <span class="freq-badge">100 - 450 Hz</span>
+                <div class="freq-info">
+                  <strong>LatentScore Neural Music Composer</strong>
+                  <p>Prompt-conditioned emotional chords, analog pads, and organic textures</p>
+                </div>
+                <span class="freq-tag">Harmonic Body</span>
+              </div>
+
+              <div class="freq-row high">
+                <span class="freq-badge">300 - 4500 Hz</span>
+                <div class="freq-info">
+                  <strong>Procedural FFmpeg DSP Engine</strong>
+                  <p>Haas 3D stereo harmonic sine partials with prime-period LFO breathing</p>
+                </div>
+                <span class="freq-tag">3D Shimmer</span>
+              </div>
+
+              <div class="freq-row foley">
+                <span class="freq-badge">Full Spec</span>
+                <div class="freq-info">
+                  <strong>Multi-Layer Environmental Foley</strong>
+                  <p>Acoustic room tone, rain on glass, distant water pressure, wind</p>
+                </div>
+                <span class="freq-tag">World Immersion</span>
+              </div>
+
+              <div class="freq-row master">
+                <span class="freq-badge">Bus</span>
+                <div class="freq-info">
+                  <strong>AI Harmonic Director (Antigravity AGY)</strong>
+                  <p>Modal map tuning (Locrian/Phrygian/Dorian) + EBU R128 (-22 LUFS)</p>
+                </div>
+                <span class="freq-tag">Conductor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Master Track Player -->
+          <div class="studio-card">
+            <h3 class="card-title">Master Audio Player</h3>
+            <div class="player-box">
+              <div class="now-playing-info">
+                <span class="now-playing-label">SELECT A TRACK TO PREVIEW</span>
+                <h4 class="now-playing-title" id="player-title">Click any video card in Schedule to audition audio</h4>
+              </div>
+              <audio id="audio-player" controls class="custom-audio-elem"></audio>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 3: Playlists -->
+      <section class="tab-pane" id="pane-playlists">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Themed YouTube Playlists</h2>
+            <p class="section-desc">Algorithmic collection clusters designed for high audience binge-retention.</p>
+          </div>
+        </div>
+
+        <div class="playlists-grid" id="playlists-container">
+          <div class="loader">Loading playlists architecture...</div>
+        </div>
+      </section>
+
+      <!-- View 4: Community Posts -->
+      <section class="tab-pane" id="pane-community">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">YouTube Community Teasers & Polls</h2>
+            <p class="section-desc">Pre-generated engagement copy and audience polls ready for the Community Tab.</p>
+          </div>
+        </div>
+
+        <div class="community-grid" id="community-container">
+          <div class="loader">Loading community posts...</div>
+        </div>
+      </section>
+
+      <!-- View 5: System Telemetry -->
+      <section class="tab-pane" id="pane-system">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Production Server & Health Telemetry</h2>
+            <p class="section-desc">Real-time status of storage, background encoders, and YouTube API parameters.</p>
+          </div>
+        </div>
+
+        <div class="system-grid">
+          <div class="system-card">
+            <h3 class="card-title">Server Storage Health</h3>
+            <div class="storage-bar-wrapper">
+              <div class="storage-bar">
+                <div class="storage-progress" id="storage-progress-bar" style="width: 64%;"></div>
+              </div>
+              <div class="storage-stats">
+                <span id="stat-used-disk">23.9 GB Used</span>
+                <span id="stat-free-disk">11.8 GB Available</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="system-card">
+            <h3 class="card-title">Channel Buffer Status</h3>
+            <div class="telemetry-item">
+              <span class="telemetry-label">Active Ahead Buffer:</span>
+              <span class="telemetry-val" id="stat-buffer-days">23 Days</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">Master Target:</span>
+              <span class="telemetry-val font-mono">-22.0 LUFS (EBU R128)</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">Video Specification:</span>
+              <span class="telemetry-val">1080p Full HD (24 fps) + Living Overlays</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

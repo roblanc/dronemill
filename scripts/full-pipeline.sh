@@ -59,7 +59,7 @@ echo ""
 echo "=== STAGE 1: render ==="
 "$DIR/cosmic.sh" "$AUDIO" "$IMAGE" "$TITLE" "$PITCH"
 
-VIDEO="$ROOT/output/${SLUG}.mp4"
+VIDEO="$DRONEMILL_MEDIA_DIR/${SLUG}.mp4"
 
 echo ""
 echo "=== STAGE 2: youtube upload ==="
