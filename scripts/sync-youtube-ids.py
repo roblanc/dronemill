@@ -104,34 +104,43 @@ def find_matching_video(title, yt_videos):
     if not title:
         return None
     c_title = clean_str(title)
+    if len(c_title) < 4:
+        return None
     main_part = clean_str(title.split("|")[0])
     
+    # Filter out empty or garbage titles in yt_videos
+    valid_yt_videos = [v for v in yt_videos if len(clean_str(v.get("title", ""))) >= 4]
+
     # 1. Exact match cleaned
-    for v in yt_videos:
+    for v in valid_yt_videos:
         if clean_str(v["title"]) == c_title:
             return v
 
     # 2. Main title part exact match
     if main_part and len(main_part) >= 6:
-        for v in yt_videos:
+        for v in valid_yt_videos:
             v_main = clean_str(v["title"].split("|")[0])
             if v_main == main_part:
                 return v
 
-    # 3. Main title part substring match
-    if main_part and len(main_part) >= 10:
-        for v in yt_videos:
+    # 3. Main title part substring match (requiring substantial length on both sides)
+    if main_part and len(main_part) >= 12:
+        for v in valid_yt_videos:
+            v_main = clean_str(v["title"].split("|")[0])
             v_clean = clean_str(v["title"])
-            if main_part in v_clean or v_clean in main_part:
+            if len(v_main) >= 12 and (main_part in v_main or v_main in main_part):
+                return v
+            if len(v_clean) >= 12 and (main_part in v_clean or v_clean in main_part):
                 return v
 
-    # 4. Partial token intersection
-    tokens = set(re.findall(r"\b\w{4,}\b", title.lower()))
-    if tokens:
+    # 4. Partial token intersection (ignoring common ambient stopwords)
+    stopwords = {"ambient", "soundscape", "drone", "hours", "hour", "minute", "sample", "music", "sleep", "relaxing", "liminal"}
+    tokens = set(re.findall(r"\b[a-z0-9]{4,}\b", title.lower())) - stopwords
+    if len(tokens) >= 3:
         best_v = None
         best_overlap = 0
-        for v in yt_videos:
-            v_tokens = set(re.findall(r"\b\w{4,}\b", v["title"].lower()))
+        for v in valid_yt_videos:
+            v_tokens = set(re.findall(r"\b[a-z0-9]{4,}\b", v["title"].lower())) - stopwords
             overlap = len(tokens.intersection(v_tokens))
             if overlap > best_overlap and overlap >= min(3, len(tokens)):
                 best_overlap = overlap
@@ -164,25 +173,53 @@ def sync():
         print("No YouTube videos available to sync.")
         return
 
-    # Sync upload_history.json
+    valid_yt = [v for v in yt_videos if len(clean_str(v.get("title", ""))) >= 4]
+
+    # Sync upload_history.json with strict 1-to-1 matching
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "r", encoding="utf-8") as f:
             history = json.load(f)
 
+        used_yt_ids = set()
+        matched = {}
+
+        # Pass 1: exact match on full cleaned title
+        for i, item in enumerate(history):
+            t = item.get("title", "")
+            ct = clean_str(t)
+            for v in valid_yt:
+                if v["video_id"] not in used_yt_ids and clean_str(v["title"]) == ct:
+                    matched[i] = v
+                    used_yt_ids.add(v["video_id"])
+                    break
+
+        # Pass 2: exact match on main part (before '|')
+        for i, item in enumerate(history):
+            if i in matched:
+                continue
+            t = item.get("title", "")
+            main = clean_str(t.split("|")[0])
+            if len(main) >= 8:
+                for v in valid_yt:
+                    if v["video_id"] not in used_yt_ids:
+                        v_main = clean_str(v["title"].split("|")[0])
+                        if v_main == main:
+                            matched[i] = v
+                            used_yt_ids.add(v["video_id"])
+                            break
+
         updated_history_count = 0
-        for item in history:
-            title = item.get("title", "")
-            match = find_matching_video(title, yt_videos)
-            if match:
+        for i, item in enumerate(history):
+            if i in matched:
+                match = matched[i]
                 item["video_id"] = match["video_id"]
                 item["youtube_url"] = match["youtube_url"]
                 item["short_url"] = match["short_url"]
                 updated_history_count += 1
             else:
-                if "video_id" not in item:
-                    item["video_id"] = None
-                    item["youtube_url"] = None
-                    item["short_url"] = None
+                item["video_id"] = None
+                item["youtube_url"] = None
+                item["short_url"] = None
 
         with open(HISTORY_FILE, "w", encoding="utf-8") as f:
             json.dump(history, f, indent=2)
@@ -199,17 +236,31 @@ def sync():
         for pl_name, pl_data in playlists.items():
             for v in pl_data.get("videos", []):
                 total_pl_vids += 1
-                match = find_matching_video(v.get("title"), yt_videos)
+                v_title = v.get("title", "")
+                ct = clean_str(v_title)
+                main = clean_str(v_title.split("|")[0])
+                match = None
+                # Exact full title
+                for ytv in valid_yt:
+                    if clean_str(ytv["title"]) == ct:
+                        match = ytv
+                        break
+                # Exact main part
+                if not match and len(main) >= 8:
+                    for ytv in valid_yt:
+                        if clean_str(ytv["title"].split("|")[0]) == main:
+                            match = ytv
+                            break
+
                 if match:
                     v["video_id"] = match["video_id"]
                     v["youtube_url"] = match["youtube_url"]
                     v["short_url"] = match["short_url"]
                     updated_pl_count += 1
                 else:
-                    if "video_id" not in v:
-                        v["video_id"] = None
-                        v["youtube_url"] = None
-                        v["short_url"] = None
+                    v["video_id"] = None
+                    v["youtube_url"] = None
+                    v["short_url"] = None
 
         with open(PLAYLISTS_FILE, "w", encoding="utf-8") as f:
             json.dump(playlists, f, indent=2)
