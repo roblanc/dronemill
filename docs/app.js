@@ -100,8 +100,13 @@ function setupRefresh() {
         btn.style.transition = '';
       }, 400);
 
+      try {
+        // Trigger live YouTube sync in backend if online
+        await fetch('/api/sync-youtube').catch(() => {});
+      } catch (e) {}
+
       await loadAllData();
-      showToast('Live data refreshed', '🔄');
+      showToast('Live data & YouTube links refreshed', '🔄');
     });
   });
 }
@@ -204,12 +209,14 @@ function renderTimeline(filter) {
     const thumbSrc = item.thumbnail ? `images/${encodeURIComponent(item.thumbnail)}` : '';
     const badgeClass = item.is_future ? 'scheduled' : 'published';
     const badgeText = item.is_future ? 'SCHEDULED' : 'PUBLISHED';
+    const hasYt = !!item.youtube_url;
 
     return `
       <article class="release-card" onclick="openVideoDetail(${item.id})">
         <div class="card-thumb-wrap">
           <img src="${thumbSrc}" alt="${escapeHtml(item.title)}" class="card-thumb-img" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100%\\' height=\\'100%\\' fill=\\'%23111\\'><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23555\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' font-family=\\'sans-serif\\' font-size=\\'14\\'>Preview</text></svg>'">
           <span class="release-badge-pill ${badgeClass}">${badgeText}</span>
+          ${hasYt ? `<span class="yt-thumb-badge" title="Uploaded to YouTube">▶ YouTube</span>` : ''}
           <span class="card-order-tag">#${item.id}</span>
         </div>
         <div class="card-body">
@@ -218,7 +225,22 @@ function renderTimeline(filter) {
           <div class="card-tags-row">
             ${(item.tags || []).slice(0, 3).map(t => `<span class="tag-badge">#${escapeHtml(t)}</span>`).join('')}
           </div>
-          <span class="card-tap-hint">Tap for details & copy &rarr;</span>
+          <div class="card-footer-row">
+            ${hasYt ? `
+              <div class="card-yt-actions">
+                <a href="${escapeHtml(item.youtube_url)}" target="_blank" rel="noopener noreferrer" class="card-yt-btn" onclick="event.stopPropagation();" title="Open video on YouTube">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>YouTube</span>
+                </a>
+                <button class="card-copy-yt-btn" onclick="event.stopPropagation(); copyText('${escapeForJs(item.youtube_url)}', 'YouTube link copied!');" title="Copy YouTube Link">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+            ` : `
+              <span class="card-status-pending">⏳ Draft / Local</span>
+            `}
+            <span class="card-tap-hint">Details &rarr;</span>
+          </div>
         </div>
       </article>
     `;
@@ -233,6 +255,7 @@ window.openVideoDetail = function(id) {
   const thumbSrc = item.thumbnail ? `images/${encodeURIComponent(item.thumbnail)}` : '';
   const badgeClass = item.is_future ? 'scheduled' : 'published';
   const badgeText = item.is_future ? 'SCHEDULED' : 'PUBLISHED';
+  const hasYt = !!item.youtube_url;
 
   const modalBody = document.getElementById('modal-content-body');
   modalBody.innerHTML = `
@@ -240,10 +263,34 @@ window.openVideoDetail = function(id) {
     <div class="modal-meta-row">
       <span class="release-badge-pill ${badgeClass}">${badgeText}</span>
       <span class="card-date-meta">🗓️ ${escapeHtml(item.release_formatted)}</span>
+      ${hasYt ? `<span class="yt-status-badge">▶ YouTube: ${escapeHtml(item.privacy || 'Uploaded')}</span>` : `<span class="pending-status-badge">Draft / Not Uploaded</span>`}
       <span class="tag-badge font-mono">#${item.id}</span>
     </div>
     <h3 class="modal-video-title">${escapeHtml(item.title)}</h3>
-    
+
+    ${hasYt ? `
+      <div class="modal-yt-box">
+        <div class="modal-yt-header">
+          <div class="modal-yt-title-group">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#ff0033"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <strong>YouTube Video Link</strong>
+          </div>
+          <span class="font-mono text-muted" style="font-size: 0.72rem;">ID: ${escapeHtml(item.video_id)}</span>
+        </div>
+        <div class="modal-yt-url-row">
+          <a href="${escapeHtml(item.youtube_url)}" target="_blank" rel="noopener noreferrer" class="modal-yt-url-link font-mono" title="Open link on YouTube">${escapeHtml(item.youtube_url)}</a>
+          <button class="modal-mini-copy-btn" onclick="copyText('${escapeForJs(item.youtube_url)}', 'YouTube link copied!')" title="Copy YouTube Link">Copy Link</button>
+        </div>
+        <div class="modal-yt-btn-group">
+          <a href="${escapeHtml(item.youtube_url)}" target="_blank" rel="noopener noreferrer" class="modal-act-btn yt-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Watch on YouTube
+          </a>
+          <button class="modal-act-btn" onclick="copyText('${escapeForJs(item.youtube_url)}', 'YouTube link copied!')">📋 Copy YouTube Link</button>
+        </div>
+      </div>
+    ` : ''}
+
     <div class="modal-actions">
       <button class="modal-act-btn primary" onclick="copyText('${escapeForJs(item.title)}', 'Title copied!')">Copy Title</button>
       <button class="modal-act-btn" onclick="copyText('${escapeForJs(item.description || '')}', 'Description copied!')">Copy Description</button>
@@ -306,9 +353,24 @@ async function fetchPlaylists() {
         <h3 class="playlist-title">${escapeHtml(name)}</h3>
         <p class="playlist-desc">${escapeHtml(data.description)}</p>
         <div class="playlist-video-list">
-          ${(data.videos || []).map(v => `
-            <div class="playlist-vid-item" title="${escapeHtml(v.title)}">▶ ${escapeHtml(v.title)}</div>
-          `).join('')}
+          ${(data.videos || []).map(v => {
+            if (v.youtube_url) {
+              return `
+                <a href="${escapeHtml(v.youtube_url)}" target="_blank" rel="noopener noreferrer" class="playlist-vid-item has-link" title="Open on YouTube: ${escapeHtml(v.title)}">
+                  <span class="pl-icon">▶</span>
+                  <span class="pl-text">${escapeHtml(v.title)}</span>
+                  <span class="pl-yt-pill">YouTube ↗</span>
+                </a>
+              `;
+            } else {
+              return `
+                <div class="playlist-vid-item" title="${escapeHtml(v.title)}">
+                  <span class="pl-icon">▶</span>
+                  <span class="pl-text">${escapeHtml(v.title)}</span>
+                </div>
+              `;
+            }
+          }).join('')}
         </div>
       </div>
     `).join('');
