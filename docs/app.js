@@ -11,8 +11,39 @@ document.addEventListener('DOMContentLoaded', () => {
   setupFilters();
   setupRefresh();
   setupModal();
+  setupDrawer();
   loadAllData();
 });
+
+// Setup Mobile Sidebar Drawer
+function setupDrawer() {
+  const drawer = document.getElementById('sidebar-drawer');
+  const backdrop = document.getElementById('drawer-backdrop');
+  const openBtn = document.getElementById('btn-drawer-toggle');
+  const closeBtn = document.getElementById('btn-drawer-close');
+
+  function openDrawer() {
+    if (drawer) drawer.classList.add('drawer-open');
+    if (backdrop) backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    if (drawer) drawer.classList.remove('drawer-open');
+    if (backdrop) backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (openBtn) openBtn.addEventListener('click', openDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+  // Close drawer when clicking any nav item in the drawer
+  const navItems = document.querySelectorAll('.sidebar .nav-item');
+  navItems.forEach(item => {
+    item.addEventListener('click', closeDrawer);
+  });
+}
 
 // Setup Tab Navigation (Supports both Desktop Sidebar & Mobile Bottom Nav)
 function setupTabs() {
