@@ -7,6 +7,7 @@ let statusData = {};
 let currentFilter = 'all';
 
 document.addEventListener('DOMContentLoaded', () => {
+  setupTheme();
   setupTabs();
   setupFilters();
   setupRefresh();
@@ -14,6 +15,42 @@ document.addEventListener('DOMContentLoaded', () => {
   setupDrawer();
   loadAllData();
 });
+
+// Setup Dark / Light Theme Toggle
+function setupTheme() {
+  const savedTheme = localStorage.getItem('dronemill-theme') || 
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  applyTheme(savedTheme);
+
+  const toggleBtns = [
+    document.getElementById('btn-theme-toggle'),
+    document.getElementById('btn-mobile-theme-toggle')
+  ].filter(Boolean);
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+      localStorage.setItem('dronemill-theme', next);
+    });
+  });
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  document.body.classList.toggle('light-theme', theme === 'light');
+  
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+  if (metaTheme) {
+    metaTheme.setAttribute('content', theme === 'light' ? '#f8fafc' : '#0a0c10');
+  }
+
+  const label = document.getElementById('theme-label-text');
+  if (label) {
+    label.textContent = theme === 'light' ? 'Light' : 'Dark';
+  }
+}
 
 // Setup Mobile Sidebar Drawer
 function setupDrawer() {

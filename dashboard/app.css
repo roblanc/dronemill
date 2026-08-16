@@ -38,6 +38,32 @@
   --safe-top: env(safe-area-inset-top, 0px);
 }
 
+/* ==========================================================================
+   LIGHT THEME OVERRIDES
+   ========================================================================== */
+[data-theme="light"], body.light-theme {
+  --bg-primary: #f1f5f9;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-elevated: #e2e8f0;
+  --bg-glass: rgba(255, 255, 255, 0.96);
+
+  --border-subtle: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --border-focus: #0284c7;
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  --accent-cyan: #0284c7;
+  --accent-blue: #2563eb;
+  --accent-amber: #d97706;
+  --accent-emerald: #059669;
+  --accent-rose: #e11d48;
+}
+
 /* Reset & Anti-Wobble */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -1382,3 +1408,143 @@ body {
     gap: 18px;
   }
 }
+
+/* ==========================================================================
+   THEME SWITCHER CONTROLS & LIGHT THEME POLISH
+   ========================================================================== */
+
+.top-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.96);
+}
+
+.theme-toggle-btn svg {
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle-btn:hover svg {
+  transform: rotate(20deg) scale(1.1);
+}
+
+/* Sun/Moon Icon visibility based on active theme */
+:root .sun-icon,
+[data-theme="dark"] .sun-icon {
+  display: block;
+  color: var(--accent-amber);
+}
+:root .moon-icon,
+[data-theme="dark"] .moon-icon {
+  display: none;
+}
+
+[data-theme="light"] .sun-icon,
+body.light-theme .sun-icon {
+  display: none;
+}
+[data-theme="light"] .moon-icon,
+body.light-theme .moon-icon {
+  display: block;
+  color: #0284c7;
+}
+
+/* Light Mode Surface Elevation & Borders */
+[data-theme="light"] body {
+  background-color: #f8fafc;
+}
+
+[data-theme="light"] .card,
+[data-theme="light"] .card-compact,
+[data-theme="light"] .playlist-card,
+[data-theme="light"] .community-card,
+[data-theme="light"] .modal-container,
+[data-theme="light"] .sidebar-status-card {
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="light"] .card:hover,
+[data-theme="light"] .playlist-card:hover,
+[data-theme="light"] .community-card:hover {
+  box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.10), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .metric-pill {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+[data-theme="light"] .filter-controls {
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .filter-btn {
+  color: #64748b;
+}
+
+[data-theme="light"] .filter-btn.active {
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .nav-item.active {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  border-color: #bae6fd;
+}
+
+[data-theme="light"] .mobile-nav-item.active {
+  color: #0284c7;
+}
+
+[data-theme="light"] .code-box,
+[data-theme="light"] .modal-code-box {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+[data-theme="light"] .tag-badge {
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #334155;
+}
+
+[data-theme="light"] .slider {
+  background-color: #e2e8f0;
+}
+

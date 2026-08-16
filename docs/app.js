@@ -7,6 +7,7 @@ let statusData = {};
 let currentFilter = 'all';
 
 document.addEventListener('DOMContentLoaded', () => {
+  setupTheme();
   setupTabs();
   setupFilters();
   setupRefresh();
@@ -14,6 +15,42 @@ document.addEventListener('DOMContentLoaded', () => {
   setupDrawer();
   loadAllData();
 });
+
+// Setup Dark / Light Theme Toggle
+function setupTheme() {
+  const savedTheme = localStorage.getItem('dronemill-theme') || 
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  applyTheme(savedTheme);
+
+  const toggleBtns = [
+    document.getElementById('btn-theme-toggle'),
+    document.getElementById('btn-mobile-theme-toggle')
+  ].filter(Boolean);
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+      localStorage.setItem('dronemill-theme', next);
+    });
+  });
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  document.body.classList.toggle('light-theme', theme === 'light');
+  
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+  if (metaTheme) {
+    metaTheme.setAttribute('content', theme === 'light' ? '#f8fafc' : '#0a0c10');
+  }
+
+  const label = document.getElementById('theme-label-text');
+  if (label) {
+    label.textContent = theme === 'light' ? 'Light' : 'Dark';
+  }
+}
 
 // Setup Mobile Sidebar Drawer
 function setupDrawer() {
@@ -124,7 +161,7 @@ async function loadAllData() {
 // Fetch Status Telemetry
 async function fetchStatus() {
   try {
-    const res = await fetch('data/status.json?v=20260816153736');
+    const res = await fetch('data/status.json?v=20260816154530');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     statusData = data;
@@ -163,7 +200,7 @@ async function fetchStatus() {
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
   try {
-    const res = await fetch('data/schedule.json?v=20260816153736');
+    const res = await fetch('data/schedule.json?v=20260816154530');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     scheduleData = await res.json();
 
@@ -344,7 +381,7 @@ function setupModal() {
 async function fetchPlaylists() {
   const container = document.getElementById('playlists-container');
   try {
-    const res = await fetch('data/playlists.json?v=20260816153736');
+    const res = await fetch('data/playlists.json?v=20260816154530');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const playlists = await res.json();
 
@@ -383,7 +420,7 @@ async function fetchPlaylists() {
 async function fetchCommunityPosts() {
   const container = document.getElementById('community-container');
   try {
-    const res = await fetch('data/community.json?v=20260816153736');
+    const res = await fetch('data/community.json?v=20260816154530');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const posts = await res.json();
 
