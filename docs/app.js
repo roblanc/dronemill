@@ -124,7 +124,7 @@ async function loadAllData() {
 // Fetch Status Telemetry
 async function fetchStatus() {
   try {
-    const res = await fetch('data/status.json');
+    const res = await fetch('data/status.json?v=20260816143713');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     statusData = data;
@@ -163,7 +163,7 @@ async function fetchStatus() {
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
   try {
-    const res = await fetch('data/schedule.json');
+    const res = await fetch('data/schedule.json?v=20260816143713');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     scheduleData = await res.json();
 
@@ -216,7 +216,7 @@ function renderTimeline(filter) {
         <div class="card-thumb-wrap">
           <img src="${thumbSrc}" alt="${escapeHtml(item.title)}" class="card-thumb-img" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100%\\' height=\\'100%\\' fill=\\'%23111\\'><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23555\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' font-family=\\'sans-serif\\' font-size=\\'14\\'>Preview</text></svg>'">
           <span class="release-badge-pill ${badgeClass}">${badgeText}</span>
-          ${hasYt ? `<span class="yt-thumb-badge" title="Uploaded to YouTube">▶ YouTube</span>` : ''}
+          ${hasYt ? `<a href="${escapeHtml(item.youtube_url)}" target="_blank" rel="noopener noreferrer" class="yt-thumb-badge" onclick="event.stopPropagation();" title="Watch on YouTube">▶ YouTube ↗</a>` : ''}
           <span class="card-order-tag">#${item.id}</span>
         </div>
         <div class="card-body">
@@ -229,11 +229,11 @@ function renderTimeline(filter) {
             ${hasYt ? `
               <div class="card-yt-actions">
                 <a href="${escapeHtml(item.youtube_url)}" target="_blank" rel="noopener noreferrer" class="card-yt-btn" onclick="event.stopPropagation();" title="Open video on YouTube">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                  <span>YouTube</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>YouTube ↗</span>
                 </a>
                 <button class="card-copy-yt-btn" onclick="event.stopPropagation(); copyText('${escapeForJs(item.youtube_url)}', 'YouTube link copied!');" title="Copy YouTube Link">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                 </button>
               </div>
             ` : `
@@ -344,7 +344,7 @@ function setupModal() {
 async function fetchPlaylists() {
   const container = document.getElementById('playlists-container');
   try {
-    const res = await fetch('data/playlists.json');
+    const res = await fetch('data/playlists.json?v=20260816143713');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const playlists = await res.json();
 
@@ -383,7 +383,7 @@ async function fetchPlaylists() {
 async function fetchCommunityPosts() {
   const container = document.getElementById('community-container');
   try {
-    const res = await fetch('data/community.json');
+    const res = await fetch('data/community.json?v=20260816143713');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const posts = await res.json();
 

@@ -580,20 +580,28 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
-  background-color: rgba(220, 38, 38, 0.9);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.65rem;
+  background-color: #e11d48;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 4px 9px;
+  border-radius: 6px;
+  font-size: 0.70rem;
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.03em;
-  display: flex;
+  color: #ffffff !important;
+  letter-spacing: 0.02em;
+  display: inline-flex;
   align-items: center;
   gap: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 10px rgba(220, 38, 38, 0.45);
+  text-decoration: none;
+  z-index: 3;
+  transition: all 0.15s ease;
+}
+
+.yt-thumb-badge:hover, .yt-thumb-badge:active {
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.7);
+  color: #ffffff !important;
 }
 
 .card-footer-row {
@@ -601,8 +609,8 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  margin-top: 6px;
-  padding-top: 8px;
+  margin-top: 8px;
+  padding-top: 10px;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -615,24 +623,25 @@ body {
 .card-yt-btn {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  background-color: rgba(220, 38, 38, 0.16);
-  border: 1px solid rgba(239, 68, 68, 0.35);
-  color: #fca5a5;
-  font-size: 0.72rem;
+  gap: 6px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+  font-size: 0.76rem;
   font-weight: 700;
-  padding: 4px 9px;
-  border-radius: var(--radius-xs);
+  padding: 6px 12px;
+  border-radius: 6px;
   text-decoration: none;
   transition: all 0.15s ease;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.35);
 }
 
 .card-yt-btn:hover, .card-yt-btn:active {
-  background-color: rgba(220, 38, 38, 0.3);
-  border-color: rgba(239, 68, 68, 0.6);
-  color: #ffffff;
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  color: #ffffff !important;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.55);
 }
 
 .card-copy-yt-btn {
@@ -642,8 +651,8 @@ body {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
-  padding: 4px 6px;
-  border-radius: var(--radius-xs);
+  padding: 6px 8px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -655,9 +664,13 @@ body {
 }
 
 .card-status-pending {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
+  background: var(--bg-secondary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px dashed var(--border-medium);
 }
 
 /* ==========================================================================

@@ -10,6 +10,7 @@ import sys
 import json
 import shutil
 import datetime
+import re
 
 ROOT = "/home/brewuser/projects/dronemill"
 DOCS = f"{ROOT}/docs"
@@ -70,7 +71,20 @@ if os.path.exists(history_file):
         if sched:
             next_release = f"{sched[0][1]} ({sched[0][0].strftime('%b %d, %H:%M UTC')})"
 
-schedule_list.reverse()
+    # Separate future scheduled releases (chronological soonest first) and published releases (newest first)
+    future_list = [x for x in schedule_list if x["is_future"]]
+    def get_dt(x):
+        p = x.get("publish_at")
+        try:
+            return datetime.datetime.fromisoformat(p.replace("Z", "+00:00"))
+        except Exception:
+            return datetime.datetime.max.replace(tzinfo=datetime.timezone.utc)
+    future_list.sort(key=get_dt)
+
+    past_list = [x for x in schedule_list if not x["is_future"]]
+    past_list.reverse()
+
+    schedule_list = future_list + past_list
 
 status_obj = {
     "server_time_utc": now_utc.strftime("%Y-%m-%d %H:%M:%S UTC"),
@@ -134,8 +148,19 @@ for d in image_dirs:
                 if not os.path.exists(dst):
                     shutil.copyfile(src, dst)
 
-# 3. Copy Web App Frontend assets to docs/
-shutil.copyfile(f"{ROOT}/dashboard/index.html", f"{DOCS}/index.html")
+# 3. Copy Web App Frontend assets to docs/ with cache busting
+v_tag = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+
+with open(f"{ROOT}/dashboard/index.html", "r", encoding="utf-8") as f:
+    html_content = f.read()
+
+# Replace any css/js cache tags with latest timestamp
+html_content = re.sub(r'href="app\.css(\?v=[^"]*)?"', f'href="app.css?v={v_tag}"', html_content)
+html_content = re.sub(r'src="app\.js(\?v=[^"]*)?"', f'src="app.js?v={v_tag}"', html_content)
+
+with open(f"{DOCS}/index.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
 shutil.copyfile(f"{ROOT}/dashboard/app.css", f"{DOCS}/app.css")
 
 # Adapt app.js to fetch from static data files when on GitHub Pages or static host
@@ -143,10 +168,10 @@ with open(f"{ROOT}/dashboard/app.js", "r", encoding="utf-8") as f:
     js_content = f.read()
 
 # Replace API endpoints with relative data files for GitHub Pages compatibility
-js_static = js_content.replace("'/api/status'", "'data/status.json'")
-js_static = js_static.replace("'/api/schedule'", "'data/schedule.json'")
-js_static = js_static.replace("'/api/playlists'", "'data/playlists.json'")
-js_static = js_static.replace("'/api/community-posts'", "'data/community.json'")
+js_static = js_content.replace("'/api/status'", f"'data/status.json?v={v_tag}'")
+js_static = js_static.replace("'/api/schedule'", f"'data/schedule.json?v={v_tag}'")
+js_static = js_static.replace("'/api/playlists'", f"'data/playlists.json?v={v_tag}'")
+js_static = js_static.replace("'/api/community-posts'", f"'data/community.json?v={v_tag}'")
 js_static = js_static.replace("`/media/image/${encodeURIComponent(item.thumbnail)}`", "`images/${encodeURIComponent(item.thumbnail)}`")
 
 with open(f"{DOCS}/app.js", "w", encoding="utf-8") as f:
