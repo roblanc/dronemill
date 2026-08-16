@@ -137,16 +137,43 @@ community_posts = [
 with open(f"{DOCS}/data/community.json", "w", encoding="utf-8") as f:
     json.dump(community_posts, f, indent=2)
 
-# 2. Copy Images to docs/images/
-image_dirs = [f"{ROOT}/images/fresh", f"{ROOT}/images/slate", f"{ROOT}/images"]
-for d in image_dirs:
-    if os.path.exists(d):
-        for fname in os.listdir(d):
-            if fname.lower().endswith(('.jpg', '.png', '.jpeg')):
-                src = os.path.join(d, fname)
-                dst = os.path.join(f"{DOCS}/images", fname)
+# 2. Copy and Process All Images to docs/images/
+media_concepts = "/DATA/Media/DroneMill ChatGPT Concepts"
+if os.path.exists(media_concepts):
+    for fname in os.listdir(media_concepts):
+        if fname.lower().endswith(('.png', '.jpg', '.jpeg')):
+            src = os.path.join(media_concepts, fname)
+            base = os.path.splitext(fname)[0]
+            dst = os.path.join(f"{DOCS}/images", fname)
+            if not os.path.exists(dst):
+                shutil.copyfile(src, dst)
+            dst_comp = os.path.join(f"{DOCS}/images", f"{base}_compressed.jpg")
+            if not os.path.exists(dst_comp):
+                shutil.copyfile(src, dst_comp)
+
+# Copy all project images
+images_root = f"{ROOT}/images"
+if os.path.exists(images_root):
+    for root_dir, _, files in os.walk(images_root):
+        for f in files:
+            if f.lower().endswith(('.jpg', '.png', '.jpeg')):
+                src = os.path.join(root_dir, f)
+                dst = os.path.join(f"{DOCS}/images", f)
                 if not os.path.exists(dst):
                     shutil.copyfile(src, dst)
+                base = os.path.splitext(f)[0]
+                dst_comp = os.path.join(f"{DOCS}/images", f"{base}_compressed.jpg")
+                if not os.path.exists(dst_comp):
+                    shutil.copyfile(src, dst_comp)
+
+# Copy /DATA/Media root images
+if os.path.exists("/DATA/Media"):
+    for f in os.listdir("/DATA/Media"):
+        if f.lower().endswith(('.jpg', '.png', '.jpeg')):
+            src = os.path.join("/DATA/Media", f)
+            dst = os.path.join(f"{DOCS}/images", f)
+            if not os.path.exists(dst):
+                shutil.copyfile(src, dst)
 
 # 3. Copy Web App Frontend assets to docs/ with cache busting
 v_tag = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
