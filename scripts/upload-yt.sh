@@ -107,6 +107,7 @@ print(json.dumps(meta, indent=2))
 echo ">> Uploading: $TITLE"
 echo ">> Tags: $TAGS_CSV"
 
+UPLOAD_LOG=$(mktemp)
 youtubeuploader \
   -filename "$VIDEO" \
   -title "$TITLE" \
@@ -114,13 +115,16 @@ youtubeuploader \
   -metaJSON "$META" \
   -thumbnail "$THUMB" \
   -secrets "$CREDS" \
-  -cache "$TOKEN"
+  -cache "$TOKEN" 2>&1 | tee "$UPLOAD_LOG"
+
+VIDEO_ID=$(grep -o 'Video ID: [a-zA-Z0-9_-]\+' "$UPLOAD_LOG" | awk '{print $3}' | tail -n 1 || true)
+rm -f "$UPLOAD_LOG"
 
 # Write to upload history log
 HISTORY_FILE="$ROOT/output/upload_history.json"
 python3 -c "
 import os, json, datetime, sys
-history_file, title, description, tags, privacy, publish_at, thumbnail, local_path = sys.argv[1:9]
+history_file, title, description, tags, privacy, publish_at, thumbnail, local_path, video_id = sys.argv[1:10]
 entry = {
     'timestamp': datetime.datetime.utcnow().isoformat() + 'Z',
     'title': title,
@@ -129,7 +133,10 @@ entry = {
     'privacy': privacy,
     'publish_at': publish_at if publish_at else None,
     'thumbnail': os.path.basename(thumbnail),
-    'local_path': os.path.basename(local_path)
+    'local_path': os.path.basename(local_path),
+    'video_id': video_id if video_id else None,
+    'youtube_url': f'https://www.youtube.com/watch?v={video_id}' if video_id else None,
+    'short_url': f'https://youtu.be/{video_id}' if video_id else None
 }
 history = []
 if os.path.exists(history_file):
@@ -143,7 +150,7 @@ if os.path.exists(history_file):
 history.append(entry)
 with open(history_file, 'w', encoding='utf-8') as f:
     json.dump(history, f, indent=2)
-" "$HISTORY_FILE" "$TITLE" "$DESCRIPTION" "$TAGS_CSV" "$PRIVACY" "$PUBLISH_AT" "$THUMB" "$VIDEO"
+" "$HISTORY_FILE" "$TITLE" "$DESCRIPTION" "$TAGS_CSV" "$PRIVACY" "$PUBLISH_AT" "$THUMB" "$VIDEO" "$VIDEO_ID"
 
 # Clean up local video file to save space
 if [ -f "$VIDEO" ]; then

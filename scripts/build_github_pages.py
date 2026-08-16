@@ -45,6 +45,11 @@ if os.path.exists(history_file):
                 except Exception:
                     release_dt_str = p
 
+            vid_id = item.get("video_id")
+            yt_url = item.get("youtube_url")
+            if vid_id and not yt_url:
+                yt_url = f"https://www.youtube.com/watch?v={vid_id}"
+
             schedule_list.append({
                 "id": idx + 1,
                 "title": item.get("title"),
@@ -54,7 +59,10 @@ if os.path.exists(history_file):
                 "privacy": item.get("privacy", "unlisted"),
                 "thumbnail": item.get("thumbnail"),
                 "tags": item.get("tags", []),
-                "description": item.get("description", "")
+                "description": item.get("description", ""),
+                "video_id": vid_id,
+                "youtube_url": yt_url,
+                "short_url": item.get("short_url") or (f"https://youtu.be/{vid_id}" if vid_id else None)
             })
             
         sched.sort()

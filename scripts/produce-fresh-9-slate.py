@@ -148,26 +148,33 @@ ITEMS = [
     }
 ]
 
-print(f"=== Starting Production of {len(ITEMS)} Brand New DroneMill Releases ===")
+DURATION = 7200 # 2 Hours (7200 seconds)
+
+print(f"=== Starting Production of {len(ITEMS)} Brand New 2-Hour DroneMill Releases ===")
 
 for idx, item in enumerate(ITEMS, 1):
+    # Ensure title has 2 hours suffix if not present
+    title = item['title']
+    if "2 hour" not in title.lower():
+        title = f"{title} | 2 hours"
+        
     print(f"\n=======================================================")
-    print(f"[{idx}/{len(ITEMS)}] {item['title']}")
-    print(f"📅 Target YouTube Release: {item['date']}")
+    print(f"[{idx}/{len(ITEMS)}] {title}")
+    print(f"📅 Target YouTube Release: {item['date']} (Duration: 2 Hours)")
     print(f"=======================================================")
     
     # 1. LatentScore Stem
     ls_wav = f"{ROOT}/audio/fresh/ls_{item['id']}.wav"
     if not os.path.exists(ls_wav):
         print(f">> Generating LatentScore: {item['id']}...")
-        cmd_ls = f"\"{ROOT}/scripts/latentscore-gen.sh\" \"{item['ls_prompt']}\" \"{ls_wav}\" 60"
+        cmd_ls = f"\"{ROOT}/scripts/latentscore-gen.sh\" \"{item['ls_prompt']}\" \"{ls_wav}\" 180"
         run_cmd(cmd_ls, f"LatentScore {item['id']}")
     
-    # 2. Master Hybrid Soundscape
-    master_wav = f"{ROOT}/audio/fresh/master_{item['id']}.wav"
+    # 2. Master Hybrid Soundscape (2 Hours)
+    master_wav = f"{ROOT}/audio/fresh/master_{item['id']}_2h.wav"
     cfg = {
-        "title": item["title"],
-        "duration": 60,
+        "title": title,
+        "duration": DURATION,
         "engines": {
             "latentscore": {"enabled": True, "wav": ls_wav, "volume": 0.85, "filter": "highpass=f=80,lowpass=f=6000"},
             "foley": {"enabled": True, "samples": item["foley"], "volume": 0.40, "filter": "highpass=f=100,lowpass=f=6500"},
@@ -177,11 +184,11 @@ for idx, item in enumerate(ITEMS, 1):
     }
     build_hybrid_soundscape(cfg, master_wav)
     
-    # 3. Render 1080p Living Video
-    out_mp4 = f"{ROOT}/output/fresh_{item['id']}.mp4"
-    print(f">> Rendering 1080p Living Video -> {out_mp4}...")
+    # 3. Render 1080p Living Video (2 Hours)
+    out_mp4 = f"{ROOT}/output/fresh_{item['id']}_2h.mp4"
+    print(f">> Rendering 1080p Living Video (2h) -> {out_mp4}...")
     cmd_render = f"""ffmpeg -y -nostdin \
-      -loop 1 -framerate 24 -t 60 -i "{item['image']}" \
+      -loop 1 -framerate 24 -t {DURATION} -i "{item['image']}" \
       -stream_loop -1 -i "{item['overlay']}" \
       -i "{master_wav}" \
       -filter_complex "
@@ -190,13 +197,13 @@ for idx, item in enumerate(ITEMS, 1):
         [base][fx]blend=all_mode=screen:all_opacity={item['overlay_opacity']}[merged];
         [merged]vignette=angle=0.32,noise=alls=0.6:allf=t+u,format=yuv420p[vout]
       " -map "[vout]" -map "2:a" \
-      -c:v libx264 -preset ultrafast -crf 20 -c:a aac -b:a 256k -ar 48000 -t 60 -movflags +faststart "{out_mp4}"
+      -c:v libx264 -preset ultrafast -crf 20 -c:a aac -b:a 256k -ar 48000 -t {DURATION} -movflags +faststart "{out_mp4}"
     """
     run_cmd(cmd_render, f"Render video {item['id']}")
     
     # 4. Schedule on YouTube
     print(f">> Scheduling on YouTube for {item['date']}...")
-    desc_text = f"""AI Hybrid Multi-Engine Soundscape:
+    desc_text = f"""2 Hours of Deep Atmospheric AI Hybrid Soundscape:
 1. AI Harmonic Director: Custom modal mapping & key tuning.
 2. LatentScore Neural Composer: Prompt-conditioned melodic & harmonic progression.
 3. Multi-Layer Environmental Foley: Acoustic spatial immersion.
@@ -206,18 +213,28 @@ for idx, item in enumerate(ITEMS, 1):
 
 Visual: Original 35mm film photograph / archival plate with subtle volumetric atmosphere.
 
-#ambient #{item['tags'].split(',')[1].strip()} #{item['tags'].split(',')[2].strip()} #hybridsound #timelessambience"""
+#ambient #{item['tags'].split(',')[1].strip()} #{item['tags'].split(',')[2].strip()} #hybridsound #timelessambience #2hours"""
 
     desc_file = f"/tmp/desc_fresh_{idx}.txt"
     with open(desc_file, "w", encoding="utf-8") as f:
         f.write(desc_text)
         
-    cmd_upload = f"\"{ROOT}/scripts/upload-yt.sh\" \"{out_mp4}\" \"{item['title']}\" \"{desc_file}\" \"{item['image']}\" \"private\" \"{item['tags']}\" \"{item['date']}\""
-    run_cmd(cmd_upload, f"Schedule {item['title']}")
+    cmd_upload = f"\"{ROOT}/scripts/upload-yt.sh\" \"{out_mp4}\" \"{title}\" \"{desc_file}\" \"{item['image']}\" \"private\" \"{item['tags']},2 hour ambient\" \"{item['date']}\""
+    run_cmd(cmd_upload, f"Schedule {title}")
     
+    # Clean up large intermediate files immediately to save disk space
     if os.path.exists(desc_file):
         os.remove(desc_file)
+    if os.path.exists(out_mp4):
+        os.remove(out_mp4)
+    if os.path.exists(master_wav):
+        os.remove(master_wav)
         
-    print(f"✅ Slot #{idx} ({item['date']}) scheduled successfully!\n")
+    print(f"✅ Slot #{idx} ({item['date']}) 2-hour production completed and scheduled!\n")
 
-print("\n🎉 ALL 9 BRAND NEW RELEASES PRODUCED AND SCHEDULED SUCCESSFULLY!")
+print("\n🎉 ALL 9 BRAND NEW 2-HOUR RELEASES PRODUCED AND SCHEDULED SUCCESSFULLY!")
+
+# Update Live GitHub Pages Dashboard
+print(">> Refreshing Live GitHub Pages Dashboard...")
+subprocess.run(f"\"{ROOT}/scripts/publish-dashboard.sh\"", shell=True)
+

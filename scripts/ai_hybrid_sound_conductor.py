@@ -72,7 +72,7 @@ def build_hybrid_soundscape(config, out_master_wav):
     # 1. LatentScore Stem
     ls_cfg = engines.get("latentscore", {})
     if ls_cfg.get("enabled") and os.path.exists(ls_cfg.get("wav", "")):
-        inputs.append(f"-i \"{ls_cfg['wav']}\"")
+        inputs.append(f"-stream_loop -1 -i \"{ls_cfg['wav']}\"")
         filt = ls_cfg.get("filter", "highpass=f=80,lowpass=f=6000")
         vol = ls_cfg.get("volume", 0.8)
         filter_chains.append(f"[{idx}:a]{filt},volume={vol},afade=t=in:ss=0:d=2,afade=t=out:st={duration-2}:d=2[stem_ls]")
@@ -129,7 +129,7 @@ def build_hybrid_soundscape(config, out_master_wav):
     # Mix down all active stems with mastering limiter and EBU R128 loudness normalization (-22 LUFS)
     merge_str = "".join(merge_inputs)
     num_stems = len(merge_inputs)
-    filter_chains.append(f"{merge_str}amix=inputs={num_stems}:duration=first:dropout_transition=2:normalize=0[mixed]")
+    filter_chains.append(f"{merge_str}amix=inputs={num_stems}:duration=longest:dropout_transition=2:normalize=0[mixed]")
     filter_chains.append("[mixed]compand=attacks=0.1:decays=0.8:points=-80/-80|-40/-32|-20/-16|0/-8:gain=2,alimiter=limit=-1.5dB,loudnorm=I=-22:TP=-1.5:LRA=9[mastered]")
 
     inputs_str = " ".join(inputs)

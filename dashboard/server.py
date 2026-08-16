@@ -38,6 +38,8 @@ class DroneMillHandler(http.server.SimpleHTTPRequestHandler):
             self.send_json(self.get_playlists())
         elif path == "/api/community-posts":
             self.send_json(self.get_community_posts())
+        elif path == "/api/sync-youtube":
+            self.send_json(self.sync_youtube())
         elif path.startswith("/media/image/"):
             img_name = urllib.parse.unquote(path.replace("/media/image/", ""))
             self.serve_file_from_dirs(img_name, [
@@ -144,6 +146,11 @@ class DroneMillHandler(http.server.SimpleHTTPRequestHandler):
                 except Exception:
                     release_dt_str = p
 
+            vid_id = item.get("video_id")
+            yt_url = item.get("youtube_url")
+            if vid_id and not yt_url:
+                yt_url = f"https://www.youtube.com/watch?v={vid_id}"
+
             results.append({
                 "id": idx + 1,
                 "title": item.get("title"),
@@ -153,12 +160,26 @@ class DroneMillHandler(http.server.SimpleHTTPRequestHandler):
                 "privacy": item.get("privacy", "unlisted"),
                 "thumbnail": item.get("thumbnail"),
                 "tags": item.get("tags", []),
-                "description": item.get("description", "")
+                "description": item.get("description", ""),
+                "video_id": vid_id,
+                "youtube_url": yt_url,
+                "short_url": item.get("short_url") or (f"https://youtu.be/{vid_id}" if vid_id else None)
             })
 
         # Return latest scheduled first or sorted
         results.reverse()
         return results
+
+    def sync_youtube(self):
+        sync_script = f"{ROOT}/scripts/sync-youtube-ids.py"
+        if os.path.exists(sync_script):
+            import subprocess
+            try:
+                subprocess.run([sys.executable, sync_script], check=True, capture_output=True, timeout=30)
+                return {"status": "ok", "message": "Successfully synchronized with YouTube API"}
+            except Exception as e:
+                return {"status": "error", "message": str(e)}
+        return {"status": "error", "message": "Sync script not found"}
 
     def get_playlists(self):
         pl_file = f"{ROOT}/output/curated_playlists.json"
