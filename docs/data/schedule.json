@@ -1,29 +1,5 @@
 [
   {
-    "id": 26,
-    "title": "every ending had changed at the video store | analog nostalgia ambient | 2 hours",
-    "publish_at": "2026-08-17T18:00:00Z",
-    "release_formatted": "Monday, Aug 17, 2026 \u2014 18:00 UTC",
-    "is_future": true,
-    "privacy": "private",
-    "thumbnail": "05-video-store-chatgpt_compressed.jpg",
-    "tags": [
-      "ambient",
-      "cosmic horror",
-      "dark ambient",
-      "sleep music",
-      "study music",
-      "analog nostalgia",
-      "liminal space",
-      "2 hour ambient",
-      "timeless ambience"
-    ],
-    "description": "Two hours inside the video store after closing, where every ending has changed.\n\nWarm analog memory and a cold seam of unease \u2014 ambient for sleep, study, or rewinding something you already know.\n\nVisual and environmental sound design assembled by DroneMill.\n\n#darkambient #analognostalgia #liminalspace #sleepmusic #2hourambient",
-    "video_id": "qQ7Kxn9PDEg",
-    "youtube_url": "https://www.youtube.com/watch?v=qQ7Kxn9PDEg",
-    "short_url": "https://youtu.be/qQ7Kxn9PDEg"
-  },
-  {
     "id": 27,
     "title": "observatory beneath the gypsum dunes | desert cosmic ambient | 2 hours",
     "publish_at": "2026-08-18T18:00:00Z",
@@ -988,6 +964,30 @@
     "video_id": null,
     "youtube_url": null,
     "short_url": null
+  },
+  {
+    "id": 26,
+    "title": "every ending had changed at the video store | analog nostalgia ambient | 2 hours",
+    "publish_at": "2026-08-17T18:00:00Z",
+    "release_formatted": "Monday, Aug 17, 2026 \u2014 18:00 UTC",
+    "is_future": false,
+    "privacy": "private",
+    "thumbnail": "05-video-store-chatgpt_compressed.jpg",
+    "tags": [
+      "ambient",
+      "cosmic horror",
+      "dark ambient",
+      "sleep music",
+      "study music",
+      "analog nostalgia",
+      "liminal space",
+      "2 hour ambient",
+      "timeless ambience"
+    ],
+    "description": "Two hours inside the video store after closing, where every ending has changed.\n\nWarm analog memory and a cold seam of unease \u2014 ambient for sleep, study, or rewinding something you already know.\n\nVisual and environmental sound design assembled by DroneMill.\n\n#darkambient #analognostalgia #liminalspace #sleepmusic #2hourambient",
+    "video_id": "qQ7Kxn9PDEg",
+    "youtube_url": "https://www.youtube.com/watch?v=qQ7Kxn9PDEg",
+    "short_url": "https://youtu.be/qQ7Kxn9PDEg"
   },
   {
     "id": 25,

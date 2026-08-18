@@ -1,12 +1,12 @@
 {
-  "server_time_utc": "2026-08-17 04:00:01 UTC",
+  "server_time_utc": "2026-08-18 04:00:02 UTC",
   "total_disk_gb": 37.2,
   "used_disk_gb": 23.9,
   "free_disk_gb": 11.8,
   "disk_percent": 64.1,
   "total_uploads": 69,
-  "future_scheduled_count": 14,
-  "next_release": "every ending had changed at the video store | analog nostalgia ambient | 2 hours (Aug 17, 18:00 UTC)",
+  "future_scheduled_count": 13,
+  "next_release": "observatory beneath the gypsum dunes | desert cosmic ambient | 2 hours (Aug 18, 18:00 UTC)",
   "master_lufs": -22.0,
   "audio_engine": "AI Hybrid 5-Engine Conductor (Active)"
 }
