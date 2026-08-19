@@ -1,29 +1,5 @@
 [
   {
-    "id": 27,
-    "title": "observatory beneath the gypsum dunes | desert cosmic ambient | 2 hours",
-    "publish_at": "2026-08-18T18:00:00Z",
-    "release_formatted": "Tuesday, Aug 18, 2026 \u2014 18:00 UTC",
-    "is_future": true,
-    "privacy": "private",
-    "thumbnail": "06-gypsum-observatory-chatgpt.png",
-    "tags": [
-      "ambient",
-      "cosmic horror",
-      "dark ambient",
-      "sleep music",
-      "study music",
-      "desert",
-      "space ambient",
-      "2 hour ambient",
-      "timeless ambience"
-    ],
-    "description": "Two hours beneath the gypsum dunes, watching a sparse sky through an observatory roof.\n\nA dry, wide desert cosmic ambient for sleep, deep work, or lying in the sand.\n\nVisual and environmental sound design assembled by DroneMill.\n\n#darkambient #desertcosmic #spaceambient #sleepmusic #2hourambient",
-    "video_id": "JLALxi2YJvY",
-    "youtube_url": "https://www.youtube.com/watch?v=JLALxi2YJvY",
-    "short_url": "https://youtu.be/JLALxi2YJvY"
-  },
-  {
     "id": 28,
     "title": "a boardwalk that grew rings like a tree | forest liminality ambient | 2 hours",
     "publish_at": "2026-08-19T18:00:00Z",
@@ -964,6 +940,30 @@
     "video_id": null,
     "youtube_url": null,
     "short_url": null
+  },
+  {
+    "id": 27,
+    "title": "observatory beneath the gypsum dunes | desert cosmic ambient | 2 hours",
+    "publish_at": "2026-08-18T18:00:00Z",
+    "release_formatted": "Tuesday, Aug 18, 2026 \u2014 18:00 UTC",
+    "is_future": false,
+    "privacy": "private",
+    "thumbnail": "06-gypsum-observatory-chatgpt.png",
+    "tags": [
+      "ambient",
+      "cosmic horror",
+      "dark ambient",
+      "sleep music",
+      "study music",
+      "desert",
+      "space ambient",
+      "2 hour ambient",
+      "timeless ambience"
+    ],
+    "description": "Two hours beneath the gypsum dunes, watching a sparse sky through an observatory roof.\n\nA dry, wide desert cosmic ambient for sleep, deep work, or lying in the sand.\n\nVisual and environmental sound design assembled by DroneMill.\n\n#darkambient #desertcosmic #spaceambient #sleepmusic #2hourambient",
+    "video_id": "JLALxi2YJvY",
+    "youtube_url": "https://www.youtube.com/watch?v=JLALxi2YJvY",
+    "short_url": "https://youtu.be/JLALxi2YJvY"
   },
   {
     "id": 26,
