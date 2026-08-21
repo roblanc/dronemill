@@ -1,29 +1,5 @@
 [
   {
-    "id": 29,
-    "title": "warm rain over the protoceratops hollow | prehistoric cozy ambient | 2 hours",
-    "publish_at": "2026-08-20T18:00:00Z",
-    "release_formatted": "Thursday, Aug 20, 2026 \u2014 18:00 UTC",
-    "is_future": true,
-    "privacy": "private",
-    "thumbnail": "08-protoceratops-hollow-chatgpt_compressed.jpg",
-    "tags": [
-      "ambient",
-      "cosmic horror",
-      "dark ambient",
-      "sleep music",
-      "study music",
-      "prehistoric",
-      "cozy ambient",
-      "2 hour ambient",
-      "timeless ambience"
-    ],
-    "description": "Two hours of warm rain over the protoceratops hollow.\n\nA prehistoric, cozy ambient for sleep, study, or sheltering beneath giant ferns.\n\nVisual and environmental sound design assembled by DroneMill.\n\n#darkambient #prehistoriccozy #warmambient #sleepmusic #2hourambient",
-    "video_id": "OOyK5PBwQdQ",
-    "youtube_url": "https://www.youtube.com/watch?v=OOyK5PBwQdQ",
-    "short_url": "https://youtu.be/OOyK5PBwQdQ"
-  },
-  {
     "id": 30,
     "title": "you enter the atrium where daylight falls upward | architectural dread ambient | 2 hours",
     "publish_at": "2026-08-21T18:00:00Z",
@@ -916,6 +892,30 @@
     "video_id": null,
     "youtube_url": null,
     "short_url": null
+  },
+  {
+    "id": 29,
+    "title": "warm rain over the protoceratops hollow | prehistoric cozy ambient | 2 hours",
+    "publish_at": "2026-08-20T18:00:00Z",
+    "release_formatted": "Thursday, Aug 20, 2026 \u2014 18:00 UTC",
+    "is_future": false,
+    "privacy": "private",
+    "thumbnail": "08-protoceratops-hollow-chatgpt_compressed.jpg",
+    "tags": [
+      "ambient",
+      "cosmic horror",
+      "dark ambient",
+      "sleep music",
+      "study music",
+      "prehistoric",
+      "cozy ambient",
+      "2 hour ambient",
+      "timeless ambience"
+    ],
+    "description": "Two hours of warm rain over the protoceratops hollow.\n\nA prehistoric, cozy ambient for sleep, study, or sheltering beneath giant ferns.\n\nVisual and environmental sound design assembled by DroneMill.\n\n#darkambient #prehistoriccozy #warmambient #sleepmusic #2hourambient",
+    "video_id": "OOyK5PBwQdQ",
+    "youtube_url": "https://www.youtube.com/watch?v=OOyK5PBwQdQ",
+    "short_url": "https://youtu.be/OOyK5PBwQdQ"
   },
   {
     "id": 28,
