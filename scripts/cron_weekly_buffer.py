@@ -435,6 +435,14 @@ def produce_and_schedule_single(concept, slot_dt):
                         _success = bool(_e2.get("video_id"))
                         break
         if _success:
+            # archive the cover so the bank never reuses it (upload-yt.sh already removed the mp4)
+            if image_path and os.path.exists(image_path) and (
+                    "/images/fresh/" in image_path or "/images/generated/" in image_path):
+                try:
+                    os.makedirs(f"{ROOT}/images/used", exist_ok=True)
+                    os.replace(image_path, f"{ROOT}/images/used/{os.path.basename(image_path)}")
+                except Exception as _mv:
+                    log(f"WARN: could not archive cover: {_mv}")
             idea_generator.save_used_idea(concept["title"])
             log(f"✅ Successfully scheduled: {concept['title']} ({pub_iso})")
         else:
