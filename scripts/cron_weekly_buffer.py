@@ -310,7 +310,33 @@ def produce_and_schedule_single(concept, slot_dt):
       " -map "[vout]" -map "2:a" \
       -c:v libx264 -preset ultrafast -crf 20 -c:a aac -b:a 256k -ar 48000 -t 7200 -movflags +faststart "{out_mp4}"
     """
-    run_cmd(cmd_render, f"Rendering 2h video -> {out_mp4}")
+    # Preferred: a seamless 60 s "living still" loop of the cover (lamps flicker, fog drifts,
+    # snow falls, the phone sways slightly), repeated under the 2 h soundtrack by stream copy.
+    # Falls back to the static-image render above if anything goes wrong.
+    living = f"{ROOT}/tmp/{slug}_living.mp4"
+    venv_py = f"{ROOT}/.venv-visual/bin/python"
+    used_living = False
+    if os.path.exists(venv_py):
+        try:
+            res = subprocess.run([venv_py, f"{ROOT}/scripts/living_still.py", image_path,
+                                  f"auto:{preset}:{concept.get('category', '')}", living, "60", "1920"],
+                                 capture_output=True, text=True, timeout=2700)
+            if res.returncode == 0 and os.path.exists(living) and os.path.getsize(living) > 1_000_000:
+                run_cmd(f'ffmpeg -y -nostdin -stream_loop -1 -i "{living}" -i "{master_audio}" -map 0:v -map 1:a '
+                        f'-c:v copy -c:a aac -b:a 256k -ar 48000 -t 7200 -movflags +faststart "{out_mp4}"',
+                        f"Muxing living-still loop with 2h audio -> {out_mp4}")
+                used_living = True
+                log("🎞️ Rendered with a living-still loop of the cover")
+            else:
+                tail = (res.stderr or res.stdout or "").strip().splitlines()[-1:] or ["no output"]
+                log(f"WARN: living still failed ({tail[0][:160]}), using static render")
+        except Exception as e:
+            log(f"WARN: living still error ({e}), using static render")
+        finally:
+            if os.path.exists(living):
+                os.remove(living)
+    if not used_living:
+        run_cmd(cmd_render, f"Rendering 2h video -> {out_mp4}")
 
     # 4. Write description file
     tmp_dir = f"{ROOT}/tmp"
@@ -322,7 +348,11 @@ def produce_and_schedule_single(concept, slot_dt):
     # 5. Upload & Schedule via upload-yt.sh
     cmd_upload = f"\"{ROOT}/scripts/upload-yt.sh\" \"{out_mp4}\" \"{concept['title']}\" \"{desc_file}\" \"{image_path}\" \"private\" \"{concept['tags']}\" \"{pub_iso}\""
     try:
-        run_cmd(cmd_upload, f"Uploading and scheduling on YouTube for {pub_iso}")
+        upload_out = run_cmd(cmd_upload, f"Uploading and scheduling on YouTube for {pub_iso}") or ""
+        # Surface the monetization and product-tagging results; upload-yt.sh only prints them.
+        for line in upload_out.splitlines():
+            if any(k in line for k in ("Monetization", "MONETIZATION", "products", "Products", "WARN", "VIDEO_ID", "Video ID")):
+                log(f"   ↳ {line.strip()[:200]}")
     finally:
         # Always clean up desc file and master wav (master wav no longer needed after render, even if upload fails)
         if os.path.exists(desc_file):
