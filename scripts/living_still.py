@@ -322,15 +322,21 @@ def auto_recipe(scene, preset="", category=""):
                                                  "y_range": (max(0.0, y - 0.45), min(1.0, y + 0.02)), "cycles": (12, 20),
                                                  "size": (0.6, 1.4), "alpha": 0.9, "bgr": (0.25, 0.6, 1.0),
                                                  "fade_with_travel": True, "blur": 0.6, "seed": 40 + i}))
-    if preset == "lovecraft" or "eldritch" in cat or "maritime" in cat:
-        recipe["post"] += [("fog_drift", {"y0": 0.05, "y1": 0.8, "density": 0.2, "speed": 0.8}),
-                           ("rain_streaks", {"count": 110, "strength": 0.04, "angle": 0.3})]
-    elif preset == "fantasy":
+    # category first: Liminal and Cosmic concepts use the lovecraft sound preset but are interiors
+    # or space scenes, where sea fog and rain would look wrong
+    if "cosmic solitude" in cat or "deep space" in cat:
+        recipe["camera"].update({"sway_px": 1.2, "push": 0.025})
+        recipe["post"].append(("dust_motes", {"count": 25, "strength": 0.15}))
+    elif any(k in cat for k in ("liminal", "retro", "academia")):
+        recipe["camera"]["push"] = 0.02
+        recipe["post"].append(("dust_motes", {"count": 40, "strength": 0.22}))
+    elif preset == "fantasy" or "knight" in cat:
         recipe["post"].insert(0, ("particles", {"count": 200, "direction": 1, "cycles": (4, 9), "size": (0.8, 2.0),
                                                 "alpha": 0.5, "seed": 62}))
-    elif "cosmic" in cat or "deep space" in cat:
-        recipe["camera"].update({"sway_px": 1.2, "push": 0.025})
-    else:  # historical, liminal, academia, retro, prehistoric
+    elif any(k in cat for k in ("eldritch", "maritime", "prehistoric")) or preset == "lovecraft":
+        recipe["post"] += [("fog_drift", {"y0": 0.05, "y1": 0.8, "density": 0.2, "speed": 0.8}),
+                           ("rain_streaks", {"count": 110, "strength": 0.04, "angle": 0.3})]
+    else:  # historical and anything new
         recipe["camera"]["push"] = 0.02
         recipe["post"].append(("dust_motes", {"count": 40, "strength": 0.22}))
     return recipe

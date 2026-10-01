@@ -170,6 +170,8 @@ def flux_prompt(prompt):
     """FLUX models follow short, concrete, positive descriptions and tend to draw whatever a
     negation mentions ("no people" adds people). Keep the scene, drop the long style block and
     every negative sentence, then add a short snapshot style."""
+    if not prompt.strip().startswith("Take the phone out of your pocket"):
+        return prompt  # older themes keep their own (cinematic) style untouched
     scene = re.sub(r"^Take the phone out of your pocket and snap a quick photo of\s*", "", prompt.strip())
     scene = scene.split("Simple iPhone")[0]
     keep = []
