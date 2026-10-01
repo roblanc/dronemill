@@ -13,7 +13,14 @@ import sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-DEFAULT_FONT = "/System/Library/Fonts/Supplemental/Copperplate.ttc"
+import os as _os
+
+# Federo (Google Fonts, SIL Open Font License) ships in assets/fonts so the server renders the
+# same look anywhere; Copperplate is the macOS fallback the style was chosen with.
+_HERE = _os.path.dirname(_os.path.abspath(__file__))
+DEFAULT_FONT = next((f for f in (_os.path.join(_HERE, "..", "assets", "fonts", "Federo-Regular.ttf"),
+                                 "/System/Library/Fonts/Supplemental/Copperplate.ttc") if _os.path.exists(f)),
+                    "/System/Library/Fonts/Supplemental/Copperplate.ttc")
 
 
 def _tracked_width(draw, text, font, tracking):

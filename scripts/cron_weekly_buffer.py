@@ -346,7 +346,22 @@ def produce_and_schedule_single(concept, slot_dt):
         f.write(concept["description"])
 
     # 5. Upload & Schedule via upload-yt.sh
-    cmd_upload = f"\"{ROOT}/scripts/upload-yt.sh\" \"{out_mp4}\" \"{concept['title']}\" \"{desc_file}\" \"{image_path}\" \"private\" \"{concept['tags']}\" \"{pub_iso}\""
+    # Thumbnail = the cover plus a short place name in wide-spaced capitals (the video itself
+    # uses the clean cover). Falls back to the plain cover if anything goes wrong.
+    thumb_path = image_path
+    if concept.get("caption"):
+        try:
+            from PIL import Image as _Image
+            from thumb_text import caption as _caption
+            _main, _sub = (list(concept["caption"]) + [None])[:2]
+            _thumb = _caption(_Image.open(image_path).convert("RGB").resize((1280, 720)), _main, _sub)
+            thumb_path = f"{tmp_dir}/{slug}_thumb.jpg"
+            _thumb.save(thumb_path, quality=90)
+            log(f"🔤 Thumbnail text: {_main}" + (f" / {_sub}" if _sub else ""))
+        except Exception as e:
+            log(f"WARN: thumbnail text failed ({e}); uploading the plain cover")
+            thumb_path = image_path
+    cmd_upload = f"\"{ROOT}/scripts/upload-yt.sh\" \"{out_mp4}\" \"{concept['title']}\" \"{desc_file}\" \"{thumb_path}\" \"private\" \"{concept['tags']}\" \"{pub_iso}\""
     try:
         upload_out = run_cmd(cmd_upload, f"Uploading and scheduling on YouTube for {pub_iso}") or ""
         # Surface the monetization and product-tagging results; upload-yt.sh only prints them.
@@ -355,6 +370,11 @@ def produce_and_schedule_single(concept, slot_dt):
                 log(f"   ↳ {line.strip()[:200]}")
     finally:
         # Always clean up desc file and master wav (master wav no longer needed after render, even if upload fails)
+        if thumb_path != image_path and os.path.exists(thumb_path):
+            try:
+                os.remove(thumb_path)
+            except Exception:
+                pass
         if os.path.exists(desc_file):
             try:
                 os.remove(desc_file)
