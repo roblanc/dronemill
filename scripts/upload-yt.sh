@@ -18,6 +18,12 @@ if [ -z "$VIDEO" ] || [ -z "$TITLE" ] || [ -z "$DESC" ] || [ -z "$THUMB" ]; then
   exit 1
 fi
 
+# YouTube enforces a strict 100-character max limit on video titles
+if [ ${#TITLE} -gt 100 ]; then
+  echo "WARN: Title exceeds 100 chars (${#TITLE}). Truncating to 100 for YouTube compliance."
+  TITLE="${TITLE:0:100}"
+fi
+
 # If publishAt is set, force privacy=private (YT requirement for scheduled videos)
 if [ -n "$PUBLISH_AT" ]; then
   if [ "$PRIVACY" != "private" ]; then
@@ -28,11 +34,19 @@ fi
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$DIR/.." && pwd)"
-CREDS="$HOME/.youtubeuploader/client_secrets.json"
-TOKEN="$HOME/.youtubeuploader/request.token"
+# systemd jobs run without $HOME set; prefer brewuser home where creds live
+if [ -d "/home/brewuser/.youtubeuploader" ]; then
+  YT_HOME="/home/brewuser"
+else
+  YT_HOME="${HOME:-$(getent passwd "$(stat -c %U "$ROOT")" | cut -d: -f6)}"
+  [ -z "$YT_HOME" ] || [ "$YT_HOME" = "/" ] && YT_HOME="/home/brewuser"
+fi
+CREDS="$YT_HOME/.youtubeuploader/client_secrets.json"
+TOKEN="$YT_HOME/.youtubeuploader/request.token"
+mkdir -p "$YT_HOME/.youtubeuploader"
 
 # Single-instance guard — prevent duplicate uploads
-LOCKFILE="$HOME/.youtubeuploader/upload.lock"
+LOCKFILE="$YT_HOME/.youtubeuploader/upload.lock"
 if [ -f "$LOCKFILE" ]; then
   PID=$(cat "$LOCKFILE")
   if kill -0 "$PID" 2>/dev/null; then
@@ -41,7 +55,8 @@ if [ -f "$LOCKFILE" ]; then
   fi
 fi
 echo $$ > "$LOCKFILE"
-trap "rm -f $LOCKFILE" EXIT
+# Preserve exit code on EXIT
+trap 'rc=$?; rm -f "$LOCKFILE"; exit $rc' EXIT
 
 if [ ! -f "$CREDS" ]; then
   echo "ERROR: client_secrets.json missing. See SETUP-YOUTUBE.md"
@@ -107,18 +122,66 @@ print(json.dumps(meta, indent=2))
 echo ">> Uploading: $TITLE"
 echo ">> Tags: $TAGS_CSV"
 
-UPLOAD_LOG=$(mktemp)
-youtubeuploader \
-  -filename "$VIDEO" \
-  -title "$TITLE" \
-  -description "$DESCRIPTION" \
-  -metaJSON "$META" \
-  -thumbnail "$THUMB" \
-  -secrets "$CREDS" \
-  -cache "$TOKEN" 2>&1 | tee "$UPLOAD_LOG"
+# Pre-flight token refresh check (fail fast with wizard) — always attempt refresh if refresh_token exists
+PRECHECK_LOG=$(mktemp "$YT_HOME/.youtubeuploader/precheck_XXXXXX.log" 2>/dev/null || mktemp /tmp/yt_token_precheck_XXXXXX.log)
+python3 <<PYEOF 2>&1 | tee "$PRECHECK_LOG"
+import json, sys
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+TOKEN_PATH="$TOKEN"
+CREDS_PATH="$CREDS"
+try:
+    with open(TOKEN_PATH) as f: t=json.load(f)
+    with open(CREDS_PATH) as f: s=json.load(f)
+    cfg=s.get("web") or s.get("installed",{})
+    creds=Credentials(token=t.get("access_token"), refresh_token=t.get("refresh_token"), token_uri="https://oauth2.googleapis.com/token", client_id=cfg.get("client_id"), client_secret=cfg.get("client_secret"))
+    # Always try to refresh to validate token — expiry may be None but token still revoked
+    if creds.refresh_token:
+        creds.refresh(Request())
+        print("TOKEN_OK refreshed")
+    else:
+        print("TOKEN_OK no refresh needed")
+except Exception as e:
+    msg=str(e)
+    if "invalid_grant" in msg or "expired or revoked" in msg:
+        print("TOKEN_INVALID_GRANT:"+msg, file=sys.stderr)
+        sys.exit(2)
+    print("TOKEN_CHECK_WARN:"+msg, file=sys.stderr)
+    sys.exit(0)
+PYEOF
+PRECHECK_RC=${PIPESTATUS[0]}
+rm -f "$PRECHECK_LOG"
+if [ $PRECHECK_RC -eq 2 ]; then
+  echo "🛑 YouTube OAuth token revoked/expired (invalid_grant)." >&2
+  echo "   Your refresh_token from $(date -r "$TOKEN" 2>/dev/null || echo "~/.youtubeuploader/request.token") is no longer valid (Google Testing-mode tokens expire after 7 days of inactivity)." >&2
+  echo "   Fix (pick one):" >&2
+  echo "   1) Direct on server:  ./scripts/reauth-youtube.sh  (via Chromium :9222, no tunnel, browser opens http://localhost:8080/oauth2callback -> approve @timelessambience55)" >&2
+  echo "   2) Or run directly:  $0 \"\$VIDEO\" ...  (same server Chromium flow)" >&2
+  echo "   3) See SETUP-YOUTUBE.md section 7 for Desktop-app OAuth re-auth." >&2
+  echo "   Keeping local mp4 for retry: $VIDEO" >&2
+  VIDEO_ID=""
+  AUTH_FAILED=1
+else
+  UPLOAD_LOG=$(mktemp)
+  youtubeuploader \
+    -filename "$VIDEO" \
+    -title "$TITLE" \
+    -description "$DESCRIPTION" \
+    -metaJSON "$META" \
+    -thumbnail "$THUMB" \
+    -secrets "$CREDS" \
+    -cache "$TOKEN" 2>&1 | tee "$UPLOAD_LOG"
 
-VIDEO_ID=$(grep -o 'Video ID: [a-zA-Z0-9_-]\+' "$UPLOAD_LOG" | awk '{print $3}' | tail -n 1 || true)
-rm -f "$UPLOAD_LOG"
+  if grep -q "invalid_grant" "$UPLOAD_LOG" 2>/dev/null; then
+    echo "🛑 Detected invalid_grant during upload — token revoked. See wizard above." >&2
+    AUTH_FAILED=1
+  else
+    AUTH_FAILED=0
+  fi
+
+  VIDEO_ID=$(grep -o 'Video ID: [a-zA-Z0-9_-]\+' "$UPLOAD_LOG" | awk '{print $3}' | tail -n 1 || true)
+  rm -f "$UPLOAD_LOG"
+fi
 
 # Write to upload history log
 HISTORY_FILE="$ROOT/output/upload_history.json"
@@ -152,10 +215,31 @@ with open(history_file, 'w', encoding='utf-8') as f:
     json.dump(history, f, indent=2)
 " "$HISTORY_FILE" "$TITLE" "$DESCRIPTION" "$TAGS_CSV" "$PRIVACY" "$PUBLISH_AT" "$THUMB" "$VIDEO" "$VIDEO_ID"
 
-# Clean up local video file to save space
-if [ -f "$VIDEO" ]; then
+# Auto-enable monetization via YouTube Studio CDP if browser is open
+if [ -n "$VIDEO_ID" ] && [ -f "$DIR/set-monetization-studio.js" ]; then
+  if curl -s --connect-timeout 2 "http://127.0.0.1:9222/json/version" >/dev/null 2>&1; then
+    echo ">> Chrome CDP is active. Auto-enabling monetization in YouTube Studio for $VIDEO_ID..."
+    node "$DIR/set-monetization-studio.js" "$VIDEO_ID" || echo "WARN: Monetization activation step failed or skipped."
+  fi
+fi
+
+# Auto-tag products via YouTube Studio CDP if browser is open
+if [ -n "$VIDEO_ID" ] && [ -f "$DIR/tag-products-studio.js" ]; then
+  if curl -s --connect-timeout 2 "http://127.0.0.1:9222/json/version" >/dev/null 2>&1; then
+    echo ">> Chrome CDP is active. Auto-tagging products in YouTube Studio for $VIDEO_ID..."
+    node "$DIR/tag-products-studio.js" "$VIDEO_ID" || echo "WARN: Product auto-tagging step failed or skipped."
+  fi
+fi
+
+# Clean up local video file ONLY after successful upload (VIDEO_ID exists) to save space
+if [ -n "$VIDEO_ID" ] && [ -f "$VIDEO" ]; then
   rm -f "$VIDEO"
-  echo "INFO: Deleted local video file: $VIDEO to save space."
+  echo "INFO: Deleted local video file after successful upload: $VIDEO to save space."
+elif [ -z "$VIDEO_ID" ] && [ -f "$VIDEO" ]; then
+  echo "WARN: Upload failed (no VIDEO_ID), keeping local file for retry: $VIDEO"
+  if [ "$AUTH_FAILED" = "1" ]; then
+    echo "   -> Auth failure: re-run ./scripts/reauth-youtube.sh then retry upload" >&2
+  fi
 fi
 
 # Clean up compressed thumbnail if created
@@ -169,4 +253,9 @@ if [ -n "$PUBLISH_AT" ]; then
   echo "Scheduled: $TITLE → publishes at $PUBLISH_AT UTC"
 else
   echo "Uploaded: $TITLE (privacy=$PRIVACY)"
+fi
+
+# Propagate auth failure to caller (cron will detect and stop refill)
+if [ "$AUTH_FAILED" = "1" ]; then
+  exit 2
 fi

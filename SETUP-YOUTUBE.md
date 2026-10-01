@@ -43,19 +43,28 @@ mkdir -p ~/.youtubeuploader
 mv ~/Downloads/client_secret_*.json ~/.youtubeuploader/client_secrets.json
 ```
 
-### 7. First auth (browser flow)
-Run any upload command — youtubeuploader opens browser:
+### 7. First auth (browser flow) - direct on server
+Run any upload command — youtubeuploader opens Chromium directly on server (no SSH tunnel needed):
 ```bash
-cd ~/Developer/GitHub/dronemill/scripts
+cd ~/projects/dronemill/scripts
 ./upload-yt.sh ../output/test.mp4 "test upload" ../descriptions/template.txt ../images/used/erebus_cover.png private
+# or wizard: ./reauth-youtube.sh  -> choose [1] Direct on server via Chromium
 ```
-Browser opens → choose Google account that owns `@timelessambience55`. If brand account: select it from "Choose an account" screen. Token saved to `~/.youtubeuploader/request.token`. Future runs are headless.
+Chromium runs headless on server at `http://localhost:9222` (CDP) and handles `http://localhost:8080/oauth2callback` automatically. Browser opens → choose Google account that owns `@timelessambience55`. If brand account: select it from "Choose an account" screen. Token saved to `~/.youtubeuploader/request.token`. Future runs are headless, no tunnel.
 
-## Constraints
+## Constraints & Permanent Token Setup
 
-- **Privacy lock:** Unverified Google apps can only upload as `private` or `unlisted`. To make public: open YT Studio, flip toggle. One-click.
-- **Quota:** 10,000 units/day. Upload = 1600. Max ~6 videos/day. Plenty.
-- **Token expiry:** Refresh token doesn't expire as long as app stays "Testing" mode in OAuth consent screen + you log in once every ~7 days.
+- **Privacy lock:** Unverified Google apps can only upload as `private` or `unlisted`. To schedule a public release: pass a future timestamp (`publishAt`), which sets the video private until the scheduled release time, when YouTube automatically makes it public.
+- **Quota:** 10,000 units/day. Upload = 1,600 units. Max ~6 videos/day.
+- **Permanent Token (Fixing the 7-day expiration):**
+  - By default, Google Cloud OAuth apps in **"Testing"** mode expire their refresh tokens after **7 days**.
+  - **To make the token permanent**:
+    1. Go to https://console.cloud.google.com/
+    2. APIs & Services → OAuth consent screen (Google Auth Platform).
+    3. Under **Publishing status**, click **"Publish App"** to switch from *Testing* to *In production*.
+    4. Ignore the Google verification prompt (verification is only needed for public multi-user apps, not private channel tools).
+    5. Re-authenticate once with `./scripts/reauth-youtube.sh` (or `upload-yt.sh`).
+    6. Once in Production, Google **never expires the refresh token**, enabling 100% autonomous unattended cron execution.
 - **Brand account:** If `@timelessambience55` is a Brand Account, the Google account auth screen will show a sub-selector. Pick the brand channel, not personal.
 
 ## Daily workflow

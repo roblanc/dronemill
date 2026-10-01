@@ -3,6 +3,9 @@
 
 set -uo pipefail
 
+export HOME="/home/brewuser"
+export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
+
 JOB_DIR="${1:-}"
 shift || true
 

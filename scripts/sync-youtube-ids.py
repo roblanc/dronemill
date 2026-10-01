@@ -154,6 +154,7 @@ def find_matching_video(title, yt_videos):
 def sync():
     creds = load_credentials()
     yt_videos = []
+    api_success = False
     if creds:
         try:
             yt = googleapiclient.discovery.build("youtube", "v3", credentials=creds)
@@ -161,8 +162,13 @@ def sync():
             if yt_videos:
                 with open(CACHE_FILE, "w", encoding="utf-8") as f:
                     json.dump(yt_videos, f, indent=2)
+                api_success = True
         except Exception as e:
             print(f"Error fetching from YouTube API: {e}")
+            # Token error like invalid_grant: do NOT wipe history
+            if "invalid_grant" in str(e) or "Token has been expired" in str(e) or "RefreshError" in str(type(e).__name__):
+                print("⚠️  Token invalid/expired — preservation mode: will NOT wipe existing video_ids. Re-auth required (see SETUP-YOUTUBE.md).")
+                return
 
     if not yt_videos and os.path.exists(CACHE_FILE):
         print("Using cached YouTube videos list...")
@@ -172,6 +178,9 @@ def sync():
     if not yt_videos:
         print("No YouTube videos available to sync.")
         return
+
+    # If API call failed (api_success False) and we are using stale cache, don't wipe unmatched entries
+    preserve_unmatched = not api_success
 
     valid_yt = [v for v in yt_videos if len(clean_str(v.get("title", ""))) >= 4]
 
@@ -209,6 +218,7 @@ def sync():
                             break
 
         updated_history_count = 0
+        preserved_count = 0
         for i, item in enumerate(history):
             if i in matched:
                 match = matched[i]
@@ -217,14 +227,21 @@ def sync():
                 item["short_url"] = match["short_url"]
                 updated_history_count += 1
             else:
-                item["video_id"] = None
-                item["youtube_url"] = None
-                item["short_url"] = None
+                if preserve_unmatched:
+                    # Keep existing video_id if API failed or using cache fallback — don't wipe
+                    if item.get("video_id"):
+                        preserved_count += 1
+                    # leave as-is (do not null out)
+                else:
+                    # API succeeded with fresh fetch: safe to null unmatched (truly not on YouTube yet)
+                    item["video_id"] = None
+                    item["youtube_url"] = None
+                    item["short_url"] = None
 
         with open(HISTORY_FILE, "w", encoding="utf-8") as f:
             json.dump(history, f, indent=2)
 
-        print(f"Synced {updated_history_count}/{len(history)} items in {HISTORY_FILE}")
+        print(f"Synced {updated_history_count}/{len(history)} items in {HISTORY_FILE} (preserved {preserved_count} existing ids in cache-fallback mode)")
 
     # Sync curated_playlists.json
     if os.path.exists(PLAYLISTS_FILE):
@@ -258,9 +275,14 @@ def sync():
                     v["short_url"] = match["short_url"]
                     updated_pl_count += 1
                 else:
-                    v["video_id"] = None
-                    v["youtube_url"] = None
-                    v["short_url"] = None
+                    if preserve_unmatched:
+                        # preserve existing ids when using cache
+                        if v.get("video_id"):
+                            preserved_count += 1
+                    else:
+                        v["video_id"] = None
+                        v["youtube_url"] = None
+                        v["short_url"] = None
 
         with open(PLAYLISTS_FILE, "w", encoding="utf-8") as f:
             json.dump(playlists, f, indent=2)

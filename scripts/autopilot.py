@@ -7,7 +7,10 @@ import subprocess
 import requests
 import base64
 import argparse
-from openai import OpenAI
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
 
 # Paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -18,6 +21,22 @@ METADATA_PATH = os.path.join(ROOT_DIR, "images", "metadata.json")
 AUDIO_QUEUE_DIR = os.path.join(ROOT_DIR, "audio", "queue")
 IMAGES_QUEUE_DIR = os.path.join(ROOT_DIR, "images", "queue")
 IMAGES_USED_DIR = os.path.join(ROOT_DIR, "images", "used")
+
+# Auto-load .env from project root if present
+_env_file = os.path.join(ROOT_DIR, ".env")
+if os.path.exists(_env_file):
+    try:
+        with open(_env_file, "r", encoding="utf-8") as _ef:
+            for _line in _ef:
+                _line = _line.strip()
+                if _line and not _line.startswith("#") and "=" in _line:
+                    _k, _v = _line.split("=", 1)
+                    _k = _k.strip()
+                    _v = _v.strip().strip('"').strip("'")
+                    if _k and _k not in os.environ:
+                        os.environ[_k] = _v
+    except Exception:
+        pass
 
 # API Keys
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
@@ -189,20 +208,31 @@ def generate_creative_assets(source_title):
             print(f"OpenRouter failed: {e}")
             
     # 2. Try OpenAI
-    if OPENAI_API_KEY:
+    openai_key = os.environ.get("OPENAI_API_KEY") or OPENAI_API_KEY
+    if openai_key:
         try:
             print(">> Querying OpenAI for titles & prompts...")
-            client = OpenAI(api_key=OPENAI_API_KEY)
-            response = client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[
+            url = "https://api.openai.com/v1/chat/completions"
+            headers = {
+                "Authorization": f"Bearer {openai_key}",
+                "Content-Type": "application/json"
+            }
+            data = {
+                "model": "gpt-4o-mini",
+                "messages": [
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": f"Source video title: {source_title}"}
                 ],
-                response_format={ "type": "json_object" }
-            )
-            content = response.choices[0].message.content.strip()
-            return json.loads(content)
+                "response_format": { "type": "json_object" }
+            }
+            response = requests.post(url, headers=headers, json=data, timeout=30)
+            if response.status_code == 200:
+                result = response.json()
+                content = result["choices"][0]["message"]["content"].strip()
+                if content.startswith("```"):
+                    content = re.sub(r"^```(?:json)?\n", "", content)
+                    content = re.sub(r"\n```$", "", content).strip()
+                return json.loads(content)
         except Exception as e:
             print(f"OpenAI failed: {e}")
 
@@ -244,11 +274,15 @@ def generate_image_ai(image_prompt, filename, dry_run=False):
     os.makedirs(IMAGES_QUEUE_DIR, exist_ok=True)
     out_path = os.path.join(IMAGES_QUEUE_DIR, filename)
     
+    # Read API keys dynamically from environment
+    openrouter_key = os.environ.get("OPENROUTER_API_KEY") or OPENROUTER_API_KEY
+    openai_key = os.environ.get("OPENAI_API_KEY") or OPENAI_API_KEY
+
     # 1. Try OpenRouter Gemini Image
-    if OPENROUTER_API_KEY:
+    if openrouter_key:
         url = "https://openrouter.ai/api/v1/chat/completions"
         headers = {
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "Authorization": f"Bearer {openrouter_key}",
             "Content-Type": "application/json"
         }
         data = {
@@ -282,33 +316,42 @@ def generate_image_ai(image_prompt, filename, dry_run=False):
                     with open(out_path, "wb") as f:
                         f.write(img_data)
                     print(f">> Saved image to {out_path}")
-                    return True
+                    return out_path
         except Exception as e:
             print(f"OpenRouter image generation failed: {e}")
             
     # 2. Try OpenAI DALL-E 3
-    if OPENAI_API_KEY:
+    if openai_key:
         try:
             print(">> Generating image via OpenAI DALL-E 3...")
-            client = OpenAI(api_key=OPENAI_API_KEY)
-            response = client.images.generate(
-                model="dall-e-3",
-                prompt=image_prompt,
-                size="1792x1024",
-                quality="standard",
-                n=1
-            )
-            img_url = response.data[0].url
-            img_data = requests.get(img_url).content
+            headers = {
+                "Authorization": f"Bearer {openai_key}",
+                "Content-Type": "application/json"
+            }
+            payload = {
+                "model": "dall-e-3",
+                "prompt": image_prompt,
+                "size": "1792x1024",
+                "quality": "standard",
+                "n": 1
+            }
+            res = requests.post("https://api.openai.com/v1/images/generations", headers=headers, json=payload, timeout=90)
+            res.raise_for_status()
+            data = res.json()
+            img_url = data["data"][0]["url"]
+            img_data = requests.get(img_url, timeout=60).content
             with open(out_path, "wb") as f:
                 f.write(img_data)
             print(f">> Saved image to {out_path}")
-            return True
+            return out_path
         except Exception as e:
             print(f"OpenAI DALL-E 3 image generation failed: {e}")
             
     print("ERROR: Image generation failed (no API keys or request error). Please manually add a cover to images/queue/.")
     return False
+
+# Backward-compatible alias
+generate_image = generate_image_ai
 
 def update_metadata(filename, title, tags):
     metadata = {}
