@@ -480,32 +480,49 @@ def run_cron_cycle():
             log(f"WARN: cover health check failed ({e})")
 
         log("🚀 Checking DroneMill release runway status...")
+        # What is actually scheduled: YouTube itself plus verified uploads in local history.
+        import youtube_schedule
         days_left, last_dt = get_schedule_status()
-        log(f"Current Buffer: {days_left} future scheduled days on YouTube (Last slot: {last_dt.strftime('%Y-%m-%d %H:%M UTC')}).")
+        occupied = set()
+        history_file = f"{ROOT}/output/upload_history.json"
+        now_utc = datetime.datetime.now(datetime.timezone.utc)
+        if os.path.exists(history_file):
+            try:
+                for item in json.load(open(history_file, encoding="utf-8")):
+                    if item.get("publish_at") and item.get("video_id"):
+                        dt = datetime.datetime.fromisoformat(item["publish_at"].replace("Z", "+00:00"))
+                        if dt > now_utc:
+                            occupied.add(dt.date())
+            except Exception as e:
+                log(f"WARN: could not read upload history: {e}")
+        yt_times = youtube_schedule.scheduled_on_youtube(log=log)
+        if yt_times is not None:
+            occupied |= {t.date() for t in yt_times}
+            log(f"📺 YouTube has {len(yt_times)} scheduled videos; local history adds "
+                f"{len(occupied) - len({t.date() for t in yt_times})} more days.")
 
-        MIN_THRESHOLD = 2
-        TARGET_BUFFER = 3  # Ensures a safe 2-day leeway buffer ahead of time
-        MAX_PER_RUN = 2
+        TARGET_RUNWAY_DAYS = 5   # keep at least this many consecutive days covered from tomorrow
+        MAX_PER_RUN = 3          # catch up faster after a gap; each video renders in about an hour
+        free_slots = youtube_schedule.next_free_slots(occupied, MAX_PER_RUN, now=now_utc)
+        runway = (free_slots[0].date() - now_utc.date()).days - 1  # covered days before the first gap
+        log(f"Current Buffer: {len(occupied)} future scheduled days; next free slot "
+            f"{free_slots[0].strftime('%Y-%m-%d %H:%M UTC')} ({max(runway, 0)} consecutive days covered).")
 
-        if days_left < MIN_THRESHOLD:
-            needed = min(MAX_PER_RUN, TARGET_BUFFER - days_left)
-            log(f"⚠️ Buffer ({days_left} days) is below threshold ({MIN_THRESHOLD} days leeway). Refilling {needed} new releases...")
-            
-            curr_slot = last_dt
+        if runway < TARGET_RUNWAY_DAYS:
+            log(f"⚠️ Gap in the schedule. Filling the next free slots: "
+                f"{', '.join(s.strftime('%Y-%m-%d') for s in free_slots)}")
             MIN_FREE_GB_FOR_RENDER = 6
-            for i in range(needed):
+            for slot in free_slots:
                 free_gb = free_disk_gb()
                 if free_gb < MIN_FREE_GB_FOR_RENDER:
                     log(f"🛑 Only {free_gb:.1f} GB free (need {MIN_FREE_GB_FOR_RENDER} GB for a safe render). Skipping production this cycle — free up disk space manually.")
                     break
-                curr_slot += datetime.timedelta(days=1)
                 concept = idea_generator.generate_novel_concept()
                 if not concept:
                     log("ERROR: Could not generate novel concept. Aborting.")
                     break
-                if produce_and_schedule_single(concept, curr_slot) is False:
-                    curr_slot -= datetime.timedelta(days=1)  # slot stays free for the next cycle
-                    break
+                if produce_and_schedule_single(concept, slot) is False:
+                    break  # the slot stays free for the next cycle
 
             # Sync IDs and rebuild GitHub Pages
             log("🔄 Syncing YouTube video IDs and updating GitHub Pages dashboard...")
@@ -514,7 +531,7 @@ def run_cron_cycle():
             subprocess.run([f"{ROOT}/scripts/publish-dashboard.sh"])
             log("✨ Buffer refill cycle completed successfully!")
         else:
-            log(f"✅ Buffer is healthy ({days_left} days remaining, target is {TARGET_BUFFER}). Re-checking sync & status.")
+            log(f"✅ Schedule is covered for the next {runway} days (target {TARGET_RUNWAY_DAYS}). Re-checking sync & status.")
             # Light telemetry sync and build
             subprocess.run(["python3", f"{ROOT}/scripts/build_github_pages.py"])
             subprocess.run(["bash", f"{ROOT}/scripts/publish-dashboard.sh"])
