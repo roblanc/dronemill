@@ -1,6 +1,7 @@
 #!/bin/bash
 # Rebuild and push DroneMill Dashboard to GitHub Pages
 set -e
+export HOME=/home/brewuser  # dronemill YouTube token lives there
 
 ROOT="/home/brewuser/projects/dronemill"
 cd "$ROOT"

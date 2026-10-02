@@ -175,6 +175,38 @@ if os.path.exists("/DATA/Media"):
             if not os.path.exists(dst):
                 shutil.copyfile(src, dst)
 
+# 2a. Thumbnails the queue has no local file for (the cron deletes the uploaded text thumbnail):
+# take YouTube's own copy through the API, which also works while the video is still scheduled.
+def _fill_missing_thumbnails(items):
+    missing = [i for i in items if i.get("video_id") and not (
+        i.get("thumbnail") and os.path.exists(os.path.join(DOCS, "images", i["thumbnail"])))]
+    if not missing:
+        return
+    try:
+        import urllib.request
+        sys.path.insert(0, f"{ROOT}/scripts")
+        import youtube_schedule as ys
+        yt = ys._youtube()
+        for k in range(0, len(missing), 50):
+            batch = missing[k:k + 50]
+            res = yt.videos().list(part="snippet", id=",".join(i["video_id"] for i in batch)).execute()
+            urls = {v["id"]: (v["snippet"]["thumbnails"].get("medium") or v["snippet"]["thumbnails"].get("high") or {}).get("url")
+                    for v in res.get("items", [])}
+            for i in batch:
+                u = urls.get(i["video_id"])
+                if u:
+                    name = f"yt_{i['video_id']}.jpg"
+                    with open(os.path.join(DOCS, "images", name), "wb") as fh:
+                        fh.write(urllib.request.urlopen(u, timeout=20).read())
+                    i["thumbnail"] = name
+    except Exception as e:
+        print(f"WARN: could not fetch missing thumbnails ({e})")
+
+
+_fill_missing_thumbnails(schedule_list)
+with open(f"{DOCS}/data/schedule.json", "w", encoding="utf-8") as f:
+    json.dump(schedule_list, f, indent=2)
+
 # 2b. NofaceChan (anime channel) list for the channel switch
 sys.path.insert(0, f"{ROOT}/scripts")
 from anime_feed import anime_feed

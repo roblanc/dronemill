@@ -161,7 +161,7 @@ async function loadAllData() {
 // Fetch Status Telemetry
 async function fetchStatus() {
   try {
-    const res = await fetch('data/status.json?v=20261002112059');
+    const res = await fetch('data/status.json?v=20261002113318');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     statusData = data;
@@ -200,7 +200,7 @@ async function fetchStatus() {
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
   try {
-    const res = await fetch('data/schedule.json?v=20261002112059');
+    const res = await fetch('data/schedule.json?v=20261002113318');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     scheduleData = await res.json();
 
@@ -242,45 +242,18 @@ function renderTimeline(filter) {
     return;
   }
 
+  container.className = 'anime-list';
   container.innerHTML = filtered.map(item => {
     const thumbSrc = item.thumbnail ? `images/${encodeURIComponent(item.thumbnail)}` : '';
-    const badgeClass = item.is_future ? 'scheduled' : 'published';
-    const badgeText = item.is_future ? 'SCHEDULED' : 'PUBLISHED';
-    const hasYt = !!item.youtube_url;
-
+    const date = (item.release_formatted || '').replace(/^\w+, /, '');
     return `
-      <article class="release-card" onclick="openVideoDetail(${item.id})">
-        <div class="card-thumb-wrap">
-          <img src="${thumbSrc}" alt="${escapeHtml(item.title)}" class="card-thumb-img" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100%\\' height=\\'100%\\' fill=\\'%23111\\'><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23555\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' font-family=\\'sans-serif\\' font-size=\\'14\\'>Preview</text></svg>'">
-          <span class="release-badge-pill ${badgeClass}">${badgeText}</span>
-          ${hasYt ? `<a href="${escapeHtml(item.youtube_url)}" target="_blank" rel="noopener noreferrer" class="yt-thumb-badge" onclick="event.stopPropagation();" title="Watch on YouTube">▶ YouTube ↗</a>` : ''}
-          <span class="card-order-tag">#${item.id}</span>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title-text">${escapeHtml(item.title)}</h3>
-          <p class="card-date-meta">🗓️ ${escapeHtml(item.release_formatted)}</p>
-          <div class="card-tags-row">
-            ${(item.tags || []).slice(0, 3).map(t => `<span class="tag-badge">#${escapeHtml(t)}</span>`).join('')}
-          </div>
-          <div class="card-footer-row">
-            ${hasYt ? `
-              <div class="card-yt-actions">
-                <a href="${escapeHtml(item.youtube_url)}" target="_blank" rel="noopener noreferrer" class="card-yt-btn" onclick="event.stopPropagation();" title="Open video on YouTube">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                  <span>YouTube ↗</span>
-                </a>
-                <button class="card-copy-yt-btn" onclick="event.stopPropagation(); copyText('${escapeForJs(item.youtube_url)}', 'YouTube link copied!');" title="Copy YouTube Link">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                </button>
-              </div>
-            ` : `
-              <span class="card-status-pending">⏳ Draft / Local</span>
-            `}
-            <span class="card-tap-hint">Details &rarr;</span>
-          </div>
-        </div>
-      </article>
-    `;
+      <a class="anime-row" href="#" onclick="event.preventDefault(); openVideoDetail(${item.id})">
+        <img class="anime-thumb" src="${thumbSrc}" alt="" loading="lazy">
+        <span class="anime-text">
+          <span class="anime-title">${escapeHtml(item.title)}</span>
+          <span class="anime-date ${item.is_future ? 'scheduled' : ''}">${item.is_future ? 'Scheduled · ' : ''}${escapeHtml(date)}</span>
+        </span>
+      </a>`;
   }).join('');
 }
 
@@ -381,7 +354,7 @@ function setupModal() {
 async function fetchPlaylists() {
   const container = document.getElementById('playlists-container');
   try {
-    const res = await fetch('data/playlists.json?v=20261002112059');
+    const res = await fetch('data/playlists.json?v=20261002113318');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const playlists = await res.json();
 
@@ -420,7 +393,7 @@ async function fetchPlaylists() {
 async function fetchCommunityPosts() {
   const container = document.getElementById('community-container');
   try {
-    const res = await fetch('data/community.json?v=20261002112059');
+    const res = await fetch('data/community.json?v=20261002113318');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const posts = await res.json();
 
@@ -524,7 +497,7 @@ function setupChannelSwitch() {
 async function fetchAnime() {
   const container = document.getElementById('anime-container');
   try {
-    const res = await fetch('data/anime.json?v=20261002112059');
+    const res = await fetch('data/anime.json?v=20261002113318');
     animeData = await res.json();
     renderAnime();
   } catch (err) {
@@ -541,8 +514,10 @@ function renderAnime() {
   container.innerHTML = animeData.map(item => `
     <a class="anime-row" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
       <img class="anime-thumb" src="${escapeHtml(item.thumb)}" alt="" loading="lazy">
-      <span class="anime-title">${escapeHtml(item.title)}</span>
-      <span class="anime-date ${item.is_future ? 'scheduled' : ''}">${item.is_future ? 'Scheduled · ' : ''}${escapeHtml(item.date)}</span>
+      <span class="anime-text">
+        <span class="anime-title">${escapeHtml(item.title)}</span>
+        <span class="anime-date ${item.is_future ? 'scheduled' : ''}">${item.is_future ? 'Scheduled · ' : ''}${escapeHtml(item.date)}</span>
+      </span>
     </a>`).join('');
 }
 
