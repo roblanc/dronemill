@@ -1,0 +1,8 @@
+body { margin: 0; background: #faf8f5; color: #1d1b19; font: 17px/1.6 Georgia, "Times New Roman", serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 72px; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+p, li { margin: 0 0 12px; }
+.meta { color: #6b645c; font-size: 15px; margin-bottom: 28px; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; margin-top: 40px; }
+a { color: #8a2b20; }
