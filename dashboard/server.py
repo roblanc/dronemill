@@ -34,6 +34,10 @@ class DroneMillHandler(http.server.SimpleHTTPRequestHandler):
             self.send_json(self.get_status())
         elif path == "/api/schedule":
             self.send_json(self.get_schedule())
+        elif path == "/api/anime":
+            sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
+            from anime_feed import anime_feed
+            self.send_json(anime_feed())
         elif path == "/api/playlists":
             self.send_json(self.get_playlists())
         elif path == "/api/community-posts":

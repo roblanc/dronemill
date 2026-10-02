@@ -1548,3 +1548,30 @@ body.light-theme .moon-icon {
   background-color: #e2e8f0;
 }
 
+
+
+/* ---------------------------------------------------------------- channel switch + NofaceChan list */
+.channel-switch { display: inline-flex; gap: 6px; flex-wrap: wrap; }
+.channel-btn {
+  font: inherit; font-size: 0.85rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border-color, rgba(127,127,127,.3)); background: transparent; color: inherit; opacity: .7;
+}
+.channel-btn.active { opacity: 1; background: var(--accent-color, #c9a227); border-color: transparent; color: #111; }
+.channel-btn:focus-visible { outline: 2px solid var(--accent-color, #c9a227); outline-offset: 2px; }
+.anime-list { display: grid; gap: 6px; max-width: 900px; }
+.anime-row {
+  display: grid; grid-template-columns: 128px minmax(0, 1fr) auto; gap: 14px; align-items: center;
+  padding: 8px; border-radius: 10px; text-decoration: none; color: inherit;
+}
+.anime-row:hover { background: rgba(127,127,127,.12); }
+.anime-thumb { width: 128px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; background: rgba(127,127,127,.2); }
+.anime-title { font-weight: 600; line-height: 1.3; min-width: 0; }
+.anime-date { font-size: .85rem; opacity: .7; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.anime-date.scheduled { opacity: 1; color: var(--accent-color, #c9a227); }
+@media (max-width: 560px) {
+  .anime-row { grid-template-columns: 104px minmax(0, 1fr); }
+  .anime-thumb { width: 104px; }
+  .anime-date { grid-column: 2; }
+}
+
+[hidden] { display: none !important; }

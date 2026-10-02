@@ -505,3 +505,45 @@ function escapeForJs(str) {
     .replace(/\n/g, '\\n')
     .replace(/\r/g, '');
 }
+
+// ---------------------------------------------------------------- NofaceChan (anime channel)
+let animeData = null;
+
+function setupChannelSwitch() {
+  const btns = document.querySelectorAll('.channel-btn');
+  btns.forEach(btn => btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.toggle('active', b === btn));
+    const anime = btn.getAttribute('data-channel') === 'anime';
+    document.getElementById('timeline-container').hidden = anime;
+    document.getElementById('dronemill-filters').hidden = anime;
+    document.getElementById('anime-container').hidden = !anime;
+    if (anime && animeData === null) fetchAnime();
+  }));
+}
+
+async function fetchAnime() {
+  const container = document.getElementById('anime-container');
+  try {
+    const res = await fetch('/api/anime');
+    animeData = await res.json();
+    renderAnime();
+  } catch (err) {
+    container.innerHTML = `<div class="loader">Error loading NofaceChan: ${escapeHtml(err.message)}</div>`;
+  }
+}
+
+function renderAnime() {
+  const container = document.getElementById('anime-container');
+  if (!animeData || !animeData.length) {
+    container.innerHTML = `<div class="loader">Nothing scheduled or published yet.</div>`;
+    return;
+  }
+  container.innerHTML = animeData.map(item => `
+    <a class="anime-row" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+      <img class="anime-thumb" src="${escapeHtml(item.thumb)}" alt="" loading="lazy">
+      <span class="anime-title">${escapeHtml(item.title)}</span>
+      <span class="anime-date ${item.is_future ? 'scheduled' : ''}">${item.is_future ? 'Scheduled · ' : ''}${escapeHtml(item.date)}</span>
+    </a>`).join('');
+}
+
+document.addEventListener('DOMContentLoaded', setupChannelSwitch);

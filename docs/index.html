@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=20260903065140">
+  <link rel="stylesheet" href="app.css?v=20261002112059">
 </head>
 <body>
   <!-- Drawer Backdrop for Mobile Slide-Out Menu -->
@@ -144,7 +144,11 @@
             <h2 class="section-title">Release Queue & Schedule</h2>
             <p class="section-desc">Live chronological queue of upcoming automated YouTube releases.</p>
           </div>
-          <div class="filter-controls">
+          <div class="channel-switch" role="tablist" aria-label="Channel">
+            <button class="channel-btn active" data-channel="dronemill" id="channel-dronemill-btn" role="tab">Timeless Ambience</button>
+            <button class="channel-btn" data-channel="anime" id="channel-anime-btn" role="tab">NofaceChan</button>
+          </div>
+          <div class="filter-controls" id="dronemill-filters">
             <button class="filter-btn active" data-filter="all" id="filter-all-btn">All <span class="filter-count" id="count-all"></span></button>
             <button class="filter-btn" data-filter="future" id="filter-future-btn">Scheduled <span class="filter-count" id="count-future"></span></button>
             <button class="filter-btn" data-filter="published" id="filter-published-btn">Published <span class="filter-count" id="count-published"></span></button>
@@ -153,6 +157,10 @@
 
         <div class="timeline-grid" id="timeline-container">
           <div class="loader">Loading scheduled calendar...</div>
+        </div>
+
+        <div class="anime-list" id="anime-container" hidden>
+          <div class="loader">Loading NofaceChan...</div>
         </div>
       </section>
 
@@ -340,6 +348,6 @@
   <!-- Toast Notification Feedback -->
   <div class="toast-container" id="toast-container"></div>
 
-  <script src="app.js?v=20260903065140"></script>
+  <script src="app.js?v=20261002112059"></script>
 </body>
 </html>

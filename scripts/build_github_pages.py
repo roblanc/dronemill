@@ -175,6 +175,12 @@ if os.path.exists("/DATA/Media"):
             if not os.path.exists(dst):
                 shutil.copyfile(src, dst)
 
+# 2b. NofaceChan (anime channel) list for the channel switch
+sys.path.insert(0, f"{ROOT}/scripts")
+from anime_feed import anime_feed
+with open(f"{DOCS}/data/anime.json", "w", encoding="utf-8") as f:
+    json.dump(anime_feed(images_dir=f"{DOCS}/images/anime", images_url="images/anime"), f, indent=2)
+
 # 3. Copy Web App Frontend assets to docs/ with cache busting
 v_tag = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
@@ -199,6 +205,7 @@ js_static = js_content.replace("'/api/status'", f"'data/status.json?v={v_tag}'")
 js_static = js_static.replace("'/api/schedule'", f"'data/schedule.json?v={v_tag}'")
 js_static = js_static.replace("'/api/playlists'", f"'data/playlists.json?v={v_tag}'")
 js_static = js_static.replace("'/api/community-posts'", f"'data/community.json?v={v_tag}'")
+js_static = js_static.replace("'/api/anime'", f"'data/anime.json?v={v_tag}'")
 js_static = js_static.replace("`/media/image/${encodeURIComponent(item.thumbnail)}`", "`images/${encodeURIComponent(item.thumbnail)}`")
 
 with open(f"{DOCS}/app.js", "w", encoding="utf-8") as f:
