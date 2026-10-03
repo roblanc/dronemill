@@ -1,0 +1,53 @@
+{
+  "name": "blend_void_1783296694_16618",
+  "profile": "void",
+  "seed": 1782862753,
+  "duration": 3600,
+  "output": "audio/queue/blend_void_1783296694_16618.mp3",
+  "stems": [
+    {
+      "file": "-m4KvVwAzDc_something-has-taken-the-tower-lovecraftian-cosmic-ambience_20m_from31m.mp3",
+      "path": "audio/owned/-m4KvVwAzDc_something-has-taken-the-tower-lovecraftian-cosmic-ambience_20m_from31m.mp3",
+      "theme": "void Something Has Taken the Tower\u2026  Lovecraftian Cosmic Ambience",
+      "source": "owned-original",
+      "owned_id": "-m4KvVwAzDc",
+      "volume": 0.814,
+      "highpass": 34,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "2nL1w-Q1ByE_10-hours-of-deep-sleep-an-astronaut-s-quiet-journey-under-a-cosm_20m_from421m.mp3",
+      "path": "audio/owned/2nL1w-Q1ByE_10-hours-of-deep-sleep-an-astronaut-s-quiet-journey-under-a-cosm_20m_from421m.mp3",
+      "theme": "void 10 Hours of Deep Sleep: An Astronaut's Quiet Journey Under a Cosmic Sky",
+      "source": "owned-original",
+      "owned_id": "2nL1w-Q1ByE",
+      "volume": 0.321,
+      "highpass": 30,
+      "lowpass": 900,
+      "delay_ms": 1500
+    },
+    {
+      "file": "jtTNBKxlhnA_she-faced-the-thing-she-couldn-t-name-like-every-sunday-night-1_20m_from21m.mp3",
+      "path": "audio/owned/jtTNBKxlhnA_she-faced-the-thing-she-couldn-t-name-like-every-sunday-night-1_20m_from21m.mp3",
+      "theme": "void She faced the thing she couldn\u2019t name, Like Every Sunday Night\u2026 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "jtTNBKxlhnA",
+      "volume": 0.108,
+      "highpass": 70,
+      "lowpass": 900,
+      "delay_ms": 5000
+    },
+    {
+      "file": "CXdHTI7ueL8_we-slept-on-the-moon-but-not-alone-1-hour-of-cosmic-horror-ambie_20m_from25m.mp3",
+      "path": "audio/owned/CXdHTI7ueL8_we-slept-on-the-moon-but-not-alone-1-hour-of-cosmic-horror-ambie_20m_from25m.mp3",
+      "theme": "void \u2192 We Slept on the Moon\u2026 But Not Alone\u2026 | 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "CXdHTI7ueL8",
+      "volume": 0.03,
+      "highpass": 70,
+      "lowpass": 900,
+      "delay_ms": 1500
+    }
+  ]
+}

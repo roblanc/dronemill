@@ -1,0 +1,53 @@
+{
+  "name": "blend_void_1783445789_31037",
+  "profile": "void",
+  "seed": 1783624499,
+  "duration": 3600,
+  "output": "audio/queue/blend_void_1783445789_31037.mp3",
+  "stems": [
+    {
+      "file": "CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "path": "audio/owned/CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "theme": "void 8 Hour Ambient Journey Through the Stars Cosmic Space, Futuristic Clouds, Sci Fi Relaxation",
+      "source": "owned-original",
+      "owned_id": "CEaRSGHNUXk",
+      "volume": 0.741,
+      "highpass": 25,
+      "lowpass": 4603,
+      "delay_ms": 0
+    },
+    {
+      "file": "tm_uuHIPpUI_lost-in-space-the-final-hours-of-an-astronaut-cosmic-horror-ambi_20m_from26m.mp3",
+      "path": "audio/owned/tm_uuHIPpUI_lost-in-space-the-final-hours-of-an-astronaut-cosmic-horror-ambi_20m_from26m.mp3",
+      "theme": "void Lost in Space | The Final Hours of an Astronaut | Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "tm_uuHIPpUI",
+      "volume": 0.123,
+      "highpass": 70,
+      "lowpass": 2200,
+      "delay_ms": 5000
+    },
+    {
+      "file": "-m4KvVwAzDc_something-has-taken-the-tower-lovecraftian-cosmic-ambience_20m_from31m.mp3",
+      "path": "audio/owned/-m4KvVwAzDc_something-has-taken-the-tower-lovecraftian-cosmic-ambience_20m_from31m.mp3",
+      "theme": "void Something Has Taken the Tower\u2026  Lovecraftian Cosmic Ambience",
+      "source": "owned-original",
+      "owned_id": "-m4KvVwAzDc",
+      "volume": 0.049,
+      "highpass": 70,
+      "lowpass": 1400,
+      "delay_ms": 0
+    },
+    {
+      "file": "k3saiGmmvuc_they-weren-t-just-scarecrows-1-hour-of-pure-cosmic-horror_20m_from11m.mp3",
+      "path": "audio/owned/k3saiGmmvuc_they-weren-t-just-scarecrows-1-hour-of-pure-cosmic-horror_20m_from11m.mp3",
+      "theme": "void They Weren't Just Scarecrows... 1 Hour of Pure Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "k3saiGmmvuc",
+      "volume": 0.068,
+      "highpass": 70,
+      "lowpass": 1400,
+      "delay_ms": 1500
+    }
+  ]
+}

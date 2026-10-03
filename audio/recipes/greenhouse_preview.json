@@ -1,0 +1,53 @@
+{
+  "name": "greenhouse_preview",
+  "profile": "mall",
+  "seed": 1781679155,
+  "duration": 30,
+  "output": "audio/queue/greenhouse_preview.mp3",
+  "stems": [
+    {
+      "file": "iWRfPcLhTlE_when-the-city-looked-up-1-hour-of-cosmic-horror-ambience_20m_from10m.mp3",
+      "path": "audio/owned/iWRfPcLhTlE_when-the-city-looked-up-1-hour-of-cosmic-horror-ambience_20m_from10m.mp3",
+      "theme": "mall When the City Looked Up\u2026  1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "iWRfPcLhTlE",
+      "volume": 0.761,
+      "highpass": 30,
+      "lowpass": 6277,
+      "delay_ms": 0
+    },
+    {
+      "file": "vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "path": "audio/owned/vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "theme": "mall Lovecraftian Ambience in an Underground Parking Garage... 1 Hour of Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "vhXyEgL8lgQ",
+      "volume": 0.335,
+      "highpass": 180,
+      "lowpass": 900,
+      "delay_ms": 5000
+    },
+    {
+      "file": "ATEuISwDjMw_late-night-laundry-in-the-wrong-dimension-1-hour-of-cosmic-horro_20m_from8m.mp3",
+      "path": "audio/owned/ATEuISwDjMw_late-night-laundry-in-the-wrong-dimension-1-hour-of-cosmic-horro_20m_from8m.mp3",
+      "theme": "mall Late Night Laundry in the Wrong Dimension\u2026  1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "ATEuISwDjMw",
+      "volume": 0.152,
+      "highpass": 70,
+      "lowpass": 3200,
+      "delay_ms": 1500
+    },
+    {
+      "file": "ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "path": "audio/owned/ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "theme": "mall The City That Dreamed Us Into Morning",
+      "source": "owned-original",
+      "owned_id": "ArkX7gJdhwk",
+      "volume": 0.039,
+      "highpass": 110,
+      "lowpass": 2200,
+      "delay_ms": 0
+    }
+  ]
+}

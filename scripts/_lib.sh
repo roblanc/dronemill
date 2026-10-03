@@ -53,6 +53,29 @@ get_tags() {
   echo "$DEFAULT"
 }
 
+get_visual_style() {
+  local IMG_PATH="$1"
+  local ROOT_DIR="$2"
+  local FILENAME=$(basename "$IMG_PATH")
+  local META="$ROOT_DIR/images/metadata.json"
+
+  if [ -f "$META" ]; then
+    local STYLE=$(python3 -c "import json, sys; m=json.load(open('$META')); print(m.get('$FILENAME', {}).get('visual_style', ''))" 2>/dev/null)
+    if [ -n "$STYLE" ]; then
+      echo "$STYLE"
+      return 0
+    fi
+
+    local TAGS=$(python3 -c "import json, sys; m=json.load(open('$META')); print(' '.join(m.get('$FILENAME', {}).get('tags', [])))" 2>/dev/null)
+    if echo "$TAGS" | grep -Eiq 'liminal|dreamcore|mallsoft|poolrooms|backrooms|nostalgic'; then
+      echo "liminal"
+      return 0
+    fi
+  fi
+
+  echo "cosmic"
+}
+
 next_audio() {
   local DIR="$1"
   local AUD

@@ -1,0 +1,53 @@
+{
+  "name": "blend_void_1783382404_1538",
+  "profile": "void",
+  "seed": 1782599353,
+  "duration": 3600,
+  "output": "audio/queue/blend_void_1783382404_1538.mp3",
+  "stems": [
+    {
+      "file": "CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "path": "audio/owned/CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "theme": "void 8 Hour Ambient Journey Through the Stars Cosmic Space, Futuristic Clouds, Sci Fi Relaxation",
+      "source": "owned-original",
+      "owned_id": "CEaRSGHNUXk",
+      "volume": 0.71,
+      "highpass": 30,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "X0vxRDaxzsg_the-last-stand-against-the-unknown-1-hour-cosmic-horror_20m_from11m.mp3",
+      "path": "audio/owned/X0vxRDaxzsg_the-last-stand-against-the-unknown-1-hour-cosmic-horror_20m_from11m.mp3",
+      "theme": "void The Last Stand Against the Unknown | 1 Hour Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "X0vxRDaxzsg",
+      "volume": 0.097,
+      "highpass": 70,
+      "lowpass": 900,
+      "delay_ms": 13000
+    },
+    {
+      "file": "k3saiGmmvuc_they-weren-t-just-scarecrows-1-hour-of-pure-cosmic-horror_20m_from11m.mp3",
+      "path": "audio/owned/k3saiGmmvuc_they-weren-t-just-scarecrows-1-hour-of-pure-cosmic-horror_20m_from11m.mp3",
+      "theme": "void They Weren't Just Scarecrows... 1 Hour of Pure Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "k3saiGmmvuc",
+      "volume": 0.128,
+      "highpass": 70,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "CXdHTI7ueL8_we-slept-on-the-moon-but-not-alone-1-hour-of-cosmic-horror-ambie_20m_from25m.mp3",
+      "path": "audio/owned/CXdHTI7ueL8_we-slept-on-the-moon-but-not-alone-1-hour-of-cosmic-horror-ambie_20m_from25m.mp3",
+      "theme": "void \u2192 We Slept on the Moon\u2026 But Not Alone\u2026 | 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "CXdHTI7ueL8",
+      "volume": 0.064,
+      "highpass": 70,
+      "lowpass": 4800,
+      "delay_ms": 3000
+    }
+  ]
+}

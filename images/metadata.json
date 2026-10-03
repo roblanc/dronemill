@@ -1,4 +1,16 @@
 {
+  "048_subway_station.png": {
+    "title": "waiting for the last train | empty subway station ambient | 1 hour liminal drone",
+    "tags": [
+      "liminal space",
+      "subway station",
+      "transit ambient",
+      "train ambient",
+      "nostalgic drone",
+      "ambient playlist",
+      "dreamcore"
+    ]
+  },
   "019_poolrooms.png": {
     "title": "lost in the tiles | poolrooms ambient playlist | liminal space drone",
     "tags": [
@@ -239,46 +251,71 @@
     "title": "The Diner That Swallowed the Fog | Cosmic Academia Ambience",
     "tags": [
       "liminal space",
-      "diner",
-      "fog ambience",
-      "cosmic horror"
-    ]
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "diner ambience",
+      "timeless ambience"
+    ],
+    "description": "template.txt",
+    "visual_style": "liminal",
+    "profile": "mall"
   },
   "027.png": {
     "title": "The Stairwell That Never Ends | Cosmic Academia Ambience",
     "tags": [
       "liminal space",
-      "stairwell",
-      "infinite",
-      "cosmic horror"
-    ]
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "stairwell ambience",
+      "timeless ambience"
+    ],
+    "description": "template.txt",
+    "visual_style": "liminal",
+    "profile": "mall"
   },
   "028.png": {
     "title": "The Wrong Reflection in the Pool | Cosmic Academia Ambience",
     "tags": [
-      "suburban horror",
-      "swimming pool",
-      "reflection",
-      "cosmic horror"
-    ]
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "poolrooms ambience",
+      "timeless ambience"
+    ],
+    "description": "template.txt",
+    "visual_style": "liminal",
+    "profile": "poolrooms"
   },
   "029.png": {
     "title": "The Midnight Bus Passenger | Cosmic Academia Ambience",
     "tags": [
-      "urban horror",
       "liminal space",
-      "empty bus",
-      "cosmic horror"
-    ]
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "transit ambience",
+      "timeless ambience"
+    ],
+    "description": "template.txt",
+    "visual_style": "liminal",
+    "profile": "terminal"
   },
   "030.png": {
     "title": "The Hallway of Infinite Doors | Cosmic Academia Ambience",
     "tags": [
       "liminal space",
-      "hallway",
-      "backrooms",
-      "cosmic horror"
-    ]
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "hallway ambience",
+      "timeless ambience"
+    ],
+    "description": "template.txt",
+    "visual_style": "liminal",
+    "profile": "mall"
   },
   "031.png": {
     "title": "The Floating Item in the Mall | Cosmic Academia Ambience",
@@ -1081,6 +1118,418 @@
       "low angle",
       "beam",
       "cosmic horror"
+    ]
+  },
+  "001_level_0.png": {
+    "title": "lost in the tiles | liminal space drone: level 0",
+    "tags": [
+      "navigating emptiness",
+      "vintage ambiance",
+      "dreamlike journey",
+      "dimly-lit wonderlands",
+      "timeless listening"
+    ]
+  },
+  "002_empty_mall.png": {
+    "title": "'mallsoft | midnight mallsoundtape | liminal space'",
+    "tags": [
+      "poolrooms",
+      "liminalspace",
+      "drone",
+      "narcissistic",
+      "digitaldarkness"
+    ]
+  },
+  "003_airport_terminal.png": {
+    "title": "lost in gateways | airport terminals liminal space dronescape | 35 minutes",
+    "tags": [
+      "liminal space airports",
+      "nostalgic liminal space soundscapes",
+      "dreamcore ambient playlist",
+      "airport drone track",
+      "silent runways ambient layer",
+      "final boarding call"
+    ]
+  },
+  "004_infinite_hotel.png": {
+    "title": "lost in the tiles | hotel corridor ambience playlist | liminal space drone",
+    "tags": [
+      "ambient loop",
+      "liminal space sounds",
+      "red carpets",
+      "gold sconces",
+      "hallway ambiance",
+      "vintage lighting",
+      "backroom hotel",
+      "nostalgic music"
+    ]
+  },
+  "005_laundromat.png": {
+    "title": "lost in the laundromat | 1 hour ambient playlist | liminal space drone",
+    "tags": [
+      "@ambient_music",
+      "#liminalspace"
+    ]
+  },
+  "006_classroom.png": {
+    "title": "'golden hedges | school rooms' | liminal space drone",
+    "tags": [
+      "empty class",
+      "golden hour",
+      "classroom decay",
+      "nostalgic dreamscapes",
+      "timeless ambience"
+    ]
+  },
+  "007_playplace.png": {
+    "title": "playground limen | night tubing dreamscape | 360\u00b0 nocturnal",
+    "tags": [
+      "liminal space",
+      "audio composition",
+      "night soundscape",
+      "dreamcore music",
+      "plastic tubes humm",
+      "children\u2019s playground vibes"
+    ]
+  },
+  "008_suburban_street.png": {
+    "title": "lost in the lawns | poolrooms liminal space | droning drone",
+    "tags": [
+      "#liminalspace",
+      "#poolroomsAmbientPlaylist",
+      "#nostalgiaMusic",
+      "#suburbanRetroHouses",
+      "#midnightStreetWalking",
+      "#sleepSound",
+      "#musicForStudy"
+    ]
+  },
+  "009_library.png": {
+    "title": "lost in a library | infinte space of whispers | liminal drift",
+    "tags": [
+      "luminarium",
+      "timeless ambience",
+      "dimly lit corridors",
+      "dark academia",
+      "infinitelibrary soundtrack",
+      "1 hour ambient playlist"
+    ]
+  },
+  "010_poolrooms.png": {
+    "title": "lost in the tiles | poolrooms ambient playlist | liminal space drone",
+    "tags": [
+      "liminal space",
+      "poolrooms",
+      "ambient playlist",
+      "dreamcore",
+      "water soundscape",
+      "nostalgic drone"
+    ]
+  },
+  "011_train_station.png": {
+    "title": "waiting for the last train | empty transit platform ambient | 1 hour liminal drone",
+    "tags": [
+      "liminal space",
+      "train station",
+      "transit ambient",
+      "fog tunnel",
+      "nostalgic drone",
+      "ambient playlist",
+      "dreamcore"
+    ]
+  },
+  "012_hms_erebus.png": {
+    "title": "The Icebound Ghost of HMS Erebus | Pure Cosmic Horror Ambience",
+    "tags": [
+      "arctic horror",
+      "ghost ship",
+      "pack ice",
+      "HMS Erebus",
+      "cosmic horror",
+      "lovecraftian"
+    ]
+  },
+  "004_cthulhu_harbor_1777727936387.png": {
+    "title": "harbor shadow | cosmic horror ambient | dark ocean drone",
+    "tags": [
+      "ambient",
+      "dark ambient",
+      "cosmic horror",
+      "sleep ambient",
+      "1 hour ambient",
+      "cthulhu",
+      "harbor"
+    ],
+    "description": "template.txt"
+  },
+  "001_the-aquarium-tunnel-after-closing.png": {
+    "title": "the aquarium tunnel | cosmic horror ambient | dark drone",
+    "tags": [
+      "ambient",
+      "dark ambient",
+      "cosmic horror",
+      "sleep ambient",
+      "1 hour ambient",
+      "the",
+      "aquarium",
+      "tunnel",
+      "after"
+    ],
+    "description": "template.txt",
+    "audio_profile": "void"
+  },
+  "002_the-data-center-kept-breathing.png": {
+    "title": "the data center | cosmic horror ambient | dark drone",
+    "tags": [
+      "ambient",
+      "dark ambient",
+      "cosmic horror",
+      "sleep ambient",
+      "1 hour ambient",
+      "the",
+      "data",
+      "center",
+      "kept"
+    ],
+    "description": "template.txt",
+    "audio_profile": "void"
+  },
+  "003_the-ferry-terminal-in-the-fog.png": {
+    "title": "the ferry terminal | cosmic horror ambient | dark drone",
+    "tags": [
+      "ambient",
+      "dark ambient",
+      "cosmic horror",
+      "sleep ambient",
+      "1 hour ambient",
+      "the",
+      "ferry",
+      "terminal",
+      "in"
+    ],
+    "description": "template.txt",
+    "audio_profile": "void"
+  },
+  "009_the-civic-archive-below-the-city.png": {
+    "title": "the civic archive below the city | 1 Hour Liminal Space Ambience",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "mall ambience",
+      "timeless ambience"
+    ],
+    "description": "library.txt",
+    "audio_profile": "mall",
+    "visual_style": "liminal",
+    "prompt": "a realistic underground civic archive room with pale concrete and skylight spill, endless file shelves, beige boxes with no readable labels, dust in the air, no people. photorealistic bright liminal or surreal architecture cover, 16:9, no text, no logo, no people, no visible monster, wide static architectural shot, monumental real-world location, strong one-point perspective or clean symmetry, large empty negative space, high-key daylight or soft sunrise light, pale surfaces, subtle haze or dust, analog camcorder still, natural colors, slightly eerie but believable, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  "010_the-rest-stop-beyond-the-highway.png": {
+    "title": "the rest stop beyond the highway | 1 Hour Liminal Space Ambience",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "terminal ambience",
+      "timeless ambience"
+    ],
+    "description": "suburban_street.txt",
+    "audio_profile": "terminal",
+    "visual_style": "liminal",
+    "prompt": "a realistic empty highway rest stop at sunrise, picnic shelters, vending machines, warm asphalt, black trees beyond the lamps, no people. photorealistic bright liminal or surreal architecture cover, 16:9, no text, no logo, no people, no visible monster, wide static architectural shot, monumental real-world location, strong one-point perspective or clean symmetry, large empty negative space, high-key daylight or soft sunrise light, pale surfaces, subtle haze or dust, analog camcorder still, natural colors, slightly eerie but believable, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  "001_the-black-tide-under-the-lighthouse.png": {
+    "title": "The Black Tide Under the Lighthouse | Cosmic Horror Ambience",
+    "description": "template.txt",
+    "audio_profile": "harbor",
+    "visual_style": "cosmic",
+    "tags": [
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "lovecraftian ambience",
+      "harbor ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a lonely lighthouse above a black cosmic tide, impossible waves reflecting faint violet stars. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage."
+  },
+  "002_the-drowned-cathedral-beneath-the-moon.png": {
+    "title": "The Drowned Cathedral Beneath the Moon | Cosmic Horror Ambience",
+    "description": "template.txt",
+    "audio_profile": "harbor",
+    "visual_style": "cosmic",
+    "tags": [
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "lovecraftian ambience",
+      "harbor ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a half-submerged gothic cathedral under moonlit water, stone spires disappearing into dark fog. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage."
+  },
+  "003_the-sunken-ruins-that-kept-breathing.png": {
+    "title": "The Sunken Ruins That Kept Breathing | Cosmic Horror Ambience",
+    "description": "template.txt",
+    "audio_profile": "void",
+    "visual_style": "cosmic",
+    "tags": [
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "lovecraftian ambience",
+      "void ambience",
+      "timeless ambience"
+    ],
+    "prompt": "ancient underwater ruins exhaling pale light from cracks, vast darkness around them. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage."
+  },
+  "011_when-the-village-heard-the-wave-think.png": {
+    "title": "When the Village Heard the Wave Think | Cosmic Horror Ambience",
+    "description": "template.txt",
+    "audio_profile": "harbor",
+    "prompt": "a coastal village facing an unnatural wall of water shaped like a sleeping mind. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.",
+    "tags": [
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "lovecraftian ambience",
+      "harbor ambience",
+      "timeless ambience"
+    ]
+  },
+  "012_the-antarctic-shelf-opened-at-midnight.png": {
+    "title": "The Antarctic Shelf Opened at Midnight | Cosmic Horror Ambience",
+    "description": "template.txt",
+    "audio_profile": "arctic",
+    "prompt": "an Antarctic ice shelf split open at night, faint red glow rising from the abyss below. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.",
+    "tags": [
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "lovecraftian ambience",
+      "arctic ambience",
+      "timeless ambience"
+    ]
+  },
+  "013_the-basalt-shore-under-three-dead-suns.png": {
+    "title": "The Basalt Shore Under Three Dead Suns | Cosmic Horror Ambience",
+    "description": "template.txt",
+    "audio_profile": "harbor",
+    "prompt": "black basalt coastline under three dim suns, tide pools reflecting alien constellations. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.",
+    "tags": [
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "lovecraftian ambience",
+      "harbor ambience",
+      "timeless ambience"
+    ]
+  },
+  "014_the-observation-deck-above-the-sleeping-city.png": {
+    "title": "the observation deck above the sleeping city | 1 Hour Liminal Space Ambience",
+    "description": "template.txt",
+    "audio_profile": "terminal",
+    "visual_style": "liminal",
+    "prompt": "a realistic empty observation deck at dusk, floor-to-ceiling windows, coin binoculars, city lights far below, reflections on polished floor, no people. photorealistic bright liminal or surreal architecture cover, 16:9, no text, no logo, no people, no visible monster, wide static architectural shot, monumental real-world location, strong one-point perspective or clean symmetry, large empty negative space, high-key daylight or soft sunrise light, pale surfaces, subtle haze or dust, analog camcorder still, natural colors, slightly eerie but believable, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up.",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "terminal ambience",
+      "timeless ambience"
+    ]
+  },
+  "015_the-car-wash-tunnel-still-dripping.png": {
+    "title": "the car wash tunnel still dripping | 1 Hour Liminal Space Ambience",
+    "description": "template.txt",
+    "audio_profile": "poolrooms",
+    "visual_style": "liminal",
+    "prompt": "a realistic empty automatic car wash tunnel after closing, wet tiled floor, hanging strips, bright utility lights, water dripping, no car, no people. photorealistic bright liminal or surreal architecture cover, 16:9, no text, no logo, no people, no visible monster, wide static architectural shot, monumental real-world location, strong one-point perspective or clean symmetry, large empty negative space, high-key daylight or soft sunrise light, pale surfaces, subtle haze or dust, analog camcorder still, natural colors, slightly eerie but believable, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up.",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "poolrooms ambience",
+      "timeless ambience"
+    ]
+  },
+  "021_the-closed-arcade-beneath-the-pier.png": {
+    "title": "the closed arcade beneath the pier | 1 Hour Liminal Space Ambience",
+    "description": "template.txt",
+    "audio_profile": "mall",
+    "visual_style": "liminal",
+    "prompt": "empty shuttered arcade under a seaside pier, wet concrete, silent machines, cold daylight, photorealistic liminal architecture cover, 16:9, no text, no logo, no people",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "mall ambience",
+      "timeless ambience"
+    ]
+  },
+  "022_the-elevator-lobby-after-the-power-went-out.png": {
+    "title": "the elevator lobby after the power went out | 1 Hour Liminal Space Ambience",
+    "description": "template.txt",
+    "audio_profile": "terminal",
+    "visual_style": "liminal",
+    "prompt": "empty elevator lobby during a power outage, emergency lights, reflective floor, no people, photorealistic liminal architecture cover, 16:9, no text, no logo, no people",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "terminal ambience",
+      "timeless ambience"
+    ]
+  },
+  "023_the-motel-pool-under-fluorescent-rain.png": {
+    "title": "the motel pool under fluorescent rain | 1 Hour Liminal Space Ambience",
+    "description": "template.txt",
+    "audio_profile": "poolrooms",
+    "visual_style": "liminal",
+    "prompt": "empty motel indoor pool under fluorescent rain light, tiled deck, humid haze, no people, photorealistic liminal architecture cover, 16:9, no text, no logo, no people",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "poolrooms ambience",
+      "timeless ambience"
+    ]
+  },
+  "024_the-airport-chapel-behind-gate-c.png": {
+    "title": "the airport chapel behind gate c | 1 Hour Liminal Space Ambience",
+    "description": "template.txt",
+    "audio_profile": "terminal",
+    "visual_style": "liminal",
+    "prompt": "small empty airport chapel behind gate c, rows of chairs, glass wall, soft terminal light, photorealistic liminal architecture cover, 16:9, no text, no logo, no people",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "terminal ambience",
+      "timeless ambience"
+    ]
+  },
+  "025_the-greenhouse-corridor-after-midnight.png": {
+    "title": "the greenhouse corridor after midnight | 1 Hour Liminal Space Ambience",
+    "description": "template.txt",
+    "audio_profile": "mall",
+    "visual_style": "liminal",
+    "prompt": "empty greenhouse corridor after midnight, glass ceiling, damp floor, pale grow lights, photorealistic liminal architecture cover, 16:9, no text, no logo, no people",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "mall ambience",
+      "timeless ambience"
     ]
   }
 }

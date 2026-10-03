@@ -61,5 +61,31 @@ else
 fi
 
 NEXT="${NEXT_DATE}T$(printf '%02d' $HOUR_UTC):00:00Z"
-echo "$NEXT" > "$STATE"
+
+schedule_epoch() {
+  local ts="$1"
+  if date -j -f "%Y-%m-%dT%H:%M:%SZ" "$ts" +%s >/dev/null 2>&1; then
+    date -j -f "%Y-%m-%dT%H:%M:%SZ" "$ts" +%s
+  else
+    date -d "$ts" +%s
+  fi
+}
+
+schedule_add_day() {
+  local ts="$1"
+  if date -j > /dev/null 2>&1; then
+    date -j -v+1d -f "%Y-%m-%dT%H:%M:%SZ" "$ts" +"%Y-%m-%dT%H:%M:%SZ"
+  else
+    date -d "$ts +1 day" -u +"%Y-%m-%dT%H:%M:%SZ"
+  fi
+}
+
+NOW_EPOCH=$(date -u +%s)
+while [ "$(schedule_epoch "$NEXT")" -le "$NOW_EPOCH" ]; do
+  NEXT=$(schedule_add_day "$NEXT")
+done
+
+if [ "${SCHEDULE_STATE_WRITE:-1}" != "0" ]; then
+  echo "$NEXT" > "$STATE"
+fi
 echo "$NEXT"

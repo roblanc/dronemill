@@ -1,0 +1,53 @@
+{
+  "name": "blend_poolrooms_1783515701_22421",
+  "profile": "poolrooms",
+  "seed": 1783381497,
+  "duration": 3600,
+  "output": "audio/queue/blend_poolrooms_1783515701_22421.mp3",
+  "stems": [
+    {
+      "file": "15m6j6rQumM_10-hours-by-the-alien-lake-delta-brainwaves-under-twin-moons_20m_from225m.mp3",
+      "path": "audio/owned/15m6j6rQumM_10-hours-by-the-alien-lake-delta-brainwaves-under-twin-moons_20m_from225m.mp3",
+      "theme": "harbor 10 Hours by the Alien Lake | Delta Brainwaves Under Twin Moons",
+      "source": "owned-original",
+      "owned_id": "15m6j6rQumM",
+      "volume": 0.805,
+      "highpass": 41,
+      "lowpass": 5291,
+      "delay_ms": 0
+    },
+    {
+      "file": "8ja7ofAUVhk_saturn-s-gardens-10-hours-of-cosmic-ambience-for-sleep-study_20m_from448m.mp3",
+      "path": "audio/owned/8ja7ofAUVhk_saturn-s-gardens-10-hours-of-cosmic-ambience-for-sleep-study_20m_from448m.mp3",
+      "theme": "arctic Saturn\u2019s Gardens | 10 Hours of Cosmic Ambience for Sleep & Study",
+      "source": "owned-original",
+      "owned_id": "8ja7ofAUVhk",
+      "volume": 0.151,
+      "highpass": 45,
+      "lowpass": 3000,
+      "delay_ms": 3000
+    },
+    {
+      "file": "VPko-B0HM64_10-hours-of-alone-time-futuristic-tranquility-creative-flow_20m_from269m.mp3",
+      "path": "audio/owned/VPko-B0HM64_10-hours-of-alone-time-futuristic-tranquility-creative-flow_20m_from269m.mp3",
+      "theme": "void 10 Hours of Alone Time  Futuristic Tranquility & Creative Flow",
+      "source": "owned-original",
+      "owned_id": "VPko-B0HM64",
+      "volume": 0.093,
+      "highpass": 110,
+      "lowpass": 3200,
+      "delay_ms": 8000
+    },
+    {
+      "file": "2eSyr2Q7auk_10-hours-in-the-cathedral-of-the-cosmos-deep-space-soundscape_20m_from108m.mp3",
+      "path": "audio/owned/2eSyr2Q7auk_10-hours-in-the-cathedral-of-the-cosmos-deep-space-soundscape_20m_from108m.mp3",
+      "theme": "void 10 Hours in the Cathedral of the Cosmos | Deep Space Soundscape",
+      "source": "owned-original",
+      "owned_id": "2eSyr2Q7auk",
+      "volume": 0.069,
+      "highpass": 180,
+      "lowpass": 4800,
+      "delay_ms": 0
+    }
+  ]
+}

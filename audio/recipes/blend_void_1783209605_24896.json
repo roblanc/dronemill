@@ -1,0 +1,53 @@
+{
+  "name": "blend_void_1783209605_24896",
+  "profile": "void",
+  "seed": 1782636781,
+  "duration": 3600,
+  "output": "audio/queue/blend_void_1783209605_24896.mp3",
+  "stems": [
+    {
+      "file": "x_bwyCZ7R5s_occult-desert-ritual-cosmic-horror-ambient-music-hd_20m_from11m.mp3",
+      "path": "audio/owned/x_bwyCZ7R5s_occult-desert-ritual-cosmic-horror-ambient-music-hd_20m_from11m.mp3",
+      "theme": "void Occult Desert Ritual | Cosmic Horror Ambient Music HD",
+      "source": "owned-original",
+      "owned_id": "x_bwyCZ7R5s",
+      "volume": 0.709,
+      "highpass": 34,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "path": "audio/owned/7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "theme": "void Something old is correcting the world... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "7RuYd6AWQgw",
+      "volume": 0.11,
+      "highpass": 70,
+      "lowpass": 4800,
+      "delay_ms": 13000
+    },
+    {
+      "file": "CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "path": "audio/owned/CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "theme": "void 8 Hour Ambient Journey Through the Stars Cosmic Space, Futuristic Clouds, Sci Fi Relaxation",
+      "source": "owned-original",
+      "owned_id": "CEaRSGHNUXk",
+      "volume": 0.155,
+      "highpass": 70,
+      "lowpass": 4800,
+      "delay_ms": 1500
+    },
+    {
+      "file": "CXdHTI7ueL8_we-slept-on-the-moon-but-not-alone-1-hour-of-cosmic-horror-ambie_20m_from25m.mp3",
+      "path": "audio/owned/CXdHTI7ueL8_we-slept-on-the-moon-but-not-alone-1-hour-of-cosmic-horror-ambie_20m_from25m.mp3",
+      "theme": "void \u2192 We Slept on the Moon\u2026 But Not Alone\u2026 | 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "CXdHTI7ueL8",
+      "volume": 0.081,
+      "highpass": 70,
+      "lowpass": 900,
+      "delay_ms": 3000
+    }
+  ]
+}

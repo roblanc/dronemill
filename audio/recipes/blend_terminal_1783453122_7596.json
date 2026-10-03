@@ -1,0 +1,53 @@
+{
+  "name": "blend_terminal_1783453122_7596",
+  "profile": "terminal",
+  "seed": 1783405176,
+  "duration": 3600,
+  "output": "audio/queue/blend_terminal_1783453122_7596.mp3",
+  "stems": [
+    {
+      "file": "Zz7rc5RhUgc_something-was-waiting-above-the-road-1-hour-of-cosmic-horror-amb_20m_from26m.mp3",
+      "path": "audio/owned/Zz7rc5RhUgc_something-was-waiting-above-the-road-1-hour-of-cosmic-horror-amb_20m_from26m.mp3",
+      "theme": "terminal Something Was Waiting Above the Road\u2026 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "Zz7rc5RhUgc",
+      "volume": 0.728,
+      "highpass": 31,
+      "lowpass": 7147,
+      "delay_ms": 0
+    },
+    {
+      "file": "70JMLQcR72g_there-was-more-than-one-shadow-on-the-road-1-hour-of-cosmic-horr_20m_from12m.mp3",
+      "path": "audio/owned/70JMLQcR72g_there-was-more-than-one-shadow-on-the-road-1-hour-of-cosmic-horr_20m_from12m.mp3",
+      "theme": "terminal There Was More Than One Shadow on the Road\u2026 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "70JMLQcR72g",
+      "volume": 0.091,
+      "highpass": 110,
+      "lowpass": 3000,
+      "delay_ms": 0
+    },
+    {
+      "file": "_7CHmewPimU_they-were-pulling-more-than-signals-1-hour-of-low-altitude-cosmi_20m_from13m.mp3",
+      "path": "audio/owned/_7CHmewPimU_they-were-pulling-more-than-signals-1-hour-of-low-altitude-cosmi_20m_from13m.mp3",
+      "theme": "terminal They Were Pulling More Than Signals\u2026 1 Hour of Low Altitude Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "_7CHmewPimU",
+      "volume": 0.088,
+      "highpass": 110,
+      "lowpass": 3200,
+      "delay_ms": 0
+    },
+    {
+      "file": "4bSTGVUnslQ_i-drove-toward-it-without-slowing-1-hour-of-cosmic-horror-ambien_20m_from16m.mp3",
+      "path": "audio/owned/4bSTGVUnslQ_i-drove-toward-it-without-slowing-1-hour-of-cosmic-horror-ambien_20m_from16m.mp3",
+      "theme": "terminal I Drove Toward It Without Slowing\u2026 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "4bSTGVUnslQ",
+      "volume": 0.073,
+      "highpass": 110,
+      "lowpass": 3000,
+      "delay_ms": 1500
+    }
+  ]
+}

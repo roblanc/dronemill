@@ -22,7 +22,7 @@ def generate_seo_metadata(prompt_text):
         "Do not use generic 'Ambient Music' titles, make them sound like stories. "
         "Respond with a JSON object containing keys: 'title' (string) and 'tags' (list of strings)."
     )
-    
+
     # 1. Try OpenRouter if API key is present
     if API_KEY:
         url = "https://openrouter.ai/api/v1/chat/completions"
@@ -52,15 +52,16 @@ def generate_seo_metadata(prompt_text):
                 print(f"  OpenRouter error: {response.status_code} - {response.text}")
         except Exception as e:
             print(f"  OpenRouter failed: {e}")
-            
+
     # 2. Try local Ollama fallback
-    print("  Trying local Ollama (phi3:latest)...")
+    ollama_model = os.environ.get("OLLAMA_MODEL", "qwen3.5:9b")
+    print(f"  Trying local Ollama ({ollama_model})...")
     url_ollama = "http://localhost:11434/v1/chat/completions"
     headers_ollama = {
         "Content-Type": "application/json"
     }
     data_ollama = {
-        "model": "phi3:latest",
+        "model": ollama_model,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": f"Scene description: {prompt_text}"}
@@ -80,7 +81,7 @@ def generate_seo_metadata(prompt_text):
             print(f"  Ollama error: {response.status_code} - {response.text}")
     except Exception as e:
         print(f"  Ollama failed: {e}")
-        
+
     # 3. Simple fallback
     print("  Using static template fallback...")
     return {
@@ -91,19 +92,19 @@ def generate_seo_metadata(prompt_text):
 def main():
     prompts = get_prompts()
     metadata = {}
-    
+
     # Load existing if any
     if os.path.exists(OUTPUT_FILE):
         with open(OUTPUT_FILE, "r") as f:
             metadata = json.load(f)
 
     print(f"Generating metadata for {len(prompts)} prompts...")
-    
+
     for num, text in prompts:
         filename = f"{num.zfill(3)}.png"
         if filename in metadata:
             continue
-            
+
         print(f"  Processing {filename}...")
         meta = generate_seo_metadata(text)
         metadata[filename] = {

@@ -1,0 +1,53 @@
+{
+  "name": "owned_harbor_test_30s",
+  "profile": "harbor",
+  "seed": 1701,
+  "duration": 30,
+  "output": "audio/queue/owned_harbor_test_30s.mp3",
+  "stems": [
+    {
+      "file": "34_cave_drip.mp3",
+      "path": "audio/samples/34_cave_drip.mp3",
+      "theme": "Cave drip / pe\u0219ter\u0103 pic\u0103turi",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.679,
+      "highpass": 44,
+      "lowpass": 8403,
+      "delay_ms": 0
+    },
+    {
+      "file": "31_synth_void.mp3",
+      "path": "audio/samples/31_synth_void.mp3",
+      "theme": "Synth void drone",
+      "source": "Procedural",
+      "owned_id": "",
+      "volume": 0.144,
+      "highpass": 45,
+      "lowpass": 7200,
+      "delay_ms": 1500
+    },
+    {
+      "file": "22_rain_window.mp3",
+      "path": "audio/samples/22_rain_window.mp3",
+      "theme": "Rain on window / ploaie",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.078,
+      "highpass": 30,
+      "lowpass": 7200,
+      "delay_ms": 13000
+    },
+    {
+      "file": "30_void_deep.mp3",
+      "path": "audio/samples/30_void_deep.mp3",
+      "theme": "Void deep / spa\u021biu profund",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.053,
+      "highpass": 45,
+      "lowpass": 900,
+      "delay_ms": 1500
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "planetarium_lobby_preview",
+  "profile": "void",
+  "seed": 1781738779,
+  "duration": 30,
+  "output": "audio/queue/planetarium_lobby_preview.mp3",
+  "stems": [
+    {
+      "file": "ZduTApUVPLc_it-rose-from-the-soil-knowing-my-name-1-hour-of-cosmic-horror-am_20m_from12m.mp3",
+      "path": "audio/owned/ZduTApUVPLc_it-rose-from-the-soil-knowing-my-name-1-hour-of-cosmic-horror-am_20m_from12m.mp3",
+      "theme": "void It Rose from the Soil Knowing My Name\u2026  1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "ZduTApUVPLc",
+      "volume": 0.716,
+      "highpass": 29,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "-m4KvVwAzDc_something-has-taken-the-tower-lovecraftian-cosmic-ambience_20m_from31m.mp3",
+      "path": "audio/owned/-m4KvVwAzDc_something-has-taken-the-tower-lovecraftian-cosmic-ambience_20m_from31m.mp3",
+      "theme": "void Something Has Taken the Tower\u2026  Lovecraftian Cosmic Ambience",
+      "source": "owned-original",
+      "owned_id": "-m4KvVwAzDc",
+      "volume": 0.226,
+      "highpass": 70,
+      "lowpass": 1400,
+      "delay_ms": 5000
+    },
+    {
+      "file": "7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "path": "audio/owned/7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "theme": "void Something old is correcting the world... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "7RuYd6AWQgw",
+      "volume": 0.074,
+      "highpass": 30,
+      "lowpass": 4800,
+      "delay_ms": 3000
+    },
+    {
+      "file": "X0vxRDaxzsg_the-last-stand-against-the-unknown-1-hour-cosmic-horror_20m_from11m.mp3",
+      "path": "audio/owned/X0vxRDaxzsg_the-last-stand-against-the-unknown-1-hour-cosmic-horror_20m_from11m.mp3",
+      "theme": "void The Last Stand Against the Unknown | 1 Hour Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "X0vxRDaxzsg",
+      "volume": 0.049,
+      "highpass": 70,
+      "lowpass": 900,
+      "delay_ms": 5000
+    }
+  ]
+}

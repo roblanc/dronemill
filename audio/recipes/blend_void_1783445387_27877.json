@@ -1,0 +1,53 @@
+{
+  "name": "blend_void_1783445387_27877",
+  "profile": "void",
+  "seed": 1782903915,
+  "duration": 3600,
+  "output": "audio/queue/blend_void_1783445387_27877.mp3",
+  "stems": [
+    {
+      "file": "x_bwyCZ7R5s_occult-desert-ritual-cosmic-horror-ambient-music-hd_20m_from11m.mp3",
+      "path": "audio/owned/x_bwyCZ7R5s_occult-desert-ritual-cosmic-horror-ambient-music-hd_20m_from11m.mp3",
+      "theme": "void Occult Desert Ritual | Cosmic Horror Ambient Music HD",
+      "source": "owned-original",
+      "owned_id": "x_bwyCZ7R5s",
+      "volume": 0.795,
+      "highpass": 40,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "path": "audio/owned/7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "theme": "void Something old is correcting the world... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "7RuYd6AWQgw",
+      "volume": 0.313,
+      "highpass": 70,
+      "lowpass": 4800,
+      "delay_ms": 5000
+    },
+    {
+      "file": "tm_uuHIPpUI_lost-in-space-the-final-hours-of-an-astronaut-cosmic-horror-ambi_20m_from26m.mp3",
+      "path": "audio/owned/tm_uuHIPpUI_lost-in-space-the-final-hours-of-an-astronaut-cosmic-horror-ambi_20m_from26m.mp3",
+      "theme": "void Lost in Space | The Final Hours of an Astronaut | Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "tm_uuHIPpUI",
+      "volume": 0.132,
+      "highpass": 70,
+      "lowpass": 4800,
+      "delay_ms": 5000
+    },
+    {
+      "file": "k3saiGmmvuc_they-weren-t-just-scarecrows-1-hour-of-pure-cosmic-horror_20m_from11m.mp3",
+      "path": "audio/owned/k3saiGmmvuc_they-weren-t-just-scarecrows-1-hour-of-pure-cosmic-horror_20m_from11m.mp3",
+      "theme": "void They Weren't Just Scarecrows... 1 Hour of Pure Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "k3saiGmmvuc",
+      "volume": 0.111,
+      "highpass": 70,
+      "lowpass": 4800,
+      "delay_ms": 13000
+    }
+  ]
+}

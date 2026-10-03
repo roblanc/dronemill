@@ -8,6 +8,11 @@
 #   title,description_filename,pitch
 #   OR:
 #   audio_filename,title,description_filename,pitch
+#   OR:
+#   audio_filename,title,description_filename,pitch,audio_profile
+# Special audio_filename values:
+#   procedural  generates one synthetic bed with audio_profile
+#   blend       mixes safe local stems with audio_profile
 #
 # Resumable via .batch_state.
 # Usage: ./batch-schedule.sh [max_per_run=5]
@@ -59,6 +64,24 @@ available_audio_queue = list(audio_queue_files)
 available_images = list(images)
 
 rows = []
+def infer_profile(title, desc):
+    text = f"{title} {desc}".lower()
+    if any(x in text for x in ["pool", "tile", "water", "aquarium"]):
+        return "poolrooms"
+    if any(x in text for x in ["airport", "terminal", "train", "station", "subway", "metro"]):
+        return "terminal"
+    if any(x in text for x in ["mall", "lobby", "hotel", "laundromat", "classroom", "playplace", "suburban", "library"]):
+        return "mall"
+    if any(x in text for x in ["server", "machine", "fan", "computer"]):
+        return "server"
+    if any(x in text for x in ["ice", "arctic", "erebus", "antarctic", "glacier"]):
+        return "arctic"
+    if any(x in text for x in ["harbor", "ocean", "coastal", "lighthouse", "cthulhu", "pier"]):
+        return "harbor"
+    if any(x in text for x in ["void", "space", "deep", "abyss", "cosmic"]):
+        return "void"
+    return "auto"
+
 try:
     with open(queue_path, "r", encoding="utf-8") as f:
         for r in csv.reader(f):
@@ -66,9 +89,10 @@ try:
                 continue
             r = [x.strip() for x in r]
             if len(r) == 3:
-                rows.append(("", r[0], r[1], r[2]))
+                rows.append(("", r[0], r[1], r[2], infer_profile(r[0], r[1])))
             elif len(r) >= 4:
-                rows.append((r[0], r[1], r[2], r[3]))
+                profile = r[4] if len(r) >= 5 and r[4] else infer_profile(r[1], r[2])
+                rows.append((r[0], r[1], r[2], r[3], profile))
 except Exception as e:
     sys.stderr.write(f"Error parsing CSV: {e}\n")
     sys.exit(1)
@@ -81,7 +105,7 @@ for i in range(processed, total):
     if run_count >= max_limit:
         break
     
-    audio_col, title, desc, pitch = rows[i]
+    audio_col, title, desc, pitch, profile = rows[i]
     desc_path = os.path.join(root_dir, "descriptions", desc)
     if not os.path.exists(desc_path):
         continue
@@ -90,7 +114,7 @@ for i in range(processed, total):
         break
         
     if audio_col:
-        if audio_col == "procedural":
+        if audio_col in ("procedural", "blend"):
             pass
         elif audio_col in available_audio_queue:
             available_audio_queue.remove(audio_col)
@@ -151,7 +175,7 @@ echo ""
 
 COUNT=0
 RUN_COUNT=0
-while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH; do
+while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH AUDIO_PROFILE; do
   if [ "$COUNT" -lt "$PROCESSED" ]; then
     COUNT=$((COUNT + 1))
     continue
@@ -162,6 +186,7 @@ while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH; do
   fi
 
   [ -z "$PITCH" ] && PITCH="0.93"
+  [ -z "$AUDIO_PROFILE" ] && AUDIO_PROFILE="auto"
 
   echo "=========================================="
   echo "[$((COUNT + 1))/$TOTAL] $TITLE"
@@ -175,13 +200,19 @@ while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH; do
   fi
 
   # Resolve audio file
-  IS_PROCEDURAL=0
+  IS_GENERATED_AUDIO=0
   if [ "$AUDIO_COL" = "procedural" ]; then
-    IS_PROCEDURAL=1
+    IS_GENERATED_AUDIO=1
     TEMP_NAME="procedural_$(date +%s)_$RANDOM"
-    echo ">> Generating procedural audio: $TEMP_NAME"
-    "$DIR/audio-synth.sh" 3600 "$TEMP_NAME" < /dev/null
+    echo ">> Generating procedural audio: $TEMP_NAME (profile=$AUDIO_PROFILE)"
+    "$DIR/audio-synth.sh" 3600 "$TEMP_NAME" "$AUDIO_PROFILE" < /dev/null
     AUDIO="$ROOT/audio/${TEMP_NAME}.mp3"
+  elif [ "$AUDIO_COL" = "blend" ]; then
+    IS_GENERATED_AUDIO=1
+    TEMP_NAME="blend_${AUDIO_PROFILE}_$(date +%s)_$RANDOM"
+    echo ">> Blending audio stems: $TEMP_NAME (profile=$AUDIO_PROFILE)"
+    python3 "$DIR/audio-blender.py" "$AUDIO_PROFILE" "$TEMP_NAME" --duration 3600 < /dev/null
+    AUDIO="$ROOT/audio/queue/${TEMP_NAME}.mp3"
   elif [ -n "$AUDIO_COL" ]; then
     if [ -f "$ROOT/audio/queue/$AUDIO_COL" ]; then
       AUDIO="$ROOT/audio/queue/$AUDIO_COL"
@@ -199,8 +230,8 @@ while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH; do
   echo ">> Audio:  $AUDIO"
 
   if "$DIR/full-pipeline.sh" "$AUDIO" "$TITLE" "$DESC_PATH" "$PITCH" schedule < /dev/null; then
-    if [ "$IS_PROCEDURAL" -eq 1 ]; then
-      echo ">> Cleaning up procedural audio: $AUDIO"
+    if [ "$IS_GENERATED_AUDIO" -eq 1 ]; then
+      echo ">> Cleaning up generated audio: $AUDIO"
       rm -f "$AUDIO"
     elif [[ "$AUDIO" == "$ROOT/audio/queue/"* ]]; then
       mark_audio_used "$AUDIO" "$ROOT"
@@ -217,7 +248,7 @@ while IFS=$'\t' read -r AUDIO_COL TITLE DESC PITCH; do
     fi
   else
     echo "ERROR: pipeline failed at row $((COUNT + 1)). State preserved at $COUNT."
-    if [ "$IS_PROCEDURAL" -eq 1 ]; then
+    if [ "$IS_GENERATED_AUDIO" -eq 1 ]; then
       rm -f "$AUDIO"
     fi
     exit 1

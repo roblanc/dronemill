@@ -1,0 +1,53 @@
+{
+  "name": "copier_room_preview",
+  "profile": "server",
+  "seed": 1782410103,
+  "duration": 30,
+  "output": "audio/queue/copier_room_preview.mp3",
+  "stems": [
+    {
+      "file": "2ciEj4LOlz4_you-found-the-gardened-machine_20m_from95m.mp3",
+      "path": "audio/owned/2ciEj4LOlz4_you-found-the-gardened-machine_20m_from95m.mp3",
+      "theme": "arctic You found the Gardened Machine",
+      "source": "owned-original",
+      "owned_id": "2ciEj4LOlz4",
+      "volume": 0.713,
+      "highpass": 45,
+      "lowpass": 4200,
+      "delay_ms": 0
+    },
+    {
+      "file": "WyNQHKaohnc_10-hours-of-god-watching-you-sleep-ambiance_20m_from36m.mp3",
+      "path": "audio/owned/WyNQHKaohnc_10-hours-of-god-watching-you-sleep-ambiance_20m_from36m.mp3",
+      "theme": "void 10 Hours of GOD Watching You Sleep Ambiance",
+      "source": "owned-original",
+      "owned_id": "WyNQHKaohnc",
+      "volume": 0.102,
+      "highpass": 110,
+      "lowpass": 4200,
+      "delay_ms": 8000
+    },
+    {
+      "file": "21_elevator_shaft.mp3",
+      "path": "audio/samples/21_elevator_shaft.mp3",
+      "theme": "Elevator shaft / lift",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.08,
+      "highpass": 110,
+      "lowpass": 3200,
+      "delay_ms": 5000
+    },
+    {
+      "file": "7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "path": "audio/owned/7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "theme": "void Something old is correcting the world... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "7RuYd6AWQgw",
+      "volume": 0.078,
+      "highpass": 180,
+      "lowpass": 4200,
+      "delay_ms": 8000
+    }
+  ]
+}

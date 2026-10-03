@@ -1,0 +1,53 @@
+{
+  "name": "laser_tag_preview",
+  "profile": "backrooms",
+  "seed": 1782570821,
+  "duration": 30,
+  "output": "audio/queue/laser_tag_preview.mp3",
+  "stems": [
+    {
+      "file": "vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "path": "audio/owned/vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "theme": "mall Lovecraftian Ambience in an Underground Parking Garage... 1 Hour of Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "vhXyEgL8lgQ",
+      "volume": 0.697,
+      "highpass": 39,
+      "lowpass": 8905,
+      "delay_ms": 0
+    },
+    {
+      "file": "18_hospital_corridor.mp3",
+      "path": "audio/samples/18_hospital_corridor.mp3",
+      "theme": "Hospital corridor / spital",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.102,
+      "highpass": 110,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "siTrP7m_Ufc_tomorrow-waits-quietly-in-your-sleep_20m_from57m.mp3",
+      "path": "audio/owned/siTrP7m_Ufc_tomorrow-waits-quietly-in-your-sleep_20m_from57m.mp3",
+      "theme": "void Tomorrow Waits Quietly In Your Sleep",
+      "source": "owned-original",
+      "owned_id": "siTrP7m_Ufc",
+      "volume": 0.141,
+      "highpass": 110,
+      "lowpass": 4800,
+      "delay_ms": 5000
+    },
+    {
+      "file": "11_parking_garage.mp3",
+      "path": "audio/samples/11_parking_garage.mp3",
+      "theme": "Parking garage / subsol",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.082,
+      "highpass": 70,
+      "lowpass": 1400,
+      "delay_ms": 8000
+    }
+  ]
+}

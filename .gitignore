@@ -9,20 +9,24 @@ __pycache__/
 # Source assets (copyright risk + size)
 audio/queue/*
 audio/used/*
+audio/owned/*
 audio/*.mp3
 !audio/samples/*.mp3
 audio/samples/raw/
 audio/*.wav
 audio/*.flac
 images/queue/*
+images/inbox/*
 images/used/*
 
 # Keep folder structure markers
 !audio/.gitkeep
 !audio/queue/.gitkeep
 !audio/used/.gitkeep
+!audio/owned/.gitkeep
 !images/.gitkeep
 !images/queue/.gitkeep
+!images/inbox/.gitkeep
 !images/used/.gitkeep
 !output/.gitkeep
 !descriptions/.gitkeep
@@ -45,10 +49,13 @@ Thumbs.db
 
 # Logs
 *.log
+logs/
 
 # Scheduler state (per-machine)
 .schedule_state
 .batch_state
+state/*.json
+state/*.lock
 
 # Personal queue (keep example only)
 queue.csv

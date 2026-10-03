@@ -1,0 +1,53 @@
+{
+  "name": "owned_pool_preview_30s",
+  "profile": "void",
+  "seed": 42,
+  "duration": 30,
+  "output": "audio/queue/owned_pool_preview_30s.mp3",
+  "stems": [
+    {
+      "file": "jtTNBKxlhnA_she-faced-the-thing-she-couldn-t-name-like-every-sunday-night-1_20m_from21m.mp3",
+      "path": "audio/owned/jtTNBKxlhnA_she-faced-the-thing-she-couldn-t-name-like-every-sunday-night-1_20m_from21m.mp3",
+      "theme": "void She faced the thing she couldn\u2019t name, Like Every Sunday Night\u2026 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "jtTNBKxlhnA",
+      "volume": 0.626,
+      "highpass": 22,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "zIO8-u1XFoE_i-looked-at-the-nothingness-and-it-looked-back-at-me-1-hour-of-c_20m_from37m.mp3",
+      "path": "audio/owned/zIO8-u1XFoE_i-looked-at-the-nothingness-and-it-looked-back-at-me-1-hour-of-c_20m_from37m.mp3",
+      "theme": "void I looked at the nothingness, and it looked back at me... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "zIO8-u1XFoE",
+      "volume": 0.14,
+      "highpass": 70,
+      "lowpass": 900,
+      "delay_ms": 8000
+    },
+    {
+      "file": "ZduTApUVPLc_it-rose-from-the-soil-knowing-my-name-1-hour-of-cosmic-horror-am_20m_from12m.mp3",
+      "path": "audio/owned/ZduTApUVPLc_it-rose-from-the-soil-knowing-my-name-1-hour-of-cosmic-horror-am_20m_from12m.mp3",
+      "theme": "void It Rose from the Soil Knowing My Name\u2026  1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "ZduTApUVPLc",
+      "volume": 0.066,
+      "highpass": 70,
+      "lowpass": 3200,
+      "delay_ms": 1500
+    },
+    {
+      "file": "X0vxRDaxzsg_the-last-stand-against-the-unknown-1-hour-cosmic-horror_20m_from11m.mp3",
+      "path": "audio/owned/X0vxRDaxzsg_the-last-stand-against-the-unknown-1-hour-cosmic-horror_20m_from11m.mp3",
+      "theme": "void The Last Stand Against the Unknown | 1 Hour Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "X0vxRDaxzsg",
+      "volume": 0.066,
+      "highpass": 70,
+      "lowpass": 900,
+      "delay_ms": 1500
+    }
+  ]
+}

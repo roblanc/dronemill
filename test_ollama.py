@@ -2,7 +2,7 @@ import importlib.util
 import sys
 import os
 
-# Set environment API_KEY to empty to force Ollama fallback
+# Force Ollama path (no OpenRouter)
 os.environ["OPENROUTER_API_KEY"] = ""
 
 script_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "scripts", "gen-metadata.py"))

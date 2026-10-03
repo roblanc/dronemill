@@ -1,0 +1,53 @@
+{
+  "name": "blend_harbor_1783451922_13170",
+  "profile": "harbor",
+  "seed": 1782861075,
+  "duration": 3600,
+  "output": "audio/queue/blend_harbor_1783451922_13170.mp3",
+  "stems": [
+    {
+      "file": "NRGssMs2KNw_10-hour-of-whispering-winds-around-the-mars-castle-eerie-red-fog_20m_from494m.mp3",
+      "path": "audio/owned/NRGssMs2KNw_10-hour-of-whispering-winds-around-the-mars-castle-eerie-red-fog_20m_from494m.mp3",
+      "theme": "harbor 10-Hour of Whispering Winds Around the Mars Castle: Eerie Red Fog Ambience for Deep Sleep",
+      "source": "owned-original",
+      "owned_id": "NRGssMs2KNw",
+      "volume": 0.767,
+      "highpass": 31,
+      "lowpass": 6422,
+      "delay_ms": 0
+    },
+    {
+      "file": "7odeLV_c5XQ_10-hour-of-windy-cliffside-ocean-ambience-for-sleep-and-study_20m_from559m.mp3",
+      "path": "audio/owned/7odeLV_c5XQ_10-hour-of-windy-cliffside-ocean-ambience-for-sleep-and-study_20m_from559m.mp3",
+      "theme": "harbor 10 Hour of Windy Cliffside Ocean Ambience for Sleep and Study",
+      "source": "owned-original",
+      "owned_id": "7odeLV_c5XQ",
+      "volume": 0.181,
+      "highpass": 70,
+      "lowpass": 2200,
+      "delay_ms": 8000
+    },
+    {
+      "file": "_0Eh5vecges_something-rises-in-the-fog-1-hour-of-cosmic-horror-ambience_20m_from36m.mp3",
+      "path": "audio/owned/_0Eh5vecges_something-rises-in-the-fog-1-hour-of-cosmic-horror-ambience_20m_from36m.mp3",
+      "theme": "harbor Something rises in the fog\u2026  1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "_0Eh5vecges",
+      "volume": 0.162,
+      "highpass": 110,
+      "lowpass": 3200,
+      "delay_ms": 8000
+    },
+    {
+      "file": "26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_5m.mp3",
+      "path": "audio/owned/26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_5m.mp3",
+      "theme": "harbor When the Lighthouse Beam Found the Wrong Thing | Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "26Sak4iVwOo",
+      "volume": 0.073,
+      "highpass": 45,
+      "lowpass": 4800,
+      "delay_ms": 1500
+    }
+  ]
+}

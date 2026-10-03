@@ -58,7 +58,7 @@ python3 "$DIR/gen-titles.py" "$COUNT" mixed > "$TITLES_FILE"
 
 # 2. Per title: generate description, append to queue.csv
 echo ""
-echo ">> [2/2] Generating descriptions via Ollama (qwen3.5:9b)..."
+echo ">> [2/2] Generating descriptions via Ollama (${OLLAMA_MODEL:-qwen3.5:9b})..."
 > "$QUEUE"
 i=0
 PITCHES=("0.85" "0.91" "0.93" "1.07")

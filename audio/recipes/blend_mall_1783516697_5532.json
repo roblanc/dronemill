@@ -1,0 +1,53 @@
+{
+  "name": "blend_mall_1783516697_5532",
+  "profile": "mall",
+  "seed": 1783286095,
+  "duration": 3600,
+  "output": "audio/queue/blend_mall_1783516697_5532.mp3",
+  "stems": [
+    {
+      "file": "vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "path": "audio/owned/vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "theme": "mall Lovecraftian Ambience in an Underground Parking Garage... 1 Hour of Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "vhXyEgL8lgQ",
+      "volume": 0.762,
+      "highpass": 26,
+      "lowpass": 4698,
+      "delay_ms": 0
+    },
+    {
+      "file": "5yeGNk6cORI_a-quiet-night-in-the-city-where-futures-are-dreamt_20m_from85m.mp3",
+      "path": "audio/owned/5yeGNk6cORI_a-quiet-night-in-the-city-where-futures-are-dreamt_20m_from85m.mp3",
+      "theme": "mall A Quiet Night in the City Where Futures Are Dreamt",
+      "source": "owned-original",
+      "owned_id": "5yeGNk6cORI",
+      "volume": 0.176,
+      "highpass": 70,
+      "lowpass": 1400,
+      "delay_ms": 3000
+    },
+    {
+      "file": "N-Qf3ERGsn8_you-found-the-city-of-tomorrow_20m_from18m.mp3",
+      "path": "audio/owned/N-Qf3ERGsn8_you-found-the-city-of-tomorrow_20m_from18m.mp3",
+      "theme": "mall You Found The City of Tomorrow",
+      "source": "owned-original",
+      "owned_id": "N-Qf3ERGsn8",
+      "volume": 0.154,
+      "highpass": 45,
+      "lowpass": 7200,
+      "delay_ms": 1500
+    },
+    {
+      "file": "ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "path": "audio/owned/ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "theme": "mall The City That Dreamed Us Into Morning",
+      "source": "owned-original",
+      "owned_id": "ArkX7gJdhwk",
+      "volume": 0.047,
+      "highpass": 30,
+      "lowpass": 900,
+      "delay_ms": 5000
+    }
+  ]
+}

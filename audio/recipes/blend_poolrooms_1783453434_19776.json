@@ -1,0 +1,53 @@
+{
+  "name": "blend_poolrooms_1783453434_19776",
+  "profile": "poolrooms",
+  "seed": 1783392936,
+  "duration": 3600,
+  "output": "audio/queue/blend_poolrooms_1783453434_19776.mp3",
+  "stems": [
+    {
+      "file": "15m6j6rQumM_10-hours-by-the-alien-lake-delta-brainwaves-under-twin-moons_20m_from225m.mp3",
+      "path": "audio/owned/15m6j6rQumM_10-hours-by-the-alien-lake-delta-brainwaves-under-twin-moons_20m_from225m.mp3",
+      "theme": "harbor 10 Hours by the Alien Lake | Delta Brainwaves Under Twin Moons",
+      "source": "owned-original",
+      "owned_id": "15m6j6rQumM",
+      "volume": 0.704,
+      "highpass": 28,
+      "lowpass": 4761,
+      "delay_ms": 0
+    },
+    {
+      "file": "ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "path": "audio/owned/ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "theme": "mall The City That Dreamed Us Into Morning",
+      "source": "owned-original",
+      "owned_id": "ArkX7gJdhwk",
+      "volume": 0.183,
+      "highpass": 70,
+      "lowpass": 3200,
+      "delay_ms": 5000
+    },
+    {
+      "file": "EzicUtkSXCA_where-the-waves-ended-its-wings-began-1-hour-of-cosmic-horror-am_20m_from17m.mp3",
+      "path": "audio/owned/EzicUtkSXCA_where-the-waves-ended-its-wings-began-1-hour-of-cosmic-horror-am_20m_from17m.mp3",
+      "theme": "harbor Where the waves ended, its wings began... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "EzicUtkSXCA",
+      "volume": 0.094,
+      "highpass": 110,
+      "lowpass": 7200,
+      "delay_ms": 1500
+    },
+    {
+      "file": "28_aquarium.mp3",
+      "path": "audio/samples/28_aquarium.mp3",
+      "theme": "Aquarium / acvariu pump",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.067,
+      "highpass": 30,
+      "lowpass": 3000,
+      "delay_ms": 3000
+    }
+  ]
+}

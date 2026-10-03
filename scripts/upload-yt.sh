@@ -53,6 +53,11 @@ if [ ! -f "$DESC" ]; then
   exit 1
 fi
 
+if [ ! -f "$VIDEO" ]; then
+  echo "ERROR: video file not found: $VIDEO"
+  exit 1
+fi
+
 # YT thumbnail limit = 2MB. Auto-compress if oversized.
 THUMB_SIZE=$(stat -f%z "$THUMB" 2>/dev/null || stat -c%s "$THUMB")
 if [ "$THUMB_SIZE" -gt 2000000 ]; then
@@ -107,14 +112,21 @@ print(json.dumps(meta, indent=2))
 echo ">> Uploading: $TITLE"
 echo ">> Tags: $TAGS_CSV"
 
-youtubeuploader \
+if ! youtubeuploader \
   -filename "$VIDEO" \
   -title "$TITLE" \
   -description "$DESCRIPTION" \
   -metaJSON "$META" \
   -thumbnail "$THUMB" \
   -secrets "$CREDS" \
-  -cache "$TOKEN"
+  -cache "$TOKEN"; then
+  rm -f "$META"
+  if [ -n "$COMPRESSED" ] && [ -f "$COMPRESSED" ]; then
+    rm -f "$COMPRESSED"
+  fi
+  echo "ERROR: youtubeuploader failed; kept local video: $VIDEO" >&2
+  exit 1
+fi
 
 # Write to upload history log
 HISTORY_FILE="$ROOT/output/upload_history.json"

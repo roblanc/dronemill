@@ -1,0 +1,53 @@
+{
+  "name": "spa_reception_preview",
+  "profile": "poolrooms",
+  "seed": 1782196990,
+  "duration": 30,
+  "output": "audio/queue/spa_reception_preview.mp3",
+  "stems": [
+    {
+      "file": "15m6j6rQumM_10-hours-by-the-alien-lake-delta-brainwaves-under-twin-moons_20m_from225m.mp3",
+      "path": "audio/owned/15m6j6rQumM_10-hours-by-the-alien-lake-delta-brainwaves-under-twin-moons_20m_from225m.mp3",
+      "theme": "harbor 10 Hours by the Alien Lake | Delta Brainwaves Under Twin Moons",
+      "source": "owned-original",
+      "owned_id": "15m6j6rQumM",
+      "volume": 0.637,
+      "highpass": 26,
+      "lowpass": 6686,
+      "delay_ms": 0
+    },
+    {
+      "file": "PntGFkzcnMc_mammoth-steppe-18-500-bc_20m.mp3",
+      "path": "audio/owned/PntGFkzcnMc_mammoth-steppe-18-500-bc_20m.mp3",
+      "theme": "arctic Mammoth Steppe, 18,500 BC",
+      "source": "owned-original",
+      "owned_id": "PntGFkzcnMc",
+      "volume": 0.135,
+      "highpass": 110,
+      "lowpass": 7200,
+      "delay_ms": 1500
+    },
+    {
+      "file": "TnrMmwIlZFw_last-witness-of-liberty-2999_20m_from25m.mp3",
+      "path": "audio/owned/TnrMmwIlZFw_last-witness-of-liberty-2999_20m_from25m.mp3",
+      "theme": "void Last Witness of Liberty, 2999",
+      "source": "owned-original",
+      "owned_id": "TnrMmwIlZFw",
+      "volume": 0.116,
+      "highpass": 45,
+      "lowpass": 3200,
+      "delay_ms": 3000
+    },
+    {
+      "file": "CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "path": "audio/owned/CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "theme": "void 8 Hour Ambient Journey Through the Stars Cosmic Space, Futuristic Clouds, Sci Fi Relaxation",
+      "source": "owned-original",
+      "owned_id": "CEaRSGHNUXk",
+      "volume": 0.093,
+      "highpass": 180,
+      "lowpass": 3000,
+      "delay_ms": 3000
+    }
+  ]
+}

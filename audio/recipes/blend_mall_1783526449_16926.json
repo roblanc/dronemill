@@ -1,0 +1,53 @@
+{
+  "name": "blend_mall_1783526449_16926",
+  "profile": "mall",
+  "seed": 1783350600,
+  "duration": 3600,
+  "output": "audio/queue/blend_mall_1783526449_16926.mp3",
+  "stems": [
+    {
+      "file": "5yeGNk6cORI_a-quiet-night-in-the-city-where-futures-are-dreamt_20m_from85m.mp3",
+      "path": "audio/owned/5yeGNk6cORI_a-quiet-night-in-the-city-where-futures-are-dreamt_20m_from85m.mp3",
+      "theme": "mall A Quiet Night in the City Where Futures Are Dreamt",
+      "source": "owned-original",
+      "owned_id": "5yeGNk6cORI",
+      "volume": 0.699,
+      "highpass": 35,
+      "lowpass": 7051,
+      "delay_ms": 0
+    },
+    {
+      "file": "DZcqE48x-EM_mcdonald-s-65-million-years-later_20m_from5m.mp3",
+      "path": "audio/owned/DZcqE48x-EM_mcdonald-s-65-million-years-later_20m_from5m.mp3",
+      "theme": "mall McDonald\u2019s, 65 Million Years Later",
+      "source": "owned-original",
+      "owned_id": "DZcqE48x-EM",
+      "volume": 0.277,
+      "highpass": 110,
+      "lowpass": 4800,
+      "delay_ms": 13000
+    },
+    {
+      "file": "yDfx13J-U6M_a-night-in-the-city-where-the-moon-never-lets-go_20m_from30m.mp3",
+      "path": "audio/owned/yDfx13J-U6M_a-night-in-the-city-where-the-moon-never-lets-go_20m_from30m.mp3",
+      "theme": "mall A Night in the City Where the Moon Never Lets Go",
+      "source": "owned-original",
+      "owned_id": "yDfx13J-U6M",
+      "volume": 0.083,
+      "highpass": 180,
+      "lowpass": 2200,
+      "delay_ms": 8000
+    },
+    {
+      "file": "ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "path": "audio/owned/ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "theme": "mall The City That Dreamed Us Into Morning",
+      "source": "owned-original",
+      "owned_id": "ArkX7gJdhwk",
+      "volume": 0.099,
+      "highpass": 30,
+      "lowpass": 900,
+      "delay_ms": 3000
+    }
+  ]
+}

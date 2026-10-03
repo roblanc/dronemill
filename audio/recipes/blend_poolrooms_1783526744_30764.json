@@ -1,0 +1,53 @@
+{
+  "name": "blend_poolrooms_1783526744_30764",
+  "profile": "poolrooms",
+  "seed": 1782637724,
+  "duration": 3600,
+  "output": "audio/queue/blend_poolrooms_1783526744_30764.mp3",
+  "stems": [
+    {
+      "file": "15m6j6rQumM_10-hours-by-the-alien-lake-delta-brainwaves-under-twin-moons_20m_from225m.mp3",
+      "path": "audio/owned/15m6j6rQumM_10-hours-by-the-alien-lake-delta-brainwaves-under-twin-moons_20m_from225m.mp3",
+      "theme": "harbor 10 Hours by the Alien Lake | Delta Brainwaves Under Twin Moons",
+      "source": "owned-original",
+      "owned_id": "15m6j6rQumM",
+      "volume": 0.762,
+      "highpass": 22,
+      "lowpass": 6559,
+      "delay_ms": 0
+    },
+    {
+      "file": "a7gdxXQeK6c_the-future-we-found-while-dreaming_20m_from31m.mp3",
+      "path": "audio/owned/a7gdxXQeK6c_the-future-we-found-while-dreaming_20m_from31m.mp3",
+      "theme": "void The Future We Found While Dreaming",
+      "source": "owned-original",
+      "owned_id": "a7gdxXQeK6c",
+      "volume": 0.2,
+      "highpass": 180,
+      "lowpass": 3000,
+      "delay_ms": 1500
+    },
+    {
+      "file": "4pycO2gWFsg_he-does-not-sleep-1-hour-of-cosmic-horror-ambience_20m_from15m.mp3",
+      "path": "audio/owned/4pycO2gWFsg_he-does-not-sleep-1-hour-of-cosmic-horror-ambience_20m_from15m.mp3",
+      "theme": "void He Does Not Sleep\u2026 | 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "4pycO2gWFsg",
+      "volume": 0.048,
+      "highpass": 45,
+      "lowpass": 3200,
+      "delay_ms": 0
+    },
+    {
+      "file": "NRGssMs2KNw_10-hour-of-whispering-winds-around-the-mars-castle-eerie-red-fog_20m_from494m.mp3",
+      "path": "audio/owned/NRGssMs2KNw_10-hour-of-whispering-winds-around-the-mars-castle-eerie-red-fog_20m_from494m.mp3",
+      "theme": "harbor 10-Hour of Whispering Winds Around the Mars Castle: Eerie Red Fog Ambience for Deep Sleep",
+      "source": "owned-original",
+      "owned_id": "NRGssMs2KNw",
+      "volume": 0.033,
+      "highpass": 180,
+      "lowpass": 7200,
+      "delay_ms": 3000
+    }
+  ]
+}

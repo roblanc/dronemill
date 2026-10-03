@@ -1,0 +1,45 @@
+{
+  "name": "test_harbor_blend_30s",
+  "profile": "harbor",
+  "seed": 123,
+  "duration": 30,
+  "output": "audio/queue/test_harbor_blend_30s.mp3",
+  "stems": [
+    {
+      "file": "22_rain_window.mp3",
+      "theme": "Rain on window / ploaie",
+      "source": "Freesound",
+      "volume": 0.724,
+      "highpass": 33,
+      "lowpass": 7568,
+      "delay_ms": 0
+    },
+    {
+      "file": "30_void_deep.mp3",
+      "theme": "Void deep / spa\u021biu profund",
+      "source": "Freesound",
+      "volume": 0.213,
+      "highpass": 45,
+      "lowpass": 7200,
+      "delay_ms": 0
+    },
+    {
+      "file": "34_cave_drip.mp3",
+      "theme": "Cave drip / pe\u0219ter\u0103 pic\u0103turi",
+      "source": "Freesound",
+      "volume": 0.159,
+      "highpass": 70,
+      "lowpass": 1400,
+      "delay_ms": 3000
+    },
+    {
+      "file": "27_wind_desolate.mp3",
+      "theme": "Wind desolate / v\u00e2nt pustiu",
+      "source": "Freesound",
+      "volume": 0.056,
+      "highpass": 110,
+      "lowpass": 900,
+      "delay_ms": 13000
+    }
+  ]
+}

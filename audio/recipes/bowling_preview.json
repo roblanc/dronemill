@@ -1,0 +1,53 @@
+{
+  "name": "bowling_preview",
+  "profile": "mall",
+  "seed": 1782516331,
+  "duration": 30,
+  "output": "audio/queue/bowling_preview.mp3",
+  "stems": [
+    {
+      "file": "146hW7w8QLM_8-hours-of-windy-silence-in-red-megacity-for-sleep-and-study_20m.mp3",
+      "path": "audio/owned/146hW7w8QLM_8-hours-of-windy-silence-in-red-megacity-for-sleep-and-study_20m.mp3",
+      "theme": "mall 8 Hours of Windy Silence in Red Megacity for Sleep and Study",
+      "source": "owned-original",
+      "owned_id": "146hW7w8QLM",
+      "volume": 0.741,
+      "highpass": 35,
+      "lowpass": 8665,
+      "delay_ms": 0
+    },
+    {
+      "file": "ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "path": "audio/owned/ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "theme": "mall The City That Dreamed Us Into Morning",
+      "source": "owned-original",
+      "owned_id": "ArkX7gJdhwk",
+      "volume": 0.249,
+      "highpass": 30,
+      "lowpass": 900,
+      "delay_ms": 1500
+    },
+    {
+      "file": "yDfx13J-U6M_a-night-in-the-city-where-the-moon-never-lets-go_20m_from30m.mp3",
+      "path": "audio/owned/yDfx13J-U6M_a-night-in-the-city-where-the-moon-never-lets-go_20m_from30m.mp3",
+      "theme": "mall A Night in the City Where the Moon Never Lets Go",
+      "source": "owned-original",
+      "owned_id": "yDfx13J-U6M",
+      "volume": 0.111,
+      "highpass": 70,
+      "lowpass": 1400,
+      "delay_ms": 5000
+    },
+    {
+      "file": "edKiC-nsTtA_you-fall-asleep-in-the-forest-of-the-city_20m_from61m.mp3",
+      "path": "audio/owned/edKiC-nsTtA_you-fall-asleep-in-the-forest-of-the-city_20m_from61m.mp3",
+      "theme": "mall You Fall Asleep In The Forest of the City",
+      "source": "owned-original",
+      "owned_id": "edKiC-nsTtA",
+      "volume": 0.095,
+      "highpass": 45,
+      "lowpass": 7200,
+      "delay_ms": 13000
+    }
+  ]
+}

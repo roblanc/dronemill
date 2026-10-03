@@ -1,0 +1,53 @@
+{
+  "name": "blend_mall_1783450951_14879",
+  "profile": "mall",
+  "seed": 1783088406,
+  "duration": 3600,
+  "output": "audio/queue/blend_mall_1783450951_14879.mp3",
+  "stems": [
+    {
+      "file": "ATEuISwDjMw_late-night-laundry-in-the-wrong-dimension-1-hour-of-cosmic-horro_20m_from8m.mp3",
+      "path": "audio/owned/ATEuISwDjMw_late-night-laundry-in-the-wrong-dimension-1-hour-of-cosmic-horro_20m_from8m.mp3",
+      "theme": "mall Late Night Laundry in the Wrong Dimension\u2026  1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "ATEuISwDjMw",
+      "volume": 0.638,
+      "highpass": 35,
+      "lowpass": 7351,
+      "delay_ms": 0
+    },
+    {
+      "file": "DZcqE48x-EM_mcdonald-s-65-million-years-later_20m_from5m.mp3",
+      "path": "audio/owned/DZcqE48x-EM_mcdonald-s-65-million-years-later_20m_from5m.mp3",
+      "theme": "mall McDonald\u2019s, 65 Million Years Later",
+      "source": "owned-original",
+      "owned_id": "DZcqE48x-EM",
+      "volume": 0.195,
+      "highpass": 45,
+      "lowpass": 3200,
+      "delay_ms": 8000
+    },
+    {
+      "file": "vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "path": "audio/owned/vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "theme": "mall Lovecraftian Ambience in an Underground Parking Garage... 1 Hour of Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "vhXyEgL8lgQ",
+      "volume": 0.099,
+      "highpass": 70,
+      "lowpass": 3200,
+      "delay_ms": 1500
+    },
+    {
+      "file": "146hW7w8QLM_8-hours-of-windy-silence-in-red-megacity-for-sleep-and-study_20m.mp3",
+      "path": "audio/owned/146hW7w8QLM_8-hours-of-windy-silence-in-red-megacity-for-sleep-and-study_20m.mp3",
+      "theme": "mall 8 Hours of Windy Silence in Red Megacity for Sleep and Study",
+      "source": "owned-original",
+      "owned_id": "146hW7w8QLM",
+      "volume": 0.1,
+      "highpass": 110,
+      "lowpass": 7200,
+      "delay_ms": 3000
+    }
+  ]
+}

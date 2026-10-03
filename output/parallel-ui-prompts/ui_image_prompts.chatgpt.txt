@@ -1,0 +1,40 @@
+# Parallel UI Image Prompts: dronemill
+# Provider batch: chatgpt
+
+Generate via the assigned UI provider only. Save approved outputs to the exact filenames.
+
+--- Image 002_the-drowned-cathedral-beneath-the-moon.png ---
+a half-submerged gothic cathedral under moonlit water, stone spires disappearing into dark fog. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 004_when-the-village-heard-the-wave-think.png ---
+a coastal village facing an unnatural wall of water shaped like a sleeping mind. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 006_the-basalt-shore-under-three-dead-suns.png ---
+black basalt coastline under three dim suns, tide pools reflecting alien constellations. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 008_the-ribcage-at-the-bottom-of-the-sea.png ---
+colossal rib bones on the abyssal seafloor glowing with bioluminescent blue light. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 010_the-icebound-ghost-of-hms-erebus.png ---
+a frozen ghost ship trapped in pack ice under green aurora and heavy black clouds. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 012_the-glacier-s-pulsing-vein.png ---
+a glacier with a glowing crimson vein beneath transparent ice, prehistoric bones nearby. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 014_the-parking-garage-below-the-wrong-moon.png ---
+underground parking garage with wet concrete, fluorescent hum, a huge moon visible through the ceiling. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 016_the-moon-that-answered-back.png ---
+astronaut standing on a grey lunar plain, a dark eye-like crater opening in the distance. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 018_the-cathedral-of-the-cosmos-went-dark.png ---
+vast space cathedral floating among stars, interior lights extinguished except one altar glow. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 020_the-red-megacity-with-no-people.png ---
+empty futuristic megacity in red fog, stacked towers, no traffic, no humans. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 022_the-gardened-machine-kept-growing.png ---
+overgrown biomechanical garden, huge silent machine covered in vines and pale flowers. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 024_the-laundromat-in-the-wrong-dimension.png ---
+empty laundromat at midnight, spinning machines full of dark water and tiny stars. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.

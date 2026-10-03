@@ -1,0 +1,53 @@
+{
+  "name": "sample_the_black_tide_under_the_lighthouse_30s",
+  "profile": "harbor",
+  "seed": 6172026,
+  "duration": 30,
+  "output": "audio/queue/sample_the_black_tide_under_the_lighthouse_30s.mp3",
+  "stems": [
+    {
+      "file": "26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_5m.mp3",
+      "path": "audio/owned/26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_5m.mp3",
+      "theme": "harbor When the Lighthouse Beam Found the Wrong Thing | Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "26Sak4iVwOo",
+      "volume": 0.64,
+      "highpass": 28,
+      "lowpass": 7796,
+      "delay_ms": 0
+    },
+    {
+      "file": "uEqU0YpNHd4_something-ancient-came-home-through-the-fog-1-hour-of-cosmic-hor_20m_from0m.mp3",
+      "path": "audio/owned/uEqU0YpNHd4_something-ancient-came-home-through-the-fog-1-hour-of-cosmic-hor_20m_from0m.mp3",
+      "theme": "harbor Something Ancient Came Home Through the Fog... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "uEqU0YpNHd4",
+      "volume": 0.099,
+      "highpass": 110,
+      "lowpass": 900,
+      "delay_ms": 3000
+    },
+    {
+      "file": "l1bfpiIHWt0_campfire-below-the-leviathan-1-hour-of-cosmic-horror-ambience_20m_from8m.mp3",
+      "path": "audio/owned/l1bfpiIHWt0_campfire-below-the-leviathan-1-hour-of-cosmic-horror-ambience_20m_from8m.mp3",
+      "theme": "harbor Campfire Below the Leviathan... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "l1bfpiIHWt0",
+      "volume": 0.093,
+      "highpass": 70,
+      "lowpass": 2200,
+      "delay_ms": 13000
+    },
+    {
+      "file": "7odeLV_c5XQ_10-hour-of-windy-cliffside-ocean-ambience-for-sleep-and-study_20m_from559m.mp3",
+      "path": "audio/owned/7odeLV_c5XQ_10-hour-of-windy-cliffside-ocean-ambience-for-sleep-and-study_20m_from559m.mp3",
+      "theme": "harbor 10 Hour of Windy Cliffside Ocean Ambience for Sleep and Study",
+      "source": "owned-original",
+      "owned_id": "7odeLV_c5XQ",
+      "volume": 0.054,
+      "highpass": 45,
+      "lowpass": 2200,
+      "delay_ms": 0
+    }
+  ]
+}

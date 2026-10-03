@@ -1,0 +1,326 @@
+[
+  {
+    "index": 18,
+    "image_file": "018_the-black-tide-under-the-lighthouse.png",
+    "title": "The Black Tide Under the Lighthouse | Cosmic Horror Ambience",
+    "description": "template.txt",
+    "audio_profile": "harbor",
+    "visual_style": "lovecraftian",
+    "content_lane": "lovecraftian",
+    "tags": [
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "lovecraftian ambience",
+      "harbor ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a lonely lighthouse above a black cosmic tide, impossible waves reflecting faint violet stars. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, analog horror texture, photorealistic cinematic still, atmospheric fog, dark but readable composition, strong simple silhouette, YouTube thumbnail clarity, slightly degraded film scan. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 19,
+    "image_file": "019_the-aquarium-tunnel-after-closing.png",
+    "title": "the aquarium tunnel after closing | 1 Hour Liminal Space Ambience",
+    "description": "poolrooms.txt",
+    "audio_profile": "poolrooms",
+    "visual_style": "liminal",
+    "content_lane": "liminal",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "poolrooms ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a realistic aquarium tunnel in bright filtered daylight, curved glass walls, pale blue water light rippling over wet floors, no fish visible, no people, serene and spacious. photorealistic bright liminal or surreal architecture cover, 16:9, no text, no logo, no people, no visible monster, wide static architectural shot, monumental real-world location, strong one-point perspective or clean symmetry, large empty negative space, high-key daylight or soft sunrise light, pale surfaces, subtle haze or dust, analog camcorder still, natural colors, slightly eerie but believable, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 20,
+    "image_file": "020_the-city-where-the-gardens-won.png",
+    "title": "The City Where the Gardens Won | 1 Hour Post-Human Ambient World",
+    "description": "library.txt",
+    "audio_profile": "mall",
+    "visual_style": "posthuman",
+    "content_lane": "posthuman",
+    "tags": [
+      "post-human ambience",
+      "dark ambient",
+      "sleep ambient",
+      "future nature",
+      "mall ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a clean post-human city street overtaken by curated gardens, glass towers covered in vines, soft daylight, no decay, no people. photorealistic speculative ambient cover, 16:9, no text, no logo, no people, wide quiet worldbuilding shot, calm but strange atmosphere, elegant composition, natural cinematic daylight, rich but restrained color palette, clear subject silhouette, large negative space, high-resolution YouTube thumbnail clarity, realistic materials and scale. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 21,
+    "image_file": "021_the-prehistoric-river-at-dawn.png",
+    "title": "The Prehistoric River at Dawn | 1 Hour Prehistoric Ambient World",
+    "description": "suburban_street.txt",
+    "audio_profile": "harbor",
+    "visual_style": "prehistoric",
+    "content_lane": "prehistoric",
+    "tags": [
+      "prehistoric ambience",
+      "dark ambient",
+      "sleep ambient",
+      "ancient earth",
+      "harbor ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a wide prehistoric river at dawn, mist above warm water, giant fern banks, distant gentle silhouettes of ancient animals, no close-up creatures. photorealistic prehistoric ambient cover, 16:9, no text, no logo, no people, wide natural landscape shot, ancient Earth atmosphere, soft mist, realistic animals only as distant scale silhouettes, documentary clarity, warm natural light, calm immersive composition, high-resolution YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 22,
+    "image_file": "022_the-archive-of-tomorrow-s-weather.png",
+    "title": "The Archive of Tomorrow's Weather | 1 Hour Soft Sci-Fi Ambience",
+    "description": "library.txt",
+    "audio_profile": "server",
+    "visual_style": "soft_scifi",
+    "content_lane": "soft_scifi",
+    "tags": [
+      "soft sci-fi ambience",
+      "dark ambient",
+      "sleep ambient",
+      "speculative ambience",
+      "server ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a bright futuristic weather archive, transparent display walls without readable text, cloud chambers, pale floors, soft blue daylight, no people. photorealistic speculative ambient cover, 16:9, no text, no logo, no people, wide quiet worldbuilding shot, calm but strange atmosphere, elegant composition, natural cinematic daylight, rich but restrained color palette, clear subject silhouette, large negative space, high-resolution YouTube thumbnail clarity, realistic materials and scale. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 23,
+    "image_file": "023_the-furniture-store-after-the-power-flickered.png",
+    "title": "The Furniture Store After the Power Flickered | 1 Hour Weird Liminal Ambience",
+    "description": "empty_mall.txt",
+    "audio_profile": "mall",
+    "visual_style": "weird_mundane",
+    "content_lane": "weird_mundane",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "weirdcore",
+      "mall ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a realistic empty furniture store after closing, staged living rooms in rows, one ceiling light flickering, polished floor, no brands, no people. photorealistic weird mundane ambient cover, 16:9, no text, no logo, no people, realistic empty everyday place, bright liminal lighting, clean readable composition, subtle unease, analog camcorder still, large negative space, believable real-world materials, high-resolution YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 24,
+    "image_file": "024_the-drowned-cathedral-beneath-the-moon.png",
+    "title": "The Drowned Cathedral Beneath the Moon | Cosmic Horror Ambience",
+    "description": "template.txt",
+    "audio_profile": "harbor",
+    "visual_style": "lovecraftian",
+    "content_lane": "lovecraftian",
+    "tags": [
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "lovecraftian ambience",
+      "harbor ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a half-submerged gothic cathedral under moonlit water, stone spires disappearing into dark fog. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, analog horror texture, photorealistic cinematic still, atmospheric fog, dark but readable composition, strong simple silhouette, YouTube thumbnail clarity, slightly degraded film scan. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 25,
+    "image_file": "025_the-data-center-kept-breathing.png",
+    "title": "the data center kept breathing | 1 Hour Liminal Space Ambience",
+    "description": "library.txt",
+    "audio_profile": "server",
+    "visual_style": "liminal",
+    "content_lane": "liminal",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "server ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a realistic data center with clean white architecture and cool daylight spilling through glass, endless server racks, polished floor reflections, cold aisle perspective, no people. photorealistic bright liminal or surreal architecture cover, 16:9, no text, no logo, no people, no visible monster, wide static architectural shot, monumental real-world location, strong one-point perspective or clean symmetry, large empty negative space, high-key daylight or soft sunrise light, pale surfaces, subtle haze or dust, analog camcorder still, natural colors, slightly eerie but believable, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 26,
+    "image_file": "026_the-valley-after-the-machines-left.png",
+    "title": "The Valley After the Machines Left | 1 Hour Post-Human Ambient World",
+    "description": "suburban_street.txt",
+    "audio_profile": "arctic",
+    "visual_style": "posthuman",
+    "content_lane": "posthuman",
+    "tags": [
+      "post-human ambience",
+      "dark ambient",
+      "sleep ambient",
+      "future nature",
+      "arctic ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a vast green valley with abandoned clean white machine towers slowly covered by moss, morning fog, peaceful post-human scale, no people. photorealistic speculative ambient cover, 16:9, no text, no logo, no people, wide quiet worldbuilding shot, calm but strange atmosphere, elegant composition, natural cinematic daylight, rich but restrained color palette, clear subject silhouette, large negative space, high-resolution YouTube thumbnail clarity, realistic materials and scale. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 27,
+    "image_file": "027_the-giant-fern-lake.png",
+    "title": "The Giant Fern Lake | 1 Hour Prehistoric Ambient World",
+    "description": "poolrooms.txt",
+    "audio_profile": "harbor",
+    "visual_style": "prehistoric",
+    "content_lane": "prehistoric",
+    "tags": [
+      "prehistoric ambience",
+      "dark ambient",
+      "sleep ambient",
+      "ancient earth",
+      "harbor ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a still ancient lake surrounded by giant ferns and cycads, warm mist, low sun, distant sauropod silhouettes partly hidden by haze. photorealistic prehistoric ambient cover, 16:9, no text, no logo, no people, wide natural landscape shot, ancient Earth atmosphere, soft mist, realistic animals only as distant scale silhouettes, documentary clarity, warm natural light, calm immersive composition, high-resolution YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 28,
+    "image_file": "028_the-quiet-beach-on-europa.png",
+    "title": "The Quiet Beach on Europa | 1 Hour Soft Sci-Fi Ambience",
+    "description": "template.txt",
+    "audio_profile": "arctic",
+    "visual_style": "soft_scifi",
+    "content_lane": "soft_scifi",
+    "tags": [
+      "soft sci-fi ambience",
+      "dark ambient",
+      "sleep ambient",
+      "speculative ambience",
+      "arctic ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a calm icy beach beneath Jupiter in the sky, smooth frozen waves, warm station lights far away, no people, peaceful science fiction atmosphere. photorealistic speculative ambient cover, 16:9, no text, no logo, no people, wide quiet worldbuilding shot, calm but strange atmosphere, elegant composition, natural cinematic daylight, rich but restrained color palette, clear subject silhouette, large negative space, high-resolution YouTube thumbnail clarity, realistic materials and scale. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 29,
+    "image_file": "029_the-hotel-breakfast-room-at-5am.png",
+    "title": "The Hotel Breakfast Room at 5am | 1 Hour Weird Liminal Ambience",
+    "description": "infinite_hotel.txt",
+    "audio_profile": "mall",
+    "visual_style": "weird_mundane",
+    "content_lane": "weird_mundane",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "weirdcore",
+      "mall ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a realistic empty hotel breakfast room before sunrise, cereal dispensers, plastic chairs, coffee machines, pale window light, no readable labels, no people. photorealistic weird mundane ambient cover, 16:9, no text, no logo, no people, realistic empty everyday place, bright liminal lighting, clean readable composition, subtle unease, analog camcorder still, large negative space, believable real-world materials, high-resolution YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 30,
+    "image_file": "030_the-sunken-ruins-that-kept-breathing.png",
+    "title": "The Sunken Ruins That Kept Breathing | Cosmic Horror Ambience",
+    "description": "template.txt",
+    "audio_profile": "void",
+    "visual_style": "lovecraftian",
+    "content_lane": "lovecraftian",
+    "tags": [
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "lovecraftian ambience",
+      "void ambience",
+      "timeless ambience"
+    ],
+    "prompt": "ancient underwater ruins exhaling pale light from cracks, vast darkness around them. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, analog horror texture, photorealistic cinematic still, atmospheric fog, dark but readable composition, strong simple silhouette, YouTube thumbnail clarity, slightly degraded film scan. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 31,
+    "image_file": "031_the-ferry-terminal-in-the-fog.png",
+    "title": "the ferry terminal in the fog | 1 Hour Liminal Space Ambience",
+    "description": "airport_terminal.txt",
+    "audio_profile": "terminal",
+    "visual_style": "liminal",
+    "content_lane": "liminal",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "dreamcore",
+      "terminal ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a realistic ferry terminal in soft morning light, rows of plastic seats, fogged windows, pale water outside, one vending machine glow, no people. photorealistic bright liminal or surreal architecture cover, 16:9, no text, no logo, no people, no visible monster, wide static architectural shot, monumental real-world location, strong one-point perspective or clean symmetry, large empty negative space, high-key daylight or soft sunrise light, pale surfaces, subtle haze or dust, analog camcorder still, natural colors, slightly eerie but believable, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 32,
+    "image_file": "032_the-airport-that-became-a-forest.png",
+    "title": "The Airport That Became a Forest | 1 Hour Post-Human Ambient World",
+    "description": "airport_terminal.txt",
+    "audio_profile": "mall",
+    "visual_style": "posthuman",
+    "content_lane": "posthuman",
+    "tags": [
+      "post-human ambience",
+      "dark ambient",
+      "sleep ambient",
+      "future nature",
+      "mall ambience",
+      "timeless ambience"
+    ],
+    "prompt": "an empty airport concourse transformed into an indoor forest, saplings growing between polished tiles, skylights glowing with morning sun, no people. photorealistic speculative ambient cover, 16:9, no text, no logo, no people, wide quiet worldbuilding shot, calm but strange atmosphere, elegant composition, natural cinematic daylight, rich but restrained color palette, clear subject silhouette, large negative space, high-resolution YouTube thumbnail clarity, realistic materials and scale. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 33,
+    "image_file": "033_the-mammoth-steppe-before-snow.png",
+    "title": "The Mammoth Steppe Before Snow | 1 Hour Prehistoric Ambient World",
+    "description": "suburban_street.txt",
+    "audio_profile": "arctic",
+    "visual_style": "prehistoric",
+    "content_lane": "prehistoric",
+    "tags": [
+      "prehistoric ambience",
+      "dark ambient",
+      "sleep ambient",
+      "ancient earth",
+      "arctic ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a wide mammoth steppe before snowfall, pale grasses, distant woolly mammoths as small silhouettes, cold blue morning, no humans. photorealistic prehistoric ambient cover, 16:9, no text, no logo, no people, wide natural landscape shot, ancient Earth atmosphere, soft mist, realistic animals only as distant scale silhouettes, documentary clarity, warm natural light, calm immersive composition, high-resolution YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 34,
+    "image_file": "034_the-floating-greenhouse-above-saturn.png",
+    "title": "The Floating Greenhouse Above Saturn | 1 Hour Soft Sci-Fi Ambience",
+    "description": "poolrooms.txt",
+    "audio_profile": "poolrooms",
+    "visual_style": "soft_scifi",
+    "content_lane": "soft_scifi",
+    "tags": [
+      "soft sci-fi ambience",
+      "dark ambient",
+      "sleep ambient",
+      "speculative ambience",
+      "poolrooms ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a serene orbital greenhouse with glass walkways, plants growing under soft artificial sun, Saturn visible through curved windows, no people. photorealistic speculative ambient cover, 16:9, no text, no logo, no people, wide quiet worldbuilding shot, calm but strange atmosphere, elegant composition, natural cinematic daylight, rich but restrained color palette, clear subject silhouette, large negative space, high-resolution YouTube thumbnail clarity, realistic materials and scale. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  },
+  {
+    "index": 35,
+    "image_file": "035_the-school-gym-after-the-dance.png",
+    "title": "The School Gym After the Dance | 1 Hour Weird Liminal Ambience",
+    "description": "classroom.txt",
+    "audio_profile": "mall",
+    "visual_style": "weird_mundane",
+    "content_lane": "weird_mundane",
+    "tags": [
+      "liminal space",
+      "dark ambient",
+      "sleep ambient",
+      "weirdcore",
+      "mall ambience",
+      "timeless ambience"
+    ],
+    "prompt": "a realistic empty school gym after a dance, folded tables, balloons on the floor, basketball hoops above, fluorescent lights, no people. photorealistic weird mundane ambient cover, 16:9, no text, no logo, no people, realistic empty everyday place, bright liminal lighting, clean readable composition, subtle unease, analog camcorder still, large negative space, believable real-world materials, high-resolution YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage, dark noir look, epic fantasy concept art, dramatic creature close-up."
+  }
+]

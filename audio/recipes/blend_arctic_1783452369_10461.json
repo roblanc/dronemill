@@ -1,0 +1,53 @@
+{
+  "name": "blend_arctic_1783452369_10461",
+  "profile": "arctic",
+  "seed": 1783257613,
+  "duration": 3600,
+  "output": "audio/queue/blend_arctic_1783452369_10461.mp3",
+  "stems": [
+    {
+      "file": "LrhnrXpzPDk_8-hours-of-windy-silence-at-the-frozen-citadel-for-sleep-and-stu_20m_from101m.mp3",
+      "path": "audio/owned/LrhnrXpzPDk_8-hours-of-windy-silence-at-the-frozen-citadel-for-sleep-and-stu_20m_from101m.mp3",
+      "theme": "arctic 8 Hours of Windy Silence at the Frozen Citadel for Sleep and Study",
+      "source": "owned-original",
+      "owned_id": "LrhnrXpzPDk",
+      "volume": 0.698,
+      "highpass": 23,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "3nC3vAuOl38_8-hours-of-windy-snowfall-at-the-cliffside-castle-for-sleep-and_20m_from232m.mp3",
+      "path": "audio/owned/3nC3vAuOl38_8-hours-of-windy-snowfall-at-the-cliffside-castle-for-sleep-and_20m_from232m.mp3",
+      "theme": "arctic 8 Hours of Windy Snowfall at the Cliffside Castle for Sleep and Study",
+      "source": "owned-original",
+      "owned_id": "3nC3vAuOl38",
+      "volume": 0.265,
+      "highpass": 30,
+      "lowpass": 2200,
+      "delay_ms": 8000
+    },
+    {
+      "file": "zAhBHgEA-nk_8-hours-of-windy-moonlit-valley-ambience-for-sleep-and-study_20m_from340m.mp3",
+      "path": "audio/owned/zAhBHgEA-nk_8-hours-of-windy-moonlit-valley-ambience-for-sleep-and-study_20m_from340m.mp3",
+      "theme": "arctic 8 Hours of Windy Moonlit Valley Ambience for Sleep and Study",
+      "source": "owned-original",
+      "owned_id": "zAhBHgEA-nk",
+      "volume": 0.044,
+      "highpass": 30,
+      "lowpass": 4800,
+      "delay_ms": 8000
+    },
+    {
+      "file": "ewuY-J0Htm8_forgotten-sky-castle-10-hours-sleep-ambience_20m_from452m.mp3",
+      "path": "audio/owned/ewuY-J0Htm8_forgotten-sky-castle-10-hours-sleep-ambience_20m_from452m.mp3",
+      "theme": "arctic Forgotten Sky Castle | 10 Hours Sleep Ambience",
+      "source": "owned-original",
+      "owned_id": "ewuY-J0Htm8",
+      "volume": 0.103,
+      "highpass": 70,
+      "lowpass": 4800,
+      "delay_ms": 5000
+    }
+  ]
+}

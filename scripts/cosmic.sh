@@ -26,11 +26,36 @@ if [ -z "$AUDIO" ] || [ -z "$IMAGE" ] || [ -z "$TITLE" ]; then
 fi
 
 mkdir -p "$ROOT/output"
-require_disk_space 10 "$ROOT/output"
+require_disk_space 3 "$ROOT/output"
 
 SLUG=$(slugify "$TITLE")
 SHIFTED="$ROOT/output/${SLUG}_shifted.aac"
 OUT="$ROOT/output/${SLUG}.mp4"
+REQUESTED_VISUAL_STYLE="${VISUAL_STYLE:-auto}"
+VIDEO_PRESET="${VIDEO_PRESET:-medium}"
+VIDEO_CRF="${VIDEO_CRF:-28}"
+
+resolve_visual_style() {
+  local target="$1"
+  if [ "$REQUESTED_VISUAL_STYLE" != "auto" ] && [ -n "$REQUESTED_VISUAL_STYLE" ]; then
+    echo "$REQUESTED_VISUAL_STYLE"
+    return 0
+  fi
+  if [ -d "$target" ]; then
+    local first
+    first=$(find "$target" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \) | sort | head -1)
+    if [ -n "$first" ]; then
+      get_visual_style "$first" "$ROOT"
+      return 0
+    fi
+  else
+    get_visual_style "$target" "$ROOT"
+    return 0
+  fi
+  echo "cosmic"
+}
+
+VISUAL_STYLE_RESOLVED=$(resolve_visual_style "$IMAGE")
 
 # ──────────────────────────────────────────────────────────────────
 # One-time fog overlay generation (60s seamless loop, 1920x1080)
@@ -60,13 +85,26 @@ ffmpeg -y -stream_loop -1 -i "$AUDIO" \
   -c:a aac -b:a 192k -t 3600 "$SHIFTED"
 
 # ──────────────────────────────────────────────────────────────────
-# Shared video filter components
-#  zoom : 1.00 -> 1.06 over 60s (sin, seamless loop)
-#  drift: x ±50px / 120s, y ±30px / 90s — desynced from zoom = floating camera
-#  eq   : contrast 15s, brightness 20s — both divide 60s -> loop seam clean
+# Shared video filter components.
+# cosmic: strong slow-drift poster motion + fog.
+# liminal: smaller camera creep + fluorescent flicker + less fog.
 # ──────────────────────────────────────────────────────────────────
-VF_BASE="scale=5760:3240:force_original_aspect_ratio=increase,crop=5760:3240,zoompan=z='1.12+0.06*sin(2*PI*on/1440)':x='iw/2-(iw/zoom/2)+150*cos(2*PI*on/1440)':y='ih/2-(ih/zoom/2)+90*sin(2*PI*on/1440)':d=1:s=1920x1080:fps=24"
-VF_POST="eq=contrast='1.0+0.003*sin(2*PI*n/480)':brightness='0.001*cos(2*PI*n/240)',vignette='angle=0.35'"
+case "$VISUAL_STYLE_RESOLVED" in
+  liminal)
+    VF_BASE="scale=3840:2160:force_original_aspect_ratio=increase,crop=3840:2160,zoompan=z='1.0+0.018*(0.5-0.5*cos(2*PI*on/1440))':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1920x1080:fps=24"
+    VF_POST="eq=contrast='1.02+0.006*sin(2*PI*n/360)':brightness='0.0015*sin(2*PI*n/97)',hue=s=0.90,vignette='angle=0.12'"
+    FOG_OPACITY="0.012"
+    NOISE_STRENGTH="5"
+    ;;
+  *)
+    VISUAL_STYLE_RESOLVED="cosmic"
+    VF_BASE="scale=5760:3240:force_original_aspect_ratio=increase,crop=5760:3240,zoompan=z='1.12+0.06*sin(2*PI*on/1440)':x='iw/2-(iw/zoom/2)+150*cos(2*PI*on/1440)':y='ih/2-(ih/zoom/2)+90*sin(2*PI*on/1440)':d=1:s=1920x1080:fps=24"
+    VF_POST="eq=contrast='1.0+0.003*sin(2*PI*n/480)':brightness='0.001*cos(2*PI*n/240)',vignette='angle=0.35'"
+    FOG_OPACITY="0.04"
+    NOISE_STRENGTH="3"
+    ;;
+esac
+echo ">> Visual style: $VISUAL_STYLE_RESOLVED"
 
 # ──────────────────────────────────────────────────────────────────
 # Multi-image path: <IMAGE> is a directory
@@ -113,13 +151,13 @@ if [ -d "$IMAGE" ]; then
 
     # Fog overlay on top + subtle film grain
     FC+="[${FOG_IDX}:v]scale=1920:1080,format=yuv420p[fog];"
-    FC+="[$PREV][fog]blend=all_mode=screen:all_opacity=0.04,noise=alls=3:allf=t+u,format=yuv420p[vout]"
+    FC+="[$PREV][fog]blend=all_mode=screen:all_opacity=${FOG_OPACITY},noise=alls=${NOISE_STRENGTH}:allf=t+u,format=yuv420p[vout]"
 
     VIDEO_TMP="$ROOT/output/${SLUG}_video.mp4"
     ffmpeg -y "${INPUT_ARGS[@]}" \
       -filter_complex "$FC" \
       -map "[vout]" \
-      -c:v libx264 -preset ultrafast -tune stillimage -pix_fmt yuv420p \
+      -c:v libx264 -preset "$VIDEO_PRESET" -crf "$VIDEO_CRF" -tune stillimage -pix_fmt yuv420p \
       -t 3600 -r 24 "$VIDEO_TMP"
 
     echo "[3/3] Mux video + audio..."
@@ -142,9 +180,9 @@ LOOPS=61
 
 echo "[2/3] Build 60s clip (drift + breathing + fog overlay)..."
 ffmpeg -y -loop 1 -framerate 24 -t 60 -i "$IMAGE" -stream_loop -1 -i "$FOG" \
-  -filter_complex "[0:v]${VF_BASE},${VF_POST}[base];[1:v]scale=1920:1080,format=yuv420p[fog];[base][fog]blend=all_mode=screen:all_opacity=0.04,noise=alls=3:allf=t+u,format=yuv420p[vout]" \
+  -filter_complex "[0:v]${VF_BASE},${VF_POST}[base];[1:v]scale=1920:1080,format=yuv420p[fog];[base][fog]blend=all_mode=screen:all_opacity=${FOG_OPACITY},noise=alls=${NOISE_STRENGTH}:allf=t+u,format=yuv420p[vout]" \
   -map "[vout]" \
-  -c:v libx264 -tune stillimage -preset ultrafast -pix_fmt yuv420p \
+  -c:v libx264 -tune stillimage -preset "$VIDEO_PRESET" -crf "$VIDEO_CRF" -pix_fmt yuv420p \
   -r 24 -t 60 "$LOOP60"
 
 echo "[3/3] Loop x${LOOPS} + mux audio..."

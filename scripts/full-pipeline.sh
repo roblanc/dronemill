@@ -65,9 +65,10 @@ echo ""
 echo "=== STAGE 2: youtube upload ==="
 
 if [ "$MODE" = "schedule" ]; then
-  PUB=$("$DIR/scheduler.sh")
+  PUB=$(SCHEDULE_STATE_WRITE=0 "$DIR/scheduler.sh")
   echo ">> Publish at: $PUB UTC"
   "$DIR/upload-yt.sh" "$VIDEO" "$TITLE" "$DESC" "$IMAGE" "private" "$TAGS" "$PUB"
+  echo "$PUB" > "$ROOT/.schedule_state"
 else
   "$DIR/upload-yt.sh" "$VIDEO" "$TITLE" "$DESC" "$IMAGE" "$EXTRA" "$TAGS" ""
 fi

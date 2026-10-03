@@ -1,0 +1,53 @@
+{
+  "name": "bus_depot_preview",
+  "profile": "terminal",
+  "seed": 1781574462,
+  "duration": 30,
+  "output": "audio/queue/bus_depot_preview.mp3",
+  "stems": [
+    {
+      "file": "Zz7rc5RhUgc_something-was-waiting-above-the-road-1-hour-of-cosmic-horror-amb_20m_from26m.mp3",
+      "path": "audio/owned/Zz7rc5RhUgc_something-was-waiting-above-the-road-1-hour-of-cosmic-horror-amb_20m_from26m.mp3",
+      "theme": "terminal Something Was Waiting Above the Road\u2026 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "Zz7rc5RhUgc",
+      "volume": 0.749,
+      "highpass": 29,
+      "lowpass": 8567,
+      "delay_ms": 0
+    },
+    {
+      "file": "_7CHmewPimU_they-were-pulling-more-than-signals-1-hour-of-low-altitude-cosmi_20m_from13m.mp3",
+      "path": "audio/owned/_7CHmewPimU_they-were-pulling-more-than-signals-1-hour-of-low-altitude-cosmi_20m_from13m.mp3",
+      "theme": "terminal They Were Pulling More Than Signals\u2026 1 Hour of Low Altitude Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "_7CHmewPimU",
+      "volume": 0.259,
+      "highpass": 110,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "4bSTGVUnslQ_i-drove-toward-it-without-slowing-1-hour-of-cosmic-horror-ambien_20m_from16m.mp3",
+      "path": "audio/owned/4bSTGVUnslQ_i-drove-toward-it-without-slowing-1-hour-of-cosmic-horror-ambien_20m_from16m.mp3",
+      "theme": "terminal I Drove Toward It Without Slowing\u2026 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "4bSTGVUnslQ",
+      "volume": 0.163,
+      "highpass": 45,
+      "lowpass": 3000,
+      "delay_ms": 3000
+    },
+    {
+      "file": "YJIa03rdeYU_they-hovered-just-above-the-roofs-1-hour-of-low-altitude-cosmic_20m_from1m.mp3",
+      "path": "audio/owned/YJIa03rdeYU_they-hovered-just-above-the-roofs-1-hour-of-low-altitude-cosmic_20m_from1m.mp3",
+      "theme": "terminal They Hovered Just Above the Roofs\u2026 1 Hour of Low Altitude Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "YJIa03rdeYU",
+      "volume": 0.047,
+      "highpass": 70,
+      "lowpass": 3000,
+      "delay_ms": 3000
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "blend_harbor_1783449987_11508",
+  "profile": "harbor",
+  "seed": 1783006374,
+  "duration": 3600,
+  "output": "audio/queue/blend_harbor_1783449987_11508.mp3",
+  "stems": [
+    {
+      "file": "26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_20m_from39m.mp3",
+      "path": "audio/owned/26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_20m_from39m.mp3",
+      "theme": "harbor When the Lighthouse Beam Found the Wrong Thing | Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "26Sak4iVwOo",
+      "volume": 0.655,
+      "highpass": 20,
+      "lowpass": 4896,
+      "delay_ms": 0
+    },
+    {
+      "file": "26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_5m.mp3",
+      "path": "audio/owned/26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_5m.mp3",
+      "theme": "harbor When the Lighthouse Beam Found the Wrong Thing | Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "26Sak4iVwOo",
+      "volume": 0.231,
+      "highpass": 180,
+      "lowpass": 4800,
+      "delay_ms": 3000
+    },
+    {
+      "file": "uEqU0YpNHd4_something-ancient-came-home-through-the-fog-1-hour-of-cosmic-hor_20m_from0m.mp3",
+      "path": "audio/owned/uEqU0YpNHd4_something-ancient-came-home-through-the-fog-1-hour-of-cosmic-hor_20m_from0m.mp3",
+      "theme": "harbor Something Ancient Came Home Through the Fog... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "uEqU0YpNHd4",
+      "volume": 0.14,
+      "highpass": 30,
+      "lowpass": 7200,
+      "delay_ms": 5000
+    },
+    {
+      "file": "l1bfpiIHWt0_campfire-below-the-leviathan-1-hour-of-cosmic-horror-ambience_20m_from8m.mp3",
+      "path": "audio/owned/l1bfpiIHWt0_campfire-below-the-leviathan-1-hour-of-cosmic-horror-ambience_20m_from8m.mp3",
+      "theme": "harbor Campfire Below the Leviathan... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "l1bfpiIHWt0",
+      "volume": 0.028,
+      "highpass": 45,
+      "lowpass": 2200,
+      "delay_ms": 0
+    }
+  ]
+}

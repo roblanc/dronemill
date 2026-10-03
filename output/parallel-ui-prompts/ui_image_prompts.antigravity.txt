@@ -1,0 +1,40 @@
+# Parallel UI Image Prompts: dronemill
+# Provider batch: antigravity
+
+Generate via the assigned UI provider only. Save approved outputs to the exact filenames.
+
+--- Image 001_the-black-tide-under-the-lighthouse.png ---
+a lonely lighthouse above a black cosmic tide, impossible waves reflecting faint violet stars. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 003_the-sunken-ruins-that-kept-breathing.png ---
+ancient underwater ruins exhaling pale light from cracks, vast darkness around them. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 005_the-antarctic-shelf-opened-at-midnight.png ---
+an Antarctic ice shelf split open at night, faint red glow rising from the abyss below. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 007_the-ship-s-wheel-turned-by-itself.png ---
+abandoned ship wheel on a ruined deck, ocean fog, unseen force turning it slowly. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 009_the-pier-where-the-fog-learned-your-name.png ---
+an old wooden pier vanishing into thick fog, distant lights beneath the water. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 011_the-fractal-cathedral-in-the-ice.png ---
+ice cathedral with impossible fractal arches, blue light pulsing deep inside. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 013_the-signal-above-the-empty-road.png ---
+an empty desert road at night, low hovering radio towers pulling light from the sky. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 015_the-city-looked-up-and-went-quiet.png ---
+empty city avenue at 3am, all windows reflecting the same impossible shape in the sky. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 017_the-door-in-the-pink-wilderness.png ---
+pink alien wilderness with one black rectangular doorway standing alone among strange plants. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 019_the-windy-citadel-at-the-end-of-sleep.png ---
+snow-covered cliffside citadel in violent wind, warm windows far above an endless valley. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 021_the-alien-lake-beneath-twin-moons.png ---
+still alien lake under two moons, black reeds, faint geometric ripples spreading outward. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.
+
+--- Image 023_the-last-train-never-arrived.png ---
+empty train platform at night, fog in the tunnel, arrival sign showing impossible symbols. cinematic cosmic horror ambience cover art, 16:9, no text, no logo, no people close-up, wide establishing shot, painterly realism, highly detailed environment, atmospheric fog, subtle film grain, dark but readable composition, strong central silhouette, YouTube thumbnail clarity. avoid readable text, watermark, logo, gore, cartoon style, low resolution, blurry subject, oversaturated neon, cute fantasy, busy collage.

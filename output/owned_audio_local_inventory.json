@@ -1,0 +1,706 @@
+[
+  {
+    "id": "-m4KvVwAzDc",
+    "profile": "void",
+    "title": "Something Has Taken the Tower…  Lovecraftian Cosmic Ambience",
+    "file": "audio/owned/-m4KvVwAzDc_something-has-taken-the-tower-lovecraftian-cosmic-ambience_20m_from31m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "-tg9kTtl0Hc",
+    "profile": "arctic",
+    "title": "the fields of green 10 hour ambiance",
+    "file": "audio/owned/-tg9kTtl0Hc_the-fields-of-green-10-hour-ambiance_20m_from532m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "0ZLN-yegwMU",
+    "profile": "void",
+    "title": "You Sleep Beneath the Moon’s Gentle Gravity",
+    "file": "audio/owned/0ZLN-yegwMU_you-sleep-beneath-the-moon-s-gentle-gravity_20m_from98m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "146hW7w8QLM",
+    "profile": "mall",
+    "title": "8 Hours of Windy Silence in Red Megacity for Sleep and Study",
+    "file": "audio/owned/146hW7w8QLM_8-hours-of-windy-silence-in-red-megacity-for-sleep-and-study_20m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "15m6j6rQumM",
+    "profile": "harbor",
+    "title": "10 Hours by the Alien Lake | Delta Brainwaves Under Twin Moons",
+    "file": "audio/owned/15m6j6rQumM_10-hours-by-the-alien-lake-delta-brainwaves-under-twin-moons_20m_from225m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "19yzMFfbXEc",
+    "profile": "void",
+    "title": "The Place Where Dreams And Futures Meet",
+    "file": "audio/owned/19yzMFfbXEc_the-place-where-dreams-and-futures-meet_20m_from11m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "26Sak4iVwOo",
+    "profile": "harbor",
+    "title": "When the Lighthouse Beam Found the Wrong Thing | Cosmic Horror Ambience",
+    "file": "audio/owned/26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_20m_from39m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "26Sak4iVwOo",
+    "profile": "harbor",
+    "title": "When the Lighthouse Beam Found the Wrong Thing | Cosmic Horror Ambience",
+    "file": "audio/owned/26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_5m.mp3",
+    "duration_seconds": 300.002,
+    "duration_minutes": 5.0
+  },
+  {
+    "id": "2ciEj4LOlz4",
+    "profile": "arctic",
+    "title": "You found the Gardened Machine",
+    "file": "audio/owned/2ciEj4LOlz4_you-found-the-gardened-machine_20m_from95m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "2eSyr2Q7auk",
+    "profile": "void",
+    "title": "10 Hours in the Cathedral of the Cosmos | Deep Space Soundscape",
+    "file": "audio/owned/2eSyr2Q7auk_10-hours-in-the-cathedral-of-the-cosmos-deep-space-soundscape_20m_from108m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "2nL1w-Q1ByE",
+    "profile": "void",
+    "title": "10 Hours of Deep Sleep: An Astronaut's Quiet Journey Under a Cosmic Sky",
+    "file": "audio/owned/2nL1w-Q1ByE_10-hours-of-deep-sleep-an-astronaut-s-quiet-journey-under-a-cosm_20m_from421m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "2vM1dhxitvo",
+    "profile": "void",
+    "title": "10 Hours Lost in the Pink Wilderness | Sleep Ambience for Night Travelers & Stargazers",
+    "file": "audio/owned/2vM1dhxitvo_10-hours-lost-in-the-pink-wilderness-sleep-ambience-for-night-tr_20m_from490m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "3nC3vAuOl38",
+    "profile": "arctic",
+    "title": "8 Hours of Windy Snowfall at the Cliffside Castle for Sleep and Study",
+    "file": "audio/owned/3nC3vAuOl38_8-hours-of-windy-snowfall-at-the-cliffside-castle-for-sleep-and_20m_from232m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "4bSTGVUnslQ",
+    "profile": "terminal",
+    "title": "I Drove Toward It Without Slowing… 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/4bSTGVUnslQ_i-drove-toward-it-without-slowing-1-hour-of-cosmic-horror-ambien_20m_from16m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "4mLFcD0iRFI",
+    "profile": "harbor",
+    "title": "He Approaches Under Quiet Waves    1 Hour Lovecraftian Ambiance",
+    "file": "audio/owned/4mLFcD0iRFI_he-approaches-under-quiet-waves-1-hour-lovecraftian-ambiance_20m_from10m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "4pycO2gWFsg",
+    "profile": "void",
+    "title": "He Does Not Sleep… | 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/4pycO2gWFsg_he-does-not-sleep-1-hour-of-cosmic-horror-ambience_20m_from15m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "5POMoXCC-TI",
+    "profile": "harbor",
+    "title": "Cthulhu Watched the Shoreline Without Blinking... 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/5POMoXCC-TI_cthulhu-watched-the-shoreline-without-blinking-1-hour-of-cosmic_20m_from29m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "5Rh8VVo5t9s",
+    "profile": "arctic",
+    "title": "3 Hours Beside the Campfire with the Last Explorer | Alien Night Ambience for Sleep and Study",
+    "file": "audio/owned/5Rh8VVo5t9s_3-hours-beside-the-campfire-with-the-last-explorer-alien-night-a_20m_from150m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "5yeGNk6cORI",
+    "profile": "mall",
+    "title": "A Quiet Night in the City Where Futures Are Dreamt",
+    "file": "audio/owned/5yeGNk6cORI_a-quiet-night-in-the-city-where-futures-are-dreamt_20m_from85m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "70JMLQcR72g",
+    "profile": "terminal",
+    "title": "There Was More Than One Shadow on the Road… 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/70JMLQcR72g_there-was-more-than-one-shadow-on-the-road-1-hour-of-cosmic-horr_20m_from12m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "7RuYd6AWQgw",
+    "profile": "void",
+    "title": "Something old is correcting the world... 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "7ZZ5D0XTsz8",
+    "profile": "void",
+    "title": "A Future Where We All Slept on The Moon",
+    "file": "audio/owned/7ZZ5D0XTsz8_a-future-where-we-all-slept-on-the-moon_20m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "7itMgWJkJHo",
+    "profile": "void",
+    "title": "Return to the Age of Giants, 3024 AD",
+    "file": "audio/owned/7itMgWJkJHo_return-to-the-age-of-giants-3024-ad_20m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "7odeLV_c5XQ",
+    "profile": "harbor",
+    "title": "10 Hour of Windy Cliffside Ocean Ambience for Sleep and Study",
+    "file": "audio/owned/7odeLV_c5XQ_10-hour-of-windy-cliffside-ocean-ambience-for-sleep-and-study_20m_from559m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "8ja7ofAUVhk",
+    "profile": "arctic",
+    "title": "Saturn’s Gardens | 10 Hours of Cosmic Ambience for Sleep & Study",
+    "file": "audio/owned/8ja7ofAUVhk_saturn-s-gardens-10-hours-of-cosmic-ambience-for-sleep-study_20m_from448m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "8tZvwDSHkNA",
+    "profile": "harbor",
+    "title": "When Cthulhu Wanders Into Your Meadow…  1 Hour of Peaceful Cosmic Horror Ambience",
+    "file": "audio/owned/8tZvwDSHkNA_when-cthulhu-wanders-into-your-meadow-1-hour-of-peaceful-cosmic_20m_from39m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "ATEuISwDjMw",
+    "profile": "mall",
+    "title": "Late Night Laundry in the Wrong Dimension…  1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/ATEuISwDjMw_late-night-laundry-in-the-wrong-dimension-1-hour-of-cosmic-horro_20m_from8m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "AlwHu_Pc0zg",
+    "profile": "arctic",
+    "title": "10 Hours Sleeping at the Castle Wrapped in Starlight",
+    "file": "audio/owned/AlwHu_Pc0zg_10-hours-sleeping-at-the-castle-wrapped-in-starlight_20m_from83m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "ArkX7gJdhwk",
+    "profile": "mall",
+    "title": "The City That Dreamed Us Into Morning",
+    "file": "audio/owned/ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "AsNV37IAeio",
+    "profile": "void",
+    "title": "Elephants of Jupiter, 2912 BC",
+    "file": "audio/owned/AsNV37IAeio_elephants-of-jupiter-2912-bc_20m_from22m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "CEaRSGHNUXk",
+    "profile": "void",
+    "title": "8 Hour Ambient Journey Through the Stars Cosmic Space, Futuristic Clouds, Sci Fi Relaxation",
+    "file": "audio/owned/CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "CXdHTI7ueL8",
+    "profile": "void",
+    "title": "→ We Slept on the Moon… But Not Alone… | 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/CXdHTI7ueL8_we-slept-on-the-moon-but-not-alone-1-hour-of-cosmic-horror-ambie_20m_from25m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "DZcqE48x-EM",
+    "profile": "mall",
+    "title": "McDonald’s, 65 Million Years Later",
+    "file": "audio/owned/DZcqE48x-EM_mcdonald-s-65-million-years-later_20m_from5m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "EzicUtkSXCA",
+    "profile": "harbor",
+    "title": "Where the waves ended, its wings began... 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/EzicUtkSXCA_where-the-waves-ended-its-wings-began-1-hour-of-cosmic-horror-am_20m_from17m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "G5pS8PCWTdw",
+    "profile": "arctic",
+    "title": "You Drift in a Wooden Canoe Across the Prehistoric Swamp, 2912 BC",
+    "file": "audio/owned/G5pS8PCWTdw_you-drift-in-a-wooden-canoe-across-the-prehistoric-swamp-2912-bc_20m_from15m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "H9lBDpYsxrE",
+    "profile": "void",
+    "title": "3 Hours Resting with the Silent Watcher Beneath the Alien Sun | Sci Fi Wind Ambience for Sleep",
+    "file": "audio/owned/H9lBDpYsxrE_3-hours-resting-with-the-silent-watcher-beneath-the-alien-sun-sc_20m_from148m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "HqlD-dpzRuE",
+    "profile": "void",
+    "title": "A lost child meets a Lovecraftian monster",
+    "file": "audio/owned/HqlD-dpzRuE_a-lost-child-meets-a-lovecraftian-monster_20m_from29m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "K1l4kLBSX5g",
+    "profile": "void",
+    "title": "10 Hours Nap in the Lonely Chair | Meditative Sound Journey",
+    "file": "audio/owned/K1l4kLBSX5g_10-hours-nap-in-the-lonely-chair-meditative-sound-journey_20m_from278m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "LrhnrXpzPDk",
+    "profile": "arctic",
+    "title": "8 Hours of Windy Silence at the Frozen Citadel for Sleep and Study",
+    "file": "audio/owned/LrhnrXpzPDk_8-hours-of-windy-silence-at-the-frozen-citadel-for-sleep-and-stu_20m_from101m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "MR8CLfez6z0",
+    "profile": "void",
+    "title": "You Found The Perfect Tomorrow ✦ New Eden Green Noise Ambience",
+    "file": "audio/owned/MR8CLfez6z0_you-found-the-perfect-tomorrow-new-eden-green-noise-ambience_20m_from2m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "MRsswdeV2_s",
+    "profile": "harbor",
+    "title": "Sleep with the Giants Primordial River Ambience",
+    "file": "audio/owned/MRsswdeV2_s_sleep-with-the-giants-primordial-river-ambience_20m_from36m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "N-Qf3ERGsn8",
+    "profile": "mall",
+    "title": "You Found The City of Tomorrow",
+    "file": "audio/owned/N-Qf3ERGsn8_you-found-the-city-of-tomorrow_20m_from18m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "NRGssMs2KNw",
+    "profile": "harbor",
+    "title": "10-Hour of Whispering Winds Around the Mars Castle: Eerie Red Fog Ambience for Deep Sleep",
+    "file": "audio/owned/NRGssMs2KNw_10-hour-of-whispering-winds-around-the-mars-castle-eerie-red-fog_20m_from494m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "NbGr_lNSDZw",
+    "profile": "harbor",
+    "title": "Plesiosaur Lake, 65 million years ago",
+    "file": "audio/owned/NbGr_lNSDZw_plesiosaur-lake-65-million-years-ago_20m_from17m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "O0yVjlJ-G_c",
+    "profile": "void",
+    "title": "The Father of All Bats, Seen Only Once... Lovecraftian Ambience",
+    "file": "audio/owned/O0yVjlJ-G_c_the-father-of-all-bats-seen-only-once-lovecraftian-ambience_20m_from6m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "O80x_s_ZDVo",
+    "profile": "void",
+    "title": "10 Hours of the Red Sun Descending | Sleep & Meditation Ambience",
+    "file": "audio/owned/O80x_s_ZDVo_10-hours-of-the-red-sun-descending-sleep-meditation-ambience_20m_from506m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "OE5PeQB22wA",
+    "profile": "arctic",
+    "title": "8 Hours Under the Burning Eye of the Sky Fortress | Deep Sci Fi Ambience for Sleep & Study",
+    "file": "audio/owned/OE5PeQB22wA_8-hours-under-the-burning-eye-of-the-sky-fortress-deep-sci-fi-am_20m_from225m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "OYIAyu_r_mQ",
+    "profile": "void",
+    "title": "You Found The Perfect Tomorrow",
+    "file": "audio/owned/OYIAyu_r_mQ_you-found-the-perfect-tomorrow_20m_from5m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "PntGFkzcnMc",
+    "profile": "arctic",
+    "title": "Mammoth Steppe, 18,500 BC",
+    "file": "audio/owned/PntGFkzcnMc_mammoth-steppe-18-500-bc_20m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "QdzG1fC4u9c",
+    "profile": "arctic",
+    "title": "10 Hours of Sleep Beside the Fortress",
+    "file": "audio/owned/QdzG1fC4u9c_10-hours-of-sleep-beside-the-fortress_20m_from280m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "SN2W0UwF3cg",
+    "profile": "harbor",
+    "title": "Dinosaur Lake at Dusk – Tranquil Prehistoric Soundscape",
+    "file": "audio/owned/SN2W0UwF3cg_dinosaur-lake-at-dusk-tranquil-prehistoric-soundscape_20m_from8m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "TnrMmwIlZFw",
+    "profile": "void",
+    "title": "Last Witness of Liberty, 2999",
+    "file": "audio/owned/TnrMmwIlZFw_last-witness-of-liberty-2999_20m_from25m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "VPko-B0HM64",
+    "profile": "void",
+    "title": "10 Hours of Alone Time  Futuristic Tranquility & Creative Flow",
+    "file": "audio/owned/VPko-B0HM64_10-hours-of-alone-time-futuristic-tranquility-creative-flow_20m_from269m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "W-Is0DmmKro",
+    "profile": "arctic",
+    "title": "Jurassic Treehouse Ambience Cozy Village Sounds for Deep Focus & Relaxation",
+    "file": "audio/owned/W-Is0DmmKro_jurassic-treehouse-ambience-cozy-village-sounds-for-deep-focus-r_20m_from73m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "WyNQHKaohnc",
+    "profile": "void",
+    "title": "10 Hours of GOD Watching You Sleep Ambiance",
+    "file": "audio/owned/WyNQHKaohnc_10-hours-of-god-watching-you-sleep-ambiance_20m_from36m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "X0vxRDaxzsg",
+    "profile": "void",
+    "title": "The Last Stand Against the Unknown | 1 Hour Cosmic Horror",
+    "file": "audio/owned/X0vxRDaxzsg_the-last-stand-against-the-unknown-1-hour-cosmic-horror_20m_from11m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "YJIa03rdeYU",
+    "profile": "terminal",
+    "title": "They Hovered Just Above the Roofs… 1 Hour of Low Altitude Cosmic Horror Ambience",
+    "file": "audio/owned/YJIa03rdeYU_they-hovered-just-above-the-roofs-1-hour-of-low-altitude-cosmic_20m_from1m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "ZO15vcojqeo",
+    "profile": "void",
+    "title": "10 Hour Sentinel Watching the Moon",
+    "file": "audio/owned/ZO15vcojqeo_10-hour-sentinel-watching-the-moon_20m_from11m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "ZduTApUVPLc",
+    "profile": "void",
+    "title": "It Rose from the Soil Knowing My Name…  1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/ZduTApUVPLc_it-rose-from-the-soil-knowing-my-name-1-hour-of-cosmic-horror-am_20m_from12m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "Zz7rc5RhUgc",
+    "profile": "terminal",
+    "title": "Something Was Waiting Above the Road… 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/Zz7rc5RhUgc_something-was-waiting-above-the-road-1-hour-of-cosmic-horror-amb_20m_from26m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "_0Eh5vecges",
+    "profile": "harbor",
+    "title": "Something rises in the fog…  1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/_0Eh5vecges_something-rises-in-the-fog-1-hour-of-cosmic-horror-ambience_20m_from36m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "_7CHmewPimU",
+    "profile": "terminal",
+    "title": "They Were Pulling More Than Signals… 1 Hour of Low Altitude Cosmic Horror Ambience",
+    "file": "audio/owned/_7CHmewPimU_they-were-pulling-more-than-signals-1-hour-of-low-altitude-cosmi_20m_from13m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "_QjrkPqIOVU",
+    "profile": "harbor",
+    "title": "The World's Edge, 75 Million Years AD – Deep Space Ocean Soundscape",
+    "file": "audio/owned/_QjrkPqIOVU_the-world-s-edge-75-million-years-ad-deep-space-ocean-soundscape_20m_from164m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "a7gdxXQeK6c",
+    "profile": "void",
+    "title": "The Future We Found While Dreaming",
+    "file": "audio/owned/a7gdxXQeK6c_the-future-we-found-while-dreaming_20m_from31m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "bzL4ZIAf-4Q",
+    "profile": "harbor",
+    "title": "River of Giants, 65 million years ago",
+    "file": "audio/owned/bzL4ZIAf-4Q_river-of-giants-65-million-years-ago_20m_from7m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "cLPCNVEW7kI",
+    "profile": "harbor",
+    "title": "The Lost Sea, 150 Million Years Ago",
+    "file": "audio/owned/cLPCNVEW7kI_the-lost-sea-150-million-years-ago_20m_from0m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "c_HCRwNwE68",
+    "profile": "arctic",
+    "title": "Journey across the Savannah, 2912",
+    "file": "audio/owned/c_HCRwNwE68_journey-across-the-savannah-2912_20m_from12m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "edKiC-nsTtA",
+    "profile": "mall",
+    "title": "You Fall Asleep In The Forest of the City",
+    "file": "audio/owned/edKiC-nsTtA_you-fall-asleep-in-the-forest-of-the-city_20m_from61m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "ewuY-J0Htm8",
+    "profile": "arctic",
+    "title": "Forgotten Sky Castle | 10 Hours Sleep Ambience",
+    "file": "audio/owned/ewuY-J0Htm8_forgotten-sky-castle-10-hours-sleep-ambience_20m_from452m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "i2coufrDJbw",
+    "profile": "void",
+    "title": "The Dinosaurs of Saturn, 2912 BC",
+    "file": "audio/owned/i2coufrDJbw_the-dinosaurs-of-saturn-2912-bc_20m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "iWRfPcLhTlE",
+    "profile": "mall",
+    "title": "When the City Looked Up…  1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/iWRfPcLhTlE_when-the-city-looked-up-1-hour-of-cosmic-horror-ambience_20m_from10m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "jtTNBKxlhnA",
+    "profile": "void",
+    "title": "She faced the thing she couldn’t name, Like Every Sunday Night… 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/jtTNBKxlhnA_she-faced-the-thing-she-couldn-t-name-like-every-sunday-night-1_20m_from21m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "k3saiGmmvuc",
+    "profile": "void",
+    "title": "They Weren't Just Scarecrows... 1 Hour of Pure Cosmic Horror",
+    "file": "audio/owned/k3saiGmmvuc_they-weren-t-just-scarecrows-1-hour-of-pure-cosmic-horror_20m_from11m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "l1bfpiIHWt0",
+    "profile": "harbor",
+    "title": "Campfire Below the Leviathan... 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/l1bfpiIHWt0_campfire-below-the-leviathan-1-hour-of-cosmic-horror-ambience_20m_from8m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "nSO0s4x-aQU",
+    "profile": "arctic",
+    "title": "10 Hour Forgotten Castle from an Alient World Ambience for Deep Sleep & Relaxation",
+    "file": "audio/owned/nSO0s4x-aQU_10-hour-forgotten-castle-from-an-alient-world-ambience-for-deep_20m_from66m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "sUA1I6od_Ls",
+    "profile": "void",
+    "title": "He Who Waited Before Time, A Deep Ambient Journey",
+    "file": "audio/owned/sUA1I6od_Ls_he-who-waited-before-time-a-deep-ambient-journey_20m_from84m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "siTrP7m_Ufc",
+    "profile": "void",
+    "title": "Tomorrow Waits Quietly In Your Sleep",
+    "file": "audio/owned/siTrP7m_Ufc_tomorrow-waits-quietly-in-your-sleep_20m_from57m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "sognUwka20M",
+    "profile": "void",
+    "title": "10 Hours of Sleep Before The Egg",
+    "file": "audio/owned/sognUwka20M_10-hours-of-sleep-before-the-egg_20m_from306m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "tm_uuHIPpUI",
+    "profile": "void",
+    "title": "Lost in Space | The Final Hours of an Astronaut | Cosmic Horror Ambience",
+    "file": "audio/owned/tm_uuHIPpUI_lost-in-space-the-final-hours-of-an-astronaut-cosmic-horror-ambi_20m_from26m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "uEqU0YpNHd4",
+    "profile": "harbor",
+    "title": "Something Ancient Came Home Through the Fog... 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/uEqU0YpNHd4_something-ancient-came-home-through-the-fog-1-hour-of-cosmic-hor_20m_from0m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "vhXyEgL8lgQ",
+    "profile": "mall",
+    "title": "Lovecraftian Ambience in an Underground Parking Garage... 1 Hour of Cosmic Horror",
+    "file": "audio/owned/vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "xAj-lkkRRwY",
+    "profile": "harbor",
+    "title": "3 Hours The Last House Before the Sea | Sunset Over Still Waters",
+    "file": "audio/owned/xAj-lkkRRwY_3-hours-the-last-house-before-the-sea-sunset-over-still-waters_20m_from17m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "x_bwyCZ7R5s",
+    "profile": "void",
+    "title": "Occult Desert Ritual | Cosmic Horror Ambient Music HD",
+    "file": "audio/owned/x_bwyCZ7R5s_occult-desert-ritual-cosmic-horror-ambient-music-hd_20m_from11m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "yDfx13J-U6M",
+    "profile": "mall",
+    "title": "A Night in the City Where the Moon Never Lets Go",
+    "file": "audio/owned/yDfx13J-U6M_a-night-in-the-city-where-the-moon-never-lets-go_20m_from30m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "zAhBHgEA-nk",
+    "profile": "arctic",
+    "title": "8 Hours of Windy Moonlit Valley Ambience for Sleep and Study",
+    "file": "audio/owned/zAhBHgEA-nk_8-hours-of-windy-moonlit-valley-ambience-for-sleep-and-study_20m_from340m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "zIO8-u1XFoE",
+    "profile": "void",
+    "title": "I looked at the nothingness, and it looked back at me... 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/zIO8-u1XFoE_i-looked-at-the-nothingness-and-it-looked-back-at-me-1-hour-of-c_20m_from37m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "zUqYvFUx26E",
+    "profile": "arctic",
+    "title": "10 Hours in the Neon Jungle Alien | Ambience for Sleep & Study",
+    "file": "audio/owned/zUqYvFUx26E_10-hours-in-the-neon-jungle-alien-ambience-for-sleep-study_20m_from33m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  },
+  {
+    "id": "zV0udVyr7Bg",
+    "profile": "void",
+    "title": "The Sky Wasn’t Empty Anymore… 1 Hour of Cosmic Horror Ambience",
+    "file": "audio/owned/zV0udVyr7Bg_the-sky-wasn-t-empty-anymore-1-hour-of-cosmic-horror-ambience_20m_from3m.mp3",
+    "duration_seconds": 1200.007,
+    "duration_minutes": 20.0
+  }
+]

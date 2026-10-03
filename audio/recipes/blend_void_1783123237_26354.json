@@ -1,0 +1,53 @@
+{
+  "name": "blend_void_1783123237_26354",
+  "profile": "void",
+  "seed": 1783031534,
+  "duration": 3600,
+  "output": "audio/queue/blend_void_1783123237_26354.mp3",
+  "stems": [
+    {
+      "file": "CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "path": "audio/owned/CEaRSGHNUXk_8-hour-ambient-journey-through-the-stars-cosmic-space-futuristic_20m_from379m.mp3",
+      "theme": "void 8 Hour Ambient Journey Through the Stars Cosmic Space, Futuristic Clouds, Sci Fi Relaxation",
+      "source": "owned-original",
+      "owned_id": "CEaRSGHNUXk",
+      "volume": 0.672,
+      "highpass": 29,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "tm_uuHIPpUI_lost-in-space-the-final-hours-of-an-astronaut-cosmic-horror-ambi_20m_from26m.mp3",
+      "path": "audio/owned/tm_uuHIPpUI_lost-in-space-the-final-hours-of-an-astronaut-cosmic-horror-ambi_20m_from26m.mp3",
+      "theme": "void Lost in Space | The Final Hours of an Astronaut | Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "tm_uuHIPpUI",
+      "volume": 0.194,
+      "highpass": 70,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "path": "audio/owned/7RuYd6AWQgw_something-old-is-correcting-the-world-1-hour-of-cosmic-horror-am_20m_from34m.mp3",
+      "theme": "void Something old is correcting the world... 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "7RuYd6AWQgw",
+      "volume": 0.154,
+      "highpass": 30,
+      "lowpass": 900,
+      "delay_ms": 1500
+    },
+    {
+      "file": "4pycO2gWFsg_he-does-not-sleep-1-hour-of-cosmic-horror-ambience_20m_from15m.mp3",
+      "path": "audio/owned/4pycO2gWFsg_he-does-not-sleep-1-hour-of-cosmic-horror-ambience_20m_from15m.mp3",
+      "theme": "void He Does Not Sleep\u2026 | 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "4pycO2gWFsg",
+      "volume": 0.113,
+      "highpass": 30,
+      "lowpass": 2200,
+      "delay_ms": 0
+    }
+  ]
+}

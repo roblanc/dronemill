@@ -1,0 +1,53 @@
+{
+  "name": "owned_harbor_fixed_30s",
+  "profile": "harbor",
+  "seed": 1701,
+  "duration": 30,
+  "output": "audio/queue/owned_harbor_fixed_30s.mp3",
+  "stems": [
+    {
+      "file": "26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_5m.mp3",
+      "path": "audio/owned/26Sak4iVwOo_when-the-lighthouse-beam-found-the-wrong-thing-cosmic-horror-amb_5m.mp3",
+      "theme": "harbor When the Lighthouse Beam Found the Wrong Thing | Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "26Sak4iVwOo",
+      "volume": 0.669,
+      "highpass": 21,
+      "lowpass": 6502,
+      "delay_ms": 0
+    },
+    {
+      "file": "22_rain_window.mp3",
+      "path": "audio/samples/22_rain_window.mp3",
+      "theme": "Rain on window / ploaie",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.319,
+      "highpass": 45,
+      "lowpass": 2200,
+      "delay_ms": 8000
+    },
+    {
+      "file": "12_cosmic_horror.mp3",
+      "path": "audio/samples/12_cosmic_horror.mp3",
+      "theme": "Cosmic horror / submarin",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.158,
+      "highpass": 110,
+      "lowpass": 1400,
+      "delay_ms": 0
+    },
+    {
+      "file": "07_train_station.mp3",
+      "path": "audio/samples/07_train_station.mp3",
+      "theme": "Train station / gar\u0103",
+      "source": "Freesound",
+      "owned_id": "",
+      "volume": 0.083,
+      "highpass": 180,
+      "lowpass": 1400,
+      "delay_ms": 8000
+    }
+  ]
+}

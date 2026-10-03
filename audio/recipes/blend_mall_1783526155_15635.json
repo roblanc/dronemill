@@ -1,0 +1,53 @@
+{
+  "name": "blend_mall_1783526155_15635",
+  "profile": "mall",
+  "seed": 1783345534,
+  "duration": 3600,
+  "output": "audio/queue/blend_mall_1783526155_15635.mp3",
+  "stems": [
+    {
+      "file": "yDfx13J-U6M_a-night-in-the-city-where-the-moon-never-lets-go_20m_from30m.mp3",
+      "path": "audio/owned/yDfx13J-U6M_a-night-in-the-city-where-the-moon-never-lets-go_20m_from30m.mp3",
+      "theme": "mall A Night in the City Where the Moon Never Lets Go",
+      "source": "owned-original",
+      "owned_id": "yDfx13J-U6M",
+      "volume": 0.642,
+      "highpass": 35,
+      "lowpass": 5579,
+      "delay_ms": 0
+    },
+    {
+      "file": "N-Qf3ERGsn8_you-found-the-city-of-tomorrow_20m_from18m.mp3",
+      "path": "audio/owned/N-Qf3ERGsn8_you-found-the-city-of-tomorrow_20m_from18m.mp3",
+      "theme": "mall You Found The City of Tomorrow",
+      "source": "owned-original",
+      "owned_id": "N-Qf3ERGsn8",
+      "volume": 0.108,
+      "highpass": 110,
+      "lowpass": 1400,
+      "delay_ms": 0
+    },
+    {
+      "file": "5yeGNk6cORI_a-quiet-night-in-the-city-where-futures-are-dreamt_20m_from85m.mp3",
+      "path": "audio/owned/5yeGNk6cORI_a-quiet-night-in-the-city-where-futures-are-dreamt_20m_from85m.mp3",
+      "theme": "mall A Quiet Night in the City Where Futures Are Dreamt",
+      "source": "owned-original",
+      "owned_id": "5yeGNk6cORI",
+      "volume": 0.134,
+      "highpass": 30,
+      "lowpass": 2200,
+      "delay_ms": 5000
+    },
+    {
+      "file": "vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "path": "audio/owned/vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "theme": "mall Lovecraftian Ambience in an Underground Parking Garage... 1 Hour of Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "vhXyEgL8lgQ",
+      "volume": 0.106,
+      "highpass": 70,
+      "lowpass": 900,
+      "delay_ms": 5000
+    }
+  ]
+}

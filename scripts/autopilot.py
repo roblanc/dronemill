@@ -207,10 +207,11 @@ def generate_creative_assets(source_title):
             print(f"OpenAI failed: {e}")
 
     # 3. Try local Ollama
-    print(">> Querying local Ollama (phi3:latest)...")
+    ollama_model = os.environ.get("OLLAMA_MODEL", "qwen3.5:9b")
+    print(f">> Querying local Ollama ({ollama_model})...")
     url_ollama = "http://localhost:11434/v1/chat/completions"
     data_ollama = {
-        "model": "phi3:latest",
+        "model": ollama_model,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": f"Source video title: {source_title}"}
@@ -227,7 +228,7 @@ def generate_creative_assets(source_title):
             return json.loads(content)
     except Exception as e:
         print(f"Ollama failed: {e}")
-        
+
     # Static Fallback
     print(">> Using static fallback creative assets...")
     return {

@@ -1,0 +1,53 @@
+{
+  "name": "indoor_garden_preview",
+  "profile": "mall",
+  "seed": 1781744313,
+  "duration": 30,
+  "output": "audio/queue/indoor_garden_preview.mp3",
+  "stems": [
+    {
+      "file": "DZcqE48x-EM_mcdonald-s-65-million-years-later_20m_from5m.mp3",
+      "path": "audio/owned/DZcqE48x-EM_mcdonald-s-65-million-years-later_20m_from5m.mp3",
+      "theme": "mall McDonald\u2019s, 65 Million Years Later",
+      "source": "owned-original",
+      "owned_id": "DZcqE48x-EM",
+      "volume": 0.665,
+      "highpass": 44,
+      "lowpass": 7538,
+      "delay_ms": 0
+    },
+    {
+      "file": "iWRfPcLhTlE_when-the-city-looked-up-1-hour-of-cosmic-horror-ambience_20m_from10m.mp3",
+      "path": "audio/owned/iWRfPcLhTlE_when-the-city-looked-up-1-hour-of-cosmic-horror-ambience_20m_from10m.mp3",
+      "theme": "mall When the City Looked Up\u2026  1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "iWRfPcLhTlE",
+      "volume": 0.202,
+      "highpass": 45,
+      "lowpass": 1400,
+      "delay_ms": 8000
+    },
+    {
+      "file": "N-Qf3ERGsn8_you-found-the-city-of-tomorrow_20m_from18m.mp3",
+      "path": "audio/owned/N-Qf3ERGsn8_you-found-the-city-of-tomorrow_20m_from18m.mp3",
+      "theme": "mall You Found The City of Tomorrow",
+      "source": "owned-original",
+      "owned_id": "N-Qf3ERGsn8",
+      "volume": 0.158,
+      "highpass": 70,
+      "lowpass": 3200,
+      "delay_ms": 0
+    },
+    {
+      "file": "edKiC-nsTtA_you-fall-asleep-in-the-forest-of-the-city_20m_from61m.mp3",
+      "path": "audio/owned/edKiC-nsTtA_you-fall-asleep-in-the-forest-of-the-city_20m_from61m.mp3",
+      "theme": "mall You Fall Asleep In The Forest of the City",
+      "source": "owned-original",
+      "owned_id": "edKiC-nsTtA",
+      "volume": 0.032,
+      "highpass": 45,
+      "lowpass": 4800,
+      "delay_ms": 13000
+    }
+  ]
+}

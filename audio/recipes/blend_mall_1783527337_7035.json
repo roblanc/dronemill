@@ -1,0 +1,53 @@
+{
+  "name": "blend_mall_1783527337_7035",
+  "profile": "mall",
+  "seed": 1782917584,
+  "duration": 3600,
+  "output": "audio/queue/blend_mall_1783527337_7035.mp3",
+  "stems": [
+    {
+      "file": "vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "path": "audio/owned/vhXyEgL8lgQ_lovecraftian-ambience-in-an-underground-parking-garage-1-hour-of_20m_from32m.mp3",
+      "theme": "mall Lovecraftian Ambience in an Underground Parking Garage... 1 Hour of Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "vhXyEgL8lgQ",
+      "volume": 0.79,
+      "highpass": 42,
+      "lowpass": 7659,
+      "delay_ms": 0
+    },
+    {
+      "file": "ATEuISwDjMw_late-night-laundry-in-the-wrong-dimension-1-hour-of-cosmic-horro_20m_from8m.mp3",
+      "path": "audio/owned/ATEuISwDjMw_late-night-laundry-in-the-wrong-dimension-1-hour-of-cosmic-horro_20m_from8m.mp3",
+      "theme": "mall Late Night Laundry in the Wrong Dimension\u2026  1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "ATEuISwDjMw",
+      "volume": 0.081,
+      "highpass": 180,
+      "lowpass": 7200,
+      "delay_ms": 3000
+    },
+    {
+      "file": "ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "path": "audio/owned/ArkX7gJdhwk_the-city-that-dreamed-us-into-morning_20m_from37m.mp3",
+      "theme": "mall The City That Dreamed Us Into Morning",
+      "source": "owned-original",
+      "owned_id": "ArkX7gJdhwk",
+      "volume": 0.162,
+      "highpass": 45,
+      "lowpass": 1400,
+      "delay_ms": 5000
+    },
+    {
+      "file": "N-Qf3ERGsn8_you-found-the-city-of-tomorrow_20m_from18m.mp3",
+      "path": "audio/owned/N-Qf3ERGsn8_you-found-the-city-of-tomorrow_20m_from18m.mp3",
+      "theme": "mall You Found The City of Tomorrow",
+      "source": "owned-original",
+      "owned_id": "N-Qf3ERGsn8",
+      "volume": 0.081,
+      "highpass": 45,
+      "lowpass": 900,
+      "delay_ms": 13000
+    }
+  ]
+}

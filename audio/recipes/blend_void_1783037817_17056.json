@@ -1,0 +1,53 @@
+{
+  "name": "blend_void_1783037817_17056",
+  "profile": "void",
+  "seed": 1782615879,
+  "duration": 3600,
+  "output": "audio/queue/blend_void_1783037817_17056.mp3",
+  "stems": [
+    {
+      "file": "ZduTApUVPLc_it-rose-from-the-soil-knowing-my-name-1-hour-of-cosmic-horror-am_20m_from12m.mp3",
+      "path": "audio/owned/ZduTApUVPLc_it-rose-from-the-soil-knowing-my-name-1-hour-of-cosmic-horror-am_20m_from12m.mp3",
+      "theme": "void It Rose from the Soil Knowing My Name\u2026  1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "ZduTApUVPLc",
+      "volume": 0.719,
+      "highpass": 32,
+      "lowpass": 4800,
+      "delay_ms": 0
+    },
+    {
+      "file": "2nL1w-Q1ByE_10-hours-of-deep-sleep-an-astronaut-s-quiet-journey-under-a-cosm_20m_from421m.mp3",
+      "path": "audio/owned/2nL1w-Q1ByE_10-hours-of-deep-sleep-an-astronaut-s-quiet-journey-under-a-cosm_20m_from421m.mp3",
+      "theme": "void 10 Hours of Deep Sleep: An Astronaut's Quiet Journey Under a Cosmic Sky",
+      "source": "owned-original",
+      "owned_id": "2nL1w-Q1ByE",
+      "volume": 0.267,
+      "highpass": 70,
+      "lowpass": 3200,
+      "delay_ms": 1500
+    },
+    {
+      "file": "CXdHTI7ueL8_we-slept-on-the-moon-but-not-alone-1-hour-of-cosmic-horror-ambie_20m_from25m.mp3",
+      "path": "audio/owned/CXdHTI7ueL8_we-slept-on-the-moon-but-not-alone-1-hour-of-cosmic-horror-ambie_20m_from25m.mp3",
+      "theme": "void \u2192 We Slept on the Moon\u2026 But Not Alone\u2026 | 1 Hour of Cosmic Horror Ambience",
+      "source": "owned-original",
+      "owned_id": "CXdHTI7ueL8",
+      "volume": 0.131,
+      "highpass": 70,
+      "lowpass": 2200,
+      "delay_ms": 3000
+    },
+    {
+      "file": "k3saiGmmvuc_they-weren-t-just-scarecrows-1-hour-of-pure-cosmic-horror_20m_from11m.mp3",
+      "path": "audio/owned/k3saiGmmvuc_they-weren-t-just-scarecrows-1-hour-of-pure-cosmic-horror_20m_from11m.mp3",
+      "theme": "void They Weren't Just Scarecrows... 1 Hour of Pure Cosmic Horror",
+      "source": "owned-original",
+      "owned_id": "k3saiGmmvuc",
+      "volume": 0.107,
+      "highpass": 30,
+      "lowpass": 4800,
+      "delay_ms": 3000
+    }
+  ]
+}
