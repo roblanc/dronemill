@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
-  <meta name="theme-color" content="#0a0c10">
+  <meta name="theme-color" content="#0f0f0f">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>DroneMill — Production Center</title>
+  <title>DroneMill</title>
   
   <style>
     /* Critical Anti-Wobble & Responsive Reset */
@@ -17,9 +20,9 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      background-color: #0a0c10;
-      color: #f8fafc;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+      font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     }
     *, *::before, *::after {
       box-sizing: border-box !important;
@@ -28,8 +31,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=20261004114317">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css?v=20261004130816">
 </head>
 <body>
   <!-- Drawer Backdrop for Mobile Slide-Out Menu -->
@@ -41,9 +44,8 @@
       <button class="icon-btn" id="btn-drawer-toggle" aria-label="Open Navigation Menu" title="Menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
-      <div class="brand-badge"></div>
-      <span class="brand-title">DRONEMILL</span>
-      <span class="mobile-status-dot pulsing"></span>
+      <img class="yt-brand-icon" src="favicon.svg" alt="" width="28" height="28">
+      <span class="yt-brand-word">DroneMill</span>
     </div>
     <div class="mobile-header-actions">
       <button class="icon-btn theme-toggle-btn" id="btn-mobile-theme-toggle" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
@@ -61,11 +63,8 @@
     <aside class="sidebar" id="sidebar-drawer">
       <div class="brand" style="justify-content: space-between; width: 100%;">
         <div style="display: flex; align-items: center; gap: 10px;">
-          <div class="brand-badge"></div>
-          <div>
-            <h1 class="brand-title">DRONEMILL</h1>
-            <p class="brand-subtitle">Autonomous Sound Studio</p>
-          </div>
+          <img class="yt-brand-icon" src="favicon.svg" alt="" width="28" height="28">
+          <h1 class="yt-brand-word">DroneMill</h1>
         </div>
         <button class="icon-btn" id="btn-drawer-close" style="display: none;" aria-label="Close Menu">✕</button>
       </div>
@@ -348,6 +347,6 @@
   <!-- Toast Notification Feedback -->
   <div class="toast-container" id="toast-container"></div>
 
-  <script src="app.js?v=20261004114317"></script>
+  <script src="app.js?v=20261004130816"></script>
 </body>
 </html>

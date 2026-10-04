@@ -120,7 +120,7 @@ function setupFilters() {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentFilter = btn.getAttribute('data-filter') || 'all';
-      renderTimeline(currentFilter);
+      renderFeed();
     });
   });
 }
@@ -161,7 +161,7 @@ async function loadAllData() {
 // Fetch Status Telemetry
 async function fetchStatus() {
   try {
-    const res = await fetch('data/status.json?v=20261004114317');
+    const res = await fetch('data/status.json?v=20261004130816');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     statusData = data;
@@ -214,7 +214,7 @@ const notOnYoutube = i => i.on_youtube === false;
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
   try {
-    const res = await fetch('data/schedule.json?v=20261004114317');
+    const res = await fetch('data/schedule.json?v=20261004130816');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const raw = await res.json();
     const wasFuture = raw.map(i => i.is_future);
@@ -227,19 +227,7 @@ async function fetchSchedule() {
       ...raw.filter((i, n) => !wasFuture[n]),
     ];
 
-    // Update Filter Counts
-    const allCount = scheduleData.length;
-    const futureCount = scheduleData.filter(i => i.is_future && !notOnYoutube(i)).length;
-    const pubCount = scheduleData.filter(i => !i.is_future && !notOnYoutube(i)).length;
-
-    const cntAll = document.getElementById('count-all');
-    const cntFuture = document.getElementById('count-future');
-    const cntPub = document.getElementById('count-published');
-    if (cntAll) cntAll.textContent = `(${allCount})`;
-    if (cntFuture) cntFuture.textContent = `(${futureCount})`;
-    if (cntPub) cntPub.textContent = `(${pubCount})`;
-
-    renderTimeline(currentFilter);
+    if (currentChannel === 'dronemill') renderFeed();
   } catch (err) {
     container.innerHTML = `<div class="loader">Error loading schedule: ${escapeHtml(err.message)}</div>`;
   }
@@ -265,18 +253,15 @@ function renderTimeline(filter) {
     return;
   }
 
-  container.className = 'anime-list';
+  container.className = 'yt-feed';
   container.innerHTML = filtered.map(item => {
     const thumbSrc = item.thumbnail ? `images/${encodeURIComponent(item.thumbnail)}` : '';
-    const date = (item.release_formatted || '').replace(/^\w+, /, '');
-    return `
-      <a class="anime-row" href="#" onclick="event.preventDefault(); openVideoDetail(${item.id})">
-        <img class="anime-thumb" src="${thumbSrc}" alt="" loading="lazy">
-        <span class="anime-text">
-          <span class="anime-title">${escapeHtml(item.title)}</span>
-          <span class="anime-date ${notOnYoutube(item) ? 'missing' : item.is_future ? 'scheduled' : ''}">${notOnYoutube(item) ? 'Not on YouTube · ' : item.is_future ? 'Scheduled · ' : ''}${escapeHtml(date)}</span>
-        </span>
-      </a>`;
+    return ytCard({
+      ch: 'dronemill', title: item.title, thumb: thumbSrc, duration: item.duration, views: item.views,
+      ms: Date.parse(item.publish_at || ''), isFuture: item.is_future, missing: notOnYoutube(item),
+      planned: (item.release_formatted || '').replace(/^\w+, /, '').replace(/ — .*/, ''),
+      attrs: `href="#" onclick="event.preventDefault(); openVideoDetail(${item.id})"`,
+    });
   }).join('');
 }
 
@@ -377,7 +362,7 @@ function setupModal() {
 async function fetchPlaylists() {
   const container = document.getElementById('playlists-container');
   try {
-    const res = await fetch('data/playlists.json?v=20261004114317');
+    const res = await fetch('data/playlists.json?v=20261004130816');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const playlists = await res.json();
 
@@ -416,7 +401,7 @@ async function fetchPlaylists() {
 async function fetchCommunityPosts() {
   const container = document.getElementById('community-container');
   try {
-    const res = await fetch('data/community.json?v=20261004114317');
+    const res = await fetch('data/community.json?v=20261004130816');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const posts = await res.json();
 
@@ -510,22 +495,23 @@ function setupChannelSwitch() {
   btns.forEach(btn => btn.addEventListener('click', () => {
     btns.forEach(b => b.classList.toggle('active', b === btn));
     const anime = btn.getAttribute('data-channel') === 'anime';
+    currentChannel = anime ? 'anime' : 'dronemill';
     document.getElementById('timeline-container').hidden = anime;
-    document.getElementById('dronemill-filters').hidden = anime;
     document.getElementById('anime-container').hidden = !anime;
     if (anime && animeData === null) fetchAnime();
+    else renderFeed();
   }));
 }
 
 async function fetchAnime() {
   const container = document.getElementById('anime-container');
   try {
-    const res = await fetch('data/anime.json?v=20261004114317');
+    const res = await fetch('data/anime.json?v=20261004130816');
     animeData = refreshFuture(await res.json());
     // Scheduled first (soonest on top), then published (newest on top).
     const when = i => Date.parse(i.publish_at || '') || 0;
     animeData.sort((a, b) => (b.is_future - a.is_future) || (a.is_future ? when(a) - when(b) : when(b) - when(a)));
-    renderAnime();
+    if (currentChannel === 'anime') renderFeed();
   } catch (err) {
     container.innerHTML = `<div class="loader">Error loading NofaceChan: ${escapeHtml(err.message)}</div>`;
   }
@@ -537,14 +523,125 @@ function renderAnime() {
     container.innerHTML = `<div class="loader">Nothing scheduled or published yet.</div>`;
     return;
   }
-  container.innerHTML = animeData.map(item => `
-    <a class="anime-row" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
-      <img class="anime-thumb" src="${escapeHtml(item.thumb)}" alt="" loading="lazy">
-      <span class="anime-text">
-        <span class="anime-title">${escapeHtml(item.title)}</span>
-        <span class="anime-date ${item.is_future ? 'scheduled' : ''}">${item.is_future ? 'Scheduled · ' : ''}${escapeHtml(item.date)}</span>
-      </span>
-    </a>`).join('');
+  const items = animeData.filter(i => currentFilter === 'future' ? i.is_future : currentFilter === 'published' ? !i.is_future : true);
+  if (!items.length) {
+    container.innerHTML = `<div class="loader">No videos matching this filter.</div>`;
+    return;
+  }
+  const card = item => ytCard({
+    ch: 'anime', title: item.title, thumb: item.thumb, duration: item.duration, views: item.views,
+    ms: Date.parse(item.publish_at || ''), isFuture: item.is_future,
+    attrs: `href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer"`,
+  });
+  const videos = items.filter(i => i.kind !== 'short');
+  const shorts = items.filter(i => i.kind === 'short');
+  container.className = 'yt-feed';
+  // A full first row of videos before the Shorts shelf, as YouTube does (one card on phones).
+  const cols = getComputedStyle(container).gridTemplateColumns.split(' ').filter(Boolean).length || 1;
+  container.innerHTML = videos.slice(0, cols).map(card).join('') + ytShortsShelf(shorts) + videos.slice(cols).map(card).join('');
+}
+
+// ---------------------------------------------------------------- YouTube-style feed
+let currentChannel = 'dronemill';
+const CHANNEL_INFO = {
+  dronemill: { name: 'Timeless Ambience', avatar: 'images/avatar-timeless.jpg', color: '#3f51b5' },
+  anime: { name: 'NofaceChan', avatar: 'images/anime/avatar.jpg', color: '#c2185b' },
+};
+
+function feedItems() {
+  return currentChannel === 'anime' ? (animeData || []) : scheduleData;
+}
+
+function updateCounts() {
+  const items = feedItems();
+  const set = (id, n) => { const el = document.getElementById(id); if (el) el.textContent = n; };
+  set('count-all', items.length);
+  set('count-future', items.filter(i => i.is_future && !notOnYoutube(i)).length);
+  set('count-published', items.filter(i => !i.is_future && !notOnYoutube(i)).length);
+}
+
+function renderFeed() {
+  updateCounts();
+  if (currentChannel === 'anime') renderAnime();
+  else renderTimeline(currentFilter);
+}
+
+// ISO 8601 length (PT2H0M3S) as YouTube's badge (2:00:03).
+function ytDuration(iso) {
+  const m = /^P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/.exec(iso || '');
+  if (!m) return '';
+  const h = (+m[1] || 0) * 24 + (+m[2] || 0), min = +m[3] || 0, sec = +m[4] || 0;
+  if (!h && !min && !sec) return '';
+  const pad = n => String(n).padStart(2, '0');
+  return h ? `${h}:${pad(min)}:${pad(sec)}` : `${min}:${pad(sec)}`;
+}
+
+function ytViews(n) {
+  if (n === null || n === undefined) return '';
+  if (n < 1000) return `${n} view${n === 1 ? '' : 's'}`;
+  const short = (v, unit) => `${v >= 10 ? Math.floor(v) : Math.floor(v * 10) / 10}${unit} views`;
+  return n < 1e6 ? short(n / 1e3, 'K') : short(n / 1e6, 'M');
+}
+
+function ytAgo(ms) {
+  const s = (Date.now() - ms) / 1000;
+  for (const [unit, len] of [['year', 31536000], ['month', 2592000], ['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60]]) {
+    const v = Math.floor(s / len);
+    if (v >= 1) return `${v} ${unit}${v > 1 ? 's' : ''} ago`;
+  }
+  return 'just now';
+}
+
+// Release time in the viewer's own time zone, as YouTube shows it.
+function ytWhen(ms) {
+  return new Date(ms).toLocaleString(undefined, { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+}
+
+function ytAvatar(ch) {
+  const info = CHANNEL_INFO[ch];
+  return `<span class="yt-avatar" style="background:${info.color}"><b>${info.name[0]}</b><img src="${info.avatar}" alt="" loading="lazy" onerror="this.remove()"></span>`;
+}
+
+function ytCard({ ch, title, thumb, duration, views, ms, isFuture, missing, planned, attrs }) {
+  const len = ytDuration(duration);
+  const badge = missing ? '<span class="yt-badge yt-badge-missing">NOT UPLOADED</span>'
+    : isFuture ? '<span class="yt-badge yt-badge-upcoming">UPCOMING</span>'
+    : len ? `<span class="yt-badge">${len}</span>` : '';
+  const sub = missing ? `<span class="yt-missing">Not on YouTube</span>${planned ? ` · planned ${escapeHtml(planned)}` : ''}`
+    : isFuture && !isNaN(ms) ? `Scheduled for ${escapeHtml(ytWhen(ms))}`
+    : [ytViews(views), isNaN(ms) ? '' : ytAgo(ms)].filter(Boolean).join(' · ');
+  return `
+    <a class="yt-card" ${attrs}>
+      <div class="yt-thumb">${thumb ? `<img src="${escapeHtml(thumb)}" alt="" loading="lazy" onerror="this.remove()">` : ''}${badge}</div>
+      <div class="yt-meta">
+        ${ytAvatar(ch)}
+        <div class="yt-text">
+          <h3 class="yt-title">${escapeHtml(title)}</h3>
+          <p class="yt-sub">${escapeHtml(CHANNEL_INFO[ch].name)}${sub ? ' · ' + sub : ''}</p>
+        </div>
+        <svg class="yt-kebab" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
+      </div>
+    </a>`;
+}
+
+function ytShortsShelf(shorts) {
+  if (!shorts.length) return '';
+  return `
+    <section class="yt-shelf">
+      <h3 class="yt-shelf-title"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="4" fill="#ff0033"/><path d="M10 8.5v7l6-3.5z" fill="#fff"/></svg>Shorts</h3>
+      <div class="yt-shelf-row">
+        ${shorts.map(i => {
+          const ms = Date.parse(i.publish_at || '');
+          const sub = i.is_future && !isNaN(ms) ? `Scheduled for ${ytWhen(ms)}` : ytViews(i.views);
+          return `
+            <a class="yt-short" href="${escapeHtml(i.url)}" target="_blank" rel="noopener noreferrer">
+              <div class="yt-short-thumb"><img src="${escapeHtml(i.short_thumb || i.thumb)}" alt="" loading="lazy">${i.is_future ? '<span class="yt-badge yt-badge-upcoming">UPCOMING</span>' : ''}</div>
+              <p class="yt-short-title">${escapeHtml(i.title)}</p>
+              <p class="yt-short-sub">${escapeHtml(sub)}</p>
+            </a>`;
+        }).join('')}
+      </div>
+    </section>`;
 }
 
 document.addEventListener('DOMContentLoaded', setupChannelSwitch);

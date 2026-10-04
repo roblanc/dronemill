@@ -5,7 +5,11 @@
     "is_future": true,
     "publish_at": "2026-10-04T15:00:00+00:00",
     "date": "Oct 4, 2026 \u00b7 15:00 UTC",
-    "thumb": "images/anime/yt_WZeQwmFFeSk.jpg"
+    "thumb": "images/anime/yt_WZeQwmFFeSk.jpg",
+    "kind": "short",
+    "duration": "PT54S",
+    "views": null,
+    "short_thumb": "images/anime/short_WZeQwmFFeSk.jpg"
   },
   {
     "title": "Which Student Could Actually Expel Ayanokoji?",
@@ -13,7 +17,10 @@
     "is_future": true,
     "publish_at": "2026-10-05T21:00:00+00:00",
     "date": "Oct 5, 2026 \u00b7 21:00 UTC",
-    "thumb": "images/anime/which-student-actually-expel-ayanokoji-thumb1.jpg"
+    "thumb": "images/anime/which-student-actually-expel-ayanokoji-thumb1.jpg",
+    "kind": "video",
+    "duration": "PT14M25S",
+    "views": null
   },
   {
     "title": "Who Could Expel Ayanokoji?",
@@ -21,7 +28,11 @@
     "is_future": true,
     "publish_at": "2026-10-06T15:00:00+00:00",
     "date": "Oct 6, 2026 \u00b7 15:00 UTC",
-    "thumb": "images/anime/yt_6mFagqB50z4.jpg"
+    "thumb": "images/anime/yt_6mFagqB50z4.jpg",
+    "kind": "short",
+    "duration": "PT52S",
+    "views": null,
+    "short_thumb": "images/anime/short_6mFagqB50z4.jpg"
   },
   {
     "title": "Suzune Horikita Can Expel Ayanokoji",
@@ -29,7 +40,11 @@
     "is_future": true,
     "publish_at": "2026-10-07T15:00:00+00:00",
     "date": "Oct 7, 2026 \u00b7 15:00 UTC",
-    "thumb": "images/anime/yt_qTbCBHNxv5g.jpg"
+    "thumb": "images/anime/yt_qTbCBHNxv5g.jpg",
+    "kind": "short",
+    "duration": "PT49S",
+    "views": null,
+    "short_thumb": "images/anime/short_qTbCBHNxv5g.jpg"
   },
   {
     "title": "Could L Unmask Kafka Hibino?",
@@ -37,7 +52,11 @@
     "is_future": false,
     "publish_at": "2026-10-03T15:00:00+00:00",
     "date": "Oct 3, 2026",
-    "thumb": "https://i.ytimg.com/vi/DTCtw60wVIA/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/DTCtw60wVIA/mqdefault.jpg",
+    "kind": "short",
+    "duration": "PT54S",
+    "views": 3,
+    "short_thumb": "images/anime/short_DTCtw60wVIA.jpg"
   },
   {
     "title": "Could L Unmask Kaiju No. 8?",
@@ -45,7 +64,10 @@
     "is_future": false,
     "publish_at": "2026-10-02T21:00:00+00:00",
     "date": "Oct 2, 2026",
-    "thumb": "https://i.ytimg.com/vi/aUX48KwzYMY/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/aUX48KwzYMY/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT15M39S",
+    "views": 22
   },
   {
     "title": "Could Maomao Catch Kira?",
@@ -53,7 +75,10 @@
     "is_future": false,
     "publish_at": "2026-10-02T04:30:00+00:00",
     "date": "Oct 2, 2026",
-    "thumb": "https://i.ytimg.com/vi/E3Hdd5Vd44U/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/E3Hdd5Vd44U/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT12M10S",
+    "views": 27
   },
   {
     "title": "Could Johan Liebert Break Deku?",
@@ -61,7 +86,10 @@
     "is_future": false,
     "publish_at": "2026-09-10T21:00:03+00:00",
     "date": "Sep 10, 2026",
-    "thumb": "https://i.ytimg.com/vi/dzA0efpqSYc/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/dzA0efpqSYc/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT8M22S",
+    "views": 153
   },
   {
     "title": "Could Light Yagami Survive Demon Slayer?",
@@ -69,7 +97,10 @@
     "is_future": false,
     "publish_at": "2026-06-27T21:00:00+00:00",
     "date": "Jun 27, 2026",
-    "thumb": "https://i.ytimg.com/vi/w7WIEHHOqa8/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/w7WIEHHOqa8/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT12M19S",
+    "views": 65
   },
   {
     "title": "Could Ayanokoji Manipulate Class 1-A?",
@@ -77,7 +108,10 @@
     "is_future": false,
     "publish_at": "2026-06-26T10:33:08+00:00",
     "date": "Jun 26, 2026",
-    "thumb": "https://i.ytimg.com/vi/GykhG2tS5Mg/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/GykhG2tS5Mg/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT29M44S",
+    "views": 234
   },
   {
     "title": "What If Orochimaru Found the Death Note?",
@@ -85,7 +119,10 @@
     "is_future": false,
     "publish_at": "2026-06-24T21:00:20+00:00",
     "date": "Jun 24, 2026",
-    "thumb": "https://i.ytimg.com/vi/DRksLImbx-0/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/DRksLImbx-0/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT28M50S",
+    "views": 131
   },
   {
     "title": "What If Ayanokoji and Kakashi Shared One System?",
@@ -93,7 +130,10 @@
     "is_future": false,
     "publish_at": "2026-06-22T21:00:31+00:00",
     "date": "Jun 22, 2026",
-    "thumb": "https://i.ytimg.com/vi/-YdAjPqqYVI/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/-YdAjPqqYVI/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT24M43S",
+    "views": 39
   },
   {
     "title": "The day the Founding Titan was inherited by Light Yagami",
@@ -101,7 +141,10 @@
     "is_future": false,
     "publish_at": "2026-06-20T21:00:08+00:00",
     "date": "Jun 20, 2026",
-    "thumb": "https://i.ytimg.com/vi/Z3vVHx-k-UU/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/Z3vVHx-k-UU/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT28M42S",
+    "views": 64
   },
   {
     "title": "When the White Room realized Light Yagami was a perfect judge",
@@ -109,7 +152,10 @@
     "is_future": false,
     "publish_at": "2026-06-18T21:00:25+00:00",
     "date": "Jun 18, 2026",
-    "thumb": "https://i.ytimg.com/vi/zRTB9AV_CyM/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/zRTB9AV_CyM/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT17M54S",
+    "views": 86
   },
   {
     "title": "When White Room logic collides with the Shibuya Incident",
@@ -117,7 +163,10 @@
     "is_future": false,
     "publish_at": "2026-06-11T21:00:28+00:00",
     "date": "Jun 11, 2026",
-    "thumb": "https://i.ytimg.com/vi/hyCLTmerdIA/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/hyCLTmerdIA/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT21M16S",
+    "views": 49
   },
   {
     "title": "Could L Catch Makima?",
@@ -125,7 +174,10 @@
     "is_future": false,
     "publish_at": "2026-06-10T21:00:04+00:00",
     "date": "Jun 10, 2026",
-    "thumb": "https://i.ytimg.com/vi/75AnF8X4mDY/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/75AnF8X4mDY/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT21M17S",
+    "views": 59
   },
   {
     "title": "EVERYONE That Could Outsmart Ayanokoji",
@@ -133,7 +185,10 @@
     "is_future": false,
     "publish_at": "2026-06-09T23:30:06+00:00",
     "date": "Jun 9, 2026",
-    "thumb": "https://i.ytimg.com/vi/6A6MUPg9ux4/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/6A6MUPg9ux4/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT22M35S",
+    "views": 194
   },
   {
     "title": "What If L Survived? | Death Note Theory",
@@ -141,7 +196,10 @@
     "is_future": false,
     "publish_at": "2026-06-09T12:59:39+00:00",
     "date": "Jun 9, 2026",
-    "thumb": "https://i.ytimg.com/vi/Uvwb9AqQTx4/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/Uvwb9AqQTx4/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT22M12S",
+    "views": 32
   },
   {
     "title": "What If Near Was Placed in Class A? (COTE Theory)",
@@ -149,7 +207,10 @@
     "is_future": false,
     "publish_at": "2026-06-07T21:29:47+00:00",
     "date": "Jun 7, 2026",
-    "thumb": "https://i.ytimg.com/vi/iMY0UhKN2ZU/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/iMY0UhKN2ZU/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT23M49S",
+    "views": 234
   },
   {
     "title": "Could Ayanokoji Survive Jujutsu Kaisen?",
@@ -157,7 +218,10 @@
     "is_future": false,
     "publish_at": "2026-06-05T20:07:40+00:00",
     "date": "Jun 5, 2026",
-    "thumb": "https://i.ytimg.com/vi/LUwvbILd3E4/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/LUwvbILd3E4/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT25M40S",
+    "views": 61
   },
   {
     "title": "Could L Survive Classroom of the Elite?",
@@ -165,7 +229,10 @@
     "is_future": false,
     "publish_at": "2026-06-04T16:15:47+00:00",
     "date": "Jun 4, 2026",
-    "thumb": "https://i.ytimg.com/vi/HmdxCN-H3Do/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/HmdxCN-H3Do/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT27M17S",
+    "views": 1759
   },
   {
     "title": "Could Ayanokoji Survive Monster?",
@@ -173,7 +240,10 @@
     "is_future": false,
     "publish_at": "2026-06-03T19:13:23+00:00",
     "date": "Jun 3, 2026",
-    "thumb": "https://i.ytimg.com/vi/oNDG7gKxo9Q/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/oNDG7gKxo9Q/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT23M29S",
+    "views": 146
   },
   {
     "title": "Could Ayanokoji Outsmart Johan Liebert?",
@@ -181,7 +251,10 @@
     "is_future": false,
     "publish_at": "2026-06-02T18:53:26+00:00",
     "date": "Jun 2, 2026",
-    "thumb": "https://i.ytimg.com/vi/9SEiRzOjSfI/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/9SEiRzOjSfI/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT23M44S",
+    "views": 480
   },
   {
     "title": "Light Yagami vs Shogo Makishima Is Not Even Close",
@@ -189,7 +262,10 @@
     "is_future": false,
     "publish_at": "2026-06-01T19:00:16+00:00",
     "date": "Jun 1, 2026",
-    "thumb": "https://i.ytimg.com/vi/3GV4gdr-sfk/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/3GV4gdr-sfk/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT18M47S",
+    "views": 226
   },
   {
     "title": "What If Sasuke Was Raised in the White Room?",
@@ -197,7 +273,10 @@
     "is_future": false,
     "publish_at": "2026-05-31T18:18:15+00:00",
     "date": "May 31, 2026",
-    "thumb": "https://i.ytimg.com/vi/ZOjHbCL9pJ4/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/ZOjHbCL9pJ4/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT18M38S",
+    "views": 137
   },
   {
     "title": "What If Near Swapped Places with Ayanokoji?",
@@ -205,7 +284,10 @@
     "is_future": false,
     "publish_at": "2026-05-30T09:00:23+00:00",
     "date": "May 30, 2026",
-    "thumb": "https://i.ytimg.com/vi/xD9vgY1OpbM/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/xD9vgY1OpbM/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT12M25S",
+    "views": 336
   },
   {
     "title": "What if Kakashi was raised in the White Room?",
@@ -213,7 +295,10 @@
     "is_future": false,
     "publish_at": "2026-05-29T15:58:32+00:00",
     "date": "May 29, 2026",
-    "thumb": "https://i.ytimg.com/vi/wpNGhI62ndU/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/wpNGhI62ndU/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT24M41S",
+    "views": 295
   },
   {
     "title": "What If Ayanokoji Joined the Chunin Exams?",
@@ -221,7 +306,10 @@
     "is_future": false,
     "publish_at": "2026-05-28T09:01:42+00:00",
     "date": "May 28, 2026",
-    "thumb": "https://i.ytimg.com/vi/9DRm7SfN9QY/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/9DRm7SfN9QY/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT25M17S",
+    "views": 690
   },
   {
     "title": "What If Itachi Raised Sasuke in Secret?",
@@ -229,7 +317,10 @@
     "is_future": false,
     "publish_at": "2026-05-27T07:39:19+00:00",
     "date": "May 27, 2026",
-    "thumb": "https://i.ytimg.com/vi/_hAMOD7QbSg/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/_hAMOD7QbSg/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT24M31S",
+    "views": 956
   },
   {
     "title": "What if Near was born in the White Room?",
@@ -237,7 +328,10 @@
     "is_future": false,
     "publish_at": "2026-05-25T21:56:40+00:00",
     "date": "May 25, 2026",
-    "thumb": "https://i.ytimg.com/vi/VniPQV40m1M/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/VniPQV40m1M/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT24M6S",
+    "views": 78
   },
   {
     "title": "What if Ayanokoji found the Death Note?",
@@ -245,7 +339,10 @@
     "is_future": false,
     "publish_at": "2026-05-24T22:19:26+00:00",
     "date": "May 24, 2026",
-    "thumb": "https://i.ytimg.com/vi/VVwjFvsakZI/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/VVwjFvsakZI/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT22M21S",
+    "views": 392
   },
   {
     "title": "When Ayanokoji directed ANHS, he began his ultimate experiment.",
@@ -253,7 +350,10 @@
     "is_future": false,
     "publish_at": "2026-05-23T21:35:07+00:00",
     "date": "May 23, 2026",
-    "thumb": "https://i.ytimg.com/vi/1bqx0fG2e8s/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/1bqx0fG2e8s/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT24M41S",
+    "views": 170
   },
   {
     "title": "What If Naruto Inherited the Attack Titan?",
@@ -261,7 +361,10 @@
     "is_future": false,
     "publish_at": "2026-05-23T16:34:39+00:00",
     "date": "May 23, 2026",
-    "thumb": "https://i.ytimg.com/vi/EWTJXEAvJoA/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/EWTJXEAvJoA/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT11M44S",
+    "views": 26
   },
   {
     "title": "What if Light Yagami Found the One Ring? | Death Note Theory",
@@ -269,7 +372,10 @@
     "is_future": false,
     "publish_at": "2026-05-22T22:58:47+00:00",
     "date": "May 22, 2026",
-    "thumb": "https://i.ytimg.com/vi/emL53Ayc0xQ/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/emL53Ayc0xQ/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT11M9S",
+    "views": 45
   },
   {
     "title": "The Castle That Never Stops Hiding",
@@ -277,7 +383,10 @@
     "is_future": false,
     "publish_at": "2025-12-30T17:24:11+00:00",
     "date": "Dec 30, 2025",
-    "thumb": "https://i.ytimg.com/vi/OiE6vxIlVTw/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/OiE6vxIlVTw/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT7M25S",
+    "views": 189
   },
   {
     "title": "The Philosophy Behind Naruto's Most Dangerous Villain",
@@ -285,7 +394,10 @@
     "is_future": false,
     "publish_at": "2025-12-18T20:39:44+00:00",
     "date": "Dec 18, 2025",
-    "thumb": "https://i.ytimg.com/vi/XN_VPASsqDs/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/XN_VPASsqDs/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT7M42S",
+    "views": 455
   },
   {
     "title": "Shinkai timelines are inconsistent",
@@ -293,7 +405,10 @@
     "is_future": false,
     "publish_at": "2025-12-14T08:00:26+00:00",
     "date": "Dec 14, 2025",
-    "thumb": "https://i.ytimg.com/vi/F57_xxxd1WU/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/F57_xxxd1WU/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT41S",
+    "views": 19
   },
   {
     "title": "The Secret Recipe of Shinkaiverse",
@@ -301,7 +416,10 @@
     "is_future": false,
     "publish_at": "2025-12-12T13:02:01+00:00",
     "date": "Dec 12, 2025",
-    "thumb": "https://i.ytimg.com/vi/sPBPkxj49Mc/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/sPBPkxj49Mc/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT1M26S",
+    "views": 795
   },
   {
     "title": "Leader, Protector, Teacher: Kakashi",
@@ -309,7 +427,10 @@
     "is_future": false,
     "publish_at": "2025-12-12T08:00:23+00:00",
     "date": "Dec 12, 2025",
-    "thumb": "https://i.ytimg.com/vi/8eB92f_UckI/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/8eB92f_UckI/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT50S",
+    "views": 1482
   },
   {
     "title": "The Discipline of the COPY Ninja #kakashi #naruto",
@@ -317,7 +438,10 @@
     "is_future": false,
     "publish_at": "2025-12-10T20:06:41+00:00",
     "date": "Dec 10, 2025",
-    "thumb": "https://i.ytimg.com/vi/sVVG9BwnXL4/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/sVVG9BwnXL4/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT1M46S",
+    "views": 911
   },
   {
     "title": "Is Tokyo Still Underwater? The Shinkai Multiverse Theory Explained",
@@ -325,7 +449,10 @@
     "is_future": false,
     "publish_at": "2025-12-10T13:45:01+00:00",
     "date": "Dec 10, 2025",
-    "thumb": "https://i.ytimg.com/vi/A76iBQeNpe8/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/A76iBQeNpe8/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT6M59S",
+    "views": 282
   },
   {
     "title": "The Price of Kakashi\u2019s Mangeky\u014d",
@@ -333,7 +460,10 @@
     "is_future": false,
     "publish_at": "2025-12-08T20:14:50+00:00",
     "date": "Dec 8, 2025",
-    "thumb": "https://i.ytimg.com/vi/MwpbN33uzIA/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/MwpbN33uzIA/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT8M53S",
+    "views": 480
   },
   {
     "title": "This Film's Final Message Will Give You Hope",
@@ -341,7 +471,10 @@
     "is_future": false,
     "publish_at": "2025-12-04T10:45:50+00:00",
     "date": "Dec 4, 2025",
-    "thumb": "https://i.ytimg.com/vi/30T6qedcoOs/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/30T6qedcoOs/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT48S",
+    "views": 63
   },
   {
     "title": "The Wind Is Rising A Haunting Call to Endure #animestudio #ghibli",
@@ -349,6 +482,9 @@
     "is_future": false,
     "publish_at": "2025-12-04T01:00:22+00:00",
     "date": "Dec 4, 2025",
-    "thumb": "https://i.ytimg.com/vi/CYHMcHrejKA/mqdefault.jpg"
+    "thumb": "https://i.ytimg.com/vi/CYHMcHrejKA/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT1M23S",
+    "views": 111
   }
 ]
