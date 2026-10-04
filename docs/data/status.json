@@ -1,12 +1,12 @@
 {
-  "server_time_utc": "2026-10-02 11:33:17 UTC",
+  "server_time_utc": "2026-10-04 10:34:04 UTC",
   "total_disk_gb": 37.2,
   "used_disk_gb": 23.9,
   "free_disk_gb": 11.8,
   "disk_percent": 64.1,
-  "total_uploads": 127,
-  "future_scheduled_count": 29,
-  "next_release": "the castle lights can wait (Oct 02, 18:00 UTC)",
+  "total_uploads": 130,
+  "future_scheduled_count": 30,
+  "next_release": "the flooded subway mezzanine at 3 AM | mallsoft drone | 2 hours (Oct 04, 18:00 UTC)",
   "master_lufs": -22.0,
   "audio_engine": "AI Hybrid 5-Engine Conductor (Active)"
 }

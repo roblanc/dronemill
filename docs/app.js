@@ -161,7 +161,7 @@ async function loadAllData() {
 // Fetch Status Telemetry
 async function fetchStatus() {
   try {
-    const res = await fetch('data/status.json?v=20261002113318');
+    const res = await fetch('data/status.json?v=20261004103405');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     statusData = data;
@@ -196,13 +196,33 @@ async function fetchStatus() {
   }
 }
 
+// is_future is set when the data is built, and the static copy can be a day old.
+// Re-check it against the viewer's clock so passed releases count as published.
+function refreshFuture(items) {
+  const now = Date.now();
+  items.forEach(i => {
+    const t = Date.parse(i.publish_at || '');
+    if (!isNaN(t)) i.is_future = t > now;
+  });
+  return items;
+}
+
 // Fetch Schedule
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
   try {
-    const res = await fetch('data/schedule.json?v=20261002113318');
+    const res = await fetch('data/schedule.json?v=20261004103405');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    scheduleData = await res.json();
+    const raw = await res.json();
+    const wasFuture = raw.map(i => i.is_future);
+    refreshFuture(raw);
+    // Releases that went live since the build lead the published list, newest first.
+    const justPublished = raw.filter((i, n) => wasFuture[n] && !i.is_future).reverse();
+    scheduleData = [
+      ...raw.filter(i => i.is_future),
+      ...justPublished,
+      ...raw.filter((i, n) => !wasFuture[n]),
+    ];
 
     // Update Filter Counts
     const allCount = scheduleData.length;
@@ -354,7 +374,7 @@ function setupModal() {
 async function fetchPlaylists() {
   const container = document.getElementById('playlists-container');
   try {
-    const res = await fetch('data/playlists.json?v=20261002113318');
+    const res = await fetch('data/playlists.json?v=20261004103405');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const playlists = await res.json();
 
@@ -393,7 +413,7 @@ async function fetchPlaylists() {
 async function fetchCommunityPosts() {
   const container = document.getElementById('community-container');
   try {
-    const res = await fetch('data/community.json?v=20261002113318');
+    const res = await fetch('data/community.json?v=20261004103405');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const posts = await res.json();
 
@@ -497,8 +517,11 @@ function setupChannelSwitch() {
 async function fetchAnime() {
   const container = document.getElementById('anime-container');
   try {
-    const res = await fetch('data/anime.json?v=20261002113318');
-    animeData = await res.json();
+    const res = await fetch('data/anime.json?v=20261004103405');
+    animeData = refreshFuture(await res.json());
+    // Scheduled first (soonest on top), then published (newest on top).
+    const when = i => Date.parse(i.publish_at || '') || 0;
+    animeData.sort((a, b) => (b.is_future - a.is_future) || (a.is_future ? when(a) - when(b) : when(b) - when(a)));
     renderAnime();
   } catch (err) {
     container.innerHTML = `<div class="loader">Error loading NofaceChan: ${escapeHtml(err.message)}</div>`;
