@@ -161,7 +161,7 @@ async function loadAllData() {
 // Fetch Status Telemetry
 async function fetchStatus() {
   try {
-    const res = await fetch('data/status.json?v=20261004103405');
+    const res = await fetch('data/status.json?v=20261004110534');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     statusData = data;
@@ -207,11 +207,14 @@ function refreshFuture(items) {
   return items;
 }
 
+// The build sets on_youtube to false for queue entries it could not find on the channel.
+const notOnYoutube = i => i.on_youtube === false;
+
 // Fetch Schedule
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
   try {
-    const res = await fetch('data/schedule.json?v=20261004103405');
+    const res = await fetch('data/schedule.json?v=20261004110534');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const raw = await res.json();
     const wasFuture = raw.map(i => i.is_future);
@@ -226,8 +229,8 @@ async function fetchSchedule() {
 
     // Update Filter Counts
     const allCount = scheduleData.length;
-    const futureCount = scheduleData.filter(i => i.is_future).length;
-    const pubCount = allCount - futureCount;
+    const futureCount = scheduleData.filter(i => i.is_future && !notOnYoutube(i)).length;
+    const pubCount = scheduleData.filter(i => !i.is_future && !notOnYoutube(i)).length;
 
     const cntAll = document.getElementById('count-all');
     const cntFuture = document.getElementById('count-future');
@@ -252,9 +255,9 @@ function renderTimeline(filter) {
 
   let filtered = scheduleData;
   if (filter === 'future') {
-    filtered = scheduleData.filter(i => i.is_future);
+    filtered = scheduleData.filter(i => i.is_future && !notOnYoutube(i));
   } else if (filter === 'published') {
-    filtered = scheduleData.filter(i => !i.is_future);
+    filtered = scheduleData.filter(i => !i.is_future && !notOnYoutube(i));
   }
 
   if (!filtered.length) {
@@ -271,7 +274,7 @@ function renderTimeline(filter) {
         <img class="anime-thumb" src="${thumbSrc}" alt="" loading="lazy">
         <span class="anime-text">
           <span class="anime-title">${escapeHtml(item.title)}</span>
-          <span class="anime-date ${item.is_future ? 'scheduled' : ''}">${item.is_future ? 'Scheduled · ' : ''}${escapeHtml(date)}</span>
+          <span class="anime-date ${notOnYoutube(item) ? 'missing' : item.is_future ? 'scheduled' : ''}">${notOnYoutube(item) ? 'Not on YouTube · ' : item.is_future ? 'Scheduled · ' : ''}${escapeHtml(date)}</span>
         </span>
       </a>`;
   }).join('');
@@ -283,8 +286,8 @@ window.openVideoDetail = function(id) {
   if (!item) return;
 
   const thumbSrc = item.thumbnail ? `images/${encodeURIComponent(item.thumbnail)}` : '';
-  const badgeClass = item.is_future ? 'scheduled' : 'published';
-  const badgeText = item.is_future ? 'SCHEDULED' : 'PUBLISHED';
+  const badgeClass = notOnYoutube(item) ? 'missing' : item.is_future ? 'scheduled' : 'published';
+  const badgeText = notOnYoutube(item) ? 'NOT ON YOUTUBE' : item.is_future ? 'SCHEDULED' : 'PUBLISHED';
   const hasYt = !!item.youtube_url;
 
   const modalBody = document.getElementById('modal-content-body');
@@ -374,7 +377,7 @@ function setupModal() {
 async function fetchPlaylists() {
   const container = document.getElementById('playlists-container');
   try {
-    const res = await fetch('data/playlists.json?v=20261004103405');
+    const res = await fetch('data/playlists.json?v=20261004110534');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const playlists = await res.json();
 
@@ -413,7 +416,7 @@ async function fetchPlaylists() {
 async function fetchCommunityPosts() {
   const container = document.getElementById('community-container');
   try {
-    const res = await fetch('data/community.json?v=20261004103405');
+    const res = await fetch('data/community.json?v=20261004110534');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const posts = await res.json();
 
@@ -517,7 +520,7 @@ function setupChannelSwitch() {
 async function fetchAnime() {
   const container = document.getElementById('anime-container');
   try {
-    const res = await fetch('data/anime.json?v=20261004103405');
+    const res = await fetch('data/anime.json?v=20261004110534');
     animeData = refreshFuture(await res.json());
     // Scheduled first (soonest on top), then published (newest on top).
     const when = i => Date.parse(i.publish_at || '') || 0;
