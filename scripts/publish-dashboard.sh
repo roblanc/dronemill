@@ -8,6 +8,9 @@ cd "$ROOT"
 # cron runs this as root on a brewuser-owned repo; without this git refuses with "dubious ownership"
 export GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=safe.directory GIT_CONFIG_VALUE_0="$ROOT"
 
+echo ">> Syncing video ids, release times and privacy from YouTube into upload_history..."
+python3 "$ROOT/scripts/sync-youtube-ids.py" || echo "WARN: YouTube sync failed, building from the existing history"
+
 echo ">> Generating static dashboard data from upload_history and playlists..."
 python3 "$ROOT/scripts/build_github_pages.py"
 

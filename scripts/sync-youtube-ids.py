@@ -100,6 +100,18 @@ def fetch_all_youtube_videos(youtube):
     return all_videos
 
 
+def fetch_release_times(youtube, ids):
+    """{video_id: (release time, privacy)}: publishAt while a video is scheduled, publishedAt once public."""
+    times = {}
+    for k in range(0, len(ids), 50):
+        res = youtube.videos().list(part="snippet,status", id=",".join(ids[k:k + 50])).execute()
+        for v in res.get("items", []):
+            st = v["status"]
+            when = st.get("publishAt") if st.get("privacyStatus") == "private" else v["snippet"].get("publishedAt")
+            times[v["id"]] = (when, st.get("privacyStatus"))
+    return times
+
+
 def find_matching_video(title, yt_videos):
     if not title:
         return None
@@ -154,6 +166,8 @@ def find_matching_video(title, yt_videos):
 def sync():
     creds = load_credentials()
     yt_videos = []
+    api_success = False
+    yt = None
     if creds:
         try:
             yt = googleapiclient.discovery.build("youtube", "v3", credentials=creds)
@@ -161,8 +175,13 @@ def sync():
             if yt_videos:
                 with open(CACHE_FILE, "w", encoding="utf-8") as f:
                     json.dump(yt_videos, f, indent=2)
+                api_success = True
         except Exception as e:
             print(f"Error fetching from YouTube API: {e}")
+            # Token error like invalid_grant: do NOT wipe history
+            if "invalid_grant" in str(e) or "Token has been expired" in str(e) or "RefreshError" in str(type(e).__name__):
+                print("⚠️  Token invalid/expired — preservation mode: will NOT wipe existing video_ids. Re-auth required (see SETUP-YOUTUBE.md).")
+                return
 
     if not yt_videos and os.path.exists(CACHE_FILE):
         print("Using cached YouTube videos list...")
@@ -172,6 +191,9 @@ def sync():
     if not yt_videos:
         print("No YouTube videos available to sync.")
         return
+
+    # If API call failed (api_success False) and we are using stale cache, don't wipe unmatched entries
+    preserve_unmatched = not api_success
 
     valid_yt = [v for v in yt_videos if len(clean_str(v.get("title", ""))) >= 4]
 
@@ -208,23 +230,48 @@ def sync():
                             used_yt_ids.add(v["video_id"])
                             break
 
+        # publish_at drifts when a video is rescheduled or published by hand in Studio,
+        # so take release time and privacy from YouTube too.
+        release_times = {}
+        if api_success:
+            try:
+                release_times = fetch_release_times(yt, [m["video_id"] for m in matched.values()])
+            except Exception as e:
+                print(f"WARN: could not read release times from YouTube ({e})")
+
         updated_history_count = 0
+        preserved_count = 0
+        retimed_count = 0
         for i, item in enumerate(history):
             if i in matched:
                 match = matched[i]
                 item["video_id"] = match["video_id"]
                 item["youtube_url"] = match["youtube_url"]
                 item["short_url"] = match["short_url"]
+                when, privacy = release_times.get(match["video_id"], (None, None))
+                if when:
+                    when = when.replace(".000Z", "Z").replace("+00:00", "Z")
+                    if item.get("publish_at") != when or item.get("privacy") != privacy:
+                        retimed_count += 1
+                    item["publish_at"] = when
+                    item["privacy"] = privacy
                 updated_history_count += 1
             else:
-                item["video_id"] = None
-                item["youtube_url"] = None
-                item["short_url"] = None
+                if preserve_unmatched:
+                    # Keep existing video_id if API failed or using cache fallback — don't wipe
+                    if item.get("video_id"):
+                        preserved_count += 1
+                    # leave as-is (do not null out)
+                else:
+                    # API succeeded with fresh fetch: safe to null unmatched (truly not on YouTube yet)
+                    item["video_id"] = None
+                    item["youtube_url"] = None
+                    item["short_url"] = None
 
         with open(HISTORY_FILE, "w", encoding="utf-8") as f:
             json.dump(history, f, indent=2)
 
-        print(f"Synced {updated_history_count}/{len(history)} items in {HISTORY_FILE}")
+        print(f"Synced {updated_history_count}/{len(history)} items in {HISTORY_FILE} (preserved {preserved_count} existing ids in cache-fallback mode, {retimed_count} release times/privacy updated from YouTube)")
 
     # Sync curated_playlists.json
     if os.path.exists(PLAYLISTS_FILE):
@@ -258,9 +305,14 @@ def sync():
                     v["short_url"] = match["short_url"]
                     updated_pl_count += 1
                 else:
-                    v["video_id"] = None
-                    v["youtube_url"] = None
-                    v["short_url"] = None
+                    if preserve_unmatched:
+                        # preserve existing ids when using cache
+                        if v.get("video_id"):
+                            preserved_count += 1
+                    else:
+                        v["video_id"] = None
+                        v["youtube_url"] = None
+                        v["short_url"] = None
 
         with open(PLAYLISTS_FILE, "w", encoding="utf-8") as f:
             json.dump(playlists, f, indent=2)
