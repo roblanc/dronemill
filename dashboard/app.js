@@ -196,13 +196,33 @@ async function fetchStatus() {
   }
 }
 
+// is_future is set when the data is built, and the static copy can be a day old.
+// Re-check it against the viewer's clock so passed releases count as published.
+function refreshFuture(items) {
+  const now = Date.now();
+  items.forEach(i => {
+    const t = Date.parse(i.publish_at || '');
+    if (!isNaN(t)) i.is_future = t > now;
+  });
+  return items;
+}
+
 // Fetch Schedule
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
   try {
     const res = await fetch('/api/schedule');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    scheduleData = await res.json();
+    const raw = await res.json();
+    const wasFuture = raw.map(i => i.is_future);
+    refreshFuture(raw);
+    // Releases that went live since the build lead the published list, newest first.
+    const justPublished = raw.filter((i, n) => wasFuture[n] && !i.is_future).reverse();
+    scheduleData = [
+      ...raw.filter(i => i.is_future),
+      ...justPublished,
+      ...raw.filter((i, n) => !wasFuture[n]),
+    ];
 
     // Update Filter Counts
     const allCount = scheduleData.length;
@@ -498,7 +518,10 @@ async function fetchAnime() {
   const container = document.getElementById('anime-container');
   try {
     const res = await fetch('/api/anime');
-    animeData = await res.json();
+    animeData = refreshFuture(await res.json());
+    // Scheduled first (soonest on top), then published (newest on top).
+    const when = i => Date.parse(i.publish_at || '') || 0;
+    animeData.sort((a, b) => (b.is_future - a.is_future) || (a.is_future ? when(a) - when(b) : when(b) - when(a)));
     renderAnime();
   } catch (err) {
     container.innerHTML = `<div class="loader">Error loading NofaceChan: ${escapeHtml(err.message)}</div>`;

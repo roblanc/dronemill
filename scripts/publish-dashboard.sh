@@ -5,6 +5,8 @@ export HOME=/home/brewuser  # dronemill YouTube token lives there
 
 ROOT="/home/brewuser/projects/dronemill"
 cd "$ROOT"
+# cron runs this as root on a brewuser-owned repo; without this git refuses with "dubious ownership"
+export GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=safe.directory GIT_CONFIG_VALUE_0="$ROOT"
 
 echo ">> Generating static dashboard data from upload_history and playlists..."
 python3 "$ROOT/scripts/build_github_pages.py"

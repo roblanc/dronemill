@@ -42,6 +42,7 @@ def anime_feed(images_dir=None, images_url=None):
             "title": e.get("title", ""),
             "url": f"https://youtu.be/{e['id']}",
             "is_future": is_future,
+            "publish_at": when.isoformat(),
             "date": when.strftime("%b %-d, %Y · %H:%M UTC") if is_future else when.strftime("%b %-d, %Y"),
             "thumb": f"https://i.ytimg.com/vi/{e['id']}/mqdefault.jpg",
             "_when": when,
