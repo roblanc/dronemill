@@ -23,13 +23,8 @@ NOFACE_TOKEN = "/root/.youtubeuploader-anime/python_token.json"
 
 def _api_thumbs(items, images_dir, images_url):
     """Point scheduled items that have no local thumbnail at YouTube's own copy, saved to images_dir."""
-    todo = []
-    for i in items:
-        name = f"yt_{i['_id']}.jpg"
-        if os.path.exists(os.path.join(images_dir, name)):
-            i["thumb"] = f"{images_url}/{name}"
-        else:
-            todo.append(i)
+    # Always fetched again (a few small images): the thumbnail can change before the video goes out.
+    todo = list(items)
     if not todo:
         return
     try:
