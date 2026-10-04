@@ -239,35 +239,56 @@ if os.path.exists("/DATA/Media"):
             if not os.path.exists(dst):
                 shutil.copyfile(src, dst)
 
-# 2a. Thumbnails the queue has no local file for (the cron deletes the uploaded text thumbnail):
-# take YouTube's own copy through the API, which also works while the video is still scheduled.
-def _fill_missing_thumbnails(items):
-    missing = [i for i in items if i.get("video_id") and not (
-        i.get("thumbnail") and os.path.exists(os.path.join(DOCS, "images", i["thumbnail"])))]
-    if not missing:
+# 2a. Every uploaded video shows YouTube's own thumbnail, taken through the API (works while the
+# video is still scheduled). The local cover in upload_history is the plain image: the captioned
+# thumbnail is made at upload time or applied later (apply_text_thumbnails.py), so the local file
+# would show no text. Scheduled videos are fetched again on every build, because their thumbnail
+# can still change; published ones once. The local cover stays as the fallback if the API fails.
+def _youtube_thumbnails(items):
+    def _path(name):
+        return os.path.join(DOCS, "images", name)
+    todo = []
+    for i in items:
+        if not i.get("video_id"):
+            continue
+        name = f"yt_{i['video_id']}.jpg"
+        if i.get("is_future") or not os.path.exists(_path(name)):
+            todo.append(i)
+        else:
+            i["thumbnail"] = name
+    if not todo:
         return
     try:
+        import io
         import urllib.request
+        from PIL import Image
         sys.path.insert(0, f"{ROOT}/scripts")
         import youtube_schedule as ys
         yt = ys._youtube()
-        for k in range(0, len(missing), 50):
-            batch = missing[k:k + 50]
+        for k in range(0, len(todo), 50):
+            batch = todo[k:k + 50]
             res = yt.videos().list(part="snippet", id=",".join(i["video_id"] for i in batch)).execute()
-            urls = {v["id"]: (v["snippet"]["thumbnails"].get("medium") or v["snippet"]["thumbnails"].get("high") or {}).get("url")
+            # 16:9 sizes only: "high" and "standard" are 4:3 with black bars
+            urls = {v["id"]: (v["snippet"]["thumbnails"].get("maxres") or v["snippet"]["thumbnails"].get("medium") or {}).get("url")
                     for v in res.get("items", [])}
             for i in batch:
                 u = urls.get(i["video_id"])
-                if u:
-                    name = f"yt_{i['video_id']}.jpg"
-                    with open(os.path.join(DOCS, "images", name), "wb") as fh:
-                        fh.write(urllib.request.urlopen(u, timeout=20).read())
+                if not u:
+                    continue
+                name = f"yt_{i['video_id']}.jpg"
+                try:
+                    img = Image.open(io.BytesIO(urllib.request.urlopen(u, timeout=20).read())).convert("RGB")
+                    if img.width > 640:
+                        img = img.resize((640, round(img.height * 640 / img.width)), Image.LANCZOS)
+                    img.save(_path(name), quality=84)
                     i["thumbnail"] = name
+                except Exception as e:
+                    print(f"WARN: thumbnail {i['video_id']} not fetched ({e})")
     except Exception as e:
-        print(f"WARN: could not fetch missing thumbnails ({e})")
+        print(f"WARN: could not fetch YouTube thumbnails ({e})")
 
 
-_fill_missing_thumbnails(schedule_list)
+_youtube_thumbnails(schedule_list)
 with open(f"{DOCS}/data/schedule.json", "w", encoding="utf-8") as f:
     json.dump(schedule_list, f, indent=2)
 
