@@ -207,6 +207,9 @@ function refreshFuture(items) {
   return items;
 }
 
+// The build sets on_youtube to false for queue entries it could not find on the channel.
+const notOnYoutube = i => i.on_youtube === false;
+
 // Fetch Schedule
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
@@ -226,8 +229,8 @@ async function fetchSchedule() {
 
     // Update Filter Counts
     const allCount = scheduleData.length;
-    const futureCount = scheduleData.filter(i => i.is_future).length;
-    const pubCount = allCount - futureCount;
+    const futureCount = scheduleData.filter(i => i.is_future && !notOnYoutube(i)).length;
+    const pubCount = scheduleData.filter(i => !i.is_future && !notOnYoutube(i)).length;
 
     const cntAll = document.getElementById('count-all');
     const cntFuture = document.getElementById('count-future');
@@ -252,9 +255,9 @@ function renderTimeline(filter) {
 
   let filtered = scheduleData;
   if (filter === 'future') {
-    filtered = scheduleData.filter(i => i.is_future);
+    filtered = scheduleData.filter(i => i.is_future && !notOnYoutube(i));
   } else if (filter === 'published') {
-    filtered = scheduleData.filter(i => !i.is_future);
+    filtered = scheduleData.filter(i => !i.is_future && !notOnYoutube(i));
   }
 
   if (!filtered.length) {
@@ -271,7 +274,7 @@ function renderTimeline(filter) {
         <img class="anime-thumb" src="${thumbSrc}" alt="" loading="lazy">
         <span class="anime-text">
           <span class="anime-title">${escapeHtml(item.title)}</span>
-          <span class="anime-date ${item.is_future ? 'scheduled' : ''}">${item.is_future ? 'Scheduled · ' : ''}${escapeHtml(date)}</span>
+          <span class="anime-date ${notOnYoutube(item) ? 'missing' : item.is_future ? 'scheduled' : ''}">${notOnYoutube(item) ? 'Not on YouTube · ' : item.is_future ? 'Scheduled · ' : ''}${escapeHtml(date)}</span>
         </span>
       </a>`;
   }).join('');
@@ -283,8 +286,8 @@ window.openVideoDetail = function(id) {
   if (!item) return;
 
   const thumbSrc = item.thumbnail ? `/media/image/${encodeURIComponent(item.thumbnail)}` : '';
-  const badgeClass = item.is_future ? 'scheduled' : 'published';
-  const badgeText = item.is_future ? 'SCHEDULED' : 'PUBLISHED';
+  const badgeClass = notOnYoutube(item) ? 'missing' : item.is_future ? 'scheduled' : 'published';
+  const badgeText = notOnYoutube(item) ? 'NOT ON YOUTUBE' : item.is_future ? 'SCHEDULED' : 'PUBLISHED';
   const hasYt = !!item.youtube_url;
 
   const modalBody = document.getElementById('modal-content-body');

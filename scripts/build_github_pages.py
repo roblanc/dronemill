@@ -27,13 +27,56 @@ total_uploads = 0
 future_scheduled = 0
 next_release = "None"
 
+# The history's publish_at can drift from YouTube (a video gets rescheduled or made public by hand),
+# so take the release time and privacy from YouTube itself: publishAt while a video is still
+# scheduled, publishedAt once it is public.
+# Entries without a video_id are matched to the channel's uploads by title; ones that still don't
+# match were never uploaded (or were deleted). Returns None when YouTube can't be reached.
+def _youtube_times(items):
+    times = {}
+    try:
+        sys.path.insert(0, f"{ROOT}/scripts")
+        import youtube_schedule as ys
+        yt = ys._youtube()
+        main = lambda t: re.sub(r"[^a-z0-9]", "", (t or "").split("|")[0].lower())
+        uploads = yt.channels().list(mine=True, part="contentDetails").execute()["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        by_title, page = {}, None
+        while True:
+            res = yt.playlistItems().list(playlistId=uploads, part="snippet", maxResults=50, pageToken=page).execute()
+            for v in res.get("items", []):
+                by_title.setdefault(main(v["snippet"]["title"]), v["snippet"]["resourceId"]["videoId"])
+            page = res.get("nextPageToken")
+            if not page:
+                break
+        for i in items:
+            if not i.get("video_id") and main(i.get("title")) in by_title:
+                i["video_id"] = by_title[main(i["title"])]
+        ids = [i["video_id"] for i in items if i.get("video_id")]
+        for k in range(0, len(ids), 50):
+            res = yt.videos().list(part="snippet,status", id=",".join(ids[k:k + 50])).execute()
+            for v in res.get("items", []):
+                st = v["status"]
+                when = st.get("publishAt") if st.get("privacyStatus") == "private" else v["snippet"].get("publishedAt")
+                if when:
+                    times[v["id"]] = (when, st.get("privacyStatus"))
+    except Exception as e:
+        print(f"WARN: could not read release times from YouTube, using upload_history ({e})")
+        return None
+    return times
+
+
 if os.path.exists(history_file):
     with open(history_file, "r", encoding="utf-8") as f:
         data = json.load(f)
         total_uploads = len(data)
+        yt_times = _youtube_times(data)
         sched = []
         for idx, item in enumerate(data):
             p = item.get("publish_at")
+            privacy = item.get("privacy", "unlisted")
+            on_youtube = None if yt_times is None else item.get("video_id") in yt_times
+            if on_youtube:
+                p, privacy = yt_times[item["video_id"]]
             is_future = False
             release_dt_str = "Published / Instant"
             if p:
@@ -57,7 +100,8 @@ if os.path.exists(history_file):
                 "publish_at": p,
                 "release_formatted": release_dt_str,
                 "is_future": is_future,
-                "privacy": item.get("privacy", "unlisted"),
+                "privacy": privacy,
+                "on_youtube": on_youtube,
                 "thumbnail": item.get("thumbnail"),
                 "tags": item.get("tags", []),
                 "description": item.get("description", ""),
@@ -83,6 +127,7 @@ if os.path.exists(history_file):
 
     past_list = [x for x in schedule_list if not x["is_future"]]
     past_list.reverse()
+    past_list.sort(key=lambda x: get_dt(x) if x.get("publish_at") else datetime.datetime.min.replace(tzinfo=datetime.timezone.utc), reverse=True)
 
     schedule_list = future_list + past_list
 
