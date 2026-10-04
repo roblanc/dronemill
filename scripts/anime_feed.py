@@ -21,12 +21,34 @@ PUBLISHED_LIMIT = 40
 NOFACE_TOKEN = "/root/.youtubeuploader-anime/python_token.json"
 
 
-def _api_thumbs(items, images_dir, images_url):
-    """Point scheduled items that have no local thumbnail at YouTube's own copy, saved to images_dir."""
-    # Always fetched again (a few small images): the thumbnail can change before the video goes out.
-    todo = list(items)
-    if not todo:
-        return
+def _short_frames(out, images_dir, images_url):
+    """A vertical frame from each Short's own video for the feed's Shorts shelf (its 16:9 thumbnail
+    would lose the text when cropped to 9:16). The run's state.json lists the Short ids in the same
+    order as output/shorts/<slug>-shorts.json lists the files."""
+    import subprocess
+    for i in out:
+        if i["kind"] != "short" or not i["_slug"]:
+            continue
+        slug = i["_slug"][:-len("-short")] if i["_slug"].endswith("-short") else i["_slug"]
+        try:
+            ids = [m["id"] for m in json.load(open(os.path.join(ANIME_ROOT, "output", "autopilot", slug, "state.json"))).get("shorts", [])]
+            files = [m["file"] for m in json.load(open(os.path.join(ANIME_ROOT, "output", "shorts", f"{slug}-shorts.json")))]
+            src = files[ids.index(i["_id"])]
+            dst = os.path.join(images_dir, f"short_{i['_id']}.jpg")
+            if not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src):
+                os.makedirs(images_dir, exist_ok=True)
+                subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", "4", "-i", src, "-frames:v", "1",
+                                "-vf", "scale=360:-2", "-q:v", "4", dst], check=True, timeout=60)
+            i["short_thumb"] = f"{images_url}/short_{i['_id']}.jpg"
+        except Exception as e:
+            print(f"WARN: no Shorts frame for {i['_id']} ({e})")
+
+
+def _api_enrich(out, images_dir, images_url):
+    """Through the channel's API token: length and views for every item, the channel avatar, and
+    YouTube's own thumbnail for scheduled items with no local one (always fetched again: it can change
+    before the video goes out)."""
+    todo = [i for i in out if i["is_future"] and i["thumb"].startswith("https://i.ytimg.com/")]
     try:
         import sys
         import urllib.request
@@ -34,10 +56,26 @@ def _api_thumbs(items, images_dir, images_url):
             os.environ.setdefault("NOFACE_TOKEN", NOFACE_TOKEN)
         sys.path.insert(0, os.path.join(ANIME_ROOT, "scripts"))
         import noface_youtube
-        res = noface_youtube.service().videos().list(part="snippet", id=",".join(i["_id"] for i in todo)).execute()
-        urls = {v["id"]: (v["snippet"]["thumbnails"].get("medium") or v["snippet"]["thumbnails"].get("high") or {}).get("url")
-                for v in res.get("items", [])}
+        yt = noface_youtube.service()
+        res = {"items": []}
+        for k in range(0, len(out), 50):
+            res["items"] += yt.videos().list(part="snippet,contentDetails,statistics",
+                                             id=",".join(i["_id"] for i in out[k:k + 50])).execute().get("items", [])
+        info = {v["id"]: v for v in res["items"]}
+        for i in out:
+            v = info.get(i["_id"])
+            if v:
+                i["duration"] = v["contentDetails"].get("duration")
+                views = v.get("statistics", {}).get("viewCount")
+                i["views"] = int(views) if views is not None and not i["is_future"] else None
+        urls = {vid: (v["snippet"]["thumbnails"].get("medium") or v["snippet"]["thumbnails"].get("high") or {}).get("url")
+                for vid, v in info.items()}
         os.makedirs(images_dir, exist_ok=True)
+        ch = yt.channels().list(mine=True, part="snippet").execute()["items"][0]["snippet"]["thumbnails"]
+        avatar = (ch.get("medium") or ch.get("default") or {}).get("url")
+        if avatar:
+            with open(os.path.join(images_dir, "avatar.jpg"), "wb") as fh:
+                fh.write(urllib.request.urlopen(avatar, timeout=20).read())
         for i in todo:
             if urls.get(i["_id"]):
                 name = f"yt_{i['_id']}.jpg"
@@ -45,7 +83,7 @@ def _api_thumbs(items, images_dir, images_url):
                     fh.write(urllib.request.urlopen(urls[i["_id"]], timeout=20).read())
                 i["thumb"] = f"{images_url}/{name}"
     except Exception as e:
-        print(f"WARN: could not fetch NofaceChan thumbnails ({e})")
+        print(f"WARN: could not read NofaceChan details from YouTube ({e})")
 
 
 def _when(entry):
@@ -75,8 +113,10 @@ def anime_feed(images_dir=None, images_url=None):
             "publish_at": when.isoformat(),
             "date": when.strftime("%b %-d, %Y · %H:%M UTC") if is_future else when.strftime("%b %-d, %Y"),
             "thumb": f"https://i.ytimg.com/vi/{e['id']}/mqdefault.jpg",
+            "kind": "short" if e.get("kind") == "short" or (e.get("slug") or "").endswith("-short") else "video",
             "_when": when,
             "_id": e["id"],
+            "_slug": e.get("slug"),
         }
         if is_future and images_dir and e.get("slug"):
             local = sorted(glob.glob(os.path.join(ANIME_ROOT, "thumbnails", f"{e['slug']}-thumb1.*")))
@@ -86,13 +126,14 @@ def anime_feed(images_dir=None, images_url=None):
                 shutil.copyfile(local[0], os.path.join(images_dir, name))
                 item["thumb"] = f"{images_url}/{name}"
         (future if is_future else past).append(item)
-    if images_dir:
-        _api_thumbs([i for i in future if i["thumb"].startswith("https://i.ytimg.com/")], images_dir, images_url)
     future.sort(key=lambda i: i["_when"])
     past.sort(key=lambda i: i["_when"], reverse=True)
     out = future + past[:PUBLISHED_LIMIT]
+    if images_dir:
+        _api_enrich(out, images_dir, images_url)
+        _short_frames(out, images_dir, images_url)
     for i in out:
-        del i["_when"], i["_id"]
+        del i["_when"], i["_id"], i["_slug"]
     return out
 
 

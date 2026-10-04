@@ -30,6 +30,19 @@ next_release = "None"
 # The history's publish_at can drift from YouTube (a video gets rescheduled or made public by hand),
 # so take the release time and privacy from YouTube itself: publishAt while a video is still
 # scheduled, publishedAt once it is public.
+def _save_avatar(channel, path):
+    """The channel's round profile picture for the feed cards."""
+    try:
+        import urllib.request
+        th = channel["snippet"]["thumbnails"]
+        url = (th.get("medium") or th.get("default") or {}).get("url")
+        if url:
+            with open(path, "wb") as fh:
+                fh.write(urllib.request.urlopen(url, timeout=20).read())
+    except Exception as e:
+        print(f"WARN: could not save channel avatar ({e})")
+
+
 # Entries without a video_id are matched to the channel's uploads by title; ones that still don't
 # match were never uploaded (or were deleted). Returns None when YouTube can't be reached.
 def _youtube_times(items):
@@ -39,7 +52,9 @@ def _youtube_times(items):
         import youtube_schedule as ys
         yt = ys._youtube()
         main = lambda t: re.sub(r"[^a-z0-9]", "", (t or "").split("|")[0].lower())
-        uploads = yt.channels().list(mine=True, part="contentDetails").execute()["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        ch = yt.channels().list(mine=True, part="contentDetails,snippet").execute()["items"][0]
+        uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+        _save_avatar(ch, f"{DOCS}/images/avatar-timeless.jpg")
         by_title, page = {}, None
         while True:
             res = yt.playlistItems().list(playlistId=uploads, part="snippet", maxResults=50, pageToken=page).execute()
@@ -53,12 +68,13 @@ def _youtube_times(items):
                 i["video_id"] = by_title[main(i["title"])]
         ids = [i["video_id"] for i in items if i.get("video_id")]
         for k in range(0, len(ids), 50):
-            res = yt.videos().list(part="snippet,status", id=",".join(ids[k:k + 50])).execute()
+            res = yt.videos().list(part="snippet,status,contentDetails,statistics", id=",".join(ids[k:k + 50])).execute()
             for v in res.get("items", []):
                 st = v["status"]
                 when = st.get("publishAt") if st.get("privacyStatus") == "private" else v["snippet"].get("publishedAt")
                 if when:
-                    times[v["id"]] = (when, st.get("privacyStatus"))
+                    times[v["id"]] = (when, st.get("privacyStatus"), v["contentDetails"].get("duration"),
+                                      v.get("statistics", {}).get("viewCount"))
     except Exception as e:
         print(f"WARN: could not read release times from YouTube, using upload_history ({e})")
         return None
@@ -75,8 +91,9 @@ if os.path.exists(history_file):
             p = item.get("publish_at")
             privacy = item.get("privacy", "unlisted")
             on_youtube = None if yt_times is None else item.get("video_id") in yt_times
+            duration = views = None
             if on_youtube:
-                p, privacy = yt_times[item["video_id"]]
+                p, privacy, duration, views = yt_times[item["video_id"]]
             is_future = False
             release_dt_str = "Published / Instant"
             if p:
@@ -102,6 +119,8 @@ if os.path.exists(history_file):
                 "is_future": is_future,
                 "privacy": privacy,
                 "on_youtube": on_youtube,
+                "duration": duration,
+                "views": int(views) if views is not None else None,
                 "thumbnail": item.get("thumbnail"),
                 "tags": item.get("tags", []),
                 "description": item.get("description", ""),
@@ -272,6 +291,9 @@ with open(f"{DOCS}/index.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 
 shutil.copyfile(f"{ROOT}/dashboard/app.css", f"{DOCS}/app.css")
+for icon in ("favicon.svg", "favicon-32.png", "apple-touch-icon.png"):
+    if os.path.exists(f"{ROOT}/dashboard/{icon}"):
+        shutil.copyfile(f"{ROOT}/dashboard/{icon}", f"{DOCS}/{icon}")
 
 # Adapt app.js to fetch from static data files when on GitHub Pages or static host
 with open(f"{ROOT}/dashboard/app.js", "r", encoding="utf-8") as f:
