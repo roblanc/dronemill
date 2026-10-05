@@ -1,16 +1,5 @@
 [
   {
-    "title": "Which Student Could Actually Expel Ayanokoji?",
-    "url": "https://youtu.be/T-L6wxnsJnU",
-    "is_future": true,
-    "publish_at": "2026-10-05T21:00:00+00:00",
-    "date": "Oct 5, 2026 \u00b7 21:00 UTC",
-    "thumb": "images/anime/which-student-actually-expel-ayanokoji-thumb1.jpg",
-    "kind": "video",
-    "duration": "PT14M25S",
-    "views": null
-  },
-  {
     "title": "Who Could Expel Ayanokoji?",
     "url": "https://youtu.be/6mFagqB50z4",
     "is_future": true,
@@ -70,6 +59,17 @@
     "short_thumb": "images/anime/short_C5l3lyzB0IE.jpg"
   },
   {
+    "title": "Which Student Could Actually Expel Ayanokoji?",
+    "url": "https://youtu.be/T-L6wxnsJnU",
+    "is_future": false,
+    "publish_at": "2026-10-05T09:22:38+00:00",
+    "date": "Oct 5, 2026",
+    "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT14M25S",
+    "views": 1
+  },
+  {
     "title": "L's Final Trap for Kafka Hibino",
     "url": "https://youtu.be/WZeQwmFFeSk",
     "is_future": false,
@@ -78,7 +78,7 @@
     "thumb": "https://i.ytimg.com/vi/WZeQwmFFeSk/mqdefault.jpg",
     "kind": "short",
     "duration": "PT54S",
-    "views": 2,
+    "views": 3,
     "short_thumb": "images/anime/short_WZeQwmFFeSk.jpg"
   },
   {
@@ -113,7 +113,7 @@
     "thumb": "https://i.ytimg.com/vi/E3Hdd5Vd44U/mqdefault.jpg",
     "kind": "video",
     "duration": "PT12M10S",
-    "views": 28
+    "views": 29
   },
   {
     "title": "Could Johan Liebert Break Deku?",
@@ -124,7 +124,7 @@
     "thumb": "https://i.ytimg.com/vi/dzA0efpqSYc/mqdefault.jpg",
     "kind": "video",
     "duration": "PT8M22S",
-    "views": 153
+    "views": 154
   },
   {
     "title": "Could Light Yagami Survive Demon Slayer?",
@@ -157,7 +157,7 @@
     "thumb": "https://i.ytimg.com/vi/DRksLImbx-0/mqdefault.jpg",
     "kind": "video",
     "duration": "PT28M50S",
-    "views": 131
+    "views": 132
   },
   {
     "title": "What If Ayanokoji and Kakashi Shared One System?",
@@ -190,7 +190,7 @@
     "thumb": "https://i.ytimg.com/vi/zRTB9AV_CyM/mqdefault.jpg",
     "kind": "video",
     "duration": "PT17M54S",
-    "views": 86
+    "views": 87
   },
   {
     "title": "When White Room logic collides with the Shibuya Incident",
@@ -499,16 +499,5 @@
     "kind": "video",
     "duration": "PT8M53S",
     "views": 480
-  },
-  {
-    "title": "This Film's Final Message Will Give You Hope",
-    "url": "https://youtu.be/30T6qedcoOs",
-    "is_future": false,
-    "publish_at": "2025-12-04T10:45:50+00:00",
-    "date": "Dec 4, 2025",
-    "thumb": "https://i.ytimg.com/vi/30T6qedcoOs/mqdefault.jpg",
-    "kind": "video",
-    "duration": "PT48S",
-    "views": 63
   }
 ]
