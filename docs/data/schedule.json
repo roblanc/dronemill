@@ -1,34 +1,5 @@
 [
   {
-    "id": 127,
-    "title": "It Was Standing Where the Sea Used to Be... 2 Hours of Cosmic Horror Ambience",
-    "publish_at": "2026-10-04T18:00:00Z",
-    "release_formatted": "Sunday, Oct 04, 2026 \u2014 18:00 UTC",
-    "is_future": true,
-    "privacy": "private",
-    "on_youtube": true,
-    "duration": "PT2H1S",
-    "views": 1,
-    "thumbnail": "yt_2vsp1eABQro.jpg",
-    "tags": [
-      "ambient",
-      "dark ambient",
-      "sleep ambient",
-      "study music",
-      "2 hours",
-      "cosmic horror",
-      "lovecraftian",
-      "eldritch horror",
-      "cosmic dread",
-      "dark ambient",
-      "eldritch ambience"
-    ],
-    "description": "Something enormous and very old stands just outside what you can see. Low tectonic drones, distant groans and the long breath of the fog.\n\n\ud83c\udf32 use this for sleep, deep work, writing, studying, reading or a quiet night.\n\n\ud83c\udf32 sound design:\n\u2022 Harmonic root: 43.65 Hz, chords that slowly change every few minutes\n\u2022 Layered pads, choir, distant events and foley in a large reverb\n\u2022 Mastered to -16 LUFS (EBU R128)\n\n\ud83c\udf32 subscribe for new atmospheric soundscapes: @timelessambience55\n\n#cosmichorror #lovecraftian #eldritchhorror #cosmicdread #ambient #sleepmusic #2hourambient #timelessambience",
-    "video_id": "2vsp1eABQro",
-    "youtube_url": "https://www.youtube.com/watch?v=2vsp1eABQro",
-    "short_url": "https://youtu.be/2vsp1eABQro"
-  },
-  {
     "id": 128,
     "title": "no one will light the lanterns now",
     "publish_at": "2026-10-06T18:00:00Z",
@@ -841,6 +812,35 @@
     "short_url": null
   },
   {
+    "id": 127,
+    "title": "It Was Standing Where the Sea Used to Be... 2 Hours of Cosmic Horror Ambience",
+    "publish_at": "2026-10-04T18:00:22Z",
+    "release_formatted": "Sunday, Oct 04, 2026 \u2014 18:00 UTC",
+    "is_future": false,
+    "privacy": "public",
+    "on_youtube": true,
+    "duration": "PT2H1S",
+    "views": 15,
+    "thumbnail": "yt_2vsp1eABQro.jpg",
+    "tags": [
+      "ambient",
+      "dark ambient",
+      "sleep ambient",
+      "study music",
+      "2 hours",
+      "cosmic horror",
+      "lovecraftian",
+      "eldritch horror",
+      "cosmic dread",
+      "dark ambient",
+      "eldritch ambience"
+    ],
+    "description": "Something enormous and very old stands just outside what you can see. Low tectonic drones, distant groans and the long breath of the fog.\n\n\ud83c\udf32 use this for sleep, deep work, writing, studying, reading or a quiet night.\n\n\ud83c\udf32 sound design:\n\u2022 Harmonic root: 43.65 Hz, chords that slowly change every few minutes\n\u2022 Layered pads, choir, distant events and foley in a large reverb\n\u2022 Mastered to -16 LUFS (EBU R128)\n\n\ud83c\udf32 subscribe for new atmospheric soundscapes: @timelessambience55\n\n#cosmichorror #lovecraftian #eldritchhorror #cosmicdread #ambient #sleepmusic #2hourambient #timelessambience",
+    "video_id": "2vsp1eABQro",
+    "youtube_url": "https://www.youtube.com/watch?v=2vsp1eABQro",
+    "short_url": "https://youtu.be/2vsp1eABQro"
+  },
+  {
     "id": 125,
     "title": "wake me when the ice sings",
     "publish_at": "2026-10-03T18:00:00Z",
@@ -878,7 +878,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 13,
+    "views": 55,
     "thumbnail": "yt_YSlKOHbW950.jpg",
     "tags": [
       "ambient",
@@ -907,7 +907,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 162,
+    "views": 198,
     "thumbnail": "yt_IrczUKZvVaU.jpg",
     "tags": [
       "ambient",

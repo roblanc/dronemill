@@ -1,12 +1,12 @@
 {
-  "server_time_utc": "2026-10-04 15:02:23 UTC",
+  "server_time_utc": "2026-10-05 04:00:28 UTC",
   "total_disk_gb": 37.2,
   "used_disk_gb": 23.9,
   "free_disk_gb": 11.8,
   "disk_percent": 64.1,
   "total_uploads": 130,
-  "future_scheduled_count": 29,
-  "next_release": "It Was Standing Where the Sea Used to Be... 2 Hours of Cosmic Horror Ambience (Oct 04, 18:00 UTC)",
+  "future_scheduled_count": 28,
+  "next_release": "no one will light the lanterns now (Oct 06, 18:00 UTC)",
   "master_lufs": -22.0,
   "audio_engine": "AI Hybrid 5-Engine Conductor (Active)"
 }
