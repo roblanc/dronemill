@@ -64,10 +64,10 @@
     "release_formatted": "Thursday, Oct 08, 2026 \u2014 17:00 UTC",
     "is_future": true,
     "privacy": "private",
-    "on_youtube": true,
-    "duration": "PT2H1S",
-    "views": 0,
-    "thumbnail": "yt_q3D3IrgRzmE.jpg",
+    "on_youtube": false,
+    "duration": null,
+    "views": null,
+    "thumbnail": "04_cliff_weather_station_compressed.jpg",
     "tags": [
       "ambient",
       "cosmic horror",
@@ -82,9 +82,9 @@
       "1980s aesthetic"
     ],
     "description": "2 hours of immersive coastal isolation ambient.\nStep inside an isolated weather station listening to a storm cross the cliffs.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
-    "video_id": "q3D3IrgRzmE",
-    "youtube_url": "https://www.youtube.com/watch?v=q3D3IrgRzmE",
-    "short_url": "https://youtu.be/q3D3IrgRzmE"
+    "video_id": null,
+    "youtube_url": null,
+    "short_url": null
   },
   {
     "id": 103,
@@ -725,35 +725,6 @@
     "short_url": "https://youtu.be/yMchdejzb-M"
   },
   {
-    "id": 99,
-    "title": "ferns sleeping beside abandoned rails | nocturne for glass and rain | 2 hours",
-    "publish_at": "2026-11-01T18:00:00Z",
-    "release_formatted": "Sunday, Nov 01, 2026 \u2014 18:00 UTC",
-    "is_future": true,
-    "privacy": "private",
-    "on_youtube": false,
-    "duration": null,
-    "views": null,
-    "thumbnail": "01_railway_conservatory_compressed.jpg",
-    "tags": [
-      "ambient",
-      "cosmic horror",
-      "dark ambient",
-      "sleep ambient",
-      "study music",
-      "2 hours",
-      "analog nostalgia",
-      "retro ambient",
-      "vaporwave",
-      "night drive",
-      "1980s aesthetic"
-    ],
-    "description": "2 hours of immersive glasshouse rain ambient.\nStep inside a forgotten railway conservatory breathing softly beneath midnight rain.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
-    "video_id": null,
-    "youtube_url": null,
-    "short_url": null
-  },
-  {
     "id": 100,
     "title": "steam beneath the basalt bathhouse | volcanic spa ambience | 2 hours",
     "publish_at": "2026-11-02T18:00:00Z",
@@ -812,6 +783,35 @@
     "short_url": null
   },
   {
+    "id": 99,
+    "title": "ferns sleeping beside abandoned rails | nocturne for glass and rain | 2 hours",
+    "publish_at": "2026-10-05T17:00:39Z",
+    "release_formatted": "Monday, Oct 05, 2026 \u2014 17:00 UTC",
+    "is_future": false,
+    "privacy": "public",
+    "on_youtube": true,
+    "duration": "PT2H1S",
+    "views": 12,
+    "thumbnail": "yt_0J1_K4lo6iw.jpg",
+    "tags": [
+      "ambient",
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "study music",
+      "2 hours",
+      "analog nostalgia",
+      "retro ambient",
+      "vaporwave",
+      "night drive",
+      "1980s aesthetic"
+    ],
+    "description": "2 hours of immersive glasshouse rain ambient.\nStep inside a forgotten railway conservatory breathing softly beneath midnight rain.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
+    "video_id": "0J1_K4lo6iw",
+    "youtube_url": "https://www.youtube.com/watch?v=0J1_K4lo6iw",
+    "short_url": "https://youtu.be/0J1_K4lo6iw"
+  },
+  {
     "id": 127,
     "title": "It Was Standing Where the Sea Used to Be... 2 Hours of Cosmic Horror Ambience",
     "publish_at": "2026-10-04T18:00:22Z",
@@ -820,7 +820,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 16,
+    "views": 39,
     "thumbnail": "yt_2vsp1eABQro.jpg",
     "tags": [
       "ambient",
@@ -878,7 +878,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 59,
+    "views": 91,
     "thumbnail": "yt_YSlKOHbW950.jpg",
     "tags": [
       "ambient",
@@ -907,7 +907,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 198,
+    "views": 200,
     "thumbnail": "yt_IrczUKZvVaU.jpg",
     "tags": [
       "ambient",
