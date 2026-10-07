@@ -1,17 +1,5 @@
 [
   {
-    "title": "Who Could Expel Ayanokoji?",
-    "url": "https://youtu.be/6mFagqB50z4",
-    "is_future": true,
-    "publish_at": "2026-10-06T15:00:00+00:00",
-    "date": "Oct 6, 2026 \u00b7 15:00 UTC",
-    "thumb": "images/anime/yt_6mFagqB50z4.jpg",
-    "kind": "short",
-    "duration": "PT52S",
-    "views": null,
-    "short_thumb": "images/anime/short_6mFagqB50z4.jpg"
-  },
-  {
     "title": "Suzune Horikita Can Expel Ayanokoji",
     "url": "https://youtu.be/qTbCBHNxv5g",
     "is_future": true,
@@ -20,8 +8,7 @@
     "thumb": "images/anime/yt_qTbCBHNxv5g.jpg",
     "kind": "short",
     "duration": "PT49S",
-    "views": null,
-    "short_thumb": "images/anime/short_qTbCBHNxv5g.jpg"
+    "views": null
   },
   {
     "title": "Could Light Yagami lie to Frieren?",
@@ -43,8 +30,7 @@
     "thumb": "images/anime/yt_Mvz0zdho0vE.jpg",
     "kind": "short",
     "duration": "PT48S",
-    "views": null,
-    "short_thumb": "images/anime/short_Mvz0zdho0vE.jpg"
+    "views": null
   },
   {
     "title": "Why Light Yagami Can't Beat Frieren",
@@ -55,8 +41,7 @@
     "thumb": "images/anime/yt_C5l3lyzB0IE.jpg",
     "kind": "short",
     "duration": "PT56S",
-    "views": null,
-    "short_thumb": "images/anime/short_C5l3lyzB0IE.jpg"
+    "views": null
   },
   {
     "title": "Could Ayanokoji Clear the Double Dungeon?",
@@ -78,8 +63,7 @@
     "thumb": "images/anime/yt_9l-tZ4PGUfg.jpg",
     "kind": "short",
     "duration": "PT49S",
-    "views": null,
-    "short_thumb": "images/anime/short_9l-tZ4PGUfg.jpg"
+    "views": null
   },
   {
     "title": "Why Ayanokoji Cannot Clear the Double Dungeon",
@@ -90,8 +74,18 @@
     "thumb": "images/anime/yt_ZHoCc8IBHAc.jpg",
     "kind": "short",
     "duration": "PT47S",
-    "views": null,
-    "short_thumb": "images/anime/short_ZHoCc8IBHAc.jpg"
+    "views": null
+  },
+  {
+    "title": "Who Could Expel Ayanokoji?",
+    "url": "https://youtu.be/6mFagqB50z4",
+    "is_future": false,
+    "publish_at": "2026-10-06T15:00:00+00:00",
+    "date": "Oct 6, 2026",
+    "thumb": "https://i.ytimg.com/vi/6mFagqB50z4/mqdefault.jpg",
+    "kind": "short",
+    "duration": "PT52S",
+    "views": 84
   },
   {
     "title": "Which Student Could Actually Expel Ayanokoji?",
@@ -102,7 +96,7 @@
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "kind": "video",
     "duration": "PT14M25S",
-    "views": 164
+    "views": 474
   },
   {
     "title": "L's Final Trap for Kafka Hibino",
@@ -113,8 +107,7 @@
     "thumb": "https://i.ytimg.com/vi/WZeQwmFFeSk/mqdefault.jpg",
     "kind": "short",
     "duration": "PT54S",
-    "views": 9,
-    "short_thumb": "images/anime/short_WZeQwmFFeSk.jpg"
+    "views": 15
   },
   {
     "title": "Could L Unmask Kafka Hibino?",
@@ -125,8 +118,7 @@
     "thumb": "https://i.ytimg.com/vi/DTCtw60wVIA/mqdefault.jpg",
     "kind": "short",
     "duration": "PT54S",
-    "views": 3,
-    "short_thumb": "images/anime/short_DTCtw60wVIA.jpg"
+    "views": 3
   },
   {
     "title": "Could L Unmask Kaiju No. 8?",
@@ -181,7 +173,7 @@
     "thumb": "https://i.ytimg.com/vi/GykhG2tS5Mg/mqdefault.jpg",
     "kind": "video",
     "duration": "PT29M44S",
-    "views": 234
+    "views": 235
   },
   {
     "title": "What If Orochimaru Found the Death Note?",
@@ -258,7 +250,7 @@
     "thumb": "https://i.ytimg.com/vi/6A6MUPg9ux4/mqdefault.jpg",
     "kind": "video",
     "duration": "PT22M35S",
-    "views": 196
+    "views": 197
   },
   {
     "title": "What If L Survived? | Death Note Theory",
@@ -280,7 +272,7 @@
     "thumb": "https://i.ytimg.com/vi/iMY0UhKN2ZU/mqdefault.jpg",
     "kind": "video",
     "duration": "PT23M49S",
-    "views": 235
+    "views": 236
   },
   {
     "title": "Could Ayanokoji Survive Jujutsu Kaisen?",
@@ -412,7 +404,7 @@
     "thumb": "https://i.ytimg.com/vi/VVwjFvsakZI/mqdefault.jpg",
     "kind": "video",
     "duration": "PT22M21S",
-    "views": 393
+    "views": 394
   },
   {
     "title": "When Ayanokoji directed ANHS, he began his ultimate experiment.",
@@ -467,7 +459,7 @@
     "thumb": "https://i.ytimg.com/vi/XN_VPASsqDs/mqdefault.jpg",
     "kind": "video",
     "duration": "PT7M42S",
-    "views": 455
+    "views": 456
   },
   {
     "title": "Shinkai timelines are inconsistent",
@@ -523,16 +515,5 @@
     "kind": "video",
     "duration": "PT6M59S",
     "views": 283
-  },
-  {
-    "title": "The Price of Kakashi\u2019s Mangeky\u014d",
-    "url": "https://youtu.be/MwpbN33uzIA",
-    "is_future": false,
-    "publish_at": "2025-12-08T20:14:50+00:00",
-    "date": "Dec 8, 2025",
-    "thumb": "https://i.ytimg.com/vi/MwpbN33uzIA/mqdefault.jpg",
-    "kind": "video",
-    "duration": "PT8M53S",
-    "views": 480
   }
 ]

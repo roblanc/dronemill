@@ -1,12 +1,12 @@
 {
-  "server_time_utc": "2026-10-06 07:00:08 UTC",
+  "server_time_utc": "2026-10-07 04:00:21 UTC",
   "total_disk_gb": 37.2,
   "used_disk_gb": 23.9,
   "free_disk_gb": 11.8,
   "disk_percent": 64.1,
   "total_uploads": 130,
-  "future_scheduled_count": 27,
-  "next_release": "no one will light the lanterns now (Oct 06, 18:00 UTC)",
+  "future_scheduled_count": 25,
+  "next_release": "the jurassic fern sanctuary at 3 AM | deep time soundscape | 2 hours (Oct 07, 18:00 UTC)",
   "master_lufs": -22.0,
   "audio_engine": "AI Hybrid 5-Engine Conductor (Active)"
 }
