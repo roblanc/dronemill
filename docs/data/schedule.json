@@ -1,34 +1,5 @@
 [
   {
-    "id": 129,
-    "title": "the jurassic fern sanctuary at 3 AM | deep time soundscape | 2 hours",
-    "publish_at": "2026-10-07T18:00:00Z",
-    "release_formatted": "Wednesday, Oct 07, 2026 \u2014 18:00 UTC",
-    "is_future": true,
-    "privacy": "private",
-    "on_youtube": true,
-    "duration": "PT2H1S",
-    "views": 0,
-    "thumbnail": "yt_ieh2Zb13O6w.jpg",
-    "tags": [
-      "ambient",
-      "cosmic horror",
-      "dark ambient",
-      "sleep ambient",
-      "study music",
-      "2 hours",
-      "prehistoric",
-      "deep time",
-      "nature ambient",
-      "ancient earth",
-      "sleep drone"
-    ],
-    "description": "2 hours of immersive deep time soundscape.\nStep inside the jurassic fern sanctuary. Resting beneath the oldest thunder.\n\n\ud83c\udf32 use this for sleep, deep work, writing, studying, or quiet nocturnal drift.\n\n\ud83c\udf32 sound design specs:\n\u2022 Harmonic Root: 73.42 Hz modal resonance\n\u2022 Multi-Layer Acoustic Foley & Procedural Haas 3D stereo drones\n\u2022 Mastered to Broadcast EBU R128 (-16 LUFS)\n\n\ud83c\udf32 subscribe for new liminal space, deep space, and dark atmospheric soundscapes weekly.\n\n#ambient #liminalspace #prehistoric #sleepmusic #studymusic #2hourambient #timelessambience",
-    "video_id": "ieh2Zb13O6w",
-    "youtube_url": "https://www.youtube.com/watch?v=ieh2Zb13O6w",
-    "short_url": "https://youtu.be/ieh2Zb13O6w"
-  },
-  {
     "id": 102,
     "title": "storm watch at the cliff weather station | coastal isolation | 2 hours",
     "publish_at": "2026-10-08T17:00:00Z",
@@ -122,10 +93,10 @@
     "release_formatted": "Saturday, Oct 10, 2026 \u2014 17:00 UTC",
     "is_future": true,
     "privacy": "private",
-    "on_youtube": true,
-    "duration": "PT2H1S",
-    "views": 0,
-    "thumbnail": "yt_R66vsxLYAXE.jpg",
+    "on_youtube": false,
+    "duration": null,
+    "views": null,
+    "thumbnail": "06_flooded_arcade_compressed.jpg",
     "tags": [
       "ambient",
       "cosmic horror",
@@ -140,9 +111,9 @@
       "1980s aesthetic"
     ],
     "description": "2 hours of immersive liminal dream ambient.\nStep inside an abandoned arcade glowing beneath a thin sheet of tidal water.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
-    "video_id": "R66vsxLYAXE",
-    "youtube_url": "https://www.youtube.com/watch?v=R66vsxLYAXE",
-    "short_url": "https://youtu.be/R66vsxLYAXE"
+    "video_id": null,
+    "youtube_url": null,
+    "short_url": null
   },
   {
     "id": 105,
@@ -696,16 +667,45 @@
     "short_url": "https://youtu.be/ia_UPfMg0Jg"
   },
   {
+    "id": 129,
+    "title": "the jurassic fern sanctuary at 3 AM | deep time soundscape | 2 hours",
+    "publish_at": "2026-10-07T18:00:17Z",
+    "release_formatted": "Wednesday, Oct 07, 2026 \u2014 18:00 UTC",
+    "is_future": false,
+    "privacy": "public",
+    "on_youtube": true,
+    "duration": "PT2H1S",
+    "views": 1,
+    "thumbnail": "yt_ieh2Zb13O6w.jpg",
+    "tags": [
+      "ambient",
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "study music",
+      "2 hours",
+      "prehistoric",
+      "deep time",
+      "nature ambient",
+      "ancient earth",
+      "sleep drone"
+    ],
+    "description": "2 hours of immersive deep time soundscape.\nStep inside the jurassic fern sanctuary. Resting beneath the oldest thunder.\n\n\ud83c\udf32 use this for sleep, deep work, writing, studying, or quiet nocturnal drift.\n\n\ud83c\udf32 sound design specs:\n\u2022 Harmonic Root: 73.42 Hz modal resonance\n\u2022 Multi-Layer Acoustic Foley & Procedural Haas 3D stereo drones\n\u2022 Mastered to Broadcast EBU R128 (-16 LUFS)\n\n\ud83c\udf32 subscribe for new liminal space, deep space, and dark atmospheric soundscapes weekly.\n\n#ambient #liminalspace #prehistoric #sleepmusic #studymusic #2hourambient #timelessambience",
+    "video_id": "ieh2Zb13O6w",
+    "youtube_url": "https://www.youtube.com/watch?v=ieh2Zb13O6w",
+    "short_url": "https://youtu.be/ieh2Zb13O6w"
+  },
+  {
     "id": 101,
     "title": "the seed vault orbiting saturn | deep space sanctuary | 2 hours",
-    "publish_at": "2026-11-03T18:00:00Z",
-    "release_formatted": "Tuesday, Nov 03, 2026 \u2014 18:00 UTC",
-    "is_future": true,
-    "privacy": "private",
-    "on_youtube": false,
-    "duration": null,
-    "views": null,
-    "thumbnail": "03_saturn_seed_vault_compressed.jpg",
+    "publish_at": "2026-10-07T12:00:09Z",
+    "release_formatted": "Wednesday, Oct 07, 2026 \u2014 12:00 UTC",
+    "is_future": false,
+    "privacy": "public",
+    "on_youtube": true,
+    "duration": "PT2H1S",
+    "views": 7,
+    "thumbnail": "yt_BulGujKDPXs.jpg",
     "tags": [
       "ambient",
       "cosmic horror",
@@ -720,9 +720,9 @@
       "cosmic dread"
     ],
     "description": "2 hours of immersive deep space sanctuary ambient.\nStep inside a silent seed vault watching Saturn turn beyond the glass.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
-    "video_id": null,
-    "youtube_url": null,
-    "short_url": null
+    "video_id": "BulGujKDPXs",
+    "youtube_url": "https://www.youtube.com/watch?v=BulGujKDPXs",
+    "short_url": "https://youtu.be/BulGujKDPXs"
   },
   {
     "id": 100,
@@ -733,7 +733,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 4,
+    "views": 7,
     "thumbnail": "yt_Ty0sUm9h54Q.jpg",
     "tags": [
       "ambient",
@@ -762,7 +762,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 9,
+    "views": 22,
     "thumbnail": "yt_kc95YrIxYRo.jpg",
     "tags": [
       "ambient",
@@ -791,7 +791,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 44,
+    "views": 60,
     "thumbnail": "yt_0J1_K4lo6iw.jpg",
     "tags": [
       "ambient",
@@ -820,7 +820,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 62,
+    "views": 65,
     "thumbnail": "yt_2vsp1eABQro.jpg",
     "tags": [
       "ambient",
@@ -878,7 +878,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 139,
+    "views": 140,
     "thumbnail": "yt_YSlKOHbW950.jpg",
     "tags": [
       "ambient",
@@ -907,7 +907,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 201,
+    "views": 199,
     "thumbnail": "yt_IrczUKZvVaU.jpg",
     "tags": [
       "ambient",
@@ -1110,7 +1110,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 44,
+    "views": 45,
     "thumbnail": "yt_LXZEwd8P7JE.jpg",
     "tags": [
       "ambient",
@@ -1342,7 +1342,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 34,
+    "views": 35,
     "thumbnail": "yt_53tdy6TF28Y.jpg",
     "tags": [
       "ambient",
@@ -1777,7 +1777,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 20,
+    "views": 21,
     "thumbnail": "yt_mkDMLoO5kHw.jpg",
     "tags": [
       "ambient",
@@ -2266,7 +2266,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 125,
+    "views": 126,
     "thumbnail": "yt_nQ4uWaLQxp8.jpg",
     "tags": [
       "dark ambient",

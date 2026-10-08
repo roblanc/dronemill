@@ -1,27 +1,5 @@
 [
   {
-    "title": "Suzune Horikita Can Expel Ayanokoji",
-    "url": "https://youtu.be/qTbCBHNxv5g",
-    "is_future": true,
-    "publish_at": "2026-10-07T15:00:00+00:00",
-    "date": "Oct 7, 2026 \u00b7 15:00 UTC",
-    "thumb": "images/anime/yt_qTbCBHNxv5g.jpg",
-    "kind": "short",
-    "duration": "PT49S",
-    "views": null
-  },
-  {
-    "title": "Could Light Yagami lie to Frieren?",
-    "url": "https://youtu.be/rPZCqvwC6JQ",
-    "is_future": true,
-    "publish_at": "2026-10-07T21:00:00+00:00",
-    "date": "Oct 7, 2026 \u00b7 21:00 UTC",
-    "thumb": "images/anime/light-yagami-lie-frieren-thumb1.jpg",
-    "kind": "video",
-    "duration": "PT12M11S",
-    "views": null
-  },
-  {
     "title": "Could Light Yagami Lie to Frieren?",
     "url": "https://youtu.be/Mvz0zdho0vE",
     "is_future": true,
@@ -77,6 +55,61 @@
     "views": null
   },
   {
+    "title": "Kenjaku vs Ayanokoji Isn't Even Close",
+    "url": "https://youtu.be/6Mc8KI40LLE",
+    "is_future": true,
+    "publish_at": "2026-10-11T21:00:00+00:00",
+    "date": "Oct 11, 2026 \u00b7 21:00 UTC",
+    "thumb": "images/anime/kenjaku-vs-ayanokoji-isn-t-even-thumb1.jpg",
+    "kind": "video",
+    "duration": "PT14M4S",
+    "views": null
+  },
+  {
+    "title": "How Kenjaku Beat Gojo Without Ever Outfighting Him",
+    "url": "https://youtu.be/uHlMTq_E00g",
+    "is_future": true,
+    "publish_at": "2026-10-12T15:00:00+00:00",
+    "date": "Oct 12, 2026 \u00b7 15:00 UTC",
+    "thumb": "images/anime/yt_uHlMTq_E00g.jpg",
+    "kind": "short",
+    "duration": "PT34S",
+    "views": null
+  },
+  {
+    "title": "Kenjaku vs Ayanokoji: Who's the Greater Schemer?",
+    "url": "https://youtu.be/IkyJMLW1dMQ",
+    "is_future": true,
+    "publish_at": "2026-10-13T15:00:00+00:00",
+    "date": "Oct 13, 2026 \u00b7 15:00 UTC",
+    "thumb": "images/anime/yt_IkyJMLW1dMQ.jpg",
+    "kind": "short",
+    "duration": "PT45S",
+    "views": null
+  },
+  {
+    "title": "Could Light Yagami lie to Frieren?",
+    "url": "https://youtu.be/rPZCqvwC6JQ",
+    "is_future": false,
+    "publish_at": "2026-10-07T21:00:00+00:00",
+    "date": "Oct 7, 2026",
+    "thumb": "https://i.ytimg.com/vi/rPZCqvwC6JQ/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT12M11S",
+    "views": 8
+  },
+  {
+    "title": "Suzune Horikita Can Expel Ayanokoji",
+    "url": "https://youtu.be/qTbCBHNxv5g",
+    "is_future": false,
+    "publish_at": "2026-10-07T15:00:00+00:00",
+    "date": "Oct 7, 2026",
+    "thumb": "https://i.ytimg.com/vi/qTbCBHNxv5g/mqdefault.jpg",
+    "kind": "short",
+    "duration": "PT49S",
+    "views": 44
+  },
+  {
     "title": "Who Could Expel Ayanokoji?",
     "url": "https://youtu.be/6mFagqB50z4",
     "is_future": false,
@@ -85,7 +118,7 @@
     "thumb": "https://i.ytimg.com/vi/6mFagqB50z4/mqdefault.jpg",
     "kind": "short",
     "duration": "PT52S",
-    "views": 87
+    "views": 121
   },
   {
     "title": "Which Student Could Actually Expel Ayanokoji?",
@@ -96,7 +129,7 @@
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "kind": "video",
     "duration": "PT14M25S",
-    "views": 475
+    "views": 688
   },
   {
     "title": "L's Final Trap for Kafka Hibino",
@@ -305,7 +338,7 @@
     "thumb": "https://i.ytimg.com/vi/oNDG7gKxo9Q/mqdefault.jpg",
     "kind": "video",
     "duration": "PT23M29S",
-    "views": 148
+    "views": 150
   },
   {
     "title": "Could Ayanokoji Outsmart Johan Liebert?",
@@ -327,7 +360,7 @@
     "thumb": "https://i.ytimg.com/vi/3GV4gdr-sfk/mqdefault.jpg",
     "kind": "video",
     "duration": "PT18M47S",
-    "views": 226
+    "views": 227
   },
   {
     "title": "What If Sasuke Was Raised in the White Room?",
@@ -382,7 +415,7 @@
     "thumb": "https://i.ytimg.com/vi/_hAMOD7QbSg/mqdefault.jpg",
     "kind": "video",
     "duration": "PT24M31S",
-    "views": 956
+    "views": 957
   },
   {
     "title": "What if Near was born in the White Room?",
@@ -404,7 +437,7 @@
     "thumb": "https://i.ytimg.com/vi/VVwjFvsakZI/mqdefault.jpg",
     "kind": "video",
     "duration": "PT22M21S",
-    "views": 394
+    "views": 395
   },
   {
     "title": "When Ayanokoji directed ANHS, he began his ultimate experiment.",
@@ -493,27 +526,5 @@
     "kind": "video",
     "duration": "PT50S",
     "views": 1482
-  },
-  {
-    "title": "The Discipline of the COPY Ninja #kakashi #naruto",
-    "url": "https://youtu.be/sVVG9BwnXL4",
-    "is_future": false,
-    "publish_at": "2025-12-10T20:06:41+00:00",
-    "date": "Dec 10, 2025",
-    "thumb": "https://i.ytimg.com/vi/sVVG9BwnXL4/mqdefault.jpg",
-    "kind": "video",
-    "duration": "PT1M46S",
-    "views": 911
-  },
-  {
-    "title": "Is Tokyo Still Underwater? The Shinkai Multiverse Theory Explained",
-    "url": "https://youtu.be/A76iBQeNpe8",
-    "is_future": false,
-    "publish_at": "2025-12-10T13:45:01+00:00",
-    "date": "Dec 10, 2025",
-    "thumb": "https://i.ytimg.com/vi/A76iBQeNpe8/mqdefault.jpg",
-    "kind": "video",
-    "duration": "PT6M59S",
-    "views": 283
   }
 ]
