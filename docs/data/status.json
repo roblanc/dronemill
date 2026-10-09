@@ -1,12 +1,12 @@
 {
-  "server_time_utc": "2026-10-08 07:00:07 UTC",
+  "server_time_utc": "2026-10-09 04:00:51 UTC",
   "total_disk_gb": 37.2,
   "used_disk_gb": 23.9,
   "free_disk_gb": 11.8,
   "disk_percent": 64.1,
   "total_uploads": 130,
-  "future_scheduled_count": 23,
-  "next_release": "storm watch at the cliff weather station | coastal isolation | 2 hours (Oct 08, 17:00 UTC)",
+  "future_scheduled_count": 21,
+  "next_release": "green lamps over the unwritten catalogue | archival hush | 2 hours (Oct 09, 20:00 UTC)",
   "master_lufs": -22.0,
   "audio_engine": "AI Hybrid 5-Engine Conductor (Active)"
 }

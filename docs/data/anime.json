@@ -1,16 +1,5 @@
 [
   {
-    "title": "Could Light Yagami Lie to Frieren?",
-    "url": "https://youtu.be/Mvz0zdho0vE",
-    "is_future": true,
-    "publish_at": "2026-10-08T15:00:00+00:00",
-    "date": "Oct 8, 2026 \u00b7 15:00 UTC",
-    "thumb": "images/anime/yt_Mvz0zdho0vE.jpg",
-    "kind": "short",
-    "duration": "PT48S",
-    "views": null
-  },
-  {
     "title": "Why Light Yagami Can't Beat Frieren",
     "url": "https://youtu.be/C5l3lyzB0IE",
     "is_future": true,
@@ -88,6 +77,17 @@
     "views": null
   },
   {
+    "title": "Could Light Yagami Lie to Frieren?",
+    "url": "https://youtu.be/Mvz0zdho0vE",
+    "is_future": false,
+    "publish_at": "2026-10-08T15:00:00+00:00",
+    "date": "Oct 8, 2026",
+    "thumb": "https://i.ytimg.com/vi/Mvz0zdho0vE/mqdefault.jpg",
+    "kind": "short",
+    "duration": "PT48S",
+    "views": 213
+  },
+  {
     "title": "Could Light Yagami lie to Frieren?",
     "url": "https://youtu.be/rPZCqvwC6JQ",
     "is_future": false,
@@ -96,7 +96,7 @@
     "thumb": "https://i.ytimg.com/vi/rPZCqvwC6JQ/mqdefault.jpg",
     "kind": "video",
     "duration": "PT12M11S",
-    "views": 16
+    "views": 26
   },
   {
     "title": "Suzune Horikita Can Expel Ayanokoji",
@@ -107,7 +107,7 @@
     "thumb": "https://i.ytimg.com/vi/qTbCBHNxv5g/mqdefault.jpg",
     "kind": "short",
     "duration": "PT49S",
-    "views": 45
+    "views": 49
   },
   {
     "title": "Who Could Expel Ayanokoji?",
@@ -118,7 +118,7 @@
     "thumb": "https://i.ytimg.com/vi/6mFagqB50z4/mqdefault.jpg",
     "kind": "short",
     "duration": "PT52S",
-    "views": 126
+    "views": 145
   },
   {
     "title": "Which Student Could Actually Expel Ayanokoji?",
@@ -129,7 +129,7 @@
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "kind": "video",
     "duration": "PT14M25S",
-    "views": 692
+    "views": 843
   },
   {
     "title": "L's Final Trap for Kafka Hibino",
@@ -140,7 +140,7 @@
     "thumb": "https://i.ytimg.com/vi/WZeQwmFFeSk/mqdefault.jpg",
     "kind": "short",
     "duration": "PT54S",
-    "views": 15
+    "views": 16
   },
   {
     "title": "Could L Unmask Kafka Hibino?",
@@ -151,7 +151,7 @@
     "thumb": "https://i.ytimg.com/vi/DTCtw60wVIA/mqdefault.jpg",
     "kind": "short",
     "duration": "PT54S",
-    "views": 3
+    "views": 4
   },
   {
     "title": "Could L Unmask Kaiju No. 8?",
@@ -206,7 +206,7 @@
     "thumb": "https://i.ytimg.com/vi/GykhG2tS5Mg/mqdefault.jpg",
     "kind": "video",
     "duration": "PT29M44S",
-    "views": 235
+    "views": 237
   },
   {
     "title": "What If Orochimaru Found the Death Note?",
@@ -272,7 +272,7 @@
     "thumb": "https://i.ytimg.com/vi/75AnF8X4mDY/mqdefault.jpg",
     "kind": "video",
     "duration": "PT21M17S",
-    "views": 60
+    "views": 61
   },
   {
     "title": "EVERYONE That Could Outsmart Ayanokoji",
@@ -327,7 +327,7 @@
     "thumb": "https://i.ytimg.com/vi/HmdxCN-H3Do/mqdefault.jpg",
     "kind": "video",
     "duration": "PT27M17S",
-    "views": 1763
+    "views": 1764
   },
   {
     "title": "Could Ayanokoji Survive Monster?",
@@ -338,7 +338,7 @@
     "thumb": "https://i.ytimg.com/vi/oNDG7gKxo9Q/mqdefault.jpg",
     "kind": "video",
     "duration": "PT23M29S",
-    "views": 150
+    "views": 151
   },
   {
     "title": "Could Ayanokoji Outsmart Johan Liebert?",
@@ -426,7 +426,7 @@
     "thumb": "https://i.ytimg.com/vi/VniPQV40m1M/mqdefault.jpg",
     "kind": "video",
     "duration": "PT24M6S",
-    "views": 78
+    "views": 79
   },
   {
     "title": "What if Ayanokoji found the Death Note?",
@@ -437,7 +437,7 @@
     "thumb": "https://i.ytimg.com/vi/VVwjFvsakZI/mqdefault.jpg",
     "kind": "video",
     "duration": "PT22M21S",
-    "views": 395
+    "views": 397
   },
   {
     "title": "When Ayanokoji directed ANHS, he began his ultimate experiment.",
@@ -503,7 +503,7 @@
     "thumb": "https://i.ytimg.com/vi/F57_xxxd1WU/mqdefault.jpg",
     "kind": "video",
     "duration": "PT41S",
-    "views": 19
+    "views": 20
   },
   {
     "title": "The Secret Recipe of Shinkaiverse",
@@ -514,17 +514,6 @@
     "thumb": "https://i.ytimg.com/vi/sPBPkxj49Mc/mqdefault.jpg",
     "kind": "video",
     "duration": "PT1M26S",
-    "views": 795
-  },
-  {
-    "title": "Leader, Protector, Teacher: Kakashi",
-    "url": "https://youtu.be/8eB92f_UckI",
-    "is_future": false,
-    "publish_at": "2025-12-12T08:00:23+00:00",
-    "date": "Dec 12, 2025",
-    "thumb": "https://i.ytimg.com/vi/8eB92f_UckI/mqdefault.jpg",
-    "kind": "video",
-    "duration": "PT50S",
-    "views": 1482
+    "views": 796
   }
 ]
