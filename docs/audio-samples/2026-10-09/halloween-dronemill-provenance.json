@@ -1,0 +1,28 @@
+{
+  "title": "Lanterns Beyond the Grave",
+  "duration_seconds": 30,
+  "excerpt_from_seconds": 30,
+  "render_duration_seconds": 90,
+  "engine": "Installed DroneMill hybrid conductor and ambient_layers",
+  "songygen_used": false,
+  "latentscore_used": false,
+  "external_recordings_used": false,
+  "layers": [
+    "Lovecraft additive pad",
+    "formant choir",
+    "Phrygian bell/organ/string phrases",
+    "quiet sparse events",
+    "Haas DSP harmonics",
+    "root-locked sub",
+    "brown/pink texture",
+    "convolution reverb"
+  ],
+  "recipe_file": "halloween-dronemill-recipe.json",
+  "source_sha256": {
+    "ai_hybrid_sound_conductor.py": "e4acd990f46428901c1d6b57b4505f370a425884a23f166910181c49a520f86d",
+    "ambient_layers.py": "e34e766a05d21e697821979cdcd67857e0abf426cea5e81262f3b6c8d2bf8f39"
+  },
+  "preview_target_lufs": -22,
+  "excerpt_gain_db": 0.14999999999999858,
+  "preview_settings": "Process-local -22 LUFS master; excerpt fades 2s in / 4s out. Installed project files unchanged."
+}

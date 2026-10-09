@@ -1,0 +1,10 @@
+{
+  "url": "https://songygen.com/assets/rig-Bu9oYniG.js",
+  "sha256": "7881a6e08c23b60ac2ed21179c6052c6012de2a9adf328b0d57abb00a0076450",
+  "retrieved_date": "2026-10-09",
+  "exported_classes": [
+    "RigStage",
+    "Svf"
+  ],
+  "execution": "local offline DSP; no remote project writes or account use"
+}

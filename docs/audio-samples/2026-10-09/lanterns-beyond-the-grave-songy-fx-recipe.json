@@ -1,0 +1,123 @@
+{
+  "title": "Lanterns Beyond the Grave — Songygen FX",
+  "duration_seconds": 30,
+  "sample_rate": 48000,
+  "composition_source": "Installed DroneMill procedural layers; original Lanterns seed and harmony",
+  "songygen_fx_source": "https://songygen.com/assets/rig-Bu9oYniG.js",
+  "effects_implementation": "Songygen public RigStage DSP evaluated locally in Node; no browser session or account mutation",
+  "eq_note": "Contour EQ used to tame harsh frequencies. A separate effect named Tame was not found in the inspected code.",
+  "stages": [
+    {
+      "id": "contour-tame",
+      "type": "eq",
+      "on": true,
+      "params": {
+        "bass": -1,
+        "middle": -2.5,
+        "freq": 900,
+        "treble": -5,
+        "level": 0
+      }
+    },
+    {
+      "id": "velvet",
+      "type": "comp",
+      "on": true,
+      "params": {
+        "threshold": -27,
+        "ratio": 1.65,
+        "attack": 35,
+        "release": 240,
+        "makeup": 0,
+        "blend": 0.3
+      }
+    },
+    {
+      "id": "orbit",
+      "type": "phaser",
+      "on": true,
+      "params": {
+        "rate": 0.055,
+        "depth": 0.4,
+        "feedback": 0.12,
+        "mix": 0.16,
+        "stages": 0
+      }
+    },
+    {
+      "id": "drift",
+      "type": "chorus",
+      "on": true,
+      "params": {
+        "rate": 0.11,
+        "depth": 0.35,
+        "mix": 0.26
+      }
+    },
+    {
+      "id": "tape",
+      "type": "delay",
+      "on": true,
+      "params": {
+        "time": 650,
+        "feedback": 0.23,
+        "mix": 0.17,
+        "mode": 1,
+        "pingpong": 1
+      }
+    },
+    {
+      "id": "plate",
+      "type": "reverb",
+      "on": true,
+      "params": {
+        "decay": 0.76,
+        "damping": 0.67,
+        "predelay": 45,
+        "mix": 0.3
+      }
+    }
+  ],
+  "adsr_per_note": {
+    "bell": {
+      "attack": 0.12,
+      "decay": 1.2,
+      "sustain": 0.23,
+      "hold": 1.1,
+      "release": 3.6
+    },
+    "organ": {
+      "attack": 0.8,
+      "decay": 1,
+      "sustain": 0.8,
+      "hold": 1,
+      "release": 3
+    },
+    "string": {
+      "attack": 1.6,
+      "decay": 1,
+      "sustain": 0.82,
+      "hold": 1.3,
+      "release": 3.4
+    }
+  },
+  "master_adsr": {
+    "attack": 2.5,
+    "decay": 2,
+    "sustain": 0.86,
+    "release": 6,
+    "note_off_seconds": 24
+  },
+  "additional_lfo": {
+    "filter_period_seconds": 19,
+    "filter_cutoff_hz": [
+      2300,
+      3700
+    ],
+    "amplitude_period_seconds": 13,
+    "amplitude_depth": 0.07,
+    "pan_period_seconds": 17,
+    "pan_depth": 0.13
+  },
+  "target_lufs": -22
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Lanterns Beyond the Grave",
+  "duration": 90,
+  "seed": "timeless-halloween-2026-lanterns-v1",
+  "root": 73.41619198,
+  "preset": "lovecraft",
+  "preset_overrides": {
+    "section_sec": [22, 28],
+    "xfade_sec": 5,
+    "progression": [0, -2, 1, 0],
+    "pad_brightness": [0.22, 0.42],
+    "choir_presence": 0.72,
+    "melody": {
+      "scale": "phrygian",
+      "timbres": {"bell": 0.65, "organ": 0.25, "string": 0.10},
+      "notes": [2, 3],
+      "spacing": [2.2, 3.8],
+      "phrase_gap": 7,
+      "low": 300
+    },
+    "events": {
+      "mean_gap": 35,
+      "weights": {"boom": 0, "groan": 1, "call": 0, "bell": 1}
+    }
+  },
+  "engines": {
+    "pad": {"enabled": true, "volume": 0.92, "send": 0.52},
+    "choir": {"enabled": true, "volume": 0.48, "send": 0.85},
+    "melody": {"enabled": true, "volume": 0.32, "send": 0.90},
+    "events": {"enabled": true, "volume": 0.045, "send": 0.90},
+    "dsp": {
+      "enabled": true,
+      "frequencies": [146.83238396, 176.19886075, 220.24857594],
+      "lfos": [71, 97, 127],
+      "volume": 0.055,
+      "send": 0.45
+    },
+    "sub": {"enabled": true, "root": 73.41619198, "volume": 0.095},
+    "texture": {
+      "enabled": true,
+      "volume": 0.028,
+      "body_lowpass": 250,
+      "air_band": [250, 1400],
+      "send": 0.40
+    },
+    "reverb": {"enabled": true, "decay": 2.8, "length": 8, "wet": 0.58}
+  }
+}
