@@ -1,0 +1,24 @@
+{
+  "tool": "built-in image_gen",
+  "prompts": [
+    "Use case: illustration-story\nAsset type: background plate for a layered ambient animation, landscape 16:9, edge-to-edge artwork\nPrimary request: Lanterns Beyond the Grave. A quiet, intimate old graveyard at autumn dusk. Crooked headstones and tufts of grass on uneven earth, bare tangled trees framing the far sides, a narrow path winding toward a small distant chapel with one warm window. Thin pale mist between the distant graves, faint clouds across the night sky. Small candle lanterns beside two distant gravestones. Fill the image with drawn texture and a strong sense of place, but keep foreground detail sparse. An unobstructed patch of earth in the lower-left-middle, from roughly 30% to 50% of width, will receive a separate seated character. Leave the complete background drawn behind that space. No characters or animals in this background plate. Original 2D pen-and-ink storybook drawing with dense irregular crosshatching and etched woodcut marks on aged paper. Broad flat shapes, convincing hand-drawn line work, limited colors: near-black charcoal #191b19, muted parchment #c6bb96, dark moss #515849, warm candle ochre #c18a45, subdued rust #80533d. Gentle spooky melancholy, cozy Halloween, charming rather than gruesome. No glossy digital painting or realistic 3D shading. No text, lettering, logos, frame, or watermark.",
+    "Use case: illustration-story\nAsset type: one complete character cutout for 2D animation on a genuinely transparent background\nPrimary request: an original small hooded lantern keeper sitting at rest on a low rough stone, turned slightly toward the right, full body visible. It is a gentle ghostlike person, NOT a cat: a large rounded ivory face tucked inside a loose charcoal hood, two tiny widely spaced dark dot eyes, no nose, no visible mouth, no ears. A worn moss-grey cloak with simple large folds and scratchy ink crosshatching drapes over a squat seated body; two little dark boots touch the ground. Right arm extends slightly out to the viewer's right; the hand is clearly visible and relaxed, fingers curled as though holding a hanging lantern handle, but the lantern itself is absent because it is a separate animation layer. Left hand rests in the lap. Compact readable silhouette, modest storybook proportions, no elaborate costume. Face unobstructed, hood clearly distinct from shoulders with a visible neckline. Single cutout only, no background or floating props. Keep whole stone, cloak and boots inside canvas with generous transparent margins. Original 2D pen-and-ink storybook drawing with dense irregular crosshatching and etched woodcut marks on aged paper. Broad flat shapes, convincing hand-drawn line work, limited colors: near-black charcoal #191b19, muted parchment #c6bb96, dark moss #515849, warm candle ochre #c18a45, subdued rust #80533d. Gentle spooky melancholy, cozy Halloween, charming rather than gruesome. No glossy digital painting or realistic 3D shading. No text, lettering, logos, frame, or watermark.",
+    "Use case: illustration-story\nAsset type: one small lantern cutout for 2D animation on a genuinely transparent background\nPrimary request: a small plain antique carrying lantern seen from the front with a slight view of its right side. A tall thin arch-shaped metal carrying handle above the roof, four simple dark iron corner posts around warm ochre glass, one modest candle flame in the center, and a little square base. The handle's very top is the suspension pivot for a hand holding it. Compact vertical silhouette, individually visible hand-drawn candle flame, subdued ochre light, scratchy drawn highlights. No glow outside the silhouette, no cast shadow, no hand, no ground. Single whole lantern completely inside canvas with transparent margins. Original 2D pen-and-ink storybook drawing with dense irregular crosshatching and etched woodcut marks on aged paper. Broad flat shapes, convincing hand-drawn line work, limited colors: near-black charcoal #191b19, muted parchment #c6bb96, dark moss #515849, warm candle ochre #c18a45, subdued rust #80533d. Gentle spooky melancholy, cozy Halloween, charming rather than gruesome. No glossy digital painting or realistic 3D shading. No text, lettering, logos, frame, or watermark."
+  ],
+  "assets": [
+    "background.png",
+    "keeper.png",
+    "lantern.png"
+  ],
+  "motion": {
+    "renderer": "OpenCV/NumPy/Pillow/FFmpeg",
+    "version": "background atmosphere",
+    "derived_from": "lanterns-illustrated-loop",
+    "added_effects": [
+      "cloud wisps",
+      "drifting ground mist",
+      "falling autumn leaves",
+      "moon shading"
+    ]
+  }
+}

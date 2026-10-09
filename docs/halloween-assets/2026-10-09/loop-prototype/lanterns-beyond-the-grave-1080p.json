@@ -1,0 +1,23 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "duration": 24,
+  "fps": 24,
+  "frames": 576,
+  "silent": true,
+  "repetitions_for_two_hours": 300,
+  "exact_endpoint": true,
+  "seam_mean_pixel_difference": 0.10983056841563786,
+  "first_step_mean_pixel_difference": 0.1094703253600823,
+  "effects": [
+    "breathing",
+    "head tilt",
+    "blinks",
+    "lantern swing",
+    "candlelight",
+    "moving cloud wisps",
+    "layered drifting ground mist",
+    "falling autumn leaves",
+    "moon shading"
+  ]
+}
