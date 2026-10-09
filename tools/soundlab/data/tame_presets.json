@@ -1,0 +1,1011 @@
+{
+ "param_ids": {
+  "MODE": 0,
+  "DEPTH": 1,
+  "DETAIL": 2,
+  "ATTACK": 3,
+  "RELEASE": 4,
+  "MIX": 5,
+  "OUT_DB": 6,
+  "WET_TRIM_DB": 7,
+  "MAX_CUT_DB": 8,
+  "BYPASS": 9,
+  "DELTA": 10,
+  "QUALITY": 11,
+  "LINEAR_PHASE": 12,
+  "LOW_LATENCY": 13,
+  "STEREO_MODE": 14,
+  "LINK": 15,
+  "FOCUS": 16,
+  "TILT_DETAIL_LO": 17,
+  "TILT_DETAIL_HI": 18,
+  "TILT_ATTACK_LO": 19,
+  "TILT_ATTACK_HI": 20,
+  "TILT_RELEASE_LO": 21,
+  "TILT_RELEASE_HI": 22,
+  "SIDECHAIN": 23,
+  "LISTEN_BAND": 24,
+  "LISTEN_DELTA": 25,
+  "SCALE_DB_RANGE": 26
+ },
+ "band_id": "100+8*band+field (ON0 SHAPE1 FREQ2 GAIN3 Q4 FOCUS5)",
+ "presets": [
+  {
+   "name": "Default",
+   "category": "Clean start",
+   "text": "A gentle start for any source: a low cut, a little focus on the presence range, a high cut.",
+   "default": true,
+   "params": {},
+   "bands": []
+  },
+  {
+   "name": "Flat and fair",
+   "category": "Clean start",
+   "text": "No curve: every frequency treated the same.",
+   "default": false,
+   "params": {},
+   "bands": []
+  },
+  {
+   "name": "Gentle polish",
+   "category": "Clean start",
+   "text": "Light, slow, transparent: takes the edge off without anyone noticing.",
+   "default": false,
+   "params": {
+    "DEPTH": 3.0,
+    "DETAIL": 4.0,
+    "ATTACK": 6.0,
+    "RELEASE": 6.0
+   },
+   "bands": [
+    [
+     0,
+     80.0,
+     0,
+     12
+    ],
+    [
+     2,
+     3000.0,
+     3.0,
+     0.8
+    ],
+    [
+     4,
+     16000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Smooth vocal",
+   "category": "Vocals",
+   "text": "Tames the harsh 2\u20135 kHz of a sung vocal and keeps its air.",
+   "default": false,
+   "params": {
+    "DEPTH": 6.0,
+    "DETAIL": 6.0,
+    "ATTACK": 5.0,
+    "RELEASE": 4.0
+   },
+   "bands": [
+    [
+     0,
+     100.0,
+     0,
+     12
+    ],
+    [
+     2,
+     3200.0,
+     4.0,
+     0.9
+    ],
+    [
+     4,
+     15000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Close mic boom",
+   "category": "Vocals",
+   "text": "The proximity bump of a mic too close, and the boxy low mids.",
+   "default": false,
+   "params": {
+    "DEPTH": 6.0,
+    "DETAIL": 5.0,
+    "ATTACK": 4.0,
+    "RELEASE": 5.0
+   },
+   "bands": [
+    [
+     0,
+     70.0,
+     0,
+     12
+    ],
+    [
+     2,
+     250.0,
+     6.0,
+     0.9
+    ],
+    [
+     2,
+     4000.0,
+     -6.0,
+     1.0
+    ],
+    [
+     4,
+     12000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Rap clarity",
+   "category": "Vocals",
+   "text": "Fast and precise for a dense, upfront rap vocal.",
+   "default": false,
+   "params": {
+    "DEPTH": 7.0,
+    "DETAIL": 7.0,
+    "ATTACK": 3.0,
+    "RELEASE": 3.0
+   },
+   "bands": [
+    [
+     0,
+     110.0,
+     0,
+     12
+    ],
+    [
+     2,
+     2800.0,
+     4.0,
+     1.2
+    ],
+    [
+     4,
+     14000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Airy top",
+   "category": "Vocals",
+   "text": "A bright vocal with a lot of top: works above 6 kHz only.",
+   "default": false,
+   "params": {
+    "DEPTH": 5.0,
+    "DETAIL": 6.0
+   },
+   "bands": [
+    [
+     0,
+     5000.0,
+     0,
+     24.0
+    ],
+    [
+     2,
+     9000.0,
+     3.0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "name": "Podcast voice",
+   "category": "Vocals",
+   "text": "Even, warm and easy for a speaking voice.",
+   "default": false,
+   "params": {
+    "DEPTH": 6.0,
+    "DETAIL": 5.0,
+    "ATTACK": 5.0,
+    "RELEASE": 6.0
+   },
+   "bands": [
+    [
+     0,
+     90.0,
+     0,
+     12
+    ],
+    [
+     2,
+     300.0,
+     3.0,
+     0.8
+    ],
+    [
+     2,
+     3500.0,
+     3.0,
+     0.9
+    ],
+    [
+     4,
+     12000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Choir and backing",
+   "category": "Vocals",
+   "text": "Stacked voices: soft and wide.",
+   "default": false,
+   "params": {
+    "DEPTH": 5.0,
+    "DETAIL": 4.0,
+    "STEREO_MODE": 1.0,
+    "LINK": 0.5
+   },
+   "bands": [
+    [
+     0,
+     150.0,
+     0,
+     12
+    ],
+    [
+     2,
+     2500.0,
+     3.0,
+     0.7
+    ],
+    [
+     4,
+     14000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "De-ess soft",
+   "category": "De-ess",
+   "text": "Sibilance only, 5\u201310 kHz, gentle.",
+   "default": false,
+   "params": {
+    "DEPTH": 7.0,
+    "DETAIL": 7.0,
+    "ATTACK": 2.0,
+    "RELEASE": 3.0
+   },
+   "bands": [
+    [
+     0,
+     4500.0,
+     0,
+     24.0
+    ],
+    [
+     2,
+     7000.0,
+     6.0,
+     1.2
+    ],
+    [
+     4,
+     12000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "De-ess hard",
+   "category": "De-ess",
+   "text": "Strong sibilance on a bright mic, in hard mode.",
+   "default": false,
+   "params": {
+    "MODE": 1.0,
+    "DEPTH": 9.0,
+    "DETAIL": 8.0,
+    "ATTACK": 1.0,
+    "RELEASE": 3.0
+   },
+   "bands": [
+    [
+     0,
+     4500.0,
+     0,
+     48.0
+    ],
+    [
+     2,
+     7500.0,
+     8.0,
+     1.4
+    ]
+   ]
+  },
+  {
+   "name": "Whistle and pops",
+   "category": "De-ess",
+   "text": "Narrow whistling S and harsh T peaks.",
+   "default": false,
+   "params": {
+    "DEPTH": 8.0,
+    "DETAIL": 9.0,
+    "ATTACK": 1.0,
+    "RELEASE": 2.0
+   },
+   "bands": [
+    [
+     0,
+     3500.0,
+     0,
+     24.0
+    ],
+    [
+     2,
+     6000.0,
+     6.0,
+     2.0
+    ]
+   ]
+  },
+  {
+   "name": "Fizzy distortion",
+   "category": "Guitar",
+   "text": "The fizz of a high-gain amp, above 3 kHz.",
+   "default": false,
+   "params": {
+    "DEPTH": 7.0,
+    "DETAIL": 6.0,
+    "ATTACK": 4.0,
+    "RELEASE": 4.0
+   },
+   "bands": [
+    [
+     0,
+     1500.0,
+     0,
+     24.0
+    ],
+    [
+     2,
+     4500.0,
+     5.0,
+     0.8
+    ],
+    [
+     4,
+     12000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Acoustic strum",
+   "category": "Guitar",
+   "text": "The boom of the body and the pick click of a strummed acoustic.",
+   "default": false,
+   "params": {
+    "DEPTH": 5.0,
+    "DETAIL": 5.0
+   },
+   "bands": [
+    [
+     0,
+     70.0,
+     0,
+     12
+    ],
+    [
+     2,
+     200.0,
+     5.0,
+     1.0
+    ],
+    [
+     2,
+     3500.0,
+     3.0,
+     1.0
+    ],
+    [
+     4,
+     15000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Clean electric sparkle",
+   "category": "Guitar",
+   "text": "Keeps the sparkle, takes the ice-pick out.",
+   "default": false,
+   "params": {
+    "DEPTH": 5.0,
+    "DETAIL": 6.0
+   },
+   "bands": [
+    [
+     0,
+     120.0,
+     0,
+     12
+    ],
+    [
+     2,
+     2500.0,
+     4.0,
+     1.0
+    ],
+    [
+     4,
+     14000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Room-miked amp",
+   "category": "Guitar",
+   "text": "Room modes and boxiness of an amp in a small room.",
+   "default": false,
+   "params": {
+    "DEPTH": 6.0,
+    "DETAIL": 7.0,
+    "RELEASE": 6.0
+   },
+   "bands": [
+    [
+     0,
+     80.0,
+     0,
+     12
+    ],
+    [
+     2,
+     400.0,
+     6.0,
+     1.0
+    ],
+    [
+     4,
+     10000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Snare ring",
+   "category": "Drums",
+   "text": "The ring of a snare drum, without killing the crack.",
+   "default": false,
+   "params": {
+    "DEPTH": 8.0,
+    "DETAIL": 8.0,
+    "ATTACK": 7.0,
+    "RELEASE": 4.0
+   },
+   "bands": [
+    [
+     0,
+     150.0,
+     0,
+     12
+    ],
+    [
+     2,
+     700.0,
+     6.0,
+     1.2
+    ],
+    [
+     4,
+     10000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Cymbal wash",
+   "category": "Drums",
+   "text": "Harsh cymbals and hats above 4 kHz.",
+   "default": false,
+   "params": {
+    "DEPTH": 6.0,
+    "DETAIL": 5.0,
+    "ATTACK": 3.0
+   },
+   "bands": [
+    [
+     0,
+     3000.0,
+     0,
+     24.0
+    ],
+    [
+     2,
+     7000.0,
+     4.0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "name": "Overheads glue",
+   "category": "Drums",
+   "text": "Smooth overheads and room mics.",
+   "default": false,
+   "params": {
+    "DEPTH": 4.0,
+    "DETAIL": 4.0,
+    "STEREO_MODE": 1.0
+   },
+   "bands": [
+    [
+     0,
+     200.0,
+     0,
+     12
+    ],
+    [
+     2,
+     3500.0,
+     3.0,
+     0.7
+    ],
+    [
+     4,
+     16000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Kick boom",
+   "category": "Drums",
+   "text": "The long boom of a kick, keeping its punch.",
+   "default": false,
+   "params": {
+    "DEPTH": 6.0,
+    "DETAIL": 7.0,
+    "ATTACK": 8.0,
+    "RELEASE": 6.0
+   },
+   "bands": [
+    [
+     4,
+     400.0,
+     0,
+     24.0
+    ],
+    [
+     2,
+     80.0,
+     4.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "name": "Drum bus tame",
+   "category": "Drums",
+   "text": "The whole kit, gently.",
+   "default": false,
+   "params": {
+    "DEPTH": 4.0,
+    "DETAIL": 5.0,
+    "ATTACK": 6.0
+   },
+   "bands": [
+    [
+     0,
+     40.0,
+     0,
+     12
+    ],
+    [
+     2,
+     500.0,
+     2.0,
+     0.6
+    ],
+    [
+     2,
+     4000.0,
+     3.0,
+     0.7
+    ],
+    [
+     4,
+     16000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Bass resonance",
+   "category": "Bass",
+   "text": "Notes that boom louder than the others on a bass.",
+   "default": false,
+   "params": {
+    "DEPTH": 7.0,
+    "DETAIL": 8.0,
+    "ATTACK": 6.0,
+    "RELEASE": 6.0
+   },
+   "bands": [
+    [
+     4,
+     600.0,
+     0,
+     24.0
+    ],
+    [
+     2,
+     120.0,
+     5.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "name": "Bass growl clean",
+   "category": "Bass",
+   "text": "The growl of a driven bass, without the fizz.",
+   "default": false,
+   "params": {
+    "DEPTH": 5.0,
+    "DETAIL": 6.0
+   },
+   "bands": [
+    [
+     0,
+     400.0,
+     0,
+     12
+    ],
+    [
+     2,
+     1500.0,
+     4.0,
+     1.0
+    ],
+    [
+     4,
+     8000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Synth tame",
+   "category": "Keys & synths",
+   "text": "Resonant synth filters that whistle.",
+   "default": false,
+   "params": {
+    "DEPTH": 7.0,
+    "DETAIL": 8.0,
+    "ATTACK": 3.0,
+    "RELEASE": 3.0
+   },
+   "bands": [
+    [
+     0,
+     150.0,
+     0,
+     12
+    ],
+    [
+     2,
+     2000.0,
+     4.0,
+     0.6
+    ],
+    [
+     4,
+     16000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Piano hammer",
+   "category": "Keys & synths",
+   "text": "The hard hammer edge of a bright piano.",
+   "default": false,
+   "params": {
+    "DEPTH": 5.0,
+    "DETAIL": 5.0,
+    "ATTACK": 4.0
+   },
+   "bands": [
+    [
+     0,
+     80.0,
+     0,
+     12
+    ],
+    [
+     2,
+     3000.0,
+     4.0,
+     0.8
+    ],
+    [
+     4,
+     14000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Acid squelch",
+   "category": "Keys & synths",
+   "text": "The resonance of a 303-style filter, kept musical.",
+   "default": false,
+   "params": {
+    "DEPTH": 6.0,
+    "DETAIL": 8.0,
+    "ATTACK": 2.0,
+    "RELEASE": 2.0
+   },
+   "bands": [
+    [
+     0,
+     100.0,
+     0,
+     12
+    ],
+    [
+     2,
+     1200.0,
+     3.0,
+     0.5
+    ],
+    [
+     4,
+     12000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Mix bus air",
+   "category": "Mix bus",
+   "text": "A light touch on the mix: harshness off, nothing else.",
+   "default": false,
+   "params": {
+    "DEPTH": 3.0,
+    "DETAIL": 4.0,
+    "ATTACK": 6.0,
+    "RELEASE": 6.0,
+    "MIX": 0.8
+   },
+   "bands": [
+    [
+     0,
+     60.0,
+     0,
+     12
+    ],
+    [
+     7,
+     2000.0,
+     3.0,
+     1
+    ],
+    [
+     4,
+     18000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Mud and harsh",
+   "category": "Mix bus",
+   "text": "Low mids and upper mids at once.",
+   "default": false,
+   "params": {
+    "DEPTH": 4.0,
+    "DETAIL": 5.0
+   },
+   "bands": [
+    [
+     0,
+     40.0,
+     0,
+     12
+    ],
+    [
+     2,
+     300.0,
+     3.0,
+     0.8
+    ],
+    [
+     2,
+     3500.0,
+     3.0,
+     0.8
+    ],
+    [
+     4,
+     18000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Master smooth",
+   "category": "Mastering",
+   "text": "Very light, slow and wide for a master.",
+   "default": false,
+   "params": {
+    "DEPTH": 2.0,
+    "DETAIL": 3.0,
+    "ATTACK": 7.0,
+    "RELEASE": 7.0,
+    "QUALITY": 1.0,
+    "MAX_CUT_DB": 6.0
+   },
+   "bands": [
+    [
+     0,
+     40.0,
+     0,
+     12
+    ],
+    [
+     7,
+     1500.0,
+     2.0,
+     1
+    ],
+    [
+     4,
+     18000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Master high end",
+   "category": "Mastering",
+   "text": "Only the top of a bright master, capped at 4 dB.",
+   "default": false,
+   "params": {
+    "DEPTH": 3.0,
+    "DETAIL": 4.0,
+    "QUALITY": 1.0,
+    "MAX_CUT_DB": 4.0
+   },
+   "bands": [
+    [
+     0,
+     3000.0,
+     0,
+     24.0
+    ],
+    [
+     3,
+     8000.0,
+     3.0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "name": "Master low end",
+   "category": "Mastering",
+   "text": "Bass notes that jump out of a master.",
+   "default": false,
+   "params": {
+    "DEPTH": 3.0,
+    "DETAIL": 6.0,
+    "QUALITY": 1.0,
+    "MAX_CUT_DB": 5.0
+   },
+   "bands": [
+    [
+     4,
+     300.0,
+     0,
+     24.0
+    ],
+    [
+     1,
+     120.0,
+     3.0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "name": "Duck for the vocal",
+   "category": "Sidechain",
+   "text": "With the vocal as the key, the music makes room where the voice is.",
+   "default": false,
+   "params": {
+    "MODE": 1.0,
+    "SIDECHAIN": 1.0,
+    "DEPTH": 6.0,
+    "DETAIL": 3.0,
+    "ATTACK": 3.0,
+    "RELEASE": 5.0
+   },
+   "bands": [
+    [
+     0,
+     150.0,
+     0,
+     12
+    ],
+    [
+     2,
+     2500.0,
+     3.0,
+     0.6
+    ],
+    [
+     4,
+     10000.0,
+     0,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Kick and bass",
+   "category": "Sidechain",
+   "text": "With the kick as the key, the bass gives way at its frequencies.",
+   "default": false,
+   "params": {
+    "MODE": 1.0,
+    "SIDECHAIN": 1.0,
+    "DEPTH": 8.0,
+    "DETAIL": 4.0,
+    "ATTACK": 1.0,
+    "RELEASE": 4.0
+   },
+   "bands": [
+    [
+     4,
+     250.0,
+     0,
+     24.0
+    ],
+    [
+     2,
+     70.0,
+     4.0,
+     1.0
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+# Songygen engine builds: downloaded on first run and checked against engines/lock.json
+engines/*.wasm
+# Drum kits: downloaded on first use (manifest keeps licence + attribution)
+kits/*/
+# Renders and scratch
+out/
+.work/
+__pycache__/

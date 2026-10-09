@@ -1,0 +1,82 @@
+{
+ "title": "drowned lighthouse at 3am, cosmic dread, fog and sea",
+ "idea": "drowned lighthouse at 3am, cosmic dread, fog and sea",
+ "profile": "ambient",
+ "seed": 1,
+ "key": {
+  "tonic": "D",
+  "mode": "minor"
+ },
+ "bpm": 60,
+ "seconds": 60.0,
+ "layers": [
+  {
+   "id": "drone",
+   "tool": "native.drone",
+   "src": "native.drone",
+   "args": {},
+   "db": -26,
+   "role": "bed"
+  },
+  {
+   "id": "dissonant_swells",
+   "tool": "native.dissonant_swells",
+   "src": "native.dissonant_swells",
+   "args": {},
+   "db": -24,
+   "role": "harmony"
+  },
+  {
+   "id": "melody_bell",
+   "tool": "native.melody.bell",
+   "src": "native.melody",
+   "args": {
+    "inst": "bell",
+    "scale_name": "pent",
+    "octave": 6,
+    "every": 3.5,
+    "density": 0.4
+   },
+   "db": -29,
+   "role": "melody"
+  },
+  {
+   "id": "foghorn",
+   "tool": "native.foghorn",
+   "src": "native.foghorn",
+   "args": {},
+   "db": -27,
+   "role": "environment"
+  },
+  {
+   "id": "waves",
+   "tool": "native.waves",
+   "src": "native.waves",
+   "args": {},
+   "db": -27,
+   "role": "environment"
+  },
+  {
+   "id": "hum",
+   "tool": "native.hum",
+   "src": "native.hum",
+   "args": {},
+   "db": -35,
+   "role": "texture"
+  }
+ ],
+ "space": {
+  "engine": "drift",
+  "preset": "Glacier",
+  "amount": 0.8
+ },
+ "color": [],
+ "master": [
+  {
+   "engine": "tame",
+   "preset": "Master smooth"
+  }
+ ],
+ "loudness_lufs": -18,
+ "true_peak_db": -1.5
+}
