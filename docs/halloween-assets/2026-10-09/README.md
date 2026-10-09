@@ -83,6 +83,12 @@ two-hour expansion command. Claude should read its
 [palette](../../../tools/soundlab/palette.json), and use this workflow for the
 chosen scene. The documented server runtime is `/mnt/media/bob/soundlab`:
 
+The checked-in palette currently catalogs 73 tools (66 ready, five manual, two
+references) and 117 drum grooves. These are catalog statuses, not a new runtime
+verification of every tool. For each new sound idea, scan the complete palette,
+review the draft and show the chosen tools with their reasons and runners-up
+before producing the 60-second preview, as the sound-palette instructions specify.
+
 ```sh
 cd /mnt/media/bob/soundlab
 python3 soundlab.py palette
