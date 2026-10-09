@@ -76,19 +76,52 @@ subject clarity before rendering the full loop.
 
 ## Develop the soundtrack
 
-Start with the [audio handoff and listening previews](../../audio-samples/2026-10-09/README.md)
-and the [portable renderer](../../../tools/audio-samples/README.md):
+The current project also includes [soundlab](../../../tools/soundlab/README.md),
+merged in PR #2, with a tool palette, idea scanner, seamless-loop renderer and
+two-hour expansion command. Claude should read its
+[working instructions](../../../tools/soundlab/claude-skill/SKILL.md), review the
+[palette](../../../tools/soundlab/palette.json), and use this workflow for the
+chosen scene. The documented server runtime is `/mnt/media/bob/soundlab`:
+
+```sh
+cd /mnt/media/bob/soundlab
+python3 soundlab.py palette
+python3 soundlab.py scan "ghost ferry on a still black marsh at midnight, lantern, low water, wind, quiet eerie drone"
+```
+
+The scanner prints tool rankings and writes a draft recipe. Review that recipe
+against the selected scene's manifest brief, then use its actual filename:
+
+```sh
+python3 soundlab.py render recipes/<generated-name>.json --seconds 60
+# Audition the twice-played loop.mp3 and inspect certificate.json.
+# Then render a longer 3–5 minute loop and inspect its seam before expanding it.
+python3 soundlab.py render recipes/<generated-name>.json --seconds 180
+python3 soundlab.py longform out/<recipe-name>/loop.wav --hours 2
+```
+
+Soundlab provides native layers, Songygen Motion synthesis, Drift space, Era
+color and the actual **Tame WASM engine**. Its lead-in/tail crossfade creates the
+audio loop and it writes a seam certificate. Use its engine lock and current
+mastering settings; listen to the exported loop before repeating it. The scanner
+is a draft generator, so scene details and density still need deliberate tuning.
+We reviewed this newly merged workflow for the handoff but did not render the
+new scenes' soundtracks or change soundlab itself.
+
+The [earlier audio handoff and listening previews](../../audio-samples/2026-10-09/README.md)
+and [portable comparison renderer](../../../tools/audio-samples/README.md) remain
+useful for hearing the native DroneMill sound and the first Songygen Rig treatment:
 
 ```sh
 python3 -m pip install -r tools/audio-samples/requirements.txt
 python3 tools/audio-samples/render.py --variant all
 ```
 
-The reproducible comparison is the native DroneMill Lovecraft/D2 texture, then a
+That earlier reproducible comparison is the native DroneMill Lovecraft/D2 texture, then a
 related native render using explicit per-note ADSR and slow amplitude, filter and
 pan LFOs, processed by Songygen's public DSP algorithms locally in Node. The EQ
-is **Contour EQ**, used to tame the upper range; no separate public effect named
-"Tame" was identified. The chain also includes a blended compressor, slow phaser,
+is **Contour EQ**, used to tame the upper range; it does not use the newer
+soundlab Tame engine. The chain also includes a blended compressor, slow phaser,
 chorus, tape ping-pong delay and Dattorro-style plate reverb. The actual parameters
 and pinned source provenance are in the existing audio recipe and tools.
 

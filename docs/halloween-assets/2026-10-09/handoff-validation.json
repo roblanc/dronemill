@@ -25,5 +25,6 @@
   },
   "finishing_helper_rejects_short_soundtrack": true,
   "new_scene_motion_and_audio": "proposed_only",
-  "audio_renderer": "unchanged; both variants previously rendered and validated as recorded in audio handoff"
+  "audio_renderer": "unchanged; both variants previously rendered and validated as recorded in audio handoff",
+  "soundlab": "Current merged PR #2 workflow reviewed and linked; no new audio renders or soundlab changes."
 }

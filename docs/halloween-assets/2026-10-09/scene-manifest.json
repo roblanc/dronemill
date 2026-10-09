@@ -106,5 +106,7 @@
       "suggested_visual_loop": "Scarecrow feet and cloth sway slightly, pumpkin light flickers; fence and tree remain static.",
       "suggested_audio_palette": "Hollow organ, low autumn wind, subdued creaking texture and warm bass; no jump-scare transients."
     }
-  ]
+  ],
+  "current_audio_workflow": "../../../tools/soundlab/README.md",
+  "claude_audio_instructions": "../../../tools/soundlab/claude-skill/SKILL.md"
 }

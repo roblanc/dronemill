@@ -2,13 +2,13 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 7475,
-      "sha256": "3efb30c629511857bfbb8ece077364c0ed49649015bfb8b854c79add5a55f33f"
+      "bytes": 9254,
+      "sha256": "0ec3baf3738ed65a7a6cec61523c8b867e6af9b33a6978c411cfc2bbfeddff58"
     },
     {
       "path": "handoff-validation.json",
-      "bytes": 720,
-      "sha256": "ab41b710c7e7aa5707239bbf5578f5b914bf4e36dbe0109b45e83dfe4a964abf"
+      "bytes": 830,
+      "sha256": "69ca7e88e9a93da12783d96b7e19f082d4b6d435d910f2b1b7742571c48d7d59"
     },
     {
       "path": "keeper-studies/01-clearing.png",
@@ -152,8 +152,8 @@
     },
     {
       "path": "scene-manifest.json",
-      "bytes": 6114,
-      "sha256": "46f6014fe6c22dca28f35edf6eefe48e1bc7be24320d85a9712477458febac82"
+      "bytes": 6259,
+      "sha256": "fa97faf490cc5f410e22c982d35c6d45c3cee3a440047f26bf130068830323af"
     },
     {
       "path": "scenes/01-cats-and-cauldron.png",
