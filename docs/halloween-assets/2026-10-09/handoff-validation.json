@@ -1,0 +1,29 @@
+{
+  "verified_pngs": 20,
+  "new_scene_count": 10,
+  "earlier_keeper_study_count": 10,
+  "image_hashes_match": true,
+  "markdown_and_gallery_links_resolve": true,
+  "python_syntax_valid": true,
+  "prototype_pose_periodicity": {
+    "width": 320,
+    "period_seconds": 24,
+    "tested_times": [
+      0,
+      0.125,
+      7.2,
+      18.7
+    ],
+    "identical": true
+  },
+  "prototype_preview": {
+    "width": 1280,
+    "height": 720,
+    "frames": 1152,
+    "duration_seconds": 48,
+    "silent": true
+  },
+  "finishing_helper_rejects_short_soundtrack": true,
+  "new_scene_motion_and_audio": "proposed_only",
+  "audio_renderer": "unchanged; both variants previously rendered and validated as recorded in audio handoff"
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "status": "still-concepts",
+  "generation_tool": "built-in image_gen",
+  "art_direction": "Nighttime black / muted sepia / amber; readable characters; restrained background.",
+  "motion_and_audio_status": "Proposed scene-specific briefs; not rendered for these ten scenes.",
+  "audio_reference": "../../audio-samples/2026-10-09/README.md",
+  "entries": [
+    {
+      "id": "01-cats-and-cauldron",
+      "title": "The Midnight Cauldron",
+      "image": "scenes/01-cats-and-cauldron.png",
+      "sha256": "e7cd33eaf33b3b5c9dd20d55d44d9adaa18a1b6865f465af42f65bbf4c72be0d",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "01-cats-and-cauldron",
+      "suggested_visual_loop": "Slow spoon arc, occasional blinks, candle flicker, sparse rising bubbles that fade before wrapping.",
+      "suggested_audio_palette": "Warm low organ/pad, restrained bubbling texture, soft fire-like noise; keep high-frequency fizz subdued."
+    },
+    {
+      "id": "02-witch-tea",
+      "title": "Tea at the Witch's Door",
+      "image": "scenes/02-witch-tea.png",
+      "sha256": "e2836504fe892aa43b17d7aca398f9ede47fa7dc0abbe22a6cfc3456eea59277",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "02-witch-tea",
+      "suggested_visual_loop": "Tiny kettle tilt, looping steam wisp, cat blink; keep chair, door and ground still.",
+      "suggested_audio_palette": "Gentle organ and sparse rounded tines, warm room/forest air, quiet tea steam texture; relaxed and intimate."
+    },
+    {
+      "id": "03-skeleton-gardener",
+      "title": "The Graveyard Gardener",
+      "image": "scenes/03-skeleton-gardener.png",
+      "sha256": "5de583c1738360d65479670107a445ef67c003eea9ba713902f27d5c6b74cd7e",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "03-skeleton-gardener",
+      "suggested_visual_loop": "Small watering-can tilt, sparse water droplets with fade, flower sway and lantern flicker.",
+      "suggested_audio_palette": "Soft low choir and distant strings, delicate water-like texture, sparse muted bell accents with long tails."
+    },
+    {
+      "id": "04-ghost-ferryman",
+      "title": "The Ghost Ferry",
+      "image": "scenes/04-ghost-ferryman.png",
+      "sha256": "079650a75edf67d7ea69163341f9cae07660fd14d65221e9e133904e45df1752",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "04-ghost-ferryman",
+      "suggested_visual_loop": "Boat rises and falls a few pixels, cloth sways, reflection ripples and mist drifts; no endless forward travel.",
+      "suggested_audio_palette": "Deep smooth drone, slow formant choir, quiet water lapping and low wind; wide space without sharp splashes."
+    },
+    {
+      "id": "05-raven-archives",
+      "title": "The Raven Archivist",
+      "image": "scenes/05-raven-archives.png",
+      "sha256": "6066a706dd5cd0a817e941f133a1a72a12c875d7516b9ae8d8d1e486503d4eb5",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "05-raven-archives",
+      "suggested_visual_loop": "Raven blinks and dips beak slightly, page corner breathes, candle flickers; book text stays indistinct.",
+      "suggested_audio_palette": "Dark rounded organ, low string layer, very soft paper-like noise; avoid repetitive page-flip impacts."
+    },
+    {
+      "id": "06-toad-alchemist",
+      "title": "The Toad's Apothecary",
+      "image": "scenes/06-toad-alchemist.png",
+      "sha256": "25f806e859556311ea5feed0da722404ade1859e2799f0c479431901f44c05ae",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "06-toad-alchemist",
+      "suggested_visual_loop": "Small vial tilt, a slow steam ribbon, occasional toad blink and gentle bowl glow.",
+      "suggested_audio_palette": "Soft bubbling bed, rounded plucked/tine accents, low pad; damp and curious rather than comic or percussive."
+    },
+    {
+      "id": "07-fox-lantern-road",
+      "title": "The Fox at the Crossroads",
+      "image": "scenes/07-fox-lantern-road.png",
+      "sha256": "60a7b308a2c9669de47529eee32d265f6810da9c4f37901ed04cec79ed968bd8",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "07-fox-lantern-road",
+      "suggested_visual_loop": "Scarf and tail sway, lantern swing and flicker; fox remains planted at the crossroads.",
+      "suggested_audio_palette": "Broad quiet wind, sparse forest-leaf texture, warm sustained strings and pad; no recurring footsteps."
+    },
+    {
+      "id": "08-mouse-bellkeeper",
+      "title": "The Little Bell Keeper",
+      "image": "scenes/08-mouse-bellkeeper.png",
+      "sha256": "4c9feecba7179c3594f9c378fda9e4e139bed3dbf1c63a5400eb97058d413b46",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "08-mouse-bellkeeper",
+      "suggested_visual_loop": "Small rope/arm motion and restrained bell sway, candle flicker; mouse feet stay on the step.",
+      "suggested_audio_palette": "Very sparse low bell partials with long decay over a dark pad and low wind; avoid a regular loud toll."
+    },
+    {
+      "id": "09-moth-collector",
+      "title": "The Moth Collector",
+      "image": "scenes/09-moth-collector.png",
+      "sha256": "4a97aa5829ec73346e6915e2d2cb5facb45acef1c12b4c26b68dc11902d0de36",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "09-moth-collector",
+      "suggested_visual_loop": "Antennae sway, a tiny moth orbits inside jar, folded wings breathe, glow changes gently.",
+      "suggested_audio_palette": "Airy formant pad, sparse high softened harmonics and quiet wing-like filtered noise; no bright jingles."
+    },
+    {
+      "id": "10-pumpkin-watchman",
+      "title": "The Pumpkin Watchman",
+      "image": "scenes/10-pumpkin-watchman.png",
+      "sha256": "d789b9bb6e3005c1357d687c69397bc3f3e6d62c8aadff9831f42e3200703f81",
+      "prompt_file": "scenes/prompts.json",
+      "prompt_entry": "10-pumpkin-watchman",
+      "suggested_visual_loop": "Scarecrow feet and cloth sway slightly, pumpkin light flickers; fence and tree remain static.",
+      "suggested_audio_palette": "Hollow organ, low autumn wind, subdued creaking texture and warm bass; no jump-scare transients."
+    }
+  ]
+}

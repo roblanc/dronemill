@@ -1,0 +1,229 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7475,
+      "sha256": "3efb30c629511857bfbb8ece077364c0ed49649015bfb8b854c79add5a55f33f"
+    },
+    {
+      "path": "handoff-validation.json",
+      "bytes": 720,
+      "sha256": "ab41b710c7e7aa5707239bbf5578f5b914bf4e36dbe0109b45e83dfe4a964abf"
+    },
+    {
+      "path": "keeper-studies/01-clearing.png",
+      "bytes": 2541548,
+      "sha256": "e8a960dac4358d5af5f0dd9fd34a78ccc70b551de2e984dfb3f71b11b52e15b3"
+    },
+    {
+      "path": "keeper-studies/02-old-gate.png",
+      "bytes": 2268589,
+      "sha256": "f675c48679b7960f9e99207083d60df5b1d675a14165e530c7f58d8497ab4a7c"
+    },
+    {
+      "path": "keeper-studies/03-stone-seat.png",
+      "bytes": 2503161,
+      "sha256": "bda3f08bba896b6c04662d92ab36ff001cc116281291f1cc08972419ee60ccb7"
+    },
+    {
+      "path": "keeper-studies/04-hollow-tree.png",
+      "bytes": 2540890,
+      "sha256": "88a46c296f2b395790cbf484c8f0915310797bb31bdda2e6d5ead13135a88b88"
+    },
+    {
+      "path": "keeper-studies/05-path-watcher.png",
+      "bytes": 2072636,
+      "sha256": "5146491863a29be57facb487855505e58dee6a50cec522528a0cc8ef80d5fdfe"
+    },
+    {
+      "path": "keeper-studies/06-at-the-grave.png",
+      "bytes": 2334078,
+      "sha256": "23551b5f56c8c4b2fd073d589e454dcbd514b591b4abe05dcae1e32e4b19e934"
+    },
+    {
+      "path": "keeper-studies/07-chapel-door.png",
+      "bytes": 2598356,
+      "sha256": "0da6928bea6bccd89fe2dda390b3756c18023827cd7a4422aabc40322af3d434"
+    },
+    {
+      "path": "keeper-studies/08-lantern-close.png",
+      "bytes": 2462152,
+      "sha256": "37ed5f3f51d610ea44df16ad3695fef58379f0e930cd3d31ec19675dd5cc43fb"
+    },
+    {
+      "path": "keeper-studies/09-moonless-wall.png",
+      "bytes": 2155131,
+      "sha256": "8314a1875d036556ee59171f21c3fae60d13547b08b141bda0459860977a371f"
+    },
+    {
+      "path": "keeper-studies/10-forest-threshold.png",
+      "bytes": 2414679,
+      "sha256": "70297fc7033430f50cf4dfee1a94d00b74e746ff992155dc1a9912edd08c9bf1"
+    },
+    {
+      "path": "keeper-studies/README.md",
+      "bytes": 533,
+      "sha256": "328c69af6e0956565061ff2566e5a7700f8c7d28552d4347f8ad87cd20feeb08"
+    },
+    {
+      "path": "keeper-studies/comparison.jpg",
+      "bytes": 874259,
+      "sha256": "605964d61d42a5e6a90e95e32571d9af39dd71419c77ccce441a86b32dbdd734"
+    },
+    {
+      "path": "keeper-studies/gallery.html",
+      "bytes": 2010,
+      "sha256": "56822035aacebd317f215d37398d0ca58fe96380213b9807f39360e817a7b139"
+    },
+    {
+      "path": "keeper-studies/prompts.json",
+      "bytes": 22817,
+      "sha256": "c34941482a2115fb2255054342ca91f3bcd0c564b521fcfa9c1865438187b8ba"
+    },
+    {
+      "path": "loop-prototype/.gitignore",
+      "bytes": 76,
+      "sha256": "94fbcb3006bbc6a571c8aadd7e4f3916966b148f768c833c389553f0b031652f"
+    },
+    {
+      "path": "loop-prototype/README.md",
+      "bytes": 2743,
+      "sha256": "76bb388d30dafc7a6ec1cf6cc720caf96eee701f6464f714e39c0d832cc537ad"
+    },
+    {
+      "path": "loop-prototype/assets/background.png",
+      "bytes": 3901680,
+      "sha256": "cd0b9da8bc412c8d18caa406f8cf40f1b641fb3a8005b237afa63868b5f9e6da"
+    },
+    {
+      "path": "loop-prototype/assets/keeper.png",
+      "bytes": 2309501,
+      "sha256": "09fc129933111883c9dd1418de6ec61301478c846ee34d8cbd3b0cebdffc5a3a"
+    },
+    {
+      "path": "loop-prototype/assets/lantern.png",
+      "bytes": 2049611,
+      "sha256": "9ce67227bdf879064d0000bc9b3e6de5f08e0aa6ea766a10903530f58e875168"
+    },
+    {
+      "path": "loop-prototype/atmosphere.py",
+      "bytes": 7763,
+      "sha256": "2ab0d5df438653980b61d0143d11a3f35eb5a6c7d7b68a2a10e416f329d091cf"
+    },
+    {
+      "path": "loop-prototype/drawing.png",
+      "bytes": 4340698,
+      "sha256": "91b7902968bc6d86acd0d0ed7013ec9f1a41e08ef11304825f21c9eece9ff76d"
+    },
+    {
+      "path": "loop-prototype/finish-two-hours.py",
+      "bytes": 2299,
+      "sha256": "3c2559c0693db82ca446a14d8a1e76d94f2be9f033849476f17b46fe1dd93fb1"
+    },
+    {
+      "path": "loop-prototype/generation.json",
+      "bytes": 4660,
+      "sha256": "41c2463cc6414d0233621aff0a272b8d260e2a814f528dcb610824fdf3206957"
+    },
+    {
+      "path": "loop-prototype/lanterns-beyond-the-grave-1080p.json",
+      "bytes": 495,
+      "sha256": "cf2b83fc3121434aea92d559811652580ae571df27da4c01c90fdd387a8fb558"
+    },
+    {
+      "path": "loop-prototype/preview-720p.mp4",
+      "bytes": 4448486,
+      "sha256": "36a24d4ec31bf5271c567cd475e12b1210b7241ef251d7d89f47158aeb4e5183"
+    },
+    {
+      "path": "loop-prototype/render.py",
+      "bytes": 9717,
+      "sha256": "b5b6ec14136f15cc8d6e40915c75b13d8112da4811c4a71bcb1a93e76d68d9e3"
+    },
+    {
+      "path": "loop-prototype/requirements.txt",
+      "bytes": 61,
+      "sha256": "f584884efd3492eb579ef5f60e17a718712441d357738f6d0a0febd008d1f814"
+    },
+    {
+      "path": "loop-prototype/validation.json",
+      "bytes": 1347,
+      "sha256": "d0f3a69fb085b8a77c02c3fd21c67bae4b9d4cd19f25bcc4d6491833f5c86ec2"
+    },
+    {
+      "path": "scene-manifest.json",
+      "bytes": 6114,
+      "sha256": "46f6014fe6c22dca28f35edf6eefe48e1bc7be24320d85a9712477458febac82"
+    },
+    {
+      "path": "scenes/01-cats-and-cauldron.png",
+      "bytes": 2338231,
+      "sha256": "e7cd33eaf33b3b5c9dd20d55d44d9adaa18a1b6865f465af42f65bbf4c72be0d"
+    },
+    {
+      "path": "scenes/02-witch-tea.png",
+      "bytes": 2420714,
+      "sha256": "e2836504fe892aa43b17d7aca398f9ede47fa7dc0abbe22a6cfc3456eea59277"
+    },
+    {
+      "path": "scenes/03-skeleton-gardener.png",
+      "bytes": 2343440,
+      "sha256": "5de583c1738360d65479670107a445ef67c003eea9ba713902f27d5c6b74cd7e"
+    },
+    {
+      "path": "scenes/04-ghost-ferryman.png",
+      "bytes": 1991783,
+      "sha256": "079650a75edf67d7ea69163341f9cae07660fd14d65221e9e133904e45df1752"
+    },
+    {
+      "path": "scenes/05-raven-archives.png",
+      "bytes": 2403766,
+      "sha256": "6066a706dd5cd0a817e941f133a1a72a12c875d7516b9ae8d8d1e486503d4eb5"
+    },
+    {
+      "path": "scenes/06-toad-alchemist.png",
+      "bytes": 2124987,
+      "sha256": "25f806e859556311ea5feed0da722404ade1859e2799f0c479431901f44c05ae"
+    },
+    {
+      "path": "scenes/07-fox-lantern-road.png",
+      "bytes": 2304511,
+      "sha256": "60a7b308a2c9669de47529eee32d265f6810da9c4f37901ed04cec79ed968bd8"
+    },
+    {
+      "path": "scenes/08-mouse-bellkeeper.png",
+      "bytes": 2459915,
+      "sha256": "4c9feecba7179c3594f9c378fda9e4e139bed3dbf1c63a5400eb97058d413b46"
+    },
+    {
+      "path": "scenes/09-moth-collector.png",
+      "bytes": 2257330,
+      "sha256": "4a97aa5829ec73346e6915e2d2cb5facb45acef1c12b4c26b68dc11902d0de36"
+    },
+    {
+      "path": "scenes/10-pumpkin-watchman.png",
+      "bytes": 2256498,
+      "sha256": "d789b9bb6e3005c1357d687c69397bc3f3e6d62c8aadff9831f42e3200703f81"
+    },
+    {
+      "path": "scenes/README.md",
+      "bytes": 339,
+      "sha256": "b46fd8e0ae215188a3a5e62dd7ef597ca44c7fb1888b5cddc274bf64c8d8c00d"
+    },
+    {
+      "path": "scenes/comparison.jpg",
+      "bytes": 920651,
+      "sha256": "b8fcf264cd64d4372adb4a41fc2b1811f3d0fddbf1075e96b443c896cfc1dd7c"
+    },
+    {
+      "path": "scenes/gallery.html",
+      "bytes": 2245,
+      "sha256": "264fe3001d90579db76f0e62f44901f4ddaa771ba1e21af51835168aed4568f4"
+    },
+    {
+      "path": "scenes/prompts.json",
+      "bytes": 21414,
+      "sha256": "57bcbc970aaeb8bd8191faeb6064d30a2b7dc09f6f371ad2028be5c751b81da5"
+    }
+  ]
+}
