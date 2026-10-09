@@ -1,16 +1,5 @@
 [
   {
-    "title": "Why Light Yagami Can't Beat Frieren",
-    "url": "https://youtu.be/C5l3lyzB0IE",
-    "is_future": true,
-    "publish_at": "2026-10-09T15:00:00+00:00",
-    "date": "Oct 9, 2026 \u00b7 15:00 UTC",
-    "thumb": "images/anime/yt_C5l3lyzB0IE.jpg",
-    "kind": "short",
-    "duration": "PT56S",
-    "views": null
-  },
-  {
     "title": "Could Ayanokoji Clear the Double Dungeon?",
     "url": "https://youtu.be/lPHxjA4tOsk",
     "is_future": true,
@@ -77,6 +66,28 @@
     "views": null
   },
   {
+    "title": "Classroom of the Elite \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/srU_XnnkrLQ",
+    "is_future": false,
+    "publish_at": "2026-10-09T15:03:43+00:00",
+    "date": "Oct 9, 2026",
+    "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
+    "kind": "video",
+    "duration": "PT2M37S",
+    "views": 32
+  },
+  {
+    "title": "Why Light Yagami Can't Beat Frieren",
+    "url": "https://youtu.be/C5l3lyzB0IE",
+    "is_future": false,
+    "publish_at": "2026-10-09T15:00:00+00:00",
+    "date": "Oct 9, 2026",
+    "thumb": "https://i.ytimg.com/vi/C5l3lyzB0IE/mqdefault.jpg",
+    "kind": "short",
+    "duration": "PT56S",
+    "views": 0
+  },
+  {
     "title": "Could Light Yagami Lie to Frieren?",
     "url": "https://youtu.be/Mvz0zdho0vE",
     "is_future": false,
@@ -85,7 +96,7 @@
     "thumb": "https://i.ytimg.com/vi/Mvz0zdho0vE/mqdefault.jpg",
     "kind": "short",
     "duration": "PT48S",
-    "views": 238
+    "views": 1215
   },
   {
     "title": "Could Light Yagami lie to Frieren?",
@@ -96,7 +107,7 @@
     "thumb": "https://i.ytimg.com/vi/rPZCqvwC6JQ/mqdefault.jpg",
     "kind": "video",
     "duration": "PT12M11S",
-    "views": 29
+    "views": 31
   },
   {
     "title": "Suzune Horikita Can Expel Ayanokoji",
@@ -107,7 +118,7 @@
     "thumb": "https://i.ytimg.com/vi/qTbCBHNxv5g/mqdefault.jpg",
     "kind": "short",
     "duration": "PT49S",
-    "views": 49
+    "views": 155
   },
   {
     "title": "Who Could Expel Ayanokoji?",
@@ -118,7 +129,7 @@
     "thumb": "https://i.ytimg.com/vi/6mFagqB50z4/mqdefault.jpg",
     "kind": "short",
     "duration": "PT52S",
-    "views": 146
+    "views": 147
   },
   {
     "title": "Which Student Could Actually Expel Ayanokoji?",
@@ -129,7 +140,7 @@
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "kind": "video",
     "duration": "PT14M25S",
-    "views": 848
+    "views": 862
   },
   {
     "title": "L's Final Trap for Kafka Hibino",
@@ -338,7 +349,7 @@
     "thumb": "https://i.ytimg.com/vi/oNDG7gKxo9Q/mqdefault.jpg",
     "kind": "video",
     "duration": "PT23M29S",
-    "views": 151
+    "views": 152
   },
   {
     "title": "Could Ayanokoji Outsmart Johan Liebert?",
@@ -437,7 +448,7 @@
     "thumb": "https://i.ytimg.com/vi/VVwjFvsakZI/mqdefault.jpg",
     "kind": "video",
     "duration": "PT22M21S",
-    "views": 397
+    "views": 398
   },
   {
     "title": "When Ayanokoji directed ANHS, he began his ultimate experiment.",
@@ -493,27 +504,5 @@
     "kind": "video",
     "duration": "PT7M42S",
     "views": 456
-  },
-  {
-    "title": "Shinkai timelines are inconsistent",
-    "url": "https://youtu.be/F57_xxxd1WU",
-    "is_future": false,
-    "publish_at": "2025-12-14T08:00:26+00:00",
-    "date": "Dec 14, 2025",
-    "thumb": "https://i.ytimg.com/vi/F57_xxxd1WU/mqdefault.jpg",
-    "kind": "video",
-    "duration": "PT41S",
-    "views": 20
-  },
-  {
-    "title": "The Secret Recipe of Shinkaiverse",
-    "url": "https://youtu.be/sPBPkxj49Mc",
-    "is_future": false,
-    "publish_at": "2025-12-12T13:02:01+00:00",
-    "date": "Dec 12, 2025",
-    "thumb": "https://i.ytimg.com/vi/sPBPkxj49Mc/mqdefault.jpg",
-    "kind": "video",
-    "duration": "PT1M26S",
-    "views": 796
   }
 ]
