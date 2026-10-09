@@ -1,0 +1,97 @@
+{
+ "title": "spooky lo-fi study beats in a witch's library, rain on the w",
+ "idea": "spooky lo-fi study beats in a witch's library, rain on the window, 90s tape",
+ "profile": "lofi",
+ "seed": 1,
+ "key": {
+  "tonic": "D",
+  "mode": "minor"
+ },
+ "bpm": 80,
+ "seconds": 60.0,
+ "layers": [
+  {
+   "id": "lofi_drums_synth",
+   "tool": "native.lofi_drums_synth",
+   "src": "native.lofi_drums_synth",
+   "args": {},
+   "db": -22,
+   "role": "rhythm",
+   "fx": [
+    {
+     "engine": "tame",
+     "preset": "Drum bus tame"
+    }
+   ],
+   "space": {
+    "reverb_scale": 0.3,
+    "no_delay": true
+   }
+  },
+  {
+   "id": "lofi_keys",
+   "tool": "native.lofi_keys",
+   "src": "native.lofi_keys",
+   "args": {},
+   "db": -24,
+   "role": "harmony"
+  },
+  {
+   "id": "lofi_bass",
+   "tool": "native.lofi_bass",
+   "src": "native.lofi_bass",
+   "args": {},
+   "db": -27,
+   "role": "bass"
+  },
+  {
+   "id": "melody_piano",
+   "tool": "native.melody.piano",
+   "src": "native.melody",
+   "args": {
+    "inst": "piano"
+   },
+   "db": -29,
+   "role": "melody"
+  },
+  {
+   "id": "vinyl",
+   "tool": "native.vinyl",
+   "src": "native.vinyl",
+   "args": {},
+   "db": -38,
+   "role": "texture"
+  },
+  {
+   "id": "rain",
+   "tool": "native.rain",
+   "src": "native.rain",
+   "args": {},
+   "db": -30,
+   "role": "environment"
+  }
+ ],
+ "space": {
+  "engine": "drift",
+  "preset": "Cathedral wash",
+  "amount": 0.35
+ },
+ "color": [
+  {
+   "engine": "era",
+   "year": 1990,
+   "authenticity": 0.35
+  },
+  {
+   "native": "tape_wow"
+  }
+ ],
+ "master": [
+  {
+   "engine": "tame",
+   "preset": "Master smooth"
+  }
+ ],
+ "loudness_lufs": -16,
+ "true_peak_db": -1.5
+}
