@@ -1,0 +1,24 @@
+Between Quiet Hours — 30-second Timeless Ambience / Dronemill sample
+
+Composition: Songygen's publicly served Sketch engine 1.0, evaluated locally.
+Source: https://songygen.com/assets/slots-CsJJr7qu.js
+Theory: https://songygen.com/assets/theory-Cdt1ESyQ.js
+Source retrieval date: 2026-10-09
+Seed: 10092026. Style: cinematic. Key: D minor. Tempo: 32 BPM.
+Density: 0.16. Surprise: 0.20. Four bars in 4/4.
+
+The generated Dm / Bb / Gm / C progression was retained, with close pad voicings.
+One generated melody note per bar was retained, lowered an octave, lengthened,
+and placed with generous silence. Generated drums and bass were removed.
+A sustained D2 / A2 drone was added.
+
+Rendering: custom local additive synthesis with softly detuned oscillators,
+gentle harmonic partials, slow envelopes, and a seeded stereo room response.
+No Songygen instrument samples or hosted generation API were used.
+The WAV is the custom render, rather than an audio export from Songygen's UI.
+Master: 48 kHz stereo, 24-bit WAV, approximately -23 LUFS.
+Listening copy: 256 kbps MP3.
+
+The MIDI contains the edited notes on separate pad, melody and drone tracks.
+Its General MIDI instruments are suggestions; timbre and reverb will vary
+with the instrument used to play it. Use the WAV to hear the intended result.

@@ -1,0 +1,13 @@
+{
+  "ambient_layers.py": {
+    "original_sha256": "e34e766a05d21e697821979cdcd67857e0abf426cea5e81262f3b6c8d2bf8f39",
+    "source": "scripts/ambient_layers.py",
+    "snapshot_date": "2026-10-09"
+  },
+  "ai_hybrid_sound_conductor.py": {
+    "original_sha256": "e4acd990f46428901c1d6b57b4505f370a425884a23f166910181c49a520f86d",
+    "source": "scripts/ai_hybrid_sound_conductor.py",
+    "snapshot_date": "2026-10-09",
+    "portability_edit": "Resolve ROOT next to snapshot and use ignored .cache for temporary files."
+  }
+}
