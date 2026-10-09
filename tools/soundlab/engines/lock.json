@@ -1,0 +1,26 @@
+{
+  "drift": {
+    "url": "https://songygen.com/engine/drift.wasm",
+    "sha256": "e51b5ca889ae9eff3a448c819c86dc71a5e9d0579a07c9540917149fd2203080",
+    "bytes": 103515,
+    "retrieved": "2026-10-09"
+  },
+  "motion": {
+    "url": "https://songygen.com/engine/motion.wasm",
+    "sha256": "f94979152e4630eeb2e1057f11b2ddd701c39413507661350e603b8b1a1eb0c9",
+    "bytes": 134786,
+    "retrieved": "2026-10-09"
+  },
+  "era": {
+    "url": "https://songygen.com/engine/era.wasm",
+    "sha256": "8a0a8fcde6fe55b0e0ae76b92bdac5e7299758eb9cb840b250fe97117e8fbe8c",
+    "bytes": 155644,
+    "retrieved": "2026-10-09"
+  },
+  "tame": {
+    "url": "https://songygen.com/engine/tame.wasm",
+    "sha256": "97c7fd65226f45c1d16dbfcb1b47998c0ee5dee1bf3988835491b8f83eb8f043",
+    "bytes": 138270,
+    "retrieved": "2026-10-09"
+  }
+}

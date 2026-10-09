@@ -1,0 +1,147 @@
+{
+ "schema": "songygen-drumkits/1",
+ "kits": [
+  {
+   "id": "drs-studio",
+   "name": "Studio Kit",
+   "description": "Handmade Danish DRS kit with Paiste 602 cymbals, close mics, overheads and room: a natural, open kit for pop, rock, funk, soul and jazz.",
+   "genres": [
+    "pop",
+    "rock",
+    "funk",
+    "soul",
+    "jazz",
+    "indie",
+    "hip-hop breaks"
+   ],
+   "license": "CC-BY-4.0",
+   "path": "drs-studio/index.json",
+   "files": 126,
+   "bytes": 4717856
+  },
+  {
+   "id": "crocell-metal",
+   "name": "Metal Kit",
+   "description": "The kit of Danish metal band Crocell, sampled in the studio with the band's own mics: tight double kick (left and right pedals), cutting snare, two chinas, splash, two crashes, ride and bell.",
+   "genres": [
+    "metal",
+    "hard rock",
+    "punk",
+    "rock",
+    "metalcore",
+    "djent"
+   ],
+   "license": "CC-BY-4.0",
+   "path": "crocell-metal/index.json",
+   "files": 165,
+   "bytes": 6758664
+  },
+  {
+   "id": "bigrusty-vintage",
+   "name": "Vintage Kit",
+   "description": "A vintage Polish kit by drum maker Zygmunt Szpaderski: big 24\" kick, deep snare, four huge toms, rusty crash, ride and china. Warm and loose, for 60s/70s rock, soul, blues and garage.",
+   "genres": [
+    "60s",
+    "70s",
+    "classic rock",
+    "soul",
+    "blues",
+    "garage",
+    "indie",
+    "doom"
+   ],
+   "license": "CC0-1.0",
+   "path": "bigrusty-vintage/index.json",
+   "files": 140,
+   "bytes": 5595487
+  },
+  {
+   "id": "bigrusty-brushes",
+   "name": "Brushes Kit",
+   "description": "The Big Rusty kit played with brushes: taps, slaps, a swirl, brushed hi-hat, toms and cymbals. For jazz, ballads, swing, bossa and quiet folk.",
+   "genres": [
+    "jazz",
+    "swing",
+    "ballad",
+    "bossa nova",
+    "folk",
+    "lounge"
+   ],
+   "license": "CC0-1.0",
+   "path": "bigrusty-brushes/index.json",
+   "files": 93,
+   "bytes": 3566141
+  },
+  {
+   "id": "tr8-808",
+   "name": "808",
+   "description": "TR-808 sounds recorded from a Roland TR-8: deep and long kicks, snappy snare, clap, hats, toms, congas, cowbell. For trap, hip-hop, R&B, electro and Miami bass.",
+   "genres": [
+    "trap",
+    "hip-hop",
+    "r&b",
+    "electro",
+    "miami bass",
+    "pop"
+   ],
+   "license": "CC0-1.0",
+   "path": "tr8-808/index.json",
+   "files": 19,
+   "bytes": 166752
+  },
+  {
+   "id": "tr8-909",
+   "name": "909",
+   "description": "TR-909 sounds recorded from a Roland TR-8: punchy kick, snare, clap, hats, toms, crash and ride. For house, techno, garage, trance and drum & bass layering.",
+   "genres": [
+    "house",
+    "techno",
+    "garage",
+    "trance",
+    "drum and bass",
+    "disco"
+   ],
+   "license": "CC0-1.0",
+   "path": "tr8-909/index.json",
+   "files": 16,
+   "bytes": 104712
+  },
+  {
+   "id": "rx5-80s",
+   "name": "80s Digital",
+   "description": "A Yamaha RX5 (1986) digital drum machine: the bright PCM kit sound of the 80s, gated snare, full GM percussion. For synth-pop, new wave, 80s rock and city pop.",
+   "genres": [
+    "80s",
+    "synth-pop",
+    "new wave",
+    "80s rock",
+    "city pop",
+    "freestyle"
+   ],
+   "license": "CC0-1.0",
+   "path": "rx5-80s/index.json",
+   "files": 30,
+   "bytes": 330240
+  },
+  {
+   "id": "latin-percussion",
+   "name": "Hand Percussion",
+   "description": "Congas, tumba, bongos, timbales, cowbell, agogo, shaker, cabasa, tambourine, claves, guiro, wood blocks, triangle and real hand claps. For latin, afro, salsa, funk, disco and pop layers.",
+   "genres": [
+    "latin",
+    "afro",
+    "salsa",
+    "bossa nova",
+    "funk",
+    "disco",
+    "reggaeton",
+    "pop"
+   ],
+   "license": "CC0-1.0",
+   "path": "latin-percussion/index.json",
+   "files": 147,
+   "bytes": 2532755
+  }
+ ],
+ "bytes": 23772607
+}

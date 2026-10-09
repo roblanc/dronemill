@@ -1,0 +1,22 @@
+{
+ "title": "Witch's library (Songygen lo-fi test)",
+ "idea": "spooky lo-fi in a witch's library, brushes, rain, 90s sampler colour",
+ "profile": "lofi",
+ "seed": 7,
+ "key": {"tonic": "D", "mode": "minor"},
+ "bpm": 84,
+ "seconds": 60,
+ "layers": [
+  {"id": "drums", "tool": "songy.drums.jazzrap", "src": "songy.drums", "args": {"groove": "jazzrap"}, "db": -23, "role": "rhythm", "fx": [{"engine": "tame", "preset": "Drum bus tame"}], "space": {"reverb_scale": 0.3, "no_delay": true}},
+  {"id": "keys", "tool": "songy.motion.lofi_keys", "src": "songy.motion", "args": {"voice": "lofi_keys", "brightness": 0.45}, "db": -24, "role": "harmony"},
+  {"id": "bass", "tool": "native.lofi_bass", "src": "native.lofi_bass", "args": {}, "db": -27, "role": "bass", "space": false},
+  {"id": "musicbox", "tool": "native.lofi_musicbox", "src": "native.lofi_musicbox", "args": {}, "db": -30, "role": "melody"},
+  {"id": "rain", "tool": "songy.env.rain", "src": "songy.env", "args": {"kind": "rain"}, "db": -31, "role": "environment", "space": false},
+  {"id": "vinyl", "tool": "native.vinyl", "src": "native.vinyl", "args": {}, "db": -39, "role": "texture", "space": false}
+ ],
+ "space": {"engine": "drift", "preset": "Cathedral wash", "amount": 0.35},
+ "color": [{"engine": "era", "year": 1990, "authenticity": 0.35}, {"native": "tape_wow"}],
+ "master": [{"engine": "tame", "preset": "Master smooth"}],
+ "loudness_lufs": -16,
+ "true_peak_db": -1.5
+}
