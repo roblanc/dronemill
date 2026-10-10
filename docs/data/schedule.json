@@ -1,34 +1,5 @@
 [
   {
-    "id": 103,
-    "title": "green lamps over the unwritten catalogue | archival hush | 2 hours",
-    "publish_at": "2026-10-09T20:00:00Z",
-    "release_formatted": "Friday, Oct 09, 2026 \u2014 20:00 UTC",
-    "is_future": true,
-    "privacy": "private",
-    "on_youtube": false,
-    "duration": null,
-    "views": null,
-    "thumbnail": "05_midnight_archive_compressed.jpg",
-    "tags": [
-      "ambient",
-      "cosmic horror",
-      "dark ambient",
-      "sleep ambient",
-      "study music",
-      "2 hours",
-      "analog nostalgia",
-      "retro ambient",
-      "vaporwave",
-      "night drive",
-      "1980s aesthetic"
-    ],
-    "description": "2 hours of immersive dark academia ambient.\nStep inside a midnight archive of old paper, green lamps, and distant rain.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
-    "video_id": null,
-    "youtube_url": null,
-    "short_url": null
-  },
-  {
     "id": 104,
     "title": "neon tides through the flooded arcade | liminal dream ambience | 2 hours",
     "publish_at": "2026-10-10T17:00:00Z",
@@ -93,10 +64,10 @@
     "release_formatted": "Monday, Oct 12, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
-    "on_youtube": true,
-    "duration": "PT2H1S",
-    "views": 0,
-    "thumbnail": "yt__QdSG-zm-ZY.jpg",
+    "on_youtube": false,
+    "duration": null,
+    "views": null,
+    "thumbnail": "08_arctic_radio_cabin_compressed.jpg",
     "tags": [
       "ambient",
       "cosmic horror",
@@ -111,9 +82,9 @@
       "sleep drone"
     ],
     "description": "2 hours of immersive polar night ambient.\nStep inside a small radio cabin receiving quiet signals beneath the aurora.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
-    "video_id": "_QdSG-zm-ZY",
-    "youtube_url": "https://www.youtube.com/watch?v=_QdSG-zm-ZY",
-    "short_url": "https://youtu.be/_QdSG-zm-ZY"
+    "video_id": null,
+    "youtube_url": null,
+    "short_url": null
   },
   {
     "id": 107,
@@ -122,10 +93,10 @@
     "release_formatted": "Tuesday, Oct 13, 2026 \u2014 19:00 UTC",
     "is_future": true,
     "privacy": "private",
-    "on_youtube": true,
-    "duration": "PT2H1S",
-    "views": 0,
-    "thumbnail": "yt_PwypkJr1rVw.jpg",
+    "on_youtube": false,
+    "duration": null,
+    "views": null,
+    "thumbnail": "09_flooded_crypt_compressed.jpg",
     "tags": [
       "ambient",
       "cosmic horror",
@@ -140,9 +111,9 @@
       "sleep drone"
     ],
     "description": "2 hours of immersive subterranean sacred ambient.\nStep inside a candlelit crypt where dark water reflects ancient stone arches.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
-    "video_id": "PwypkJr1rVw",
-    "youtube_url": "https://www.youtube.com/watch?v=PwypkJr1rVw",
-    "short_url": "https://youtu.be/PwypkJr1rVw"
+    "video_id": null,
+    "youtube_url": null,
+    "short_url": null
   },
   {
     "id": 108,
@@ -151,10 +122,10 @@
     "release_formatted": "Wednesday, Oct 14, 2026 \u2014 17:00 UTC",
     "is_future": true,
     "privacy": "private",
-    "on_youtube": true,
-    "duration": "PT2H1S",
-    "views": 0,
-    "thumbnail": "yt_w3Tzzs3MVxQ.jpg",
+    "on_youtube": false,
+    "duration": null,
+    "views": null,
+    "thumbnail": "10_night_ferry_lounge_compressed.jpg",
     "tags": [
       "ambient",
       "cosmic horror",
@@ -169,15 +140,15 @@
       "cosmic solitude"
     ],
     "description": "2 hours of immersive ocean transit ambient.\nStep inside an empty ferry lounge crossing black water long after midnight.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
-    "video_id": "w3Tzzs3MVxQ",
-    "youtube_url": "https://www.youtube.com/watch?v=w3Tzzs3MVxQ",
-    "short_url": "https://youtu.be/w3Tzzs3MVxQ"
+    "video_id": null,
+    "youtube_url": null,
+    "short_url": null
   },
   {
     "id": 109,
     "title": "before the continents learned their names | primordial valley ambience | 2 hours",
-    "publish_at": "2026-10-15T18:00:00Z",
-    "release_formatted": "Thursday, Oct 15, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-10-25T18:00:00Z",
+    "release_formatted": "Sunday, Oct 25, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -205,8 +176,8 @@
   {
     "id": 110,
     "title": "maps of silence in the lunar cartography room | moon base ambience | 2 hours",
-    "publish_at": "2026-10-16T18:00:00Z",
-    "release_formatted": "Friday, Oct 16, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-10-26T18:00:00Z",
+    "release_formatted": "Monday, Oct 26, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -234,8 +205,8 @@
   {
     "id": 111,
     "title": "signals below the lightless sea | deep ocean listening station | 2 hours",
-    "publish_at": "2026-10-17T18:00:00Z",
-    "release_formatted": "Saturday, Oct 17, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-10-27T18:00:00Z",
+    "release_formatted": "Tuesday, Oct 27, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -263,8 +234,8 @@
   {
     "id": 112,
     "title": "snowfall beyond the alpine winter garden | cozy glasshouse ambience | 2 hours",
-    "publish_at": "2026-10-18T18:00:00Z",
-    "release_formatted": "Sunday, Oct 18, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-10-28T18:00:00Z",
+    "release_formatted": "Wednesday, Oct 28, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -292,8 +263,8 @@
   {
     "id": 113,
     "title": "reading through the lighthouse storm | maritime library ambience | 2 hours",
-    "publish_at": "2026-10-19T18:00:00Z",
-    "release_formatted": "Monday, Oct 19, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-10-29T18:00:00Z",
+    "release_formatted": "Thursday, Oct 29, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -321,8 +292,8 @@
   {
     "id": 114,
     "title": "the abandoned tram depot on mars | red planet ambience | 2 hours",
-    "publish_at": "2026-10-20T18:00:00Z",
-    "release_formatted": "Tuesday, Oct 20, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-10-30T18:00:00Z",
+    "release_formatted": "Friday, Oct 30, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -350,8 +321,8 @@
   {
     "id": 115,
     "title": "redwood observatory under starlight | forest nocturne drone | 2 hours",
-    "publish_at": "2026-10-21T18:00:00Z",
-    "release_formatted": "Wednesday, Oct 21, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-10-31T18:00:00Z",
+    "release_formatted": "Saturday, Oct 31, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -379,8 +350,8 @@
   {
     "id": 116,
     "title": "the final screening underground | empty cinema ambience | 2 hours",
-    "publish_at": "2026-10-22T18:00:00Z",
-    "release_formatted": "Thursday, Oct 22, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-11-01T18:00:00Z",
+    "release_formatted": "Sunday, Nov 01, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -408,8 +379,8 @@
   {
     "id": 117,
     "title": "mist through the cloud forest station | rainforest research ambience | 2 hours",
-    "publish_at": "2026-10-23T18:00:00Z",
-    "release_formatted": "Friday, Oct 23, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-11-02T18:00:00Z",
+    "release_formatted": "Monday, Nov 02, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -437,8 +408,8 @@
   {
     "id": 118,
     "title": "fluorescent silence below avenue zero | subterranean waiting room | 2 hours",
-    "publish_at": "2026-10-24T18:00:00Z",
-    "release_formatted": "Saturday, Oct 24, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-11-03T18:00:00Z",
+    "release_formatted": "Tuesday, Nov 03, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -466,8 +437,8 @@
   {
     "id": 119,
     "title": "coffee break in the asteroid canteen | cozy orbital ambience | 2 hours",
-    "publish_at": "2026-10-25T18:00:00Z",
-    "release_formatted": "Sunday, Oct 25, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-11-04T18:00:00Z",
+    "release_formatted": "Wednesday, Nov 04, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -495,8 +466,8 @@
   {
     "id": 120,
     "title": "winter ink in the monastery scriptorium | medieval study ambience | 2 hours",
-    "publish_at": "2026-10-26T18:00:00Z",
-    "release_formatted": "Monday, Oct 26, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-11-05T18:00:00Z",
+    "release_formatted": "Thursday, Nov 05, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -524,8 +495,8 @@
   {
     "id": 121,
     "title": "after closing in the submerged museum | underwater liminal ambience | 2 hours",
-    "publish_at": "2026-10-27T18:00:00Z",
-    "release_formatted": "Tuesday, Oct 27, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-11-06T18:00:00Z",
+    "release_formatted": "Friday, Nov 06, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -553,8 +524,8 @@
   {
     "id": 122,
     "title": "the final cable car above the storm | mountain terminal ambience | 2 hours",
-    "publish_at": "2026-10-28T18:00:00Z",
-    "release_formatted": "Wednesday, Oct 28, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-11-07T18:00:00Z",
+    "release_formatted": "Saturday, Nov 07, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -582,8 +553,8 @@
   {
     "id": 123,
     "title": "a thousand clocks after midnight | antique workshop ambience | 2 hours",
-    "publish_at": "2026-10-29T18:00:00Z",
-    "release_formatted": "Thursday, Oct 29, 2026 \u2014 18:00 UTC",
+    "publish_at": "2026-11-08T18:00:00Z",
+    "release_formatted": "Sunday, Nov 08, 2026 \u2014 18:00 UTC",
     "is_future": true,
     "privacy": "private",
     "on_youtube": true,
@@ -609,6 +580,35 @@
     "short_url": "https://youtu.be/ia_UPfMg0Jg"
   },
   {
+    "id": 103,
+    "title": "green lamps over the unwritten catalogue | archival hush | 2 hours",
+    "publish_at": "2026-10-09T20:00:00Z",
+    "release_formatted": "Friday, Oct 09, 2026 \u2014 20:00 UTC",
+    "is_future": false,
+    "privacy": "private",
+    "on_youtube": false,
+    "duration": null,
+    "views": null,
+    "thumbnail": "05_midnight_archive_compressed.jpg",
+    "tags": [
+      "ambient",
+      "cosmic horror",
+      "dark ambient",
+      "sleep ambient",
+      "study music",
+      "2 hours",
+      "analog nostalgia",
+      "retro ambient",
+      "vaporwave",
+      "night drive",
+      "1980s aesthetic"
+    ],
+    "description": "2 hours of immersive dark academia ambient.\nStep inside a midnight archive of old paper, green lamps, and distant rain.\n\nCreated as an original Timeless Ambience soundscape for November 2026. Use it for sleep, deep work, reading, writing, or quiet nocturnal drift.\n\n#ambient #sleepmusic #studymusic #2hourambient #timelessambience",
+    "video_id": null,
+    "youtube_url": null,
+    "short_url": null
+  },
+  {
     "id": 130,
     "title": "let me sit by the gate a while",
     "publish_at": "2026-10-08T18:00:13Z",
@@ -617,7 +617,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 4,
+    "views": 47,
     "thumbnail": "yt_yMchdejzb-M.jpg",
     "tags": [
       "ambient",
@@ -646,7 +646,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 9,
+    "views": 15,
     "thumbnail": "yt_q3D3IrgRzmE.jpg",
     "tags": [
       "ambient",
@@ -675,7 +675,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 29,
+    "views": 34,
     "thumbnail": "yt_ieh2Zb13O6w.jpg",
     "tags": [
       "ambient",
@@ -762,7 +762,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 35,
+    "views": 37,
     "thumbnail": "yt_kc95YrIxYRo.jpg",
     "tags": [
       "ambient",
@@ -791,7 +791,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 90,
+    "views": 92,
     "thumbnail": "yt_0J1_K4lo6iw.jpg",
     "tags": [
       "ambient",
@@ -820,7 +820,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 69,
+    "views": 75,
     "thumbnail": "yt_2vsp1eABQro.jpg",
     "tags": [
       "ambient",
@@ -2375,7 +2375,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT2H1S",
-    "views": 61,
+    "views": 62,
     "thumbnail": "yt_RRDah-RO_Zk.jpg",
     "tags": [
       "liminal spaces",
@@ -2546,7 +2546,7 @@
     "privacy": "public",
     "on_youtube": true,
     "duration": "PT1H1S",
-    "views": 79,
+    "views": 80,
     "thumbnail": "yt_wl5LxRsbOBE.jpg",
     "tags": [
       "suburban night",
