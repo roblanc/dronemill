@@ -1,0 +1,5 @@
+{
+  "feed_url": "https://api.github.com/repos/roblanc/dronemill/contents/feed.json?ref=dashboard-feed",
+  "poll_url": "https://raw.githubusercontent.com/roblanc/dronemill/dashboard-feed/feed.json",
+  "poll_interval_ms": 60000
+}

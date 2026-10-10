@@ -316,3 +316,20 @@ Lowercase. No em dashes. Pipe `|` separator.
 - `.env`
 
 `.gitignore` enforces. Always run `git status` before push.
+
+
+## Live dashboard refresh
+
+The server refreshes both NoFaceChan and Timeless Ambience after the upload/scheduling ledgers change, including new private uploads with a future publishAt. A cheap local file check runs every three seconds and debounces changes for five seconds. There is no minute-by-minute YouTube API polling. It publishes the display data to the `dashboard-feed` branch of this same repository. The GitHub Pages frontend reads that feed directly, so schedule changes do not require rebuilding Pages. Refresh fetches the newest published feed through GitHub's Contents API; visible tabs check the raw data feed once per minute and on return. An additional YouTube check every 15 minutes catches changes made directly in Studio. Refresh loads the latest server-published feed immediately; it does not trigger a new YouTube request on the server.
+
+The page shows the feed's update time in Europe/Bucharest. If the feed is more than 30 minutes old or cannot be read, it retains the last good schedule and explicitly shows that it is saved data. The daily Pages build also updates the static fallback from YouTube.
+
+`dronemill-live.service` runs a read-only API on loopback port 8890. `dronemill-live-publisher.service` reads it and updates only the dedicated data branch, using a separate managed bare Git repository at `/home/brewuser/.local/share/dronemill-live-feed.git`. Both start at boot and restart on failure. No new public server endpoint or tunnel is used. Existing tunnels and production publishing scripts remain available.
+
+YouTube credentials stay in the existing server-side SDK configuration. Unscheduled private and unlisted uploads are excluded. The owner explicitly approved automatic public publication of upcoming titles, release times, thumbnails, links, durations and channel identity on 2026-10-10. The publisher limits its payload to display fields and excludes local plans, descriptions, tags and local paths. That authorization is required in dashboard/live-publish-consent.json before the publisher starts. Publishing uses normal fast-forward Git pushes, never overwrites another branch, and does not touch the main working tree or staged changes. The API does not modify videos or ledgers.
+
+The API shares a 55-second cache. Upload-triggered refreshes request a complete scan; the 15-minute backup check also scans the full channel. Each worker has a 45-second timeout. Failed lookups keep the last good snapshot; failed publication keeps the last good feed on GitHub. Disk snapshots are in `/var/lib/dronemill-live/`.
+
+Check `systemctl status dronemill-live dronemill-live-publisher` and `curl http://127.0.0.1:8890/health`. Unit definitions are in `deploy/`. A server-side immediate refresh can also be requested with `touch /var/lib/dronemill-live/refresh-request`. Disabling both units stops updates; the page then displays its saved feed. The daily Pages publisher uses `/run/lock/dronemill-pages.lock` to avoid overlapping deployments.
+
+Regression checks: `python3 -m unittest discover -s tests -p test_live_feed.py -v`.

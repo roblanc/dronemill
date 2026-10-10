@@ -50,6 +50,9 @@ def _youtube_times(items):
     try:
         sys.path.insert(0, f"{ROOT}/scripts")
         import youtube_schedule as ys
+        # The dashboard's configured identity belongs to brewuser, including root-run rebuilds.
+        ys.TOKEN_PATH = '/home/brewuser/.youtubeuploader/request.token'
+        ys.SECRETS_PATH = '/home/brewuser/.youtubeuploader/client_secrets.json'
         yt = ys._youtube()
         main = lambda t: re.sub(r"[^a-z0-9]", "", (t or "").split("|")[0].lower())
         ch = yt.channels().list(mine=True, part="contentDetails,snippet").execute()["items"][0]
@@ -297,6 +300,35 @@ sys.path.insert(0, f"{ROOT}/scripts")
 from anime_feed import anime_feed
 with open(f"{DOCS}/data/anime.json", "w", encoding="utf-8") as f:
     json.dump(anime_feed(images_dir=f"{DOCS}/images/anime", images_url="images/anime"), f, indent=2)
+
+# Keep the offline snapshot current for Studio-only uploads too. The live browser feed
+# does not need a Pages rebuild; these files are its fallback when the server is offline.
+import subprocess
+for channel, filename in (("anime", "anime.json"), ("dronemill", "schedule.json")):
+    try:
+        response = subprocess.run([sys.executable, f"{ROOT}/scripts/live_youtube_feed.py", channel],
+                                  capture_output=True, text=True, check=True, timeout=45)
+        latest = json.loads(response.stdout)["items"]
+        target = f"{DOCS}/data/{filename}"
+        old = json.load(open(target))
+        def item_key(item):
+            return item.get("video_id") or item.get("url", "").rsplit("/", 1)[-1] or f"plan-{item.get('id')}"
+        by_id = {item_key(i): i for i in old}
+        for item in latest:
+            previous = by_id.get(item_key(item), {})
+            # Existing local image copies remain usable if YouTube's signed image URLs expire.
+            for key in ("thumb", "short_thumb", "thumbnail", "description", "tags"):
+                if previous.get(key):
+                    item[key] = previous[key]
+            if item.get('is_future'):
+                # Do not newly disclose private Studio descriptions/tags in the public fallback.
+                if 'description' in item:
+                    item['description'] = previous.get('description','')
+                    item['tags'] = previous.get('tags',[])
+        with open(target, "w", encoding="utf-8") as f:
+            json.dump(latest, f, indent=2)
+    except (subprocess.SubprocessError, ValueError, OSError):
+        print(f"WARN: live {channel} snapshot unavailable; retaining existing dashboard data")
 
 # 3. Copy Web App Frontend assets to docs/ with cache busting
 v_tag = datetime.datetime.now().strftime("%Y%m%d%H%M%S")

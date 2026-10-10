@@ -4,6 +4,8 @@ set -e
 export HOME=/home/brewuser  # dronemill YouTube token lives there
 
 ROOT="/home/brewuser/projects/dronemill"
+exec 9>/run/lock/dronemill-pages.lock
+flock 9
 cd "$ROOT"
 # cron runs this as root on a brewuser-owned repo; without this git refuses with "dubious ownership"
 export GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=safe.directory GIT_CONFIG_VALUE_0="$ROOT"

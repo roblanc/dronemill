@@ -1,0 +1,16 @@
+[Unit]
+Description=DroneMill read-only live YouTube feeds
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/brewuser/projects/dronemill/dashboard/live_server.py
+Restart=on-failure
+RestartSec=5
+StateDirectory=dronemill-live
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

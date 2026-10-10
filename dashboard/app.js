@@ -137,13 +137,13 @@ function setupRefresh() {
         btn.style.transition = '';
       }, 400);
 
+      btns.forEach(b => { b.disabled = true; });
       try {
-        // Trigger live YouTube sync in backend if online
-        await fetch('/api/sync-youtube').catch(() => {});
-      } catch (e) {}
-
-      await loadAllData();
-      showToast('Live data & YouTube links refreshed', '🔄');
+        const result = await fetchLiveFeed(currentChannel, true);
+        showToast(result ? 'YouTube schedule refreshed' : 'YouTube unavailable — showing saved data', result ? '🔄' : '⚠️');
+      } finally {
+        btns.forEach(b => { b.disabled = false; });
+      }
     });
   });
 }
@@ -154,8 +154,10 @@ async function loadAllData() {
     fetchStatus(),
     fetchSchedule(),
     fetchPlaylists(),
-    fetchCommunityPosts()
+    fetchCommunityPosts(),
+    fetchAnime()
   ]);
+  await fetchLiveFeed(currentChannel);
 }
 
 // Fetch Status Telemetry
@@ -255,22 +257,22 @@ function renderTimeline(filter) {
 
   container.className = 'yt-feed';
   container.innerHTML = filtered.map(item => {
-    const thumbSrc = item.thumbnail ? `/media/image/${encodeURIComponent(item.thumbnail)}` : '';
+    const thumbSrc = item.thumb || (item.thumbnail ? `/media/image/${encodeURIComponent(item.thumbnail)}` : '');
     return ytCard({
       ch: 'dronemill', title: item.title, thumb: thumbSrc, duration: item.duration, views: item.views,
       ms: Date.parse(item.publish_at || ''), isFuture: item.is_future, missing: notOnYoutube(item),
       planned: (item.release_formatted || '').replace(/^\w+, /, '').replace(/ — .*/, ''),
-      attrs: `href="#" onclick="event.preventDefault(); openVideoDetail(${item.id})"`,
+      attrs: `href="#" onclick="event.preventDefault(); openVideoDetail('${escapeForJs(String(item.id))}')"`,
     });
   }).join('');
 }
 
 // Open Video Detail Modal / Bottom Sheet
 window.openVideoDetail = function(id) {
-  const item = scheduleData.find(i => i.id === id);
+  const item = scheduleData.find(i => String(i.id) === String(id));
   if (!item) return;
 
-  const thumbSrc = item.thumbnail ? `/media/image/${encodeURIComponent(item.thumbnail)}` : '';
+  const thumbSrc = item.thumb || (item.thumbnail ? `/media/image/${encodeURIComponent(item.thumbnail)}` : '');
   const badgeClass = notOnYoutube(item) ? 'missing' : item.is_future ? 'scheduled' : 'published';
   const badgeText = notOnYoutube(item) ? 'NOT ON YOUTUBE' : item.is_future ? 'SCHEDULED' : 'PUBLISHED';
   const hasYt = !!item.youtube_url;
@@ -500,6 +502,7 @@ function setupChannelSwitch() {
     document.getElementById('anime-container').hidden = !anime;
     if (anime && animeData === null) fetchAnime();
     else renderFeed();
+    fetchLiveFeed(currentChannel);
   }));
 }
 
@@ -507,6 +510,7 @@ async function fetchAnime() {
   const container = document.getElementById('anime-container');
   try {
     const res = await fetch('/api/anime');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     animeData = refreshFuture(await res.json());
     // Scheduled first (soonest on top), then published (newest on top).
     const when = i => Date.parse(i.publish_at || '') || 0;
@@ -557,6 +561,7 @@ function updateCounts() {
   const set = (id, n) => { const el = document.getElementById(id); if (el) el.textContent = n; };
   set('count-all', items.length);
   set('count-future', items.filter(i => i.is_future && !notOnYoutube(i)).length);
+  set('badge-scheduled', items.filter(i => i.is_future && !notOnYoutube(i)).length);
   set('count-published', items.filter(i => !i.is_future && !notOnYoutube(i)).length);
 }
 
@@ -645,3 +650,104 @@ function ytShortsShelf(shorts) {
 }
 
 document.addEventListener('DOMContentLoaded', setupChannelSwitch);
+
+// The GitHub Pages snapshot remains available if the live server is offline.
+const liveState = {};
+const liveRequests = {};
+let liveConfig = null;
+let liveConfigReadAt = 0;
+
+async function liveSettings(force) {
+  if (!force && liveConfig && Date.now() - liveConfigReadAt < 60000) return liveConfig;
+  const res = await fetch(`https://roblanc.github.io/dronemill/data/live-config.json?v=${Date.now()}`, {
+    cache: 'no-store', signal: AbortSignal.timeout(5000),
+  });
+  if (!res.ok) throw new Error('Live refresh is unavailable');
+  const config = await res.json();
+  if (config.feed_url !== 'https://api.github.com/repos/roblanc/dronemill/contents/feed.json?ref=dashboard-feed' ||
+      config.poll_url !== 'https://raw.githubusercontent.com/roblanc/dronemill/dashboard-feed/feed.json') throw new Error('Invalid live feed');
+  liveConfig = config;
+  liveConfigReadAt = Date.now();
+  return config;
+}
+
+function renderLiveStatus() {
+  const el = document.getElementById('live-refresh-status');
+  if (!el) return;
+  const state = liveState[currentChannel];
+  if (!state) { el.textContent = 'Saved schedule · checking YouTube…'; return; }
+  if (state.loading) { el.textContent = 'Checking YouTube…'; return; }
+  if (state.stale) { el.textContent = 'Live connection unavailable · showing last saved schedule'; return; }
+  const time = new Date(state.updated_at).toLocaleTimeString('en-GB', {
+    hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/Bucharest',
+  });
+  el.textContent = `YouTube · updated ${time} Bucharest · updates after uploads`;
+}
+
+let publishedFeed = null;
+let publishedFeedReadAt = 0;
+let publishedFeedRequest = null;
+
+async function readPublishedFeed(force) {
+  if (!force && publishedFeed && Date.now() - publishedFeedReadAt < 55000) return publishedFeed;
+  if (publishedFeedRequest) return publishedFeedRequest;
+  publishedFeedRequest = (async () => {
+    const config = await liveSettings(force);
+    const url = force ? `${config.feed_url}&t=${Date.now()}` : `${config.poll_url}?t=${Date.now()}`;
+    const res = await fetch(url, {
+      cache: 'no-store', signal: AbortSignal.timeout(15000),
+      headers: force ? { Accept: 'application/vnd.github.raw+json' } : {},
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if (!data.channels?.anime || !data.channels?.dronemill) throw new Error('Invalid live feed');
+    publishedFeed = data;
+    publishedFeedReadAt = Date.now();
+    return data;
+  })();
+  try { return await publishedFeedRequest; }
+  finally { publishedFeedRequest = null; }
+}
+
+async function fetchLiveFeed(channel, force = false) {
+  if (liveRequests[channel]) return liveRequests[channel];
+  liveRequests[channel] = (async () => {
+    liveState[channel] = { ...liveState[channel], loading: true };
+    renderLiveStatus();
+    try {
+      const data = (await readPublishedFeed(force)).channels[channel];
+      if (!Array.isArray(data.items) || data.channel !== channel) throw new Error('Invalid live feed');
+      const items = refreshFuture(data.items);
+      if (channel === 'anime') animeData = items;
+      else {
+        const actual = new Set(items.map(i => i.video_id));
+        const plans = scheduleData.filter(i => notOnYoutube(i) && !actual.has(i.video_id));
+        const previous = new Map(scheduleData.map(i => [i.video_id, i]));
+        scheduleData = items.map(i => ({ ...previous.get(i.video_id), ...i })).concat(plans);
+      }
+      if (data.avatar) CHANNEL_INFO[channel].avatar = data.avatar;
+      const stale = !!data.stale || Date.now() - Date.parse(data.updated_at) > 1800000;
+      liveState[channel] = { updated_at: data.updated_at, stale };
+      if (channel === currentChannel) renderFeed();
+      return !stale;
+    } catch (err) {
+      liveState[channel] = { ...liveState[channel], loading: false, stale: true };
+      console.warn('Live schedule unavailable; preserving saved schedule');
+      return false;
+    } finally {
+      delete liveRequests[channel];
+      renderLiveStatus();
+    }
+  })();
+  return liveRequests[channel];
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setInterval(() => {
+    if (!document.hidden) fetchLiveFeed(currentChannel);
+  }, 60000);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) fetchLiveFeed(currentChannel);
+  });
+  window.addEventListener('focus', () => fetchLiveFeed(currentChannel));
+});

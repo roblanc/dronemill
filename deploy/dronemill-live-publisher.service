@@ -1,0 +1,13 @@
+[Unit]
+Description=DroneMill upload-triggered YouTube feed publisher to existing GitHub dashboard
+After=network-online.target dronemill-live.service
+Wants=network-online.target dronemill-live.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/brewuser/projects/dronemill/scripts/publish-live-feed.py
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
