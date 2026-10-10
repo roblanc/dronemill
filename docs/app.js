@@ -506,7 +506,7 @@ function setupChannelSwitch() {
 async function fetchAnime() {
   const container = document.getElementById('anime-container');
   try {
-    const res = await fetch('data/anime.json?v=20261010070013');
+    const res = await fetch('data/anime.json?v=20261010085256');
     animeData = refreshFuture(await res.json());
     // Scheduled first (soonest on top), then published (newest on top).
     const when = i => Date.parse(i.publish_at || '') || 0;
