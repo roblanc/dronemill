@@ -84,6 +84,18 @@
     "on_youtube": true
   },
   {
+    "title": "Chainsaw Man \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/miwzDV5COkU",
+    "publish_at": "2026-10-11T06:52:08Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/miwzDV5COkU/mqdefault.jpg",
+    "duration": "PT2M28S",
+    "views": 2,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
     "title": "Ayanokoji vs the Double Dungeon",
     "url": "https://youtu.be/9l-tZ4PGUfg",
     "publish_at": "2026-10-10T15:00:21Z",
@@ -91,7 +103,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/9l-tZ4PGUfg/mqdefault.jpg",
     "duration": "PT49S",
-    "views": 48,
+    "views": 59,
     "kind": "short",
     "on_youtube": true
   },
@@ -103,7 +115,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/lPHxjA4tOsk/mqdefault.jpg",
     "duration": "PT13M24S",
-    "views": 128,
+    "views": 150,
     "kind": "video",
     "on_youtube": true
   },
@@ -115,7 +127,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/C5l3lyzB0IE/mqdefault.jpg",
     "duration": "PT56S",
-    "views": 79,
+    "views": 81,
     "kind": "short",
     "on_youtube": true
   },
@@ -127,7 +139,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
     "duration": "PT2M37S",
-    "views": 160,
+    "views": 161,
     "kind": "video",
     "on_youtube": true
   },
@@ -187,7 +199,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "duration": "PT14M25S",
-    "views": 882,
+    "views": 883,
     "kind": "video",
     "on_youtube": true
   },
@@ -523,7 +535,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/9DRm7SfN9QY/mqdefault.jpg",
     "duration": "PT25M17S",
-    "views": 690,
+    "views": 691,
     "kind": "video",
     "on_youtube": true
   },
@@ -548,18 +560,6 @@
     "thumb": "https://i.ytimg.com/vi/VniPQV40m1M/mqdefault.jpg",
     "duration": "PT24M6S",
     "views": 79,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "What if Ayanokoji found the Death Note?",
-    "url": "https://youtu.be/VVwjFvsakZI",
-    "publish_at": "2026-05-24T22:19:26Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/VVwjFvsakZI/mqdefault.jpg",
-    "duration": "PT22M21S",
-    "views": 400,
     "kind": "video",
     "on_youtube": true
   }
