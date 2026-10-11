@@ -1,32 +1,8 @@
 [
   {
-    "title": "Ayanokoji vs the Double Dungeon",
-    "url": "https://youtu.be/9l-tZ4PGUfg",
-    "publish_at": "2026-10-10T15:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_9l-tZ4PGUfg.jpg",
-    "duration": "PT49S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
-    "title": "Why Ayanokoji Cannot Clear the Double Dungeon",
-    "url": "https://youtu.be/ZHoCc8IBHAc",
-    "publish_at": "2026-10-11T15:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_ZHoCc8IBHAc.jpg",
-    "duration": "PT47S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
     "title": "Kenjaku vs Ayanokoji Isn't Even Close",
     "url": "https://youtu.be/6Mc8KI40LLE",
-    "publish_at": "2026-10-11T21:00:00Z",
+    "publish_at": "2026-10-12T21:00:00Z",
     "is_future": true,
     "privacy": "private",
     "thumb": "images/anime/kenjaku-vs-ayanokoji-isn-t-even-thumb1.jpg",
@@ -38,7 +14,7 @@
   {
     "title": "How Kenjaku Beat Gojo Without Ever Outfighting Him",
     "url": "https://youtu.be/uHlMTq_E00g",
-    "publish_at": "2026-10-12T15:00:00Z",
+    "publish_at": "2026-10-14T15:00:00Z",
     "is_future": true,
     "privacy": "private",
     "thumb": "images/anime/yt_uHlMTq_E00g.jpg",
@@ -50,7 +26,7 @@
   {
     "title": "Kenjaku vs Ayanokoji: Who's the Greater Schemer?",
     "url": "https://youtu.be/IkyJMLW1dMQ",
-    "publish_at": "2026-10-13T15:00:00Z",
+    "publish_at": "2026-10-16T15:00:00Z",
     "is_future": true,
     "privacy": "private",
     "thumb": "images/anime/yt_IkyJMLW1dMQ.jpg",
@@ -62,7 +38,7 @@
   {
     "title": "Everyone Who Could Catch Kira",
     "url": "https://youtu.be/Wxey4muEgpY",
-    "publish_at": "2026-10-13T21:00:00Z",
+    "publish_at": "2026-10-16T21:00:00Z",
     "is_future": true,
     "privacy": "private",
     "thumb": "images/anime/everyone-who-catch-kira-thumb1.jpg",
@@ -74,7 +50,7 @@
   {
     "title": "Why Catching Light Yagami Isn't Just a Genius Test for L",
     "url": "https://youtu.be/jyD4hhmTUaQ",
-    "publish_at": "2026-10-14T15:00:00Z",
+    "publish_at": "2026-10-18T15:00:00Z",
     "is_future": true,
     "privacy": "private",
     "thumb": "images/anime/yt_jyD4hhmTUaQ.jpg",
@@ -86,7 +62,7 @@
   {
     "title": "L, Frieren, Maomao or Aqua: Who Really Catches Kira?",
     "url": "https://youtu.be/cUhKbiM52ZU",
-    "publish_at": "2026-10-15T15:00:00Z",
+    "publish_at": "2026-10-20T15:00:00Z",
     "is_future": true,
     "privacy": "private",
     "thumb": "images/anime/yt_cUhKbiM52ZU.jpg",
@@ -96,15 +72,27 @@
     "on_youtube": true
   },
   {
-    "title": "Chainsaw Man \u2013 But It's 1970s Anime!",
-    "url": "https://youtu.be/wTaWjyT4m_s",
-    "publish_at": "2026-10-15T21:00:00Z",
+    "title": "Why Ayanokoji Cannot Clear the Double Dungeon",
+    "url": "https://youtu.be/ZHoCc8IBHAc",
+    "publish_at": "2026-10-22T15:00:00Z",
     "is_future": true,
     "privacy": "private",
-    "thumb": "images/anime/chainsaw-man-1970s-thumb1.jpg",
-    "duration": "PT2M28S",
+    "thumb": "images/anime/yt_ZHoCc8IBHAc.jpg",
+    "duration": "PT47S",
     "views": null,
-    "kind": "video",
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
+    "title": "Ayanokoji vs the Double Dungeon",
+    "url": "https://youtu.be/9l-tZ4PGUfg",
+    "publish_at": "2026-10-10T15:00:21Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/9l-tZ4PGUfg/mqdefault.jpg",
+    "duration": "PT49S",
+    "views": 48,
+    "kind": "short",
     "on_youtube": true
   },
   {
@@ -115,7 +103,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/lPHxjA4tOsk/mqdefault.jpg",
     "duration": "PT13M24S",
-    "views": 7,
+    "views": 128,
     "kind": "video",
     "on_youtube": true
   },
@@ -127,7 +115,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/C5l3lyzB0IE/mqdefault.jpg",
     "duration": "PT56S",
-    "views": 61,
+    "views": 79,
     "kind": "short",
     "on_youtube": true
   },
@@ -139,7 +127,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
     "duration": "PT2M37S",
-    "views": 130,
+    "views": 160,
     "kind": "video",
     "on_youtube": true
   },
@@ -151,7 +139,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Mvz0zdho0vE/mqdefault.jpg",
     "duration": "PT48S",
-    "views": 1244,
+    "views": 1255,
     "kind": "short",
     "on_youtube": true
   },
@@ -163,7 +151,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/rPZCqvwC6JQ/mqdefault.jpg",
     "duration": "PT12M11S",
-    "views": 58,
+    "views": 87,
     "kind": "video",
     "on_youtube": true
   },
@@ -175,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/qTbCBHNxv5g/mqdefault.jpg",
     "duration": "PT49S",
-    "views": 203,
+    "views": 204,
     "kind": "short",
     "on_youtube": true
   },
@@ -187,7 +175,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6mFagqB50z4/mqdefault.jpg",
     "duration": "PT52S",
-    "views": 147,
+    "views": 149,
     "kind": "short",
     "on_youtube": true
   },
@@ -199,7 +187,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "duration": "PT14M25S",
-    "views": 876,
+    "views": 882,
     "kind": "video",
     "on_youtube": true
   },
@@ -259,7 +247,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/dzA0efpqSYc/mqdefault.jpg",
     "duration": "PT8M22S",
-    "views": 154,
+    "views": 155,
     "kind": "video",
     "on_youtube": true
   },
@@ -307,7 +295,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-YdAjPqqYVI/mqdefault.jpg",
     "duration": "PT24M43S",
-    "views": 39,
+    "views": 40,
     "kind": "video",
     "on_youtube": true
   },
@@ -572,18 +560,6 @@
     "thumb": "https://i.ytimg.com/vi/VVwjFvsakZI/mqdefault.jpg",
     "duration": "PT22M21S",
     "views": 400,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "When Ayanokoji directed ANHS, he began his ultimate experiment.",
-    "url": "https://youtu.be/1bqx0fG2e8s",
-    "publish_at": "2026-05-23T21:35:07Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/1bqx0fG2e8s/mqdefault.jpg",
-    "duration": "PT24M41S",
-    "views": 171,
     "kind": "video",
     "on_youtube": true
   }
