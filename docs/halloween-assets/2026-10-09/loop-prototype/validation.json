@@ -1,0 +1,55 @@
+{
+  "master": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "24/1",
+        "nb_frames": "576"
+      }
+    ],
+    "format": {
+      "duration": "24.000000",
+      "size": "24026805"
+    }
+  },
+  "source": {
+    "width": 1920,
+    "height": 1080,
+    "duration": 24,
+    "fps": 24,
+    "frames": 576,
+    "silent": true,
+    "repetitions_for_two_hours": 300,
+    "exact_endpoint": true,
+    "seam_mean_pixel_difference": 0.10983056841563786,
+    "first_step_mean_pixel_difference": 0.1094703253600823,
+    "effects": [
+      "breathing",
+      "head tilt",
+      "blinks",
+      "lantern swing",
+      "candlelight",
+      "moving cloud wisps",
+      "layered drifting ground mist",
+      "falling autumn leaves",
+      "moon shading"
+    ]
+  },
+  "encoded_seam_mean_pixel_difference": 1.5571354627609253,
+  "encoded_ordinary_keyframe_mean_pixel_difference": 1.3859469890594482,
+  "encoded_first_step_mean_pixel_difference": 0.10637795925140381,
+  "encoded_last_step_mean_pixel_difference": 0.09764210134744644,
+  "preview": {
+    "width": 1280,
+    "height": 720,
+    "frames": 1152,
+    "duration_seconds": 48.0,
+    "silent": true
+  },
+  "finishing_helper_two_cycle_test_passed": true
+}

@@ -4,6 +4,9 @@ Four 30-second listening previews were created for Timeless Ambience / DroneMill
 The latest comparison is **Lanterns Beyond the Grave**, first using the installed
 DroneMill procedural engine, then with Songygen effect processing.
 
+For the new illustrated Halloween scenes, generation prompts and visual loop
+prototype, start with the [rendering and audio handoff](../../halloween-assets/2026-10-09/README.md).
+
 | Preview | Composition and rendering | Files |
 | --- | --- | --- |
 | Between Quiet Hours | Songygen's public rule-based Sketch engine evaluated locally; edited D-minor notes rendered with custom ambient synthesis | [MP3](between-quiet-hours.mp3), [MIDI](between-quiet-hours.mid), [notes](between-quiet-hours-notes.txt) |
