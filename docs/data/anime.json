@@ -24,6 +24,18 @@
     "on_youtube": true
   },
   {
+    "title": "Dandadan \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/JIng_MHFc3A",
+    "publish_at": "2026-10-14T21:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "https://i9.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg?sqp=CPCKstYG&rs=AOn4CLAXM5r7skrhGrngc01VdNaz3S15Bw",
+    "duration": "PT2M9S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
     "title": "Kenjaku vs Ayanokoji: Who's the Greater Schemer?",
     "url": "https://youtu.be/IkyJMLW1dMQ",
     "publish_at": "2026-10-16T15:00:00Z",
@@ -84,24 +96,12 @@
     "on_youtube": true
   },
   {
-    "title": "Dandadan \u2013 But It's 1970s Anime!",
-    "url": "https://youtu.be/JIng_MHFc3A",
-    "publish_at": "2026-10-22T21:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "https://i9.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg?sqp=CMC2sdYG&rs=AOn4CLB0pPkny5L9O0kkE7W5Z_1Vrx8vYg",
-    "duration": "PT2M9S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "Why L Could Never Prove Light Was Kira",
     "url": "https://youtu.be/Y4nH0oJsV54",
     "publish_at": "2026-10-24T15:00:00Z",
     "is_future": true,
     "privacy": "private",
-    "thumb": "https://i9.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg?sqp=CMC2sdYG&rs=AOn4CLAMIOvSwVXZ5xh3Sw0gSKSP4EkJwQ",
+    "thumb": "https://i9.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg?sqp=CPCKstYG&rs=AOn4CLC2VNRY9gOFgeGn1p-l2yyCOsxyuA",
     "duration": "PT1M1S",
     "views": null,
     "kind": "short",
@@ -115,7 +115,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/miwzDV5COkU/mqdefault.jpg",
     "duration": "PT2M28S",
-    "views": 36,
+    "views": 42,
     "kind": "video",
     "on_youtube": true
   },
@@ -127,7 +127,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/9l-tZ4PGUfg/mqdefault.jpg",
     "duration": "PT49S",
-    "views": 104,
+    "views": 107,
     "kind": "short",
     "on_youtube": true
   },
@@ -139,7 +139,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/lPHxjA4tOsk/mqdefault.jpg",
     "duration": "PT13M24S",
-    "views": 445,
+    "views": 559,
     "kind": "video",
     "on_youtube": true
   },
@@ -211,7 +211,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6mFagqB50z4/mqdefault.jpg",
     "duration": "PT52S",
-    "views": 150,
+    "views": 151,
     "kind": "short",
     "on_youtube": true
   },
@@ -235,7 +235,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/WZeQwmFFeSk/mqdefault.jpg",
     "duration": "PT54S",
-    "views": 16,
+    "views": 17,
     "kind": "short",
     "on_youtube": true
   },
