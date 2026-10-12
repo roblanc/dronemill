@@ -1,12 +1,12 @@
 {
-  "server_time_utc": "2026-10-11 07:00:06 UTC",
+  "server_time_utc": "2026-10-12 04:00:25 UTC",
   "total_disk_gb": 37.2,
   "used_disk_gb": 23.9,
   "free_disk_gb": 11.8,
   "disk_percent": 64.1,
   "total_uploads": 130,
-  "future_scheduled_count": 19,
-  "next_release": "the mountain control room above the clouds | analog focus drone | 2 hours (Oct 11, 20:00 UTC)",
+  "future_scheduled_count": 18,
+  "next_release": "aurora signals from the arctic radio cabin | polar night ambience | 2 hours (Oct 12, 18:00 UTC)",
   "master_lufs": -22.0,
   "audio_engine": "AI Hybrid 5-Engine Conductor (Active)"
 }
