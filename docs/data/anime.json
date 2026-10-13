@@ -17,7 +17,7 @@
     "publish_at": "2026-10-14T21:00:00Z",
     "is_future": true,
     "privacy": "private",
-    "thumb": "https://i9.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg?sqp=CMDZttYG&rs=AOn4CLBrtZMGOgf4yDf0xGVd1o7Storgpw",
+    "thumb": "https://i9.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg?sqp=CPCtt9YG&rs=AOn4CLAMs4f1qBpwVKOQmgkCnWbFdvn1Fg",
     "duration": "PT2M9S",
     "views": null,
     "kind": "video",
@@ -113,7 +113,7 @@
     "publish_at": "2026-10-24T15:00:00Z",
     "is_future": true,
     "privacy": "private",
-    "thumb": "https://i9.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg?sqp=CMDZttYG&rs=AOn4CLAGbvPJO4PqiP3lW6RsU643UoukSQ",
+    "thumb": "https://i9.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg?sqp=CPCtt9YG&rs=AOn4CLBldQt5JGfN7y4xgTnyzAKdKkOL2A",
     "duration": "PT1M1S",
     "views": null,
     "kind": "short",
@@ -151,7 +151,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/miwzDV5COkU/mqdefault.jpg",
     "duration": "PT2M28S",
-    "views": 77,
+    "views": 79,
     "kind": "video",
     "on_youtube": true
   },
@@ -175,7 +175,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/lPHxjA4tOsk/mqdefault.jpg",
     "duration": "PT13M24S",
-    "views": 848,
+    "views": 849,
     "kind": "video",
     "on_youtube": true
   },
@@ -187,7 +187,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/C5l3lyzB0IE/mqdefault.jpg",
     "duration": "PT56S",
-    "views": 98,
+    "views": 97,
     "kind": "short",
     "on_youtube": true
   },
@@ -511,7 +511,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/HmdxCN-H3Do/mqdefault.jpg",
     "duration": "PT27M17S",
-    "views": 1767,
+    "views": 1768,
     "kind": "video",
     "on_youtube": true
   },
