@@ -1,17 +1,5 @@
 [
   {
-    "title": "Kenjaku vs Ayanokoji Isn't Even Close",
-    "url": "https://youtu.be/6Mc8KI40LLE",
-    "publish_at": "2026-10-12T21:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
-    "duration": "PT14M4S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "How Kenjaku Beat Gojo Without Ever Outfighting Him",
     "url": "https://youtu.be/uHlMTq_E00g",
     "publish_at": "2026-10-14T15:00:00Z",
@@ -29,7 +17,7 @@
     "publish_at": "2026-10-14T21:00:00Z",
     "is_future": true,
     "privacy": "private",
-    "thumb": "https://i9.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg?sqp=CPCKstYG&rs=AOn4CLAXM5r7skrhGrngc01VdNaz3S15Bw",
+    "thumb": "https://i9.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg?sqp=CMDZttYG&rs=AOn4CLBrtZMGOgf4yDf0xGVd1o7Storgpw",
     "duration": "PT2M9S",
     "views": null,
     "kind": "video",
@@ -72,6 +60,18 @@
     "on_youtube": true
   },
   {
+    "title": "Death Note \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/-vQuvAeoI1Y",
+    "publish_at": "2026-10-18T21:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_-vQuvAeoI1Y.jpg",
+    "duration": "PT2M30S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
     "title": "L, Frieren, Maomao or Aqua: Who Really Catches Kira?",
     "url": "https://youtu.be/cUhKbiM52ZU",
     "publish_at": "2026-10-20T15:00:00Z",
@@ -84,12 +84,24 @@
     "on_youtube": true
   },
   {
+    "title": "Could Makima Control Sung Jinwoo?",
+    "url": "https://youtu.be/2_4Q98Q-qwo",
+    "publish_at": "2026-10-20T21:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_2_4Q98Q-qwo.jpg",
+    "duration": "PT14M59S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
     "title": "Why Ayanokoji Cannot Clear the Double Dungeon",
     "url": "https://youtu.be/ZHoCc8IBHAc",
     "publish_at": "2026-10-22T15:00:00Z",
     "is_future": true,
     "privacy": "private",
-    "thumb": "https://i.ytimg.com/vi/ZHoCc8IBHAc/mqdefault.jpg",
+    "thumb": "images/anime/yt_ZHoCc8IBHAc.jpg",
     "duration": "PT47S",
     "views": null,
     "kind": "short",
@@ -101,10 +113,34 @@
     "publish_at": "2026-10-24T15:00:00Z",
     "is_future": true,
     "privacy": "private",
-    "thumb": "https://i9.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg?sqp=CPCKstYG&rs=AOn4CLC2VNRY9gOFgeGn1p-l2yyCOsxyuA",
+    "thumb": "https://i9.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg?sqp=CMDZttYG&rs=AOn4CLAGbvPJO4PqiP3lW6RsU643UoukSQ",
     "duration": "PT1M1S",
     "views": null,
     "kind": "short",
+    "on_youtube": true
+  },
+  {
+    "title": "Jujutsu Kaisen \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/PIujWSnp-qY",
+    "publish_at": "2026-10-25T22:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_PIujWSnp-qY.jpg",
+    "duration": "PT2M27S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Kenjaku vs Ayanokoji Isn't Even Close",
+    "url": "https://youtu.be/6Mc8KI40LLE",
+    "publish_at": "2026-10-12T21:00:36Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
+    "duration": "PT14M4S",
+    "views": 12,
+    "kind": "video",
     "on_youtube": true
   },
   {
@@ -115,7 +151,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/miwzDV5COkU/mqdefault.jpg",
     "duration": "PT2M28S",
-    "views": 42,
+    "views": 77,
     "kind": "video",
     "on_youtube": true
   },
@@ -127,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/9l-tZ4PGUfg/mqdefault.jpg",
     "duration": "PT49S",
-    "views": 107,
+    "views": 128,
     "kind": "short",
     "on_youtube": true
   },
@@ -139,7 +175,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/lPHxjA4tOsk/mqdefault.jpg",
     "duration": "PT13M24S",
-    "views": 559,
+    "views": 848,
     "kind": "video",
     "on_youtube": true
   },
@@ -151,7 +187,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/C5l3lyzB0IE/mqdefault.jpg",
     "duration": "PT56S",
-    "views": 97,
+    "views": 98,
     "kind": "short",
     "on_youtube": true
   },
@@ -163,7 +199,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
     "duration": "PT2M37S",
-    "views": 175,
+    "views": 178,
     "kind": "video",
     "on_youtube": true
   },
@@ -175,7 +211,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Mvz0zdho0vE/mqdefault.jpg",
     "duration": "PT48S",
-    "views": 1254,
+    "views": 1255,
     "kind": "short",
     "on_youtube": true
   },
@@ -199,7 +235,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/qTbCBHNxv5g/mqdefault.jpg",
     "duration": "PT49S",
-    "views": 204,
+    "views": 206,
     "kind": "short",
     "on_youtube": true
   },
@@ -223,7 +259,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "duration": "PT14M25S",
-    "views": 888,
+    "views": 890,
     "kind": "video",
     "on_youtube": true
   },
@@ -271,7 +307,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/E3Hdd5Vd44U/mqdefault.jpg",
     "duration": "PT12M10S",
-    "views": 31,
+    "views": 33,
     "kind": "video",
     "on_youtube": true
   },
@@ -331,7 +367,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-YdAjPqqYVI/mqdefault.jpg",
     "duration": "PT24M43S",
-    "views": 40,
+    "views": 41,
     "kind": "video",
     "on_youtube": true
   },
@@ -343,7 +379,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Z3vVHx-k-UU/mqdefault.jpg",
     "duration": "PT28M42S",
-    "views": 65,
+    "views": 66,
     "kind": "video",
     "on_youtube": true
   },
@@ -427,7 +463,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6A6MUPg9ux4/mqdefault.jpg",
     "duration": "PT22M35S",
-    "views": 199,
+    "views": 200,
     "kind": "video",
     "on_youtube": true
   },
@@ -475,7 +511,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/HmdxCN-H3Do/mqdefault.jpg",
     "duration": "PT27M17S",
-    "views": 1766,
+    "views": 1767,
     "kind": "video",
     "on_youtube": true
   },
@@ -572,18 +608,6 @@
     "thumb": "https://i.ytimg.com/vi/_hAMOD7QbSg/mqdefault.jpg",
     "duration": "PT24M31S",
     "views": 957,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "What if Near was born in the White Room?",
-    "url": "https://youtu.be/VniPQV40m1M",
-    "publish_at": "2026-05-25T21:56:40Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/VniPQV40m1M/mqdefault.jpg",
-    "duration": "PT24M6S",
-    "views": 79,
     "kind": "video",
     "on_youtube": true
   }
