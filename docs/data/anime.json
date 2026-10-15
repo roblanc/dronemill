@@ -1,29 +1,5 @@
 [
   {
-    "title": "How Kenjaku Beat Gojo Without Ever Outfighting Him",
-    "url": "https://youtu.be/uHlMTq_E00g",
-    "publish_at": "2026-10-14T15:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_uHlMTq_E00g.jpg",
-    "duration": "PT34S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
-    "title": "Dandadan \u2013 But It's 1970s Anime!",
-    "url": "https://youtu.be/JIng_MHFc3A",
-    "publish_at": "2026-10-14T21:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "https://i9.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg?sqp=CPDQvNYG&rs=AOn4CLARFvuichm5C9caGikMIGst7gD6Vg",
-    "duration": "PT2M9S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "Kenjaku vs Ayanokoji: Who's the Greater Schemer?",
     "url": "https://youtu.be/IkyJMLW1dMQ",
     "publish_at": "2026-10-16T15:00:00Z",
@@ -113,7 +89,7 @@
     "publish_at": "2026-10-24T15:00:00Z",
     "is_future": true,
     "privacy": "private",
-    "thumb": "https://i9.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg?sqp=CPDQvNYG&rs=AOn4CLBFBRU8j_gKrKCQ_y-0NPUZyWLGlA",
+    "thumb": "images/anime/yt_Y4nH0oJsV54.jpg",
     "duration": "PT1M1S",
     "views": null,
     "kind": "short",
@@ -132,6 +108,54 @@
     "on_youtube": true
   },
   {
+    "title": "Jujutsu Kaisen 1970s \u2014 character highlight",
+    "url": "https://youtu.be/40GG6tJV-XU",
+    "publish_at": "2026-10-27T16:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_40GG6tJV-XU.jpg",
+    "duration": "PT16S",
+    "views": null,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
+    "title": "Code Geass \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/Sfds-QNup7s",
+    "publish_at": "2026-10-29T22:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_Sfds-QNup7s.jpg",
+    "duration": "PT2M30S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Dandadan \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/JIng_MHFc3A",
+    "publish_at": "2026-10-14T21:00:07Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg",
+    "duration": "PT2M9S",
+    "views": 8,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "How Kenjaku Beat Gojo Without Ever Outfighting Him",
+    "url": "https://youtu.be/uHlMTq_E00g",
+    "publish_at": "2026-10-14T15:00:19Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/uHlMTq_E00g/mqdefault.jpg",
+    "duration": "PT34S",
+    "views": 32,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Kenjaku vs Ayanokoji Isn't Even Close",
     "url": "https://youtu.be/6Mc8KI40LLE",
     "publish_at": "2026-10-12T21:00:36Z",
@@ -139,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
     "duration": "PT14M4S",
-    "views": 102,
+    "views": 171,
     "kind": "video",
     "on_youtube": true
   },
@@ -151,7 +175,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/miwzDV5COkU/mqdefault.jpg",
     "duration": "PT2M28S",
-    "views": 111,
+    "views": 161,
     "kind": "video",
     "on_youtube": true
   },
@@ -163,7 +187,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/9l-tZ4PGUfg/mqdefault.jpg",
     "duration": "PT49S",
-    "views": 132,
+    "views": 130,
     "kind": "short",
     "on_youtube": true
   },
@@ -199,7 +223,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
     "duration": "PT2M37S",
-    "views": 185,
+    "views": 190,
     "kind": "video",
     "on_youtube": true
   },
@@ -211,7 +235,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Mvz0zdho0vE/mqdefault.jpg",
     "duration": "PT48S",
-    "views": 1255,
+    "views": 1256,
     "kind": "short",
     "on_youtube": true
   },
@@ -223,7 +247,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/rPZCqvwC6JQ/mqdefault.jpg",
     "duration": "PT12M11S",
-    "views": 103,
+    "views": 104,
     "kind": "video",
     "on_youtube": true
   },
@@ -235,7 +259,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/qTbCBHNxv5g/mqdefault.jpg",
     "duration": "PT49S",
-    "views": 208,
+    "views": 210,
     "kind": "short",
     "on_youtube": true
   },
@@ -319,7 +343,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/dzA0efpqSYc/mqdefault.jpg",
     "duration": "PT8M22S",
-    "views": 155,
+    "views": 156,
     "kind": "video",
     "on_youtube": true
   },
@@ -427,7 +451,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/DH5JjnUOMuI/mqdefault.jpg",
     "duration": "PT23M4S",
-    "views": 105,
+    "views": 106,
     "kind": "video",
     "on_youtube": true
   },
@@ -511,7 +535,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/HmdxCN-H3Do/mqdefault.jpg",
     "duration": "PT27M17S",
-    "views": 1769,
+    "views": 1771,
     "kind": "video",
     "on_youtube": true
   },
@@ -571,7 +595,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/xD9vgY1OpbM/mqdefault.jpg",
     "duration": "PT12M25S",
-    "views": 338,
+    "views": 339,
     "kind": "video",
     "on_youtube": true
   },
@@ -584,30 +608,6 @@
     "thumb": "https://i.ytimg.com/vi/wpNGhI62ndU/mqdefault.jpg",
     "duration": "PT24M41S",
     "views": 295,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "What If Ayanokoji Joined the Chunin Exams?",
-    "url": "https://youtu.be/9DRm7SfN9QY",
-    "publish_at": "2026-05-28T09:01:42Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/9DRm7SfN9QY/mqdefault.jpg",
-    "duration": "PT25M17S",
-    "views": 692,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "What If Itachi Raised Sasuke in Secret?",
-    "url": "https://youtu.be/_hAMOD7QbSg",
-    "publish_at": "2026-05-27T07:39:19Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/_hAMOD7QbSg/mqdefault.jpg",
-    "duration": "PT24M31S",
-    "views": 958,
     "kind": "video",
     "on_youtube": true
   }
