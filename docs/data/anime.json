@@ -120,6 +120,30 @@
     "on_youtube": true
   },
   {
+    "title": "Could Lelouch Outsmart Ayanokoji?",
+    "url": "https://youtu.be/emhuJ6QumMA",
+    "publish_at": "2026-10-27T22:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_emhuJ6QumMA.jpg",
+    "duration": "PT11M46S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Could Lelouch Outsmart Ayanokoji? \u2014 excerpt",
+    "url": "https://youtu.be/1PrA0CK655I",
+    "publish_at": "2026-10-29T16:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_1PrA0CK655I.jpg",
+    "duration": "PT39S",
+    "views": null,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Code Geass \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/Sfds-QNup7s",
     "publish_at": "2026-10-29T22:00:00Z",
@@ -139,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg",
     "duration": "PT2M9S",
-    "views": 8,
+    "views": 51,
     "kind": "video",
     "on_youtube": true
   },
@@ -151,7 +175,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/uHlMTq_E00g/mqdefault.jpg",
     "duration": "PT34S",
-    "views": 32,
+    "views": 86,
     "kind": "short",
     "on_youtube": true
   },
@@ -163,7 +187,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
     "duration": "PT14M4S",
-    "views": 177,
+    "views": 287,
     "kind": "video",
     "on_youtube": true
   },
@@ -199,7 +223,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/lPHxjA4tOsk/mqdefault.jpg",
     "duration": "PT13M24S",
-    "views": 906,
+    "views": 905,
     "kind": "video",
     "on_youtube": true
   },
@@ -223,7 +247,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
     "duration": "PT2M37S",
-    "views": 190,
+    "views": 191,
     "kind": "video",
     "on_youtube": true
   },
@@ -283,7 +307,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "duration": "PT14M25S",
-    "views": 891,
+    "views": 893,
     "kind": "video",
     "on_youtube": true
   },
@@ -535,7 +559,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/HmdxCN-H3Do/mqdefault.jpg",
     "duration": "PT27M17S",
-    "views": 1770,
+    "views": 1771,
     "kind": "video",
     "on_youtube": true
   },
@@ -595,7 +619,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/xD9vgY1OpbM/mqdefault.jpg",
     "duration": "PT12M25S",
-    "views": 339,
+    "views": 340,
     "kind": "video",
     "on_youtube": true
   },
