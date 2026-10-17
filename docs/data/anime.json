@@ -1,29 +1,5 @@
 [
   {
-    "title": "Kenjaku vs Ayanokoji: Who's the Greater Schemer?",
-    "url": "https://youtu.be/IkyJMLW1dMQ",
-    "publish_at": "2026-10-16T15:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_IkyJMLW1dMQ.jpg",
-    "duration": "PT45S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
-    "title": "Everyone Who Could Catch Kira",
-    "url": "https://youtu.be/Wxey4muEgpY",
-    "publish_at": "2026-10-16T21:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/everyone-who-catch-kira-thumb1.jpg",
-    "duration": "PT13M39S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "Why Catching Light Yagami Isn't Just a Genius Test for L",
     "url": "https://youtu.be/jyD4hhmTUaQ",
     "publish_at": "2026-10-18T15:00:00Z",
@@ -156,6 +132,54 @@
     "on_youtube": true
   },
   {
+    "title": "Code Geass \u2013 But It's 1970s Anime! \u2014 character highlight",
+    "url": "https://youtu.be/GNfrlSz91CE",
+    "publish_at": "2026-10-31T16:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_GNfrlSz91CE.jpg",
+    "duration": "PT17S",
+    "views": null,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
+    "title": "Could Johan Liebert Break Denji?",
+    "url": "https://youtu.be/jCyOearvVf8",
+    "publish_at": "2026-10-31T22:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_jCyOearvVf8.jpg",
+    "duration": "PT14M43S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Everyone Who Could Catch Kira",
+    "url": "https://youtu.be/Wxey4muEgpY",
+    "publish_at": "2026-10-16T21:00:40Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/Wxey4muEgpY/mqdefault.jpg",
+    "duration": "PT13M39S",
+    "views": 9,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Kenjaku vs Ayanokoji: Who's the Greater Schemer?",
+    "url": "https://youtu.be/IkyJMLW1dMQ",
+    "publish_at": "2026-10-16T15:00:27Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/IkyJMLW1dMQ/mqdefault.jpg",
+    "duration": "PT45S",
+    "views": 517,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Dandadan \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/JIng_MHFc3A",
     "publish_at": "2026-10-14T21:00:07Z",
@@ -163,7 +187,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg",
     "duration": "PT2M9S",
-    "views": 51,
+    "views": 142,
     "kind": "video",
     "on_youtube": true
   },
@@ -175,7 +199,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/uHlMTq_E00g/mqdefault.jpg",
     "duration": "PT34S",
-    "views": 86,
+    "views": 115,
     "kind": "short",
     "on_youtube": true
   },
@@ -187,7 +211,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
     "duration": "PT14M4S",
-    "views": 287,
+    "views": 325,
     "kind": "video",
     "on_youtube": true
   },
@@ -307,7 +331,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "duration": "PT14M25S",
-    "views": 893,
+    "views": 894,
     "kind": "video",
     "on_youtube": true
   },
@@ -439,7 +463,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/zRTB9AV_CyM/mqdefault.jpg",
     "duration": "PT17M54S",
-    "views": 96,
+    "views": 97,
     "kind": "video",
     "on_youtube": true
   },
@@ -535,7 +559,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/iMY0UhKN2ZU/mqdefault.jpg",
     "duration": "PT23M49S",
-    "views": 237,
+    "views": 238,
     "kind": "video",
     "on_youtube": true
   },
@@ -571,7 +595,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/oNDG7gKxo9Q/mqdefault.jpg",
     "duration": "PT23M29S",
-    "views": 152,
+    "views": 153,
     "kind": "video",
     "on_youtube": true
   },
@@ -607,31 +631,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/ZOjHbCL9pJ4/mqdefault.jpg",
     "duration": "PT18M38S",
-    "views": 137,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "What If Near Swapped Places with Ayanokoji?",
-    "url": "https://youtu.be/xD9vgY1OpbM",
-    "publish_at": "2026-05-30T09:00:23Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/xD9vgY1OpbM/mqdefault.jpg",
-    "duration": "PT12M25S",
-    "views": 340,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "What if Kakashi was raised in the White Room? ",
-    "url": "https://youtu.be/wpNGhI62ndU",
-    "publish_at": "2026-05-29T15:58:32Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/wpNGhI62ndU/mqdefault.jpg",
-    "duration": "PT24M41S",
-    "views": 295,
+    "views": 138,
     "kind": "video",
     "on_youtube": true
   }
