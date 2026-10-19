@@ -1,29 +1,5 @@
 [
   {
-    "title": "Why Catching Light Yagami Isn't Just a Genius Test for L",
-    "url": "https://youtu.be/jyD4hhmTUaQ",
-    "publish_at": "2026-10-18T15:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_jyD4hhmTUaQ.jpg",
-    "duration": "PT43S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
-    "title": "Death Note \u2013 But It's 1970s Anime!",
-    "url": "https://youtu.be/-vQuvAeoI1Y",
-    "publish_at": "2026-10-18T21:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_-vQuvAeoI1Y.jpg",
-    "duration": "PT2M30S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "L, Frieren, Maomao or Aqua: Who Really Catches Kira?",
     "url": "https://youtu.be/cUhKbiM52ZU",
     "publish_at": "2026-10-20T15:00:00Z",
@@ -156,6 +132,30 @@
     "on_youtube": true
   },
   {
+    "title": "Death Note \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/-vQuvAeoI1Y",
+    "publish_at": "2026-10-18T21:00:38Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/-vQuvAeoI1Y/mqdefault.jpg",
+    "duration": "PT2M30S",
+    "views": 6,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Why Catching Light Yagami Isn't Just a Genius Test for L",
+    "url": "https://youtu.be/jyD4hhmTUaQ",
+    "publish_at": "2026-10-18T15:00:00Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/jyD4hhmTUaQ/mqdefault.jpg",
+    "duration": "PT43S",
+    "views": 112,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Everyone Who Could Catch Kira",
     "url": "https://youtu.be/Wxey4muEgpY",
     "publish_at": "2026-10-16T21:00:40Z",
@@ -163,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Wxey4muEgpY/mqdefault.jpg",
     "duration": "PT13M39S",
-    "views": 130,
+    "views": 269,
     "kind": "video",
     "on_youtube": true
   },
@@ -175,7 +175,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/IkyJMLW1dMQ/mqdefault.jpg",
     "duration": "PT45S",
-    "views": 681,
+    "views": 797,
     "kind": "short",
     "on_youtube": true
   },
@@ -187,7 +187,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg",
     "duration": "PT2M9S",
-    "views": 161,
+    "views": 246,
     "kind": "video",
     "on_youtube": true
   },
@@ -199,7 +199,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/uHlMTq_E00g/mqdefault.jpg",
     "duration": "PT34S",
-    "views": 131,
+    "views": 132,
     "kind": "short",
     "on_youtube": true
   },
@@ -211,7 +211,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
     "duration": "PT14M4S",
-    "views": 327,
+    "views": 326,
     "kind": "video",
     "on_youtube": true
   },
@@ -247,7 +247,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/lPHxjA4tOsk/mqdefault.jpg",
     "duration": "PT13M24S",
-    "views": 907,
+    "views": 910,
     "kind": "video",
     "on_youtube": true
   },
@@ -271,7 +271,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
     "duration": "PT2M37S",
-    "views": 191,
+    "views": 192,
     "kind": "video",
     "on_youtube": true
   },
@@ -295,7 +295,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/rPZCqvwC6JQ/mqdefault.jpg",
     "duration": "PT12M11S",
-    "views": 104,
+    "views": 106,
     "kind": "video",
     "on_youtube": true
   },
@@ -331,7 +331,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "duration": "PT14M25S",
-    "views": 894,
+    "views": 895,
     "kind": "video",
     "on_youtube": true
   },
@@ -379,7 +379,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/E3Hdd5Vd44U/mqdefault.jpg",
     "duration": "PT12M10S",
-    "views": 35,
+    "views": 36,
     "kind": "video",
     "on_youtube": true
   },
@@ -608,30 +608,6 @@
     "thumb": "https://i.ytimg.com/vi/9SEiRzOjSfI/mqdefault.jpg",
     "duration": "PT23M44S",
     "views": 481,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "Light Yagami vs Shogo Makishima Is Not Even Close",
-    "url": "https://youtu.be/3GV4gdr-sfk",
-    "publish_at": "2026-06-01T19:00:16Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/3GV4gdr-sfk/mqdefault.jpg",
-    "duration": "PT18M47S",
-    "views": 229,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "What If Sasuke Was Raised in the White Room?",
-    "url": "https://youtu.be/ZOjHbCL9pJ4",
-    "publish_at": "2026-05-31T18:18:15Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/ZOjHbCL9pJ4/mqdefault.jpg",
-    "duration": "PT18M38S",
-    "views": 138,
     "kind": "video",
     "on_youtube": true
   }
