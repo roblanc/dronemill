@@ -1,29 +1,5 @@
 [
   {
-    "title": "L, Frieren, Maomao or Aqua: Who Really Catches Kira?",
-    "url": "https://youtu.be/cUhKbiM52ZU",
-    "publish_at": "2026-10-20T15:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_cUhKbiM52ZU.jpg",
-    "duration": "PT42S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
-    "title": "Could Makima Control Sung Jinwoo?",
-    "url": "https://youtu.be/2_4Q98Q-qwo",
-    "publish_at": "2026-10-20T21:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_2_4Q98Q-qwo.jpg",
-    "duration": "PT14M59S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "Why Ayanokoji Cannot Clear the Double Dungeon",
     "url": "https://youtu.be/ZHoCc8IBHAc",
     "publish_at": "2026-10-22T15:00:00Z",
@@ -132,6 +108,30 @@
     "on_youtube": true
   },
   {
+    "title": "Could Makima Control Sung Jinwoo?",
+    "url": "https://youtu.be/2_4Q98Q-qwo",
+    "publish_at": "2026-10-20T21:00:39Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/2_4Q98Q-qwo/mqdefault.jpg",
+    "duration": "PT14M59S",
+    "views": 7,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "L, Frieren, Maomao or Aqua: Who Really Catches Kira?",
+    "url": "https://youtu.be/cUhKbiM52ZU",
+    "publish_at": "2026-10-20T15:00:24Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/cUhKbiM52ZU/mqdefault.jpg",
+    "duration": "PT42S",
+    "views": 176,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Death Note \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/-vQuvAeoI1Y",
     "publish_at": "2026-10-18T21:00:38Z",
@@ -139,7 +139,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-vQuvAeoI1Y/mqdefault.jpg",
     "duration": "PT2M30S",
-    "views": 65,
+    "views": 105,
     "kind": "video",
     "on_youtube": true
   },
@@ -151,7 +151,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/jyD4hhmTUaQ/mqdefault.jpg",
     "duration": "PT43S",
-    "views": 171,
+    "views": 226,
     "kind": "short",
     "on_youtube": true
   },
@@ -163,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Wxey4muEgpY/mqdefault.jpg",
     "duration": "PT13M39S",
-    "views": 322,
+    "views": 337,
     "kind": "video",
     "on_youtube": true
   },
@@ -211,7 +211,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
     "duration": "PT14M4S",
-    "views": 328,
+    "views": 329,
     "kind": "video",
     "on_youtube": true
   },
@@ -391,7 +391,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/dzA0efpqSYc/mqdefault.jpg",
     "duration": "PT8M22S",
-    "views": 157,
+    "views": 158,
     "kind": "video",
     "on_youtube": true
   },
@@ -463,7 +463,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/zRTB9AV_CyM/mqdefault.jpg",
     "duration": "PT17M54S",
-    "views": 98,
+    "views": 100,
     "kind": "video",
     "on_youtube": true
   },
@@ -583,31 +583,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/HmdxCN-H3Do/mqdefault.jpg",
     "duration": "PT27M17S",
-    "views": 1772,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "Could Ayanokoji Survive Monster?",
-    "url": "https://youtu.be/oNDG7gKxo9Q",
-    "publish_at": "2026-06-03T19:13:23Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/oNDG7gKxo9Q/mqdefault.jpg",
-    "duration": "PT23M29S",
-    "views": 154,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "Could Ayanokoji Outsmart Johan Liebert?",
-    "url": "https://youtu.be/9SEiRzOjSfI",
-    "publish_at": "2026-06-02T18:53:26Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/9SEiRzOjSfI/mqdefault.jpg",
-    "duration": "PT23M44S",
-    "views": 481,
+    "views": 1774,
     "kind": "video",
     "on_youtube": true
   }
