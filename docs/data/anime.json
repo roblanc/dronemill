@@ -1,17 +1,5 @@
 [
   {
-    "title": "Why Ayanokoji Cannot Clear the Double Dungeon",
-    "url": "https://youtu.be/ZHoCc8IBHAc",
-    "publish_at": "2026-10-22T15:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_ZHoCc8IBHAc.jpg",
-    "duration": "PT47S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
     "title": "Why L Could Never Prove Light Was Kira",
     "url": "https://youtu.be/Y4nH0oJsV54",
     "publish_at": "2026-10-24T15:00:00Z",
@@ -108,6 +96,30 @@
     "on_youtube": true
   },
   {
+    "title": "Hunter \u00d7 Hunter \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/f4j8HOHPcgE",
+    "publish_at": "2026-11-02T22:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_f4j8HOHPcgE.jpg",
+    "duration": "PT2M41S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Why Ayanokoji Cannot Clear the Double Dungeon",
+    "url": "https://youtu.be/ZHoCc8IBHAc",
+    "publish_at": "2026-10-22T15:00:31Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/ZHoCc8IBHAc/mqdefault.jpg",
+    "duration": "PT47S",
+    "views": 257,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Could Makima Control Sung Jinwoo?",
     "url": "https://youtu.be/2_4Q98Q-qwo",
     "publish_at": "2026-10-20T21:00:39Z",
@@ -115,7 +127,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/2_4Q98Q-qwo/mqdefault.jpg",
     "duration": "PT14M59S",
-    "views": 20,
+    "views": 24,
     "kind": "video",
     "on_youtube": true
   },
@@ -139,7 +151,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-vQuvAeoI1Y/mqdefault.jpg",
     "duration": "PT2M30S",
-    "views": 139,
+    "views": 219,
     "kind": "video",
     "on_youtube": true
   },
@@ -151,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/jyD4hhmTUaQ/mqdefault.jpg",
     "duration": "PT43S",
-    "views": 233,
+    "views": 232,
     "kind": "short",
     "on_youtube": true
   },
@@ -175,7 +187,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/IkyJMLW1dMQ/mqdefault.jpg",
     "duration": "PT45S",
-    "views": 818,
+    "views": 817,
     "kind": "short",
     "on_youtube": true
   },
@@ -187,7 +199,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg",
     "duration": "PT2M9S",
-    "views": 245,
+    "views": 246,
     "kind": "video",
     "on_youtube": true
   },
@@ -211,7 +223,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
     "duration": "PT14M4S",
-    "views": 329,
+    "views": 334,
     "kind": "video",
     "on_youtube": true
   },
@@ -271,7 +283,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
     "duration": "PT2M37S",
-    "views": 192,
+    "views": 193,
     "kind": "video",
     "on_youtube": true
   },
@@ -499,7 +511,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/DH5JjnUOMuI/mqdefault.jpg",
     "duration": "PT23M4S",
-    "views": 106,
+    "views": 107,
     "kind": "video",
     "on_youtube": true
   },
@@ -572,18 +584,6 @@
     "thumb": "https://i.ytimg.com/vi/LUwvbILd3E4/mqdefault.jpg",
     "duration": "PT25M40S",
     "views": 63,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "Could L Survive Classroom of the Elite?",
-    "url": "https://youtu.be/HmdxCN-H3Do",
-    "publish_at": "2026-06-04T16:15:47Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/HmdxCN-H3Do/mqdefault.jpg",
-    "duration": "PT27M17S",
-    "views": 1777,
     "kind": "video",
     "on_youtube": true
   }
