@@ -108,6 +108,18 @@
     "on_youtube": true
   },
   {
+    "title": "Could Johan Really Break Denji?",
+    "url": "https://youtu.be/1PAXyWWgYTE",
+    "publish_at": "2026-10-23T07:11:28Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/1PAXyWWgYTE/mqdefault.jpg",
+    "duration": "PT35S",
+    "views": 197,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Why Ayanokoji Cannot Clear the Double Dungeon",
     "url": "https://youtu.be/ZHoCc8IBHAc",
     "publish_at": "2026-10-22T15:00:31Z",
@@ -115,7 +127,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/ZHoCc8IBHAc/mqdefault.jpg",
     "duration": "PT47S",
-    "views": 263,
+    "views": 270,
     "kind": "short",
     "on_youtube": true
   },
@@ -127,7 +139,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/2_4Q98Q-qwo/mqdefault.jpg",
     "duration": "PT14M59S",
-    "views": 25,
+    "views": 43,
     "kind": "video",
     "on_youtube": true
   },
@@ -139,7 +151,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/cUhKbiM52ZU/mqdefault.jpg",
     "duration": "PT42S",
-    "views": 181,
+    "views": 183,
     "kind": "short",
     "on_youtube": true
   },
@@ -151,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-vQuvAeoI1Y/mqdefault.jpg",
     "duration": "PT2M30S",
-    "views": 231,
+    "views": 354,
     "kind": "video",
     "on_youtube": true
   },
@@ -187,7 +199,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/IkyJMLW1dMQ/mqdefault.jpg",
     "duration": "PT45S",
-    "views": 817,
+    "views": 818,
     "kind": "short",
     "on_youtube": true
   },
@@ -223,7 +235,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
     "duration": "PT14M4S",
-    "views": 334,
+    "views": 335,
     "kind": "video",
     "on_youtube": true
   },
@@ -379,7 +391,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/aUX48KwzYMY/mqdefault.jpg",
     "duration": "PT15M39S",
-    "views": 28,
+    "views": 29,
     "kind": "video",
     "on_youtube": true
   },
@@ -391,7 +403,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/E3Hdd5Vd44U/mqdefault.jpg",
     "duration": "PT12M10S",
-    "views": 36,
+    "views": 37,
     "kind": "video",
     "on_youtube": true
   },
@@ -499,7 +511,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/8OnTOfC6aRs/mqdefault.jpg",
     "duration": "PT23M55S",
-    "views": 47,
+    "views": 48,
     "kind": "video",
     "on_youtube": true
   },
@@ -572,18 +584,6 @@
     "thumb": "https://i.ytimg.com/vi/iMY0UhKN2ZU/mqdefault.jpg",
     "duration": "PT23M49S",
     "views": 238,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "Could Ayanokoji Survive Jujutsu Kaisen?",
-    "url": "https://youtu.be/LUwvbILd3E4",
-    "publish_at": "2026-06-05T20:07:40Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/LUwvbILd3E4/mqdefault.jpg",
-    "duration": "PT25M40S",
-    "views": 63,
     "kind": "video",
     "on_youtube": true
   }
