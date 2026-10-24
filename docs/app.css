@@ -1805,3 +1805,99 @@ body.light-theme .moon-icon {
   color: var(--text-primary);
 }
 .mobile-header .icon-btn:hover { background: var(--yt-chip); }
+
+/* Compact schedule overview; all styles stay inside the added calendar. */
+.schedule-calendar {
+  --calendar-accent: oklch(68% 0.15 75);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  inline-size: min(100%, 440px);
+  padding: clamp(14px, 3vw, 20px);
+  margin-block-end: 24px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font: 400 13px/1.4 var(--font-sans);
+  font-variant-numeric: tabular-nums;
+}
+.schedule-calendar-header { display: flex; align-items: center; gap: 8px; }
+.schedule-calendar-header h3 {
+  margin: 0;
+  font-size: clamp(17px, 2vw, 20px);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.schedule-calendar-header p { margin: 3px 0 0; color: var(--text-secondary); font-size: 11px; }
+.schedule-calendar-nav { display: flex; gap: 4px; margin-inline-start: auto; }
+.schedule-calendar button { font-family: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.schedule-calendar-nav button {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--yt-chip);
+  color: var(--text-primary);
+  font-size: 26px;
+  line-height: 1;
+}
+.schedule-calendar-grid { inline-size: 100%; border-collapse: collapse; table-layout: fixed; }
+.schedule-calendar-grid th { padding-block: 0 6px; color: var(--calendar-accent); font-size: 11px; font-weight: 600; text-align: center; }
+.schedule-calendar-grid td { padding: 0; text-align: center; }
+.schedule-calendar-day {
+  position: relative;
+  display: grid;
+  place-items: center;
+  inline-size: 100%;
+  block-size: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+}
+.schedule-calendar-day[aria-current="date"] { background: var(--yt-chip); font-weight: 700; }
+.schedule-calendar-day.is-last { outline: 1.5px solid var(--calendar-accent); outline-offset: -4px; }
+.schedule-calendar-day.is-selected { background: color-mix(in oklch, var(--calendar-accent) 18%, var(--bg-card)); font-weight: 700; }
+.schedule-calendar-dot { display: inline-block; inline-size: 5px; block-size: 5px; border-radius: 50%; background: var(--calendar-accent); }
+.schedule-calendar-day .schedule-calendar-dot { position: absolute; inset-block-end: 5px; inset-inline-start: calc(50% - 2.5px); }
+.schedule-calendar-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; color: var(--text-secondary); font-size: 11px; }
+.schedule-calendar-legend > span { display: inline-flex; align-items: center; gap: 6px; }
+.schedule-calendar-ring { display: inline-block; inline-size: 10px; block-size: 10px; border: 1.5px solid var(--calendar-accent); border-radius: 50%; }
+.schedule-calendar-last {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  inline-size: 100%;
+  min-block-size: 44px;
+  padding: 10px 0 0;
+  border: 0;
+  border-block-start: 1px solid var(--border-subtle);
+  border-radius: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  text-align: start;
+  font-size: 11px;
+}
+.schedule-calendar-last strong { margin-inline-start: auto; color: var(--text-primary); font-size: 12px; font-weight: 500; }
+.schedule-calendar-empty { margin: 0; padding-block-start: 10px; border-block-start: 1px solid var(--border-subtle); color: var(--text-secondary); }
+.schedule-calendar-details { padding-block-start: 10px; border-block-start: 1px solid var(--border-subtle); }
+.schedule-calendar-details p { margin: 0 0 8px; font-size: 12px; font-weight: 600; }
+.schedule-calendar-details ul { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.schedule-calendar-details li { display: flex; align-items: baseline; gap: 10px; font-size: 12px; }
+.schedule-calendar-details time { flex: none; color: var(--text-secondary); }
+.schedule-calendar-details li > span { min-inline-size: 0; overflow-wrap: anywhere; }
+.schedule-calendar-details small { color: var(--text-secondary); }
+.schedule-calendar button:focus-visible { outline: 2px solid var(--calendar-accent); outline-offset: 2px; }
+.schedule-calendar button:active { background: color-mix(in oklch, var(--calendar-accent) 25%, var(--bg-card)); }
+@media (hover: hover) and (pointer: fine) {
+  .schedule-calendar-nav button:hover, .schedule-calendar-grid button:hover { background: var(--yt-chip-hover); }
+  .schedule-calendar-last:hover strong { text-decoration: underline; }
+}

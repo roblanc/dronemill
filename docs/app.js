@@ -3,6 +3,7 @@
 // ==========================================================================
 
 let scheduleData = [];
+let scheduleLoaded = false;
 let statusData = {};
 let currentFilter = 'all';
 
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupRefresh();
   setupModal();
   setupDrawer();
+  setupScheduleCalendar();
   loadAllData();
 });
 
@@ -163,7 +165,7 @@ async function loadAllData() {
 // Fetch Status Telemetry
 async function fetchStatus() {
   try {
-    const res = await fetch('data/status.json?v=20261024070020');
+    const res = await fetch('data/status.json?v=20261025001312');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     statusData = data;
@@ -216,7 +218,7 @@ const notOnYoutube = i => i.on_youtube === false;
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
   try {
-    const res = await fetch('data/schedule.json?v=20261024070020');
+    const res = await fetch('data/schedule.json?v=20261025001312');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const raw = await res.json();
     const wasFuture = raw.map(i => i.is_future);
@@ -228,6 +230,7 @@ async function fetchSchedule() {
       ...justPublished,
       ...raw.filter((i, n) => !wasFuture[n]),
     ];
+    scheduleLoaded = true;
 
     if (currentChannel === 'dronemill') renderFeed();
   } catch (err) {
@@ -364,7 +367,7 @@ function setupModal() {
 async function fetchPlaylists() {
   const container = document.getElementById('playlists-container');
   try {
-    const res = await fetch('data/playlists.json?v=20261024070020');
+    const res = await fetch('data/playlists.json?v=20261025001312');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const playlists = await res.json();
 
@@ -403,7 +406,7 @@ async function fetchPlaylists() {
 async function fetchCommunityPosts() {
   const container = document.getElementById('community-container');
   try {
-    const res = await fetch('data/community.json?v=20261024070020');
+    const res = await fetch('data/community.json?v=20261025001312');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const posts = await res.json();
 
@@ -509,7 +512,7 @@ function setupChannelSwitch() {
 async function fetchAnime() {
   const container = document.getElementById('anime-container');
   try {
-    const res = await fetch('data/anime.json?v=20261024070020');
+    const res = await fetch('data/anime.json?v=20261025001312');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     animeData = refreshFuture(await res.json());
     // Scheduled first (soonest on top), then published (newest on top).
@@ -567,8 +570,123 @@ function updateCounts() {
 
 function renderFeed() {
   updateCounts();
+  renderScheduleCalendar();
   if (currentChannel === 'anime') renderAnime();
   else renderTimeline(currentFilter);
+}
+
+// A separate overview above the feed: filters never hide scheduled releases here.
+const calendarState = {};
+const CALENDAR_TIME_ZONE = 'Europe/Bucharest';
+
+function calendarDateKey(ms) {
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone: CALENDAR_TIME_ZONE, year: 'numeric', month: '2-digit', day: '2-digit',
+  }).formatToParts(new Date(ms));
+  const part = type => parts.find(p => p.type === type).value;
+  return `${part('year')}-${part('month')}-${part('day')}`;
+}
+
+function calendarReleases(items, now = Date.now()) {
+  return items.map(item => ({ item, ms: Date.parse(item.publish_at || '') }))
+    .filter(({ item, ms }) => !notOnYoutube(item) && Number.isFinite(ms) && ms > now)
+    .sort((a, b) => a.ms - b.ms);
+}
+
+function setupScheduleCalendar() {
+  const calendar = document.getElementById('schedule-calendar');
+  if (!calendar) return;
+  calendar.addEventListener('click', event => {
+    const button = event.target.closest('button');
+    if (!button || !calendar.contains(button)) return;
+    const state = calendarState[currentChannel];
+    if (!state) return;
+    const action = button.dataset.calendarAction;
+    if (action === 'prev' || action === 'next') {
+      const [year, month] = state.month.split('-').map(Number);
+      state.month = new Date(Date.UTC(year, month - 1 + (action === 'next' ? 1 : -1), 1))
+        .toISOString().slice(0, 7);
+      state.day = null;
+    } else if (action === 'last') {
+      const releases = calendarReleases(feedItems());
+      if (!releases.length) return;
+      state.day = calendarDateKey(releases[releases.length - 1].ms);
+      state.month = state.day.slice(0, 7);
+    } else if (button.dataset.calendarDay) {
+      state.day = state.day === button.dataset.calendarDay ? null : button.dataset.calendarDay;
+    } else return;
+    renderScheduleCalendar();
+    // Preserve keyboard focus when replacing the calendar's markup.
+    const selector = action ? `[data-calendar-action="${action}"]`
+      : `[data-calendar-day="${button.dataset.calendarDay}"]`;
+    calendar.querySelector(selector)?.focus({ preventScroll: true });
+  });
+}
+
+function renderScheduleCalendar() {
+  const calendar = document.getElementById('schedule-calendar');
+  if (!calendar) return;
+  if (currentChannel === 'anime' ? animeData === null : !scheduleLoaded) {
+    calendar.hidden = true;
+    return;
+  }
+  const now = Date.now();
+  const today = calendarDateKey(now);
+  const state = calendarState[currentChannel] ||= { month: today.slice(0, 7), day: null };
+  const releases = calendarReleases(feedItems(), now);
+  const last = releases[releases.length - 1];
+  const lastDay = last ? calendarDateKey(last.ms) : null;
+  const byDay = new Map();
+  releases.forEach(release => {
+    const key = calendarDateKey(release.ms);
+    if (!byDay.has(key)) byDay.set(key, []);
+    byDay.get(key).push(release);
+  });
+  const [year, month] = state.month.split('-').map(Number);
+  const first = new Date(Date.UTC(year, month - 1, 1));
+  const monthLabel = first.toLocaleDateString('ro-RO', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const offset = (first.getUTCDay() + 6) % 7; // Monday first, including DST boundaries.
+  const days = new Date(Date.UTC(year, month, 0)).getUTCDate();
+  const cells = [];
+  for (let slot = 0; slot < Math.ceil((offset + days) / 7) * 7; slot++) {
+    const day = slot - offset + 1;
+    if (day < 1 || day > days) { cells.push('<td></td>'); continue; }
+    const key = `${state.month}-${String(day).padStart(2, '0')}`;
+    const entries = byDay.get(key) || [];
+    const current = key === today ? ' aria-current="date"' : '';
+    const classes = `schedule-calendar-day${key === lastDay ? ' is-last' : ''}${key === state.day ? ' is-selected' : ''}`;
+    const label = `${day} ${monthLabel}${key === today ? ', astăzi' : ''}`;
+    cells.push(entries.length
+      ? `<td><button type="button" class="${classes}" data-calendar-day="${key}"${current} aria-pressed="${key === state.day}" aria-label="${escapeHtml(label)}, ${entries.length === 1 ? 'o programare' : entries.length + ' programări'}${key === lastDay ? ', ultima zi programată' : ''}">${day}<span class="schedule-calendar-dot" aria-hidden="true"></span></button></td>`
+      : `<td><span class="${classes}"${current}>${day}</span></td>`);
+  }
+  const rows = [];
+  for (let i = 0; i < cells.length; i += 7) rows.push(`<tr>${cells.slice(i, i + 7).join('')}</tr>`);
+  const formatTime = ms => new Date(ms).toLocaleTimeString('ro-RO', {
+    timeZone: CALENDAR_TIME_ZONE, hour: '2-digit', minute: '2-digit',
+  });
+  const lastLabel = last ? new Date(last.ms).toLocaleDateString('ro-RO', {
+    timeZone: CALENDAR_TIME_ZONE, day: 'numeric', month: 'short', year: 'numeric',
+  }) + `, ${formatTime(last.ms)}` : '';
+  const selected = byDay.get(state.day) || [];
+  calendar.hidden = false;
+  calendar.innerHTML = `
+    <div class="schedule-calendar-header">
+      <div><h3 id="schedule-calendar-month">${escapeHtml(monthLabel)}</h3>
+        <p>${releases.length} ${releases.length === 1 ? 'programare' : 'programări'} · ora Bucureștiului</p></div>
+      <div class="schedule-calendar-nav">
+        <button type="button" data-calendar-action="prev" aria-label="Luna anterioară">‹</button>
+        <button type="button" data-calendar-action="next" aria-label="Luna următoare">›</button>
+      </div>
+    </div>
+    <table class="schedule-calendar-grid" aria-labelledby="schedule-calendar-month">
+      <thead><tr>${['Lun', 'Mar', 'Mie', 'Joi', 'Vin', 'Sâm', 'Dum'].map(day => `<th scope="col">${day}</th>`).join('')}</tr></thead>
+      <tbody>${rows.join('')}</tbody>
+    </table>
+    <div class="schedule-calendar-legend"><span><i class="schedule-calendar-dot" aria-hidden="true"></i>Programat</span><span><i class="schedule-calendar-ring" aria-hidden="true"></i>Ultima zi</span></div>
+    ${last ? `<button type="button" class="schedule-calendar-last" data-calendar-action="last"><span>Ultima programare</span><strong>${escapeHtml(lastLabel)} <span aria-hidden="true">↗</span></strong></button>`
+      : '<p class="schedule-calendar-empty">Niciun video programat în acest moment.</p>'}
+    ${selected.length ? `<div class="schedule-calendar-details"><p>${escapeHtml(new Date(`${state.day}T12:00:00Z`).toLocaleDateString('ro-RO', { timeZone: CALENDAR_TIME_ZONE, day: 'numeric', month: 'long', year: 'numeric' }))}</p><ul>${selected.map(({ item, ms }) => `<li><time datetime="${new Date(ms).toISOString()}">${formatTime(ms)}</time><span>${escapeHtml(item.title)}${item.kind === 'short' ? ' <small>Short</small>' : ''}</span></li>`).join('')}</ul></div>` : ''}`;
 }
 
 // ISO 8601 length (PT2H0M3S) as YouTube's badge (2:00:03).
@@ -724,6 +842,7 @@ async function fetchLiveFeed(channel, force = false) {
         const plans = scheduleData.filter(i => notOnYoutube(i) && !actual.has(i.video_id));
         const previous = new Map(scheduleData.map(i => [i.video_id, i]));
         scheduleData = items.map(i => ({ ...previous.get(i.video_id), ...i })).concat(plans);
+        scheduleLoaded = true;
       }
       if (data.avatar) CHANNEL_INFO[channel].avatar = data.avatar;
       const stale = !!data.stale || Date.now() - Date.parse(data.updated_at) > 1800000;
