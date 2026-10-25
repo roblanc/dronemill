@@ -1,17 +1,5 @@
 [
   {
-    "title": "Why L Could Never Prove Light Was Kira",
-    "url": "https://youtu.be/Y4nH0oJsV54",
-    "publish_at": "2026-10-24T15:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_Y4nH0oJsV54.jpg",
-    "duration": "PT1M1S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
     "title": "Jujutsu Kaisen \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/PIujWSnp-qY",
     "publish_at": "2026-10-25T22:00:00Z",
@@ -108,6 +96,18 @@
     "on_youtube": true
   },
   {
+    "title": "Why L Could Never Prove Light Was Kira",
+    "url": "https://youtu.be/Y4nH0oJsV54",
+    "publish_at": "2026-10-24T15:00:35Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg",
+    "duration": "PT1M1S",
+    "views": 1130,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Could Johan Really Break Denji?",
     "url": "https://youtu.be/1PAXyWWgYTE",
     "publish_at": "2026-10-23T07:11:28Z",
@@ -115,7 +115,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/1PAXyWWgYTE/mqdefault.jpg",
     "duration": "PT35S",
-    "views": 198,
+    "views": 503,
     "kind": "short",
     "on_youtube": true
   },
@@ -127,7 +127,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/ZHoCc8IBHAc/mqdefault.jpg",
     "duration": "PT47S",
-    "views": 270,
+    "views": 271,
     "kind": "short",
     "on_youtube": true
   },
@@ -139,7 +139,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/2_4Q98Q-qwo/mqdefault.jpg",
     "duration": "PT14M59S",
-    "views": 49,
+    "views": 65,
     "kind": "video",
     "on_youtube": true
   },
@@ -151,7 +151,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/cUhKbiM52ZU/mqdefault.jpg",
     "duration": "PT42S",
-    "views": 183,
+    "views": 182,
     "kind": "short",
     "on_youtube": true
   },
@@ -163,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-vQuvAeoI1Y/mqdefault.jpg",
     "duration": "PT2M30S",
-    "views": 357,
+    "views": 425,
     "kind": "video",
     "on_youtube": true
   },
@@ -247,7 +247,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/miwzDV5COkU/mqdefault.jpg",
     "duration": "PT2M28S",
-    "views": 162,
+    "views": 163,
     "kind": "video",
     "on_youtube": true
   },
@@ -271,7 +271,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/lPHxjA4tOsk/mqdefault.jpg",
     "duration": "PT13M24S",
-    "views": 910,
+    "views": 911,
     "kind": "video",
     "on_youtube": true
   },
@@ -331,7 +331,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/qTbCBHNxv5g/mqdefault.jpg",
     "duration": "PT49S",
-    "views": 211,
+    "views": 212,
     "kind": "short",
     "on_youtube": true
   },
@@ -439,7 +439,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/GykhG2tS5Mg/mqdefault.jpg",
     "duration": "PT29M44S",
-    "views": 238,
+    "views": 239,
     "kind": "video",
     "on_youtube": true
   },
@@ -572,18 +572,6 @@
     "thumb": "https://i.ytimg.com/vi/Uvwb9AqQTx4/mqdefault.jpg",
     "duration": "PT22M12S",
     "views": 33,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "What If Near Was Placed in Class A? (COTE Theory)",
-    "url": "https://youtu.be/iMY0UhKN2ZU",
-    "publish_at": "2026-06-07T21:29:47Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/iMY0UhKN2ZU/mqdefault.jpg",
-    "duration": "PT23M49S",
-    "views": 238,
     "kind": "video",
     "on_youtube": true
   }
