@@ -1,17 +1,5 @@
 [
   {
-    "title": "Jujutsu Kaisen \u2013 But It's 1970s Anime!",
-    "url": "https://youtu.be/PIujWSnp-qY",
-    "publish_at": "2026-10-25T22:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_PIujWSnp-qY.jpg",
-    "duration": "PT2M27S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "Jujutsu Kaisen 1970s \u2014 character highlight",
     "url": "https://youtu.be/40GG6tJV-XU",
     "publish_at": "2026-10-27T16:00:00Z",
@@ -96,6 +84,18 @@
     "on_youtube": true
   },
   {
+    "title": "Jujutsu Kaisen \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/PIujWSnp-qY",
+    "publish_at": "2026-10-25T22:00:33Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/PIujWSnp-qY/mqdefault.jpg",
+    "duration": "PT2M27S",
+    "views": 8,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
     "title": "Why L Could Never Prove Light Was Kira",
     "url": "https://youtu.be/Y4nH0oJsV54",
     "publish_at": "2026-10-24T15:00:35Z",
@@ -103,7 +103,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg",
     "duration": "PT1M1S",
-    "views": 1172,
+    "views": 1243,
     "kind": "short",
     "on_youtube": true
   },
@@ -115,7 +115,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/1PAXyWWgYTE/mqdefault.jpg",
     "duration": "PT35S",
-    "views": 616,
+    "views": 642,
     "kind": "short",
     "on_youtube": true
   },
@@ -139,7 +139,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/2_4Q98Q-qwo/mqdefault.jpg",
     "duration": "PT14M59S",
-    "views": 65,
+    "views": 66,
     "kind": "video",
     "on_youtube": true
   },
@@ -163,7 +163,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-vQuvAeoI1Y/mqdefault.jpg",
     "duration": "PT2M30S",
-    "views": 434,
+    "views": 500,
     "kind": "video",
     "on_youtube": true
   },
@@ -199,7 +199,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/IkyJMLW1dMQ/mqdefault.jpg",
     "duration": "PT45S",
-    "views": 818,
+    "views": 819,
     "kind": "short",
     "on_youtube": true
   },
@@ -319,7 +319,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/rPZCqvwC6JQ/mqdefault.jpg",
     "duration": "PT12M11S",
-    "views": 106,
+    "views": 107,
     "kind": "video",
     "on_youtube": true
   },
@@ -391,7 +391,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/aUX48KwzYMY/mqdefault.jpg",
     "duration": "PT15M39S",
-    "views": 29,
+    "views": 30,
     "kind": "video",
     "on_youtube": true
   },
@@ -487,7 +487,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/zRTB9AV_CyM/mqdefault.jpg",
     "duration": "PT17M54S",
-    "views": 101,
+    "views": 102,
     "kind": "video",
     "on_youtube": true
   },
@@ -560,18 +560,6 @@
     "thumb": "https://i.ytimg.com/vi/6A6MUPg9ux4/mqdefault.jpg",
     "duration": "PT22M35S",
     "views": 200,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "What If L Survived? | Death Note Theory",
-    "url": "https://youtu.be/Uvwb9AqQTx4",
-    "publish_at": "2026-06-09T12:59:39Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/Uvwb9AqQTx4/mqdefault.jpg",
-    "duration": "PT22M12S",
-    "views": 33,
     "kind": "video",
     "on_youtube": true
   }
