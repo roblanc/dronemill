@@ -165,7 +165,7 @@ async function loadAllData() {
 // Fetch Status Telemetry
 async function fetchStatus() {
   try {
-    const res = await fetch('data/status.json?v=20261026040046');
+    const res = await fetch('data/status.json?v=20261026070020');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     statusData = data;
@@ -218,7 +218,7 @@ const notOnYoutube = i => i.on_youtube === false;
 async function fetchSchedule() {
   const container = document.getElementById('timeline-container');
   try {
-    const res = await fetch('data/schedule.json?v=20261026040046');
+    const res = await fetch('data/schedule.json?v=20261026070020');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const raw = await res.json();
     const wasFuture = raw.map(i => i.is_future);
@@ -367,7 +367,7 @@ function setupModal() {
 async function fetchPlaylists() {
   const container = document.getElementById('playlists-container');
   try {
-    const res = await fetch('data/playlists.json?v=20261026040046');
+    const res = await fetch('data/playlists.json?v=20261026070020');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const playlists = await res.json();
 
@@ -406,7 +406,7 @@ async function fetchPlaylists() {
 async function fetchCommunityPosts() {
   const container = document.getElementById('community-container');
   try {
-    const res = await fetch('data/community.json?v=20261026040046');
+    const res = await fetch('data/community.json?v=20261026070020');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const posts = await res.json();
 
@@ -512,7 +512,7 @@ function setupChannelSwitch() {
 async function fetchAnime() {
   const container = document.getElementById('anime-container');
   try {
-    const res = await fetch('data/anime.json?v=20261026040046');
+    const res = await fetch('data/anime.json?v=20261026070020');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     animeData = refreshFuture(await res.json());
     // Scheduled first (soonest on top), then published (newest on top).
