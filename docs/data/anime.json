@@ -1,29 +1,5 @@
 [
   {
-    "title": "Jujutsu Kaisen 1970s \u2014 character highlight",
-    "url": "https://youtu.be/40GG6tJV-XU",
-    "publish_at": "2026-10-27T16:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_40GG6tJV-XU.jpg",
-    "duration": "PT16S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
-    "title": "Could Lelouch Outsmart Ayanokoji?",
-    "url": "https://youtu.be/emhuJ6QumMA",
-    "publish_at": "2026-10-27T22:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_emhuJ6QumMA.jpg",
-    "duration": "PT11M46S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "Could Lelouch Outsmart Ayanokoji? \u2014 excerpt",
     "url": "https://youtu.be/1PrA0CK655I",
     "publish_at": "2026-10-29T16:00:00Z",
@@ -84,6 +60,42 @@
     "on_youtube": true
   },
   {
+    "title": "Could Maomao Expose Kenjaku?",
+    "url": "https://youtu.be/pdSk-nxxKaw",
+    "publish_at": "2026-11-04T22:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_pdSk-nxxKaw.jpg",
+    "duration": "PT14M21S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Could Lelouch Outsmart Ayanokoji?",
+    "url": "https://youtu.be/emhuJ6QumMA",
+    "publish_at": "2026-10-27T22:00:16Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/emhuJ6QumMA/mqdefault.jpg",
+    "duration": "PT11M46S",
+    "views": 3,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Jujutsu Kaisen 1970s \u2014 character highlight",
+    "url": "https://youtu.be/40GG6tJV-XU",
+    "publish_at": "2026-10-27T16:00:25Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/40GG6tJV-XU/mqdefault.jpg",
+    "duration": "PT16S",
+    "views": 651,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Jujutsu Kaisen \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/PIujWSnp-qY",
     "publish_at": "2026-10-25T22:00:33Z",
@@ -91,7 +103,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/PIujWSnp-qY/mqdefault.jpg",
     "duration": "PT2M27S",
-    "views": 34,
+    "views": 285,
     "kind": "video",
     "on_youtube": true
   },
@@ -103,7 +115,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg",
     "duration": "PT1M1S",
-    "views": 1294,
+    "views": 1318,
     "kind": "short",
     "on_youtube": true
   },
@@ -115,7 +127,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/1PAXyWWgYTE/mqdefault.jpg",
     "duration": "PT35S",
-    "views": 643,
+    "views": 644,
     "kind": "short",
     "on_youtube": true
   },
@@ -163,7 +175,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-vQuvAeoI1Y/mqdefault.jpg",
     "duration": "PT2M30S",
-    "views": 501,
+    "views": 503,
     "kind": "video",
     "on_youtube": true
   },
@@ -235,7 +247,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
     "duration": "PT14M4S",
-    "views": 335,
+    "views": 336,
     "kind": "video",
     "on_youtube": true
   },
@@ -295,7 +307,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
     "duration": "PT2M37S",
-    "views": 193,
+    "views": 194,
     "kind": "video",
     "on_youtube": true
   },
@@ -355,7 +367,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
     "duration": "PT14M25S",
-    "views": 898,
+    "views": 900,
     "kind": "video",
     "on_youtube": true
   },
@@ -391,7 +403,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/aUX48KwzYMY/mqdefault.jpg",
     "duration": "PT15M39S",
-    "views": 30,
+    "views": 31,
     "kind": "video",
     "on_youtube": true
   },
@@ -415,7 +427,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/dzA0efpqSYc/mqdefault.jpg",
     "duration": "PT8M22S",
-    "views": 158,
+    "views": 159,
     "kind": "video",
     "on_youtube": true
   },
@@ -499,7 +511,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/qJECxe36kPw/mqdefault.jpg",
     "duration": "PT29M21S",
-    "views": 46,
+    "views": 47,
     "kind": "video",
     "on_youtube": true
   },
@@ -523,7 +535,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/DH5JjnUOMuI/mqdefault.jpg",
     "duration": "PT23M4S",
-    "views": 108,
+    "views": 109,
     "kind": "video",
     "on_youtube": true
   },
@@ -536,30 +548,6 @@
     "thumb": "https://i.ytimg.com/vi/hyCLTmerdIA/mqdefault.jpg",
     "duration": "PT21M16S",
     "views": 49,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "Could L Catch Makima?",
-    "url": "https://youtu.be/75AnF8X4mDY",
-    "publish_at": "2026-06-10T21:00:04Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/75AnF8X4mDY/mqdefault.jpg",
-    "duration": "PT21M17S",
-    "views": 61,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "EVERYONE That Could Outsmart Ayanokoji",
-    "url": "https://youtu.be/6A6MUPg9ux4",
-    "publish_at": "2026-06-09T23:30:06Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/6A6MUPg9ux4/mqdefault.jpg",
-    "duration": "PT22M35S",
-    "views": 200,
     "kind": "video",
     "on_youtube": true
   }
