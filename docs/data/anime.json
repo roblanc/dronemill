@@ -1,29 +1,5 @@
 [
   {
-    "title": "Code Geass \u2013 But It's 1970s Anime! \u2014 character highlight",
-    "url": "https://youtu.be/GNfrlSz91CE",
-    "publish_at": "2026-10-31T16:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_GNfrlSz91CE.jpg",
-    "duration": "PT17S",
-    "views": null,
-    "kind": "short",
-    "on_youtube": true
-  },
-  {
-    "title": "Could Johan Liebert Break Denji?",
-    "url": "https://youtu.be/jCyOearvVf8",
-    "publish_at": "2026-10-31T22:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_jCyOearvVf8.jpg",
-    "duration": "PT14M43S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "Hunter \u00d7 Hunter \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/f4j8HOHPcgE",
     "publish_at": "2026-11-02T22:00:00Z",
@@ -72,6 +48,30 @@
     "on_youtube": true
   },
   {
+    "title": "Could Johan Liebert Break Denji?",
+    "url": "https://youtu.be/jCyOearvVf8",
+    "publish_at": "2026-10-31T22:00:01Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/jCyOearvVf8/mqdefault.jpg",
+    "duration": "PT14M43S",
+    "views": 10,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Code Geass \u2013 But It's 1970s Anime! \u2014 character highlight",
+    "url": "https://youtu.be/GNfrlSz91CE",
+    "publish_at": "2026-10-31T16:00:12Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/GNfrlSz91CE/mqdefault.jpg",
+    "duration": "PT17S",
+    "views": 1131,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
     "title": "Code Geass \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/Sfds-QNup7s",
     "publish_at": "2026-10-29T22:00:36Z",
@@ -79,7 +79,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Sfds-QNup7s/mqdefault.jpg",
     "duration": "PT2M30S",
-    "views": 39,
+    "views": 80,
     "kind": "video",
     "on_youtube": true
   },
@@ -91,7 +91,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/1PrA0CK655I/mqdefault.jpg",
     "duration": "PT39S",
-    "views": 111,
+    "views": 144,
     "kind": "short",
     "on_youtube": true
   },
@@ -103,7 +103,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/emhuJ6QumMA/mqdefault.jpg",
     "duration": "PT11M46S",
-    "views": 997,
+    "views": 1020,
     "kind": "video",
     "on_youtube": true
   },
@@ -115,7 +115,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/40GG6tJV-XU/mqdefault.jpg",
     "duration": "PT16S",
-    "views": 864,
+    "views": 870,
     "kind": "short",
     "on_youtube": true
   },
@@ -139,7 +139,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg",
     "duration": "PT1M1S",
-    "views": 1339,
+    "views": 1340,
     "kind": "short",
     "on_youtube": true
   },
@@ -247,7 +247,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg",
     "duration": "PT2M9S",
-    "views": 247,
+    "views": 248,
     "kind": "video",
     "on_youtube": true
   },
@@ -524,30 +524,6 @@
     "thumb": "https://i.ytimg.com/vi/zRTB9AV_CyM/mqdefault.jpg",
     "duration": "PT17M54S",
     "views": 102,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "The moment Orochimaru claimed the Death Note, science went dark",
-    "url": "https://youtu.be/qJECxe36kPw",
-    "publish_at": "2026-06-16T21:00:33Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/qJECxe36kPw/mqdefault.jpg",
-    "duration": "PT29M21S",
-    "views": 47,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "When L used raw deduction to outsmart the asymptomatic Makishima",
-    "url": "https://youtu.be/8OnTOfC6aRs",
-    "publish_at": "2026-06-14T21:00:31Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/8OnTOfC6aRs/mqdefault.jpg",
-    "duration": "PT23M55S",
-    "views": 48,
     "kind": "video",
     "on_youtube": true
   }
