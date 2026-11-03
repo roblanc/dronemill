@@ -1,17 +1,5 @@
 [
   {
-    "title": "Hunter \u00d7 Hunter \u2013 But It's 1970s Anime!",
-    "url": "https://youtu.be/f4j8HOHPcgE",
-    "publish_at": "2026-11-02T22:00:00Z",
-    "is_future": true,
-    "privacy": "private",
-    "thumb": "images/anime/yt_f4j8HOHPcgE.jpg",
-    "duration": "PT2M41S",
-    "views": null,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
     "title": "Hunter \u00d7 Hunter \u2013 But It's 1970s Anime! \u2014 character highlight",
     "url": "https://youtu.be/M-OthQWQ4V4",
     "publish_at": "2026-11-04T16:00:00Z",
@@ -48,6 +36,18 @@
     "on_youtube": true
   },
   {
+    "title": "Hunter \u00d7 Hunter \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/f4j8HOHPcgE",
+    "publish_at": "2026-11-02T22:00:24Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/f4j8HOHPcgE/mqdefault.jpg",
+    "duration": "PT2M41S",
+    "views": 4,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
     "title": "Could Johan Liebert Break Denji?",
     "url": "https://youtu.be/jCyOearvVf8",
     "publish_at": "2026-10-31T22:00:01Z",
@@ -55,7 +55,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/jCyOearvVf8/mqdefault.jpg",
     "duration": "PT14M43S",
-    "views": 42,
+    "views": 83,
     "kind": "video",
     "on_youtube": true
   },
@@ -67,7 +67,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/GNfrlSz91CE/mqdefault.jpg",
     "duration": "PT17S",
-    "views": 1249,
+    "views": 1274,
     "kind": "short",
     "on_youtube": true
   },
@@ -79,7 +79,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Sfds-QNup7s/mqdefault.jpg",
     "duration": "PT2M30S",
-    "views": 169,
+    "views": 185,
     "kind": "video",
     "on_youtube": true
   },
@@ -103,7 +103,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/emhuJ6QumMA/mqdefault.jpg",
     "duration": "PT11M46S",
-    "views": 1021,
+    "views": 1023,
     "kind": "video",
     "on_youtube": true
   },
@@ -115,7 +115,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/40GG6tJV-XU/mqdefault.jpg",
     "duration": "PT16S",
-    "views": 876,
+    "views": 881,
     "kind": "short",
     "on_youtube": true
   },
@@ -127,7 +127,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/PIujWSnp-qY/mqdefault.jpg",
     "duration": "PT2M27S",
-    "views": 675,
+    "views": 677,
     "kind": "video",
     "on_youtube": true
   },
@@ -139,7 +139,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg",
     "duration": "PT1M1S",
-    "views": 1340,
+    "views": 1341,
     "kind": "short",
     "on_youtube": true
   },
@@ -199,7 +199,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-vQuvAeoI1Y/mqdefault.jpg",
     "duration": "PT2M30S",
-    "views": 504,
+    "views": 505,
     "kind": "video",
     "on_youtube": true
   },
@@ -247,7 +247,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg",
     "duration": "PT2M9S",
-    "views": 249,
+    "views": 250,
     "kind": "video",
     "on_youtube": true
   },
@@ -331,7 +331,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
     "duration": "PT2M37S",
-    "views": 194,
+    "views": 195,
     "kind": "video",
     "on_youtube": true
   },
@@ -511,19 +511,7 @@
     "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Z3vVHx-k-UU/mqdefault.jpg",
     "duration": "PT28M42S",
-    "views": 66,
-    "kind": "video",
-    "on_youtube": true
-  },
-  {
-    "title": "When the White Room realized Light Yagami was a perfect judge",
-    "url": "https://youtu.be/zRTB9AV_CyM",
-    "publish_at": "2026-06-18T21:00:25Z",
-    "is_future": false,
-    "privacy": "public",
-    "thumb": "https://i.ytimg.com/vi/zRTB9AV_CyM/mqdefault.jpg",
-    "duration": "PT17M54S",
-    "views": 102,
+    "views": 67,
     "kind": "video",
     "on_youtube": true
   }
