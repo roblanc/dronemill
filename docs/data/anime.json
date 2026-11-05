@@ -1,389 +1,518 @@
 [
   {
-    "title": "Hunter \u00d7 Hunter \u2013 But It's 1970s Anime! \u2014 character highlight",
-    "url": "https://youtu.be/M-OthQWQ4V4",
+    "title": "Could Maomao Expose Kenjaku? \u2014 excerpt",
+    "url": "https://youtu.be/t9YYD2T3CsQ",
+    "publish_at": "2026-11-06T16:00:00Z",
     "is_future": true,
-    "publish_at": "2026-11-04T16:00:00+00:00",
-    "date": "Nov 4, 2026 \u00b7 16:00 UTC",
-    "thumb": "https://i.ytimg.com/vi/M-OthQWQ4V4/mqdefault.jpg",
-    "kind": "short"
+    "privacy": "private",
+    "thumb": "images/anime/yt_t9YYD2T3CsQ.jpg",
+    "duration": "PT36S",
+    "views": null,
+    "kind": "short",
+    "on_youtube": true
+  },
+  {
+    "title": "Solo Leveling \u2013 But It's 1970s Anime!",
+    "url": "https://youtu.be/MJ_WT9qd7Uc",
+    "publish_at": "2026-11-06T22:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_MJ_WT9qd7Uc.jpg",
+    "duration": "PT2M25S",
+    "views": null,
+    "kind": "video",
+    "on_youtube": true
+  },
+  {
+    "title": "Solo Leveling in 1978 \u2014 Which Character Is Your Favourite? #Shorts",
+    "url": "https://youtu.be/vH5p77zzDOc",
+    "publish_at": "2026-11-08T16:00:00Z",
+    "is_future": true,
+    "privacy": "private",
+    "thumb": "images/anime/yt_vH5p77zzDOc.jpg",
+    "duration": "PT25S",
+    "views": null,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Could Maomao Expose Kenjaku?",
     "url": "https://youtu.be/pdSk-nxxKaw",
-    "is_future": true,
-    "publish_at": "2026-11-04T22:00:00+00:00",
-    "date": "Nov 4, 2026 \u00b7 22:00 UTC",
+    "publish_at": "2026-11-04T22:00:06Z",
+    "is_future": false,
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/pdSk-nxxKaw/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT14M21S",
+    "views": 1,
+    "kind": "video",
+    "on_youtube": true
   },
   {
-    "title": "Could Maomao Expose Kenjaku? \u2014 excerpt",
-    "url": "https://youtu.be/t9YYD2T3CsQ",
-    "is_future": true,
-    "publish_at": "2026-11-06T16:00:00+00:00",
-    "date": "Nov 6, 2026 \u00b7 16:00 UTC",
-    "thumb": "https://i.ytimg.com/vi/t9YYD2T3CsQ/mqdefault.jpg",
-    "kind": "short"
+    "title": "Hunter \u00d7 Hunter \u2013 But It's 1970s Anime! \u2014 character highlight",
+    "url": "https://youtu.be/M-OthQWQ4V4",
+    "publish_at": "2026-11-04T16:00:07Z",
+    "is_future": false,
+    "privacy": "public",
+    "thumb": "https://i.ytimg.com/vi/M-OthQWQ4V4/mqdefault.jpg",
+    "duration": "PT25S",
+    "views": 978,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Hunter \u00d7 Hunter \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/f4j8HOHPcgE",
+    "publish_at": "2026-11-02T22:00:24Z",
     "is_future": false,
-    "publish_at": "2026-11-02T22:00:00+00:00",
-    "date": "Nov 2, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/f4j8HOHPcgE/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT2M41S",
+    "views": 407,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Could Johan Liebert Break Denji?",
     "url": "https://youtu.be/jCyOearvVf8",
+    "publish_at": "2026-10-31T22:00:01Z",
     "is_future": false,
-    "publish_at": "2026-10-31T22:00:00+00:00",
-    "date": "Oct 31, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/jCyOearvVf8/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT14M43S",
+    "views": 160,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Code Geass \u2013 But It's 1970s Anime! \u2014 character highlight",
     "url": "https://youtu.be/GNfrlSz91CE",
+    "publish_at": "2026-10-31T16:00:12Z",
     "is_future": false,
-    "publish_at": "2026-10-31T16:00:00+00:00",
-    "date": "Oct 31, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/GNfrlSz91CE/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT17S",
+    "views": 1173,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Code Geass \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/Sfds-QNup7s",
+    "publish_at": "2026-10-29T22:00:36Z",
     "is_future": false,
-    "publish_at": "2026-10-29T22:00:00+00:00",
-    "date": "Oct 29, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Sfds-QNup7s/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT2M30S",
+    "views": 194,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Could Lelouch Outsmart Ayanokoji? \u2014 excerpt",
     "url": "https://youtu.be/1PrA0CK655I",
+    "publish_at": "2026-10-29T16:00:29Z",
     "is_future": false,
-    "publish_at": "2026-10-29T16:00:00+00:00",
-    "date": "Oct 29, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/1PrA0CK655I/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT39S",
+    "views": 145,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Could Lelouch Outsmart Ayanokoji?",
     "url": "https://youtu.be/emhuJ6QumMA",
+    "publish_at": "2026-10-27T22:00:16Z",
     "is_future": false,
-    "publish_at": "2026-10-27T22:00:16+00:00",
-    "date": "Oct 27, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/emhuJ6QumMA/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT11M46S",
+    "views": 1026,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Jujutsu Kaisen 1970s \u2014 character highlight",
     "url": "https://youtu.be/40GG6tJV-XU",
+    "publish_at": "2026-10-27T16:00:25Z",
     "is_future": false,
-    "publish_at": "2026-10-27T16:00:25+00:00",
-    "date": "Oct 27, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/40GG6tJV-XU/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT16S",
+    "views": 891,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Jujutsu Kaisen \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/PIujWSnp-qY",
+    "publish_at": "2026-10-25T22:00:33Z",
     "is_future": false,
-    "publish_at": "2026-10-25T22:00:33+00:00",
-    "date": "Oct 25, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/PIujWSnp-qY/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT2M27S",
+    "views": 680,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Why L Could Never Prove Light Was Kira",
     "url": "https://youtu.be/Y4nH0oJsV54",
+    "publish_at": "2026-10-24T15:00:35Z",
     "is_future": false,
-    "publish_at": "2026-10-24T15:00:35+00:00",
-    "date": "Oct 24, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Y4nH0oJsV54/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT1M1S",
+    "views": 1341,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Could Johan Really Break Denji?",
     "url": "https://youtu.be/1PAXyWWgYTE",
+    "publish_at": "2026-10-23T07:11:28Z",
     "is_future": false,
-    "publish_at": "2026-10-23T07:11:28+00:00",
-    "date": "Oct 23, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/1PAXyWWgYTE/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT35S",
+    "views": 644,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Why Ayanokoji Cannot Clear the Double Dungeon",
     "url": "https://youtu.be/ZHoCc8IBHAc",
+    "publish_at": "2026-10-22T15:00:31Z",
     "is_future": false,
-    "publish_at": "2026-10-22T15:00:31+00:00",
-    "date": "Oct 22, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/ZHoCc8IBHAc/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT47S",
+    "views": 273,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Could Makima Control Sung Jinwoo?",
     "url": "https://youtu.be/2_4Q98Q-qwo",
+    "publish_at": "2026-10-20T21:00:39Z",
     "is_future": false,
-    "publish_at": "2026-10-20T21:00:39+00:00",
-    "date": "Oct 20, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/2_4Q98Q-qwo/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT14M59S",
+    "views": 68,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "L, Frieren, Maomao or Aqua: Who Really Catches Kira?",
     "url": "https://youtu.be/cUhKbiM52ZU",
+    "publish_at": "2026-10-20T15:00:24Z",
     "is_future": false,
-    "publish_at": "2026-10-20T15:00:24+00:00",
-    "date": "Oct 20, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/cUhKbiM52ZU/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT42S",
+    "views": 184,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Death Note \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/-vQuvAeoI1Y",
+    "publish_at": "2026-10-18T21:00:38Z",
     "is_future": false,
-    "publish_at": "2026-10-18T21:00:38+00:00",
-    "date": "Oct 18, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/-vQuvAeoI1Y/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT2M30S",
+    "views": 506,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Why Catching Light Yagami Isn't Just a Genius Test for L",
     "url": "https://youtu.be/jyD4hhmTUaQ",
+    "publish_at": "2026-10-18T15:00:00Z",
     "is_future": false,
-    "publish_at": "2026-10-18T15:00:00+00:00",
-    "date": "Oct 18, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/jyD4hhmTUaQ/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT43S",
+    "views": 234,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Everyone Who Could Catch Kira",
     "url": "https://youtu.be/Wxey4muEgpY",
+    "publish_at": "2026-10-16T21:00:40Z",
     "is_future": false,
-    "publish_at": "2026-10-16T21:00:40+00:00",
-    "date": "Oct 16, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Wxey4muEgpY/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT13M39S",
+    "views": 338,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Kenjaku vs Ayanokoji: Who's the Greater Schemer?",
     "url": "https://youtu.be/IkyJMLW1dMQ",
+    "publish_at": "2026-10-16T15:00:27Z",
     "is_future": false,
-    "publish_at": "2026-10-16T15:00:27+00:00",
-    "date": "Oct 16, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/IkyJMLW1dMQ/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT45S",
+    "views": 820,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Dandadan \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/JIng_MHFc3A",
+    "publish_at": "2026-10-14T21:00:07Z",
     "is_future": false,
-    "publish_at": "2026-10-14T21:00:07+00:00",
-    "date": "Oct 14, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/JIng_MHFc3A/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT2M9S",
+    "views": 252,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "How Kenjaku Beat Gojo Without Ever Outfighting Him",
     "url": "https://youtu.be/uHlMTq_E00g",
+    "publish_at": "2026-10-14T15:00:19Z",
     "is_future": false,
-    "publish_at": "2026-10-14T15:00:19+00:00",
-    "date": "Oct 14, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/uHlMTq_E00g/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT34S",
+    "views": 134,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Kenjaku vs Ayanokoji Isn't Even Close",
     "url": "https://youtu.be/6Mc8KI40LLE",
+    "publish_at": "2026-10-12T21:00:36Z",
     "is_future": false,
-    "publish_at": "2026-10-12T21:00:36+00:00",
-    "date": "Oct 12, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6Mc8KI40LLE/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT14M4S",
+    "views": 339,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Chainsaw Man \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/miwzDV5COkU",
+    "publish_at": "2026-10-11T06:52:08Z",
     "is_future": false,
-    "publish_at": "2026-10-11T06:52:08+00:00",
-    "date": "Oct 11, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/miwzDV5COkU/mqdefault.jpg",
-    "kind": "video"
-  },
-  {
-    "title": "Chainsaw Man \u2013 But It's 1970s Anime!",
-    "url": "https://youtu.be/wTaWjyT4m_s",
-    "is_future": false,
-    "publish_at": "2026-10-10T21:00:00+00:00",
-    "date": "Oct 10, 2026",
-    "thumb": "https://i.ytimg.com/vi/wTaWjyT4m_s/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT2M28S",
+    "views": 163,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Ayanokoji vs the Double Dungeon",
     "url": "https://youtu.be/9l-tZ4PGUfg",
+    "publish_at": "2026-10-10T15:00:21Z",
     "is_future": false,
-    "publish_at": "2026-10-10T15:00:21+00:00",
-    "date": "Oct 10, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/9l-tZ4PGUfg/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT49S",
+    "views": 130,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Could Ayanokoji Clear the Double Dungeon?",
     "url": "https://youtu.be/lPHxjA4tOsk",
+    "publish_at": "2026-10-09T21:00:19Z",
     "is_future": false,
-    "publish_at": "2026-10-09T21:00:19+00:00",
-    "date": "Oct 9, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/lPHxjA4tOsk/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT13M24S",
+    "views": 911,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Why Light Yagami Can't Beat Frieren",
     "url": "https://youtu.be/C5l3lyzB0IE",
+    "publish_at": "2026-10-09T15:00:23Z",
     "is_future": false,
-    "publish_at": "2026-10-09T15:00:23+00:00",
-    "date": "Oct 9, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/C5l3lyzB0IE/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT56S",
+    "views": 97,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Classroom of the Elite \u2013 But It's 1970s Anime!",
     "url": "https://youtu.be/srU_XnnkrLQ",
+    "publish_at": "2026-10-09T07:13:06Z",
     "is_future": false,
-    "publish_at": "2026-10-09T07:13:06+00:00",
-    "date": "Oct 9, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/srU_XnnkrLQ/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT2M37S",
+    "views": 195,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Could Light Yagami Lie to Frieren?",
     "url": "https://youtu.be/Mvz0zdho0vE",
+    "publish_at": "2026-10-08T15:00:17Z",
     "is_future": false,
-    "publish_at": "2026-10-08T15:00:17+00:00",
-    "date": "Oct 8, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/Mvz0zdho0vE/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT48S",
+    "views": 1256,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Could Light Yagami lie to Frieren?",
     "url": "https://youtu.be/rPZCqvwC6JQ",
+    "publish_at": "2026-10-07T21:00:01Z",
     "is_future": false,
-    "publish_at": "2026-10-07T21:00:01+00:00",
-    "date": "Oct 7, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/rPZCqvwC6JQ/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT12M11S",
+    "views": 107,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Suzune Horikita Can Expel Ayanokoji",
     "url": "https://youtu.be/qTbCBHNxv5g",
+    "publish_at": "2026-10-07T15:00:33Z",
     "is_future": false,
-    "publish_at": "2026-10-07T15:00:33+00:00",
-    "date": "Oct 7, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/qTbCBHNxv5g/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT49S",
+    "views": 212,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Who Could Expel Ayanokoji?",
     "url": "https://youtu.be/6mFagqB50z4",
+    "publish_at": "2026-10-06T15:00:09Z",
     "is_future": false,
-    "publish_at": "2026-10-06T15:00:09+00:00",
-    "date": "Oct 6, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/6mFagqB50z4/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT52S",
+    "views": 151,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Which Student Could Actually Expel Ayanokoji?",
     "url": "https://youtu.be/T-L6wxnsJnU",
+    "publish_at": "2026-10-05T09:22:38Z",
     "is_future": false,
-    "publish_at": "2026-10-05T09:22:38+00:00",
-    "date": "Oct 5, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/T-L6wxnsJnU/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT14M25S",
+    "views": 904,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "L's Final Trap for Kafka Hibino",
     "url": "https://youtu.be/WZeQwmFFeSk",
+    "publish_at": "2026-10-04T15:00:33Z",
     "is_future": false,
-    "publish_at": "2026-10-04T15:00:33+00:00",
-    "date": "Oct 4, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/WZeQwmFFeSk/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT54S",
+    "views": 17,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Could L Unmask Kafka Hibino?",
     "url": "https://youtu.be/DTCtw60wVIA",
+    "publish_at": "2026-10-03T15:00:21Z",
     "is_future": false,
-    "publish_at": "2026-10-03T15:00:21+00:00",
-    "date": "Oct 3, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/DTCtw60wVIA/mqdefault.jpg",
-    "kind": "short"
+    "duration": "PT54S",
+    "views": 4,
+    "kind": "short",
+    "on_youtube": true
   },
   {
     "title": "Could L Unmask Kaiju No. 8?",
     "url": "https://youtu.be/aUX48KwzYMY",
+    "publish_at": "2026-10-02T21:00:13Z",
     "is_future": false,
-    "publish_at": "2026-10-02T21:00:13+00:00",
-    "date": "Oct 2, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/aUX48KwzYMY/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT15M39S",
+    "views": 31,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Could Maomao Catch Kira?",
     "url": "https://youtu.be/E3Hdd5Vd44U",
+    "publish_at": "2026-10-02T04:30:18Z",
     "is_future": false,
-    "publish_at": "2026-10-02T04:30:18+00:00",
-    "date": "Oct 2, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/E3Hdd5Vd44U/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT12M10S",
+    "views": 37,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Could Johan Liebert Break Deku?",
     "url": "https://youtu.be/dzA0efpqSYc",
+    "publish_at": "2026-09-10T21:00:03Z",
     "is_future": false,
-    "publish_at": "2026-09-10T21:00:03+00:00",
-    "date": "Sep 10, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/dzA0efpqSYc/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT8M22S",
+    "views": 162,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Could Light Yagami Survive Demon Slayer?",
     "url": "https://youtu.be/w7WIEHHOqa8",
+    "publish_at": "2026-06-27T21:00:00Z",
     "is_future": false,
-    "publish_at": "2026-06-27T21:00:00+00:00",
-    "date": "Jun 27, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/w7WIEHHOqa8/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT12M19S",
+    "views": 66,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "Could Ayanokoji Manipulate Class 1-A?",
     "url": "https://youtu.be/GykhG2tS5Mg",
+    "publish_at": "2026-06-26T10:33:08Z",
     "is_future": false,
-    "publish_at": "2026-06-26T10:33:08+00:00",
-    "date": "Jun 26, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/GykhG2tS5Mg/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT29M44S",
+    "views": 239,
+    "kind": "video",
+    "on_youtube": true
   },
   {
     "title": "What If Orochimaru Found the Death Note?",
     "url": "https://youtu.be/DRksLImbx-0",
+    "publish_at": "2026-06-24T21:00:20Z",
     "is_future": false,
-    "publish_at": "2026-06-24T21:00:20+00:00",
-    "date": "Jun 24, 2026",
+    "privacy": "public",
     "thumb": "https://i.ytimg.com/vi/DRksLImbx-0/mqdefault.jpg",
-    "kind": "video"
-  },
-  {
-    "title": "What If Ayanokoji and Kakashi Shared One System?",
-    "url": "https://youtu.be/-YdAjPqqYVI",
-    "is_future": false,
-    "publish_at": "2026-06-22T21:00:31+00:00",
-    "date": "Jun 22, 2026",
-    "thumb": "https://i.ytimg.com/vi/-YdAjPqqYVI/mqdefault.jpg",
-    "kind": "video"
+    "duration": "PT28M50S",
+    "views": 132,
+    "kind": "video",
+    "on_youtube": true
   }
 ]
