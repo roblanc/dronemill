@@ -1,12 +1,12 @@
 {
-  "server_time_utc": "2026-11-05 07:00:05 UTC",
+  "server_time_utc": "2026-11-06 04:00:13 UTC",
   "total_disk_gb": 37.2,
   "used_disk_gb": 23.9,
   "free_disk_gb": 11.8,
   "disk_percent": 64.1,
   "total_uploads": 137,
-  "future_scheduled_count": 15,
-  "next_release": "winter ink in the monastery scriptorium | medieval study ambience | 2 hours (Nov 05, 18:00 UTC)",
+  "future_scheduled_count": 14,
+  "next_release": "after closing in the submerged museum | underwater liminal ambience | 2 hours (Nov 06, 18:00 UTC)",
   "master_lufs": -22.0,
   "audio_engine": "AI Hybrid 5-Engine Conductor (Active)"
 }
